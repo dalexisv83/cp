@@ -10,6 +10,10 @@
                     "name": "Package Compare",
                     "url": "package-compare",
                     "src": "tools/package_compare/index.htm"
+                }, {
+                    "name": "Channel Lineup",
+                    "url": "channel-lineup",
+                    "src": "tools/channel_list/index.htm"
                 }];
                 // $scope.trusted = {};
                 // for (var i=0;i<$scope.tools.length;i++) {
