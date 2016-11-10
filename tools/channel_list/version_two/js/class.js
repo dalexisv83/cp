@@ -1359,21 +1359,21 @@ var Utility = function(){
     };
 };
 
-/**
- * The Error class
- */
-var Error = function(message){
-    "use strict";
-    this.message = message;
-};
+// /**
+//  * The Error class
+//  */
+// var Error = function(message){
+//     "use strict";
+//     this.message = message;
+// };
 
-Error.prototype.toString = function(){
-    "use strict";
-    return this.message;
-};
-/**
- * End of Error class
- */
+// Error.prototype.toString = function(){
+//     "use strict";
+//     return this.message;
+// };
+// /**
+//  * End of Error class
+//  */
 
 
 /**
