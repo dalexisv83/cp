@@ -14,6 +14,10 @@
                     "name": "Channel Lineup",
                     "url": "channel-lineup",
                     "src": "tools/channel_list/index.htm"
+                }, {
+                    "name": "Programming Package",
+                    "url": "programming-package",
+                    "src": "tools/programming_package/programming_package.htm"
                 }];
                 // $scope.trusted = {};
                 // for (var i=0;i<$scope.tools.length;i++) {

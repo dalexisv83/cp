@@ -1,0 +1,363 @@
+/* CSS Document */
+html,body {
+    margin:0;
+    padding:0;
+    display:inline-block
+}
+
+body {
+    text-align:center;
+    font:65%/1 Verdana,Arial,sans-serif;
+    padding-bottom:0;
+    background-color:#051d22;
+}
+
+A:link {
+    color:#070872;
+    text-decoration:none
+}
+
+A:active {
+    color:#070872;
+    text-decoration:none
+}
+
+A:visited {
+    color:#070872;
+    text-decoration:none
+}
+
+A:hover {
+    color:#F60;
+    text-decoration:none
+}
+
+A.step3:link {
+    color:#070872;
+    text-decoration:underline;
+    white-space:nowrap
+}
+
+A.step3:active {
+    color:#070872;
+    text-decoration:underline;
+    white-space:nowrap
+}
+
+A.step3:visited {
+    color:#070872;
+    text-decoration:underline;
+    white-space:nowrap
+}
+
+A.step3:hover {
+    color:#F60;
+    text-decoration:underline;
+    white-space:nowrap
+}
+
+/* used only for the MDU:TMU package table  */
+A.step4:link {
+    color:#070872;
+    text-decoration:underline;
+    white-space:nowrap;
+    font-size:smaller
+}
+
+A.step4:active {
+    color:#070872;
+    text-decoration:underline;
+    white-space:nowrap;
+    font-size:smaller
+}
+
+A.step4:visited {
+    color:#070872;
+    text-decoration:underline;
+    white-space:nowrap;
+    font-size:smaller
+}
+
+A.step4:hover {
+    color:#F60;
+    text-decoration:underline;
+    white-space:nowrap;
+    font-size:smaller
+}
+
+.innerboxHeadBig4 {
+    font:Verdana,Arial,sans-serif;
+}
+
+div#centerContent {
+    position:relative;
+    vertical-align:middle;
+    height:700px;
+    width:900px;
+    margin-left:2.5%;
+    padding-right:40px;
+    background:#fff url(/en-us/res/system/img/pkg_tool_interface_english_stretched_new.jpg) no-repeat top left;
+    z-index:0;
+    text-align:left;
+    overflow:hidden
+}
+
+.centerSpan {
+    float:right;
+    height:40px;
+    table-layout:inline;
+    margin-top:13px
+}
+
+.headerTable {
+    width:210px
+}
+
+.hboPrices {
+    width:120px
+}
+
+.dvrInnerboxHeadAndLine {
+    font-weight:700;
+    border-bottom:1px;
+    border-bottom-style:solid;
+    border-bottom-color:#000;
+    width:30%
+}
+
+ul#container1 {
+    width:230px;
+    z-index:5;
+    float:left
+}
+
+ul#container2 {
+    width:496px;
+    filter:chroma(color=#E8EAF5);
+    z-index:5;
+    float:right
+}
+
+li#totalsHead {
+    position:absolute;
+    top:67px;
+    left:26px;
+    width:195px;
+    height:205px;
+    color:#070872;
+    font:bold 115%/1.3 Verdana,Arial,sans-serif;
+    text-transform:uppercase;
+    text-align:center
+}
+
+li#totalsBox {
+    position:absolute;
+    top:100px;
+    left:20px;
+    width:195px;
+    height:205px;
+    color:#000
+}
+
+li#summaryHead {
+    position:absolute;
+    top:318px;
+    left:0;
+    width:260px;
+    height:193px;
+    color:#070872;
+    font:bold 115%/1.3 Verdana,Arial,sans-serif;
+    text-transform:uppercase;
+    text-align:center
+}
+
+li#summaryBox {
+    position:absolute;
+    top:352px;
+    left:-6px;
+    width:260px;
+    height:233px;
+    color:#000;
+    text-align:left
+}
+
+#summaryBox table{
+    margin-right:20px;
+}
+
+#summaryBox table td font{
+    padding-right:60px;
+}
+
+
+li#step1Head {
+    position:absolute;
+    top:71px;
+    left:258px;
+    width:235px;
+    height:50px;
+    color:#070872;
+    font:bold 100% Verdana,Arial,sans-serif;
+    text-transform:uppercase
+}
+
+li#step1Box {
+    position:absolute;
+    top:150px;
+    left:250px;
+    width:243px;
+    height:50px;
+    color:#000
+}
+
+li#primaryCredit {
+    position:absolute;
+    top:100px;
+    left:250px;
+    width:243px;
+    height:50px;
+    color:#000
+}
+
+#primaryCredit .innerboxHeadBig {
+    font-size:11px;
+    font-weight:400;
+    letter-spacing:-1px;
+    padding-top:11px;
+}
+
+li#step2Head {
+    position:absolute;
+    top:71px;
+    left:468px;
+    width:223px;
+    height:50px;
+    color:#070872;
+    font:bold 100% Verdana,Arial,sans-serif;
+    text-transform:uppercase
+}
+
+li#step2Box {
+    position:absolute;
+    top:105px;
+    left:480px;
+    width:335px;
+    height:50px;
+    color:#000
+}
+
+li#step3Head {
+    position:absolute;
+    top:165px;
+    left:263px;
+    width:485px;
+    height:95px;
+    color:#070872;
+    font:bold 100% Verdana,Arial,sans-serif;
+    text-transform:uppercase
+}
+
+li#step3Box {
+    position:absolute;
+    top:240px;
+    left:250px;
+    width:500px;
+    height:95px;
+    color:#000
+}
+
+li#step4Head {
+    position:absolute;
+    top:380px;
+    left:263px;
+    width:258px;
+    height:100px;
+    color:#070872;
+    font:bold 100% Verdana,Arial,sans-serif;
+    text-transform:uppercase
+}
+
+li#step4Box {
+    position:absolute;
+    top:470px;
+    left:260px;
+    width:258px;
+    height:140px;
+    color:#000
+}
+
+li#step5Head {
+    position:absolute;
+    top:380px;
+    left:563px;
+    width:178px;
+    height:100px;
+    color:#070872;
+    font:bold 100% Verdana,Arial,sans-serif;
+    text-transform:uppercase
+}
+
+li#step5Box {
+    position:absolute;
+    top:480px;
+    left:620px;
+    width:290px;
+    height:140px;
+    color:#000
+}
+
+li#step6Head {
+    position:absolute;
+    top:523px;
+    left:263px;
+    width:488px;
+    height:70px;
+    color:#070872;
+    font:bold 100% Verdana,Arial,sans-serif;
+    text-transform:uppercase
+}
+
+li#step6Box {
+    position:absolute;
+    top:620px;
+    left:325px;
+    width:520px;
+    height:70px;
+    color:#000
+}
+
+.innerboxHead {
+    font-weight:700
+}
+
+.innerboxHeadAndLine {
+    font-weight:700;
+    border-bottom:1px;
+    border-bottom-style:solid;
+    border-bottom-color:#000
+}
+
+.innerboxHeadBig {
+    font:bold 105% Verdana,Arial,sans-serif
+}
+
+.innerboxText {
+    font-stretch:extra-condensed;
+    white-space:nowrap
+}
+
+.packageImage {
+    height:30px;
+    width:50px
+}
+
+.nlb2 {
+    background-color:#fff;
+    color:#070872;
+    text-align:left
+}
+
+.lyr2ndMonth {
+    color:red
+}
+form li {list-style: none}
