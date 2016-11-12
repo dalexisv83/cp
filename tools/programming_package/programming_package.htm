@@ -1,30 +1,6 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 1.0 Transitional//EN" "http://www.w3.org/TR/html1/DTD/html1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/html"><head>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<meta http-equiv="X-UA-Compatible" content="IE=7" />
-<script src="http://agentanswercenter.directv.com/en-us/res/system/js/webtrends_cookie_tracking.js"></script>
-<title>Package Tool</title>
-
-<link rel="stylesheet" type="text/css" href="css/package.css?v1">
-<script type="text/javascript" src="http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ProgrammingPackage"></script>
-<script language="JavaScript" src="scripts/arrayNewPackages_2007.js"></script>
-<script language="javascript" src="scripts/packageTool.js?v1"></script>
-<script language="JavaScript" src="http://agentanswercenter.directv.com/en-us/res/system/js/jquery144.js"></script>
-<script language="JavaScript" src="http://agentanswercenter.directv.com/en-us/res/system/js/popup.js"></script>
-<script language="javascript" src="http://agentanswercenter.directv.com/en-us/res/system/js/newWindow.js"></script>
-
-
-<!-- TOOL FEEDBACK -->
-<script type="text/javascript" src="http://agentanswercenter.directv.com/en-us/res/system/js/site-plugins.js"></script>
-<script type="text/javascript" src="http://agentanswercenter.directv.com/en-us/res/system/js/tool-feedback.js"></script>
-<link rel="stylesheet" href="http://agentanswercenter.directv.com/en-us/res/system/css/feedback-tool.css" type="text/css">
-<input type="hidden" id="tool-author-id" value="Jason McKenney"/>
-</head>
-<body>
-<!-- -->
-<form name="frmNewPackage">
-      <div id="centerContent">
-            
+<div ng-controller="PP_Controller">
+    <form name="frmNewPackage">
+        <div id="centerContent">
             <span class="centerSpan">
                 <table cellpadding="0" cellspacing="0" class="headerTable">
                     <tbody>
@@ -72,60 +48,50 @@
                     </tbody>
                 </table>
             </span>
-
-            
-
             <ul id="container1">
-               
                 <li id="totalsBox">
                     <table align="center" width="100%">
                         <tbody>
                             <tr>
-                                <td id="lyrSuggestion" rowspan="2" width=
-                                "100%">&nbsp;</td>
+                                <td id="lyrSuggestion" rowspan="2" width="100%">&nbsp;</td>
                             </tr>
                         </tbody>
                     </table>
-
                     <table align="center" width="100%">
                         <tbody>
                             <tr align="center">
-                                <td width="50%">Base<br>
-                                $ <input name="txtBase" readonly size=
-                                "6" type="text" value="0.00"></td>
-
-                                <td width="50%">Premium<br>
-                                $ <input name="txtPrem" readonly size=
-                                "6" type="text" value="0.00"></td>
+                                <td width="50%">Base
+                                    <br> $
+                                    <input name="txtBase" readonly size="6" type="text" value="0.00">
+                                </td>
+                                <td width="50%">Premium
+                                    <br> $
+                                    <input name="txtPrem" readonly size="6" type="text" value="0.00">
+                                </td>
                             </tr>
-
                             <tr align="center">
-                                <td>Extras<br>
-                                $ <input name="txtExtra" readonly size=
-                                "6" type="text" value="0.00"></td>
-
-                                <td>1st Month Total<br>
-                                $ <input name="txtGrandTotal" readonly
-                                size="6" style=
-                                "background-color: #FFFFCC; color: #000000; border: 2px solid #003366"
-                                type="text" value="0.00"> &nbsp;</td>
+                                <td>Extras
+                                    <br> $
+                                    <input name="txtExtra" readonly size="6" type="text" value="0.00">
+                                </td>
+                                <td>1st Month Total
+                                    <br> $
+                                    <input name="txtGrandTotal" readonly size="6" style="background-color: #FFFFCC; color: #000000; border: 2px solid #003366" type="text" value="0.00"> &nbsp;</td>
                             </tr>
-
                             <tr>
                                 <td>&nbsp;</td>
                             </tr>
                         </tbody>
                     </table>
-
                     <table align="center" border="0">
                         <tbody>
                             <tr>
-                                <td><input onclick="javascript:resetAll();"
-                                type="button" value="Reset"></td>
+                                <td>
+                                    <input onclick="javascript:resetAll();" type="button" value="Reset">
+                                </td>
                             </tr>
                         </tbody>
                     </table>
-
                     <table>
                         <tbody>
                             <tr>
@@ -134,792 +100,397 @@
                         </tbody>
                     </table>
                 </li>
-
                 <li id="summaryHead" style="display:none">
                     <p>quick summary</p>
                 </li>
-
                 <li id="summaryBox">
                     <table align="center" width="200">
                         <tbody>
                             <tr>
-                                <td id="SUMMARY">Rollover package names<br /> for a quick summary<br /> <br /><br />
-                                - or -<br />
-                                <br />Click on package links<br> for a detailed description.<br /></td>
+                                <td ng-bind-html="ppSUMMARY">
+                                </td>
                             </tr>
                         </tbody>
                     </table>
                 </li>
             </ul>
-
             <ul id="container2">
                 <li id="step1Head" style="display:none;">
                     <p>Step 1: Select # of Tv's:</p>
                 </li>
-                
-                
                 <li id="primaryCredit">
-                  <table width="220px">
-                            <tbody>
-                               <tr>
+                    <table width="220px">
+                        <tbody>
+                            <tr>
                                 <td>
-                                    <a href="javascript:img_click_primaryCredit();" onmouseout="SUMMARY.innerHTML = varDefaultSummary; img_off_primaryCredit();"
-                                       onmouseover="SUMMARY.innerHTML = varDefaultSummary; img_on_primaryCredit();return true;">
-                                       <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif">
+                                    <a href="javascript:img_click_primaryCredit();" onmouseout="ppSUMMARY = varDefaultSummary; img_off_primaryCredit();" onmouseover="ppSUMMARY = varDefaultSummary; img_on_primaryCredit();return true;">
+                                        <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif">
                                     </a>
                                 </td>
                                 <td class="innerboxHeadBig">
-                                       
-                                          Click box if Primary TV Credit = No<br />
-                                          (Rio > Bill Ledger tab)
+                                    Click box if Primary TV Credit = No
+                                    <br /> (Rio > Bill Ledger tab)
                                 </td>
-                               </tr>
-                            </tbody>
-                   </table> 
+                            </tr>
+                        </tbody>
+                    </table>
                 </li>
-                
-               
-
                 <li id="step1Box">
                     <p>
-                        <a href="javascript:img_click_ds('1receiver',1);"
-                        onmouseout="img_off_ds('1receiver',1);" onmouseover=
-                        "img_on_ds('1receiver',1); return true;"><img alt=
-                        "1 receiver" border="0" id="1receiver" name="1receiver"
-                        src="http://agentanswercenter.directv.com/en-us/res/system/img/button1normal.jpg"></a> <a href=
-                        "javascript:img_click_ds('2receiver',2);" onmouseout=
-                        "img_off_ds('2receiver',2);" onmouseover=
-                        "img_on_ds('2receiver',2); return true;"><img alt=
-                        "2 receiver" border="0" id="2receiver" name="2receiver"
-                        src="http://agentanswercenter.directv.com/en-us/res/system/img/button2normal.jpg"></a> <a href=
-                        "javascript:img_click_ds('3receiver',3);" onmouseout=
-                        "img_off_ds('3receiver',3);" onmouseover=
-                        "img_on_ds('3receiver',3); return true;"><img alt=
-                        "3 receiver" border="0" id="3receiver" name="3receiver"
-                        src="http://agentanswercenter.directv.com/en-us/res/system/img/button3normal.jpg"></a> <a href=
-                        "javascript:img_click_ds('4receiver',4);" onmouseout=
-                        "img_off_ds('4receiver',4);" onmouseover=
-                        "img_on_ds('4receiver',4); return true;"><img alt=
-                        "4 receiver" border="0" id="4receiver" name="4receiver"
-                        src="http://agentanswercenter.directv.com/en-us/res/system/img/button4normal.jpg">
-                        </a> <a href="javascript:img_click_ds('5receiver',5);"
-                        onmouseout="img_off_ds('5receiver',5);" onmouseover=
-                        "img_on_ds('5receiver',5); return true;"><img alt=
-                        "5 receiver" border="0" id="5receiver" name="5receiver"
-                        src="http://agentanswercenter.directv.com/en-us/res/system/img/button5normal.jpg"></a> <a href=
-                        "javascript:img_click_ds('6receiver',6);" onmouseout=
-                        "img_off_ds('6receiver',6);" onmouseover=
-                        "img_on_ds('6receiver',6); return true;"><img alt=
-                        "6 receiver" border="0" id="6receiver" name="6receiver"
-                        src="http://agentanswercenter.directv.com/en-us/res/system/img/button6normal.jpg">
+                        <a href="javascript:img_click_ds('1receiver',1);" onmouseout="img_off_ds('1receiver',1);" onmouseover="img_on_ds('1receiver',1); return true;"><img alt="1 receiver" border="0" id="1receiver" name="1receiver" src="http://agentanswercenter.directv.com/en-us/res/system/img/button1normal.jpg"></a>
+                        <a href="javascript:img_click_ds('2receiver',2);" onmouseout="img_off_ds('2receiver',2);" onmouseover="img_on_ds('2receiver',2); return true;"><img alt="2 receiver" border="0" id="2receiver" name="2receiver" src="http://agentanswercenter.directv.com/en-us/res/system/img/button2normal.jpg"></a>
+                        <a href="javascript:img_click_ds('3receiver',3);" onmouseout="img_off_ds('3receiver',3);" onmouseover="img_on_ds('3receiver',3); return true;"><img alt="3 receiver" border="0" id="3receiver" name="3receiver" src="http://agentanswercenter.directv.com/en-us/res/system/img/button3normal.jpg"></a>
+                        <a href="javascript:img_click_ds('4receiver',4);" onmouseout="img_off_ds('4receiver',4);" onmouseover="img_on_ds('4receiver',4); return true;"><img alt="4 receiver" border="0" id="4receiver" name="4receiver" src="http://agentanswercenter.directv.com/en-us/res/system/img/button4normal.jpg">
+                        </a>
+                        <a href="javascript:img_click_ds('5receiver',5);" onmouseout="img_off_ds('5receiver',5);" onmouseover="img_on_ds('5receiver',5); return true;"><img alt="5 receiver" border="0" id="5receiver" name="5receiver" src="http://agentanswercenter.directv.com/en-us/res/system/img/button5normal.jpg"></a>
+                        <a href="javascript:img_click_ds('6receiver',6);" onmouseout="img_off_ds('6receiver',6);" onmouseover="img_on_ds('6receiver',6); return true;"><img alt="6 receiver" border="0" id="6receiver" name="6receiver" src="http://agentanswercenter.directv.com/en-us/res/system/img/button6normal.jpg">
                         </a>
                     </p>
                 </li>
-
-
                 <li id="step2Head" style="display:none">
                     <p>Step 2: Select Equipment Service</p>
                 </li>
-
                 <li id="step2Box">
                     <table width="450" cellpadding="2">
                         <tbody>
                             <tr>
                                 <td colspan="2">
-                                    <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');">
-                                    <strong>ARS</strong></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');">
+                                        <strong>ARS</strong></a>
                                 </td>
-
                                 <td colspan="2">
-                                    <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/equipment/dtv_plus_dvr_recording.html');">
-                                    <strong>ARS-DVR</strong></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/equipment/dtv_plus_dvr_recording.html');">
+                                        <strong>ARS-DVR</strong></a>
                                 </td>
-
                                 <td colspan="2">
-                                    <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hd_access.html');">
-                                    <strong>ARS-HD</strong></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hd_access.html');">
+                                        <strong>ARS-HD</strong></a>
                                 </td>
-
                                 <td colspan="2">
-                                    <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/whole_home_dvr_basics.html');">
-                                    <strong>Whole-Home DVR</strong></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/whole_home_dvr_basics.html');">
+                                        <strong>Whole-Home DVR</strong></a>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    <a href=
-                                    "javascript:img_Click_ARS('ARS1',1)"
-                                    onmouseout="img_off_ARS('ARS1',2);"
-                                    onmouseover=
-                                    "img_on('ARS1',12);"><img border="0" id=
-                                    "ARS1" name="ARS1" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_ARS('ARS1',1)" onmouseout="img_off_ARS('ARS1',2);" onmouseover="img_on('ARS1',12);"><img border="0" id="ARS1" name="ARS1" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
-                                <td>Monthly(<span id=
-                                "ARS_Monthly_Fee">$25</span>)</td>
-
+                                <td>Monthly(<span id="ARS_Monthly_Fee">$25</span>)</td>
                                 <td>
-                                    <a href=
-                                    "javascript:img_Click_DVR('DVR1',1)"
-                                    onmouseout="img_off_DVR('DVR1',2);"
-                                    onmouseover=
-                                    "img_on('DVR1',12);"><img border="0" id=
-                                    "DVR1" name="DVR1" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_DVR('DVR1',1)" onmouseout="img_off_DVR('DVR1',2);" onmouseover="img_on('DVR1',12);"><img border="0" id="DVR1" name="DVR1" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
-                                <td>Monthly(<span id=
-                                "ARS_Monthly_DVR_Fee">$10</span>)</td>
-
+                                <td>Monthly(<span id="ARS_Monthly_DVR_Fee">$10</span>)</td>
                                 <td>
-                                    <a href=
-                                    "javascript:img_Click_HD_Access('HD_Access1',1)"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_HD_Access('HD_Access1',1);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[2]; img_on('HD_Access1',10);">
-                                    <img border="0" id="HD_Access1" name=
-                                    "HD_Access1" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_HD_Access('HD_Access1',1)" onmouseout="ppSUMMARY = varDefaultSummary; img_off_HD_Access('HD_Access1',1);" onmouseover="ppSUMMARY = arrayExtraSummary[2]; img_on('HD_Access1',10);">
+                                        <img border="0" id="HD_Access1" name="HD_Access1" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
-                                <td>Monthly(<span id=
-                                "ARS_Monthly_HD_Fee">$10</span>)</td>
-
+                                <td>Monthly(<span id="ARS_Monthly_HD_Fee">$10</span>)</td>
                                 <td>
-                                    <a href=
-                                    "javascript:img_Click_MRV('MRV1',1)"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_MRV('MRV1',1);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[4]; img_on('MRV1',10);">
-                                    <img border="0" id="MRV1" name="MRV1" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_MRV('MRV1',1)" onmouseout="ppSUMMARY = varDefaultSummary; img_off_MRV('MRV1',1);" onmouseover="ppSUMMARY = arrayExtraSummary[4]; img_on('MRV1',10);">
+                                        <img border="0" id="MRV1" name="MRV1" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
                                 <td>Monthly(<span id="MRV">$3</span>)</td>
                             </tr>
-                            
                             <tr>
                                 <td>
-                                    <a  href=
-                                    "javascript:img_Click_ARS_Extra();"
-                                    onmouseout="img_mouseout_ars_extra();"
-                                    onmouseover=
-                                    "img_mouseover_ars_extra();"><img border="0" id=
-                                    "MRV3" name="MRV3" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_ARS_Extra();" onmouseout="img_mouseout_ars_extra();" onmouseover="img_mouseover_ars_extra();"><img border="0" id="MRV3" name="MRV3" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
                                 <td>
-                                  Monthly(<span>$15</span>)  
+                                    Monthly(<span>$15</span>)
                                 </td>
                                 <td>
-                                    <a href=
-                                    "javascript:img_Click_DVR('DVR2',2)"
-                                    onmouseout="img_off_DVR('DVR2',2);"
-                                    onmouseover=
-                                    "img_on('DVR2',12);"><img border="0" id=
-                                    "DVR2" name="DVR2" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_DVR('DVR2',2)" onmouseout="img_off_DVR('DVR2',2);" onmouseover="img_on('DVR2',12);"><img border="0" id="DVR2" name="DVR2" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
                                 <td>Remove</td>
-
                                 <td>
-                                    <a href=
-                                    "javascript:img_Click_HD_Access('HD_Access2',2)"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_HD_Access('HD_Access2',2);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[2]; img_on('HD_Access2',12);">
-                                    <img border="0" id="HD_Access2" name=
-                                    "HD_Access2" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_HD_Access('HD_Access2',2)" onmouseout="ppSUMMARY = varDefaultSummary; img_off_HD_Access('HD_Access2',2);" onmouseover="ppSUMMARY = arrayExtraSummary[2]; img_on('HD_Access2',12);">
+                                        <img border="0" id="HD_Access2" name="HD_Access2" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
                                 <td>Remove</td>
-
                                 <td>
-                                    <a href=
-                                    "javascript:img_Click_MRV('MRV2',2)"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_MRV('MRV2',2);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[4]; img_on('MRV2',12);">
-                                    <img border="0" id="MRV2" name="MRV2" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_MRV('MRV2',2)" onmouseout="ppSUMMARY = varDefaultSummary; img_off_MRV('MRV2',2);" onmouseover="ppSUMMARY = arrayExtraSummary[4]; img_on('MRV2',12);">
+                                        <img border="0" id="MRV2" name="MRV2" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
                                 <td>Remove</td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    <a href=
-                                    "javascript:img_Click_ARS('ARS2',2)"
-                                    onmouseout="img_off_ARS('ARS2',2);"
-                                    onmouseover=
-                                    "img_on('ARS2',12);"><img border="0" id=
-                                    "ARS2" name="ARS2" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_Click_ARS('ARS2',2)" onmouseout="img_off_ARS('ARS2',2);" onmouseover="img_on('ARS2',12);"><img border="0" id="ARS2" name="ARS2" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
                                 <td>Remove</td>
                                 <td colspan="7">
-                                    
                                 </td>
                             </tr>
-
                             <tr>
                                 <td colspan="8">
-                                    Accounts may require different <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');">
+                                    Accounts may require different <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');">
                                     Advanced Services (ARS)</a>.
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-              </li>
-
+                </li>
                 <li id="step3Head" style="display:none">
                     <p><span style="float:left;height:100%;">Step 3: select a
                     base package</span></p>
                 </li>
-
                 <li id="step3Box">
-
                     <div id="lyrEnglish2">
-                      <table width="100%">
+                        <table width="100%">
                             <tbody>
                                 <tr>
                                     <td colspan="8" height="10px"></td>
                                 </tr>
-
                                 <tr>
                                     <td width="10%" align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Family',1);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Family',1);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[1]; img_on_Base('Family',1); return true;">
-                                        <img alt="Family" border="0" id=
-                                        "Family" name="Family" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="" ng-click="img_click_Base('Family',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Family',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base('Family',1);">
+                                            <img alt="Family" border="0" id="Family" name="Family" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td width="12%" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/family.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[1]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/family.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();">
                                         Family</a>
                                     </td>
-
                                     <td width="10%" align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Xtra%20Add-On%20FDB',32);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Xtra Add-On FDB',22);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[32]; img_on_Base('Xtra Add-On FDB',22); return true;">
-                                        <img alt="Select" border="0" id=
-                                        "Select" name="Select" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="" ng-click="img_click_Base('Xtra%20Add-On%20FDB',32);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Xtra Add-On FDB',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base('Xtra Add-On FDB',22);">
+                                            <img alt="Select" border="0" id="Select" name="Select" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td width="14%" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/select.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[32]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/select.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();">
                                         Select</a>
                                     </td>
-
                                     <td width="10%" align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Entertainment',28);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Entertainment',28);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[5]; img_on_Base('Entertainment',28); return true;">
-                                        <img alt="Entertainment" border="0" id=
-                                        "Entertainment" name="Entertainment"
-                                        src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="" ng-click="img_click_Base('Entertainment',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Entertainment',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base('Entertainment',28);">
+                                            <img alt="Entertainment" border="0" id="Entertainment" name="Entertainment" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td width="16%" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/entertainment_2.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[5]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/entertainment_2.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();">
                                         Entertainment</a>
                                     </td>
-
                                     <td width="10%" align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Choice',2);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Choice',2);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[2]; img_on_Base('Choice',2); return true;">
-                                        <img alt="Choice" border="0" id=
-                                        "Choice" name="Choice" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="" ng-click="img_click_Base('Choice',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Choice',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base('Choice',2);">
+                                            <img alt="Choice" border="0" id="Choice" name="Choice" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td width="20%" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[2]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();">
                                         Choice</a>
                                     </td>
-                                    
-                                  
                                 </tr>
-
                                 <tr>
                                     <td colspan="8" height="10px"></td>
                                 </tr>
-
                                 <tr>
                                     <td align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Xtra',3);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Xtra',3);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[3]; img_on_Base('Xtra',3); return true;">
-                                        <img alt="Xtra" border="0" id="Xtra"
-                                        name="Xtra" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="" ng-click="img_click_Base('Xtra',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Xtra',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base('Xtra',3);">
+                                            <img alt="Xtra" border="0" id="Xtra" name="Xtra" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice_xtra_new.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[3]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice_xtra_new.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();">
                                         Xtra</a>
                                     </td>
-
                                     <td align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Ultimate',4);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Ultimate',4);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[4]; img_on_Base('Ultimate',4); return true;">
-                                        <img alt="Ultimate" border="0" id=
-                                        "Ultimate" name="Ultimate" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="" ng-click="img_click_Base('Ultimate',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Ultimate',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base('Ultimate',4);">
+                                            <img alt="Ultimate" border="0" id="Ultimate" name="Ultimate" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice_ultimate.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[4]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice_ultimate.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();">
                                         Ultimate</a>
                                     </td>
-
                                     <td align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Premier',6);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Premier',6);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[6]; img_on_Base('Premier',6); return true;">
-                                        <img alt="Premier" border="0" id=
-                                        "Premier" name="Premier" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="" ng-click="img_click_Base('Premier',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Premier',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base('Premier',6);">
+                                            <img alt="Premier" border="0" id="Premier" name="Premier" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/premier.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[6]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/premier.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();">
                                         Premier</a>
                                     </td>
-
-                                      <!--Preferred Extra-->
+                                    <!--Preferred Extra-->
                                     <td width="10%" align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Preferred Extra',33);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Preferred Extra',33);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[33]; img_on_Base('Preferred Extra',33);return true;">
-                                        <img alt="Preferred Xtra" border="0" id=
-                                        "Preferred_extra" name="Preferred Extra" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="" ng-click="img_click_Base('Preferred Extra',33);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Preferred Extra',33);" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base('Preferred Extra',33);">
+                                            <img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-                                    
                                     <td width="25%" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/preferred_xtra.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayBaseSummary[33]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/preferred_xtra.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();">
                                         Preferred Xtra</a>
                                     </td>
-                                     <!--Preferred Extra-->
+                                    <!--Preferred Extra-->
                                 </tr>
-
                                 <tr>
                                     <td></td>
-
                                     <td class="innerboxText">&nbsp;</td>
-
                                     <td></td>
-
                                     <td class="innerboxText">&nbsp;</td>
-
                                     <td></td>
-
                                     <td></td>
-
                                     <td></td>
-
                                     <td></td>
                                 </tr>
-
                                 <tr>
                                     <td colspan="8">&nbsp;</td>
                                 </tr>
-
                                 <tr>
                                     <td class="innerboxText" colspan="8">
-                                        Base package required for
-                                        premiums/additional services. See
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html');">
+                                        Base package required for premiums/additional services. See
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html');">
                                         Package Requirements</a>.
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-
                     <div id="lyrSpanish2" style="display:none;">
                         <table>
                             <tbody>
                                 <tr>
                                     <td colspan="4" height="10"></td>
                                 </tr>
-
                                 <tr>
                                     <td align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Mas%20Latino',7);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Mas Latino',7);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayParaSummary[10]; img_on_Base('Mas Latino',7); return true;">
-                                        <img alt="Mas Latino" border="0" name=
-                                        "Mas Latino" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="javascript:img_click_Base('Mas%20Latino',7);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Base('Mas Latino',7);" onmouseover="ppSUMMARY = arrayParaSummary[10]; img_on_Base('Mas Latino',7); return true;">
+                                            <img alt="Mas Latino" border="0" name="Mas Latino" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td align="left" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_latino.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayParaSummary[10]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_latino.html');" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayParaSummary[10]; importXML(); return true;">
                                         Más Latino</a>
                                     </td>
-
                                     <td align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Optimo_Mas',8);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Optimo_Mas',8);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayParaSummary[1]; img_on_Base('Optimo_Mas',8); return true;">
-                                        <img alt="Optimo Mas" border="0" name=
-                                        "Optimo_Mas" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="javascript:img_click_Base('Optimo_Mas',8);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Base('Optimo_Mas',8);" onmouseover="ppSUMMARY = arrayParaSummary[1]; img_on_Base('Optimo_Mas',8); return true;">
+                                            <img alt="Optimo Mas" border="0" name="Optimo_Mas" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td align="left" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/optimo_mas.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayParaSummary[1]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/optimo_mas.html');" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayParaSummary[1]; importXML(); return true;">
                                         Optimo Más</a>
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td></td>
-
                                     <td></td>
-
                                     <td></td>
-
                                     <td>&nbsp;</td>
                                 </tr>
-
                                 <tr>
                                     <td align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Mas%20Ultra',24);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Mas Ultra',24);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayParaSummary[9]; img_on_Base('Mas Ultra',24); return true;">
-                                        <img alt="Mas Ultra" border="0" name=
-                                        "Mas Ultra" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="javascript:img_click_Base('Mas%20Ultra',24);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Base('Mas Ultra',24);" onmouseover="ppSUMMARY = arrayParaSummary[9]; img_on_Base('Mas Ultra',24); return true;">
+                                            <img alt="Mas Ultra" border="0" name="Mas Ultra" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td align="left" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_ultra.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayParaSummary[9]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_ultra.html');" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayParaSummary[9]; importXML(); return true;">
                                         Más Ultra</a>
                                     </td>
-
                                     <td align="center">
-                                        <a href=
-                                        "javascript:img_click_Base('Lo%20Maximo',10);"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary; img_off_Base('Lo Maximo',10);"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayParaSummary[5]; img_on_Base('Lo Maximo',10); return true;">
-                                        <img alt="Lo Maximo" border="0" name=
-                                        "Lo Maximo" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                        <a href="javascript:img_click_Base('Lo%20Maximo',10);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Base('Lo Maximo',10);" onmouseover="ppSUMMARY = arrayParaSummary[5]; img_on_Base('Lo Maximo',10); return true;">
+                                            <img alt="Lo Maximo" border="0" name="Lo Maximo" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                     </td>
-
                                     <td align="left" class="innerboxHeadBig">
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/lo_maximo.html');"
-                                        onmouseout=
-                                        "SUMMARY.innerHTML = varDefaultSummary;"
-                                        onmouseover=
-                                        "SUMMARY.innerHTML = arrayParaSummary[5]; importXML(); return true;">
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/lo_maximo.html');" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayParaSummary[5]; importXML(); return true;">
                                         Lo Maximo</a>
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td></td>
-
                                     <td></td>
-
                                     <td></td>
-
                                     <td></td>
                                 </tr>
-
                                 <tr>
                                     <td class="innerboxText" colspan="4">
-                                        Base package required for
-                                        premiums/additional services. See
-                                        <a class="step3" href=
-                                        "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html');">
+                                        Base package required for premiums/additional services. See
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html');">
                                         Package Requirements</a>.
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
-
                     <div id="lyrMDU1" style="display:none;">
                         <table width="100%">
                             <tbody>
                                 <tr>
-                                    <td width="5%"><select name="MDUselection"
-                                    onchange=
-                                    "fillMDUdiv(this.selectedIndex, this.value)"
-                                    style="margin-right:5px;">
-                                        <option value="Select One...">
-                                            Select One...
-                                        </option>
-
-                                        <option value="MDU/JDU">
-                                            MDU / JDU
-                                        </option>
-
-                                        <option value="TCD/JCD">
-                                            TCD / JCD
-                                        </option>
-
-                                        <option value="TMW/JMW">
-                                            TMW / JMW
-                                        </option>
-
-                                        <option value="TMU/JMU">
-                                            TMU / JMU
-                                        </option>
-                                    </select></td>
-
-                                    <td align="left" colspan="5" id=
-                                    "MDUselectionInfo" width="95%">&nbsp;</td>
+                                    <td width="5%">
+                                        <select name="MDUselection" onchange="fillMDUdiv(this.selectedIndex, this.value)" style="margin-right:5px;">
+                                            <option value="Select One...">
+                                                Select One...
+                                            </option>
+                                            <option value="MDU/JDU">
+                                                MDU / JDU
+                                            </option>
+                                            <option value="TCD/JCD">
+                                                TCD / JCD
+                                            </option>
+                                            <option value="TMW/JMW">
+                                                TMW / JMW
+                                            </option>
+                                            <option value="TMU/JMU">
+                                                TMU / JMU
+                                            </option>
+                                        </select>
+                                    </td>
+                                    <td align="left" colspan="5" id="MDUselectionInfo" width="95%">&nbsp;</td>
                                 </tr>
-
                                 <tr>
                                     <td colspan="5" id="MDUdefault">
-                                    Multi-Dwelling customers' programming based
-                                    on account type. Many receive same packages
-                                    and pricing as REG, but some receive
-                                    significantly reduced-price programming
-                                    since their entire building has activated
-                                    DIRECTV. For reduced-priced packages, the
-                                    name is different in Rio but is very
-                                    similar to package mirrored.</td>
+                                        Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.</td>
                                 </tr>
-
                                 <tr>
-                                    <td colspan="6" id="MDUdiv" style=
-                                    "display:none;">
-                                        &nbsp;<br>
+                                    <td colspan="6" id="MDUdiv" style="display:none;">
+                                        &nbsp;
+                                        <br>
                                         <!-- TMU SECTION   -->
-                                         <img alt="Total Choice Plus TMU"
-                                        border="0" name="Total Choice Plus TMU"
-                                        src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
+                                        <img alt="Total Choice Plus TMU" border="0" name="Total Choice Plus TMU" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
                                         <!-- Family Digital Bulk column  -->
-                                         <img alt="Family Digital Bulk" border=
-                                        "0" name="Family Digital Bulk" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Xtra Add-On" border="0" name=
-                                        "Xtra Add-On" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Xtra Add-On FDB" border="0"
-                                        name="Xtra Add-On FDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Xtra Add-On EDB" border="0"
-                                        name="Xtra Add-On EDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Choice Add-On FDB" border="0"
-                                        name="Choice Add-On FDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Choice Add-On EDB" border="0"
-                                        name="Choice Add-On EDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Premier Add-On FDB" border=
-                                        "0" name="Premier Add-On FDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
+                                        <img alt="Family Digital Bulk" border="0" name="Family Digital Bulk" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Xtra Add-On" border="0" name="Xtra Add-On" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Xtra Add-On FDB" border="0" name="Xtra Add-On FDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Xtra Add-On EDB" border="0" name="Xtra Add-On EDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Choice Add-On FDB" border="0" name="Choice Add-On FDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Choice Add-On EDB" border="0" name="Choice Add-On EDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Premier Add-On FDB" border="0" name="Premier Add-On FDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
                                         <!--==============================-->
-                                         <img alt="Entertainment Add-On"
-                                        border="0" name="Entertainment Add-On"
-                                        src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Preferred Choice" border="0"
-                                        name="Preferred Choice" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Total Choice" border="0"
-                                        name="Total Choice for TCD/JCD" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Choice Tier" border="0" name=
-                                        "Choice Tier for TCD/JCD" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Ultimate Add-On CDB" border=
-                                        "0" name="Ultimate Add-On CDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Ultimate Add-On FDB" border=
-                                        "0" name="Ultimate Add-On FDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Ultimate Add-On EDB" border=
-                                        "0" name="Ultimate Add-On EDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Premier Add-On CDB" border=
-                                        "0" name="Premier Add-On CDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Premier Add-On EDB" border=
-                                        "0" name="Premier Add-On EDB" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Xtra Digital Bulk" name=
-                                        "Xtra Digital Bulk" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt="Student Choice Add-On" name=
-                                        "Student Choice Add-On" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"><br>
-                                        <img alt=
-                                        "Student Choice Xtra Classic Add-On"
-                                        name=
-                                        "Student Choice Xtra Classic Add-On"
-                                        style="display:none;"><br>
-                                        <a href="#" id=
-                                        "total_choice_plus_anchor" onmouseout=
-                                        "return false;" onmouseover=
-                                        "return false;"><img alt=
-                                        "Total Choice Plus" border="0" name=
-                                        "Total Choice Plus" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"></a><br>
-                                        <a href="#" id="xtra_tier_anchor"
-                                        onmouseout="return false;" onmouseover=
-                                        "return false;"><img alt="Xtra Tier"
-                                        border="0" name="Xtra Tier" src=
-                                        "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"
-                                        style="display:none;"></a><br>
+                                        <img alt="Entertainment Add-On" border="0" name="Entertainment Add-On" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Preferred Choice" border="0" name="Preferred Choice" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Total Choice" border="0" name="Total Choice for TCD/JCD" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Choice Tier" border="0" name="Choice Tier for TCD/JCD" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Ultimate Add-On CDB" border="0" name="Ultimate Add-On CDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Ultimate Add-On FDB" border="0" name="Ultimate Add-On FDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Ultimate Add-On EDB" border="0" name="Ultimate Add-On EDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Premier Add-On CDB" border="0" name="Premier Add-On CDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Premier Add-On EDB" border="0" name="Premier Add-On EDB" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Xtra Digital Bulk" name="Xtra Digital Bulk" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Student Choice Add-On" name="Student Choice Add-On" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;">
+                                        <br>
+                                        <img alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" style="display:none;">
+                                        <br>
+                                        <a href="#" id="total_choice_plus_anchor" onmouseout="return false;" onmouseover="return false;"><img alt="Total Choice Plus" border="0" name="Total Choice Plus" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;"></a>
+                                        <br>
+                                        <a href="#" id="xtra_tier_anchor" onmouseout="return false;" onmouseover="return false;"><img alt="Xtra Tier" border="0" name="Xtra Tier" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif" style="display:none;"></a>
+                                        <br>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </li>
-
                 <li id="step4Head" style="display:none">
                     <p>Step 4: Add premium services</p>
                 </li>
-
                 <li id="step4Box">
-                
-
                     <table>
                         <tbody>
                             <tr>
@@ -928,194 +499,83 @@
                                         <tbody>
                                             <tr>
                                                 <td>
-                                                    <a href=
-                                                    "javascript:img_click_Prem('hbo',7);%20layerSwap();"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_Prem('hbo',7);"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[0]; img_on('hbo',7); return true;">
-                                                    <img alt="HBO The Works"
-                                                    border="0" id="hbo" name=
-                                                    "hbo" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                                    <a href="javascript:img_click_Prem('hbo',7);%20layerSwap();" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Prem('hbo',7);" onmouseover="ppSUMMARY = arrayPremSummary[0]; img_on('hbo',7); return true;">
+                                                        <img alt="HBO The Works" border="0" id="hbo" name="hbo" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                                 </td>
-
                                                 <td>
-                                                    <a href=
-                                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hbo.html')"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary;"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[0]; return true;">
-                                                    <img alt=
-                                                    "Click here for more info."
-                                                    border="0" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/packages_hbo.gif"></a>
+                                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hbo.html')" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayPremSummary[0]; return true;">
+                                                        <img alt="Click here for more info." border="0" src="http://agentanswercenter.directv.com/en-us/res/system/img/packages_hbo.gif"></a>
                                                 </td>
-
                                                 <td>&nbsp;</td>
-
                                                 <td>
-                                                    <a href=
-                                                    "javascript:img_click_Prem('cinemax',8);"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_Prem('cinemax',8);"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[3]; img_on('cinemax',8); return true;">
-                                                    <img alt="Cinemax More Max"
-                                                    border="0" id="cinemax"
-                                                    name="cinemax" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                                    <a href="javascript:img_click_Prem('cinemax',8);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Prem('cinemax',8);" onmouseover="ppSUMMARY = arrayPremSummary[3]; img_on('cinemax',8); return true;">
+                                                        <img alt="Cinemax More Max" border="0" id="cinemax" name="cinemax" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                                 </td>
-
                                                 <td>
-                                                    <a href=
-                                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/cinemax.html')"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary;"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[3]; return true;">
-                                                    <img alt=
-                                                    "Click here for more info."
-                                                    border="0" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/packages_cinemax.gif"></a>
+                                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/cinemax.html')" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayPremSummary[3]; return true;">
+                                                        <img alt="Click here for more info." border="0" src="http://agentanswercenter.directv.com/en-us/res/system/img/packages_cinemax.gif"></a>
                                                 </td>
                                                 <td>&nbsp;</td>
                                             </tr>
-
                                             <tr>
                                                 <td>
-                                                    <a href=
-                                                    "javascript:img_click_Prem('starz',8);"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_Prem('starz',8);"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[2]; img_on('starz',8); return true;">
-                                                    <img alt="Starz Super Pack"
-                                                    border="0" id="starz" name=
-                                                    "starz" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                                    <a href="javascript:img_click_Prem('starz',8);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Prem('starz',8);" onmouseover="ppSUMMARY = arrayPremSummary[2]; img_on('starz',8); return true;">
+                                                        <img alt="Starz Super Pack" border="0" id="starz" name="starz" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                                 </td>
-
                                                 <td>
-                                                    <a href=
-                                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/starz_super_pack.html')"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary;"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[2]; return true;">
-                                                    <img alt=
-                                                    "Click here for more info."
-                                                    border="0" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/packages_starz.gif"></a>
+                                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/starz_super_pack.html')" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayPremSummary[2]; return true;">
+                                                        <img alt="Click here for more info." border="0" src="http://agentanswercenter.directv.com/en-us/res/system/img/packages_starz.gif"></a>
                                                 </td>
-
                                                 <td>&nbsp;</td>
-
                                                 <td>
-                                                    <a href=
-                                                    "javascript:img_click_Prem('sportspack',9);"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_Prem('sportspack',9);"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[4]; img_on('sportspack',9); return true;">
-                                                    <img alt="Sports Pack"
-                                                    border="0" id="sportspack"
-                                                    name="sportspack" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                                    <a href="javascript:img_click_Prem('sportspack',9);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Prem('sportspack',9);" onmouseover="ppSUMMARY = arrayPremSummary[4]; img_on('sportspack',9); return true;">
+                                                        <img alt="Sports Pack" border="0" id="sportspack" name="sportspack" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                                 </td>
-
                                                 <td>
-                                                    <a href=
-                                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/sports_pack.html')"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary;"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[4]; return true;">
-                                                    <img alt=
-                                                    "Click here for more info."
-                                                    border="0" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/packages_sports.gif"></a>
+                                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/sports_pack.html')" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayPremSummary[4]; return true;">
+                                                        <img alt="Click here for more info." border="0" src="http://agentanswercenter.directv.com/en-us/res/system/img/packages_sports.gif"></a>
                                                 </td>
                                                 <td>&nbsp;</td>
                                             </tr>
-
                                             <tr>
                                                 <td>
-                                                    <a href=
-                                                    "javascript:img_click_Prem('showtime',8);"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_Prem('showtime',8);"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[1]; img_on('showtime',8); return true;">
-                                                    <img alt=
-                                                    "Showtime Unlimited"
-                                                    border="0" id="showtime"
-                                                    name="showtime" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                                    <a href="javascript:img_click_Prem('showtime',8);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Prem('showtime',8);" onmouseover="ppSUMMARY = arrayPremSummary[1]; img_on('showtime',8); return true;">
+                                                        <img alt="Showtime Unlimited" border="0" id="showtime" name="showtime" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                                 </td>
-
                                                 <td>
-                                                    <a href=
-                                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/showtime_unlimited.html')"
-                                                    onmouseout=
-                                                    "SUMMARY.innerHTML = varDefaultSummary;"
-                                                    onmouseover=
-                                                    "SUMMARY.innerHTML = arrayPremSummary[1]; return true;">
-                                                    <img alt=
-                                                    "Click here for more info."
-                                                    border="0" src=
-                                                    "http://agentanswercenter.directv.com/en-us/res/system/img/packages_showtime.gif"></a>
+                                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/showtime_unlimited.html')" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayPremSummary[1]; return true;">
+                                                        <img alt="Click here for more info." border="0" src="http://agentanswercenter.directv.com/en-us/res/system/img/packages_showtime.gif"></a>
                                                 </td>
-
                                                 <td>&nbsp;</td>
-
                                                 <td></td>
-
                                                 <td></td>
                                                 <td></td>
                                             </tr>
                                         </tbody>
                                     </table>
-                              </td>
-
+                                </td>
                                 <td>
                                     <table class="hboPrices">
                                         <tbody>
                                             <tr>
-                                                <td class=
-                                                "innerboxHeadAndLine">
-                                                    <a href=
-                                                    "javascript:img_click_Prem('hbo',7);"
-                                                    id="without">without HBO</a>
+                                                <td class="innerboxHeadAndLine">
+                                                    <a href="javascript:img_click_Prem('hbo',7);" id="without">without HBO</a>
                                                 </td>
                                             </tr>
-
                                             <tr>
-                                                <td>1st = <span class="prices"
-                                                id=
-                                                "firstPrem">$13.99</span></td>
+                                                <td>1st = <span class="prices" id="firstPrem">$13.99</span></td>
                                             </tr>
-
                                             <tr>
-                                                <td>2nd = <span class="prices"
-                                                id=
-                                                "secondPrem">$12</span></td>
+                                                <td>2nd = <span class="prices" id="secondPrem">$12</span></td>
                                             </tr>
-
                                             <tr>
-                                                <td>3rd = <span class=
-                                                "prices">$13</span></td>
+                                                <td>3rd = <span class="prices">$13</span></td>
                                             </tr>
-
                                             <tr>
-                                                <td>4th = <span class=
-                                                "prices">$10</span></td>
+                                                <td>4th = <span class="prices">$10</span></td>
                                             </tr>
-
                                             <tr>
-                                                <td>5th = <span class="prices"
-                                                id="fifthPrem">n/a</span></td>
+                                                <td>5th = <span class="prices" id="fifthPrem">n/a</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -1124,244 +584,148 @@
                         </tbody>
                     </table>
                 </li>
-
                 <li id="step5Head" style="display: none;">
                     <p>Step 5: add extra services</p>
                 </li>
-
-                <li id="step5Box">                  
+                <li id="step5Box">
                     <table>
                         <tbody>
-
-
                             <tr>
-                              <td class="innerboxHeadAndLine" colspan="6">
-                                    <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan.html');">
+                                <td class="innerboxHeadAndLine" colspan="6">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan.html');">
                                     DIRECTV Protection Plan</a>
-                              </td>
-                                <td>
-                                    <a href=
-                                    "javascript:img_click_Protect('protect_1',10);"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_Protect('protect_1',10);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[1]; img_on('protect_1',10); return true;">
-                                    <img alt="Standard Receiver ($5.99/mo.)"
-                                    border="0" id="protect_1" name="protect_1"
-                                    src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
+                                <td>
+                                    <a href="javascript:img_click_Protect('protect_1',10);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Protect('protect_1',10);" onmouseover="ppSUMMARY = arrayExtraSummary[1]; img_on('protect_1',10); return true;">
+                                        <img alt="Standard Receiver ($5.99/mo.)" border="0" id="protect_1" name="protect_1" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                </td>
                                 <td class="innerboxHead">Monthly</td>
-
                                 <td></td>
-
                                 <td>
-                                    <a href=
-                                    "javascript:img_click_Protect('protect_3',11);"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_Protect('protect_3',11);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[1]; img_on('protect_3',11); return true;">
-                                    <img alt="none" border="0" id="protect_3"
-                                    name="protect_3" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_click_Protect('protect_3',11);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Protect('protect_3',11);" onmouseover="ppSUMMARY = arrayExtraSummary[1]; img_on('protect_3',11); return true;">
+                                        <img alt="none" border="0" id="protect_3" name="protect_3" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
                                 <td class="innerboxHead">Remove</td>
                             </tr>
-
                             <tr>
-                              <td colspan="6">&nbsp;</td>
-                              <td>&nbsp;</td>
-                              <td class="innerboxHead">&nbsp;</td>
-                              <td></td>
-                              <td>&nbsp;</td>
-                              <td class="innerboxHead">&nbsp;</td>
+                                <td colspan="6">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="innerboxHead">&nbsp;</td>
+                                <td></td>
+                                <td>&nbsp;</td>
+                                <td class="innerboxHead">&nbsp;</td>
                             </tr>
                             <tr>
-                              <td class="innerboxHeadAndLine" colspan="6">
-                                    <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hd_extra_pack.html');">
+                                <td class="innerboxHeadAndLine" colspan="6">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hd_extra_pack.html');">
                                     DIRECTV HD Extra Pack</a>
-                              </td>
-                                <td>
-                                    <a href=
-                                    "javascript:img_click_hdextra('hdextra_1',10);"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_hdextra('hdextra_1',10);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[3]; img_on('hdextra_1',10); return true;">
-                                    <img alt="none" border="0" id="hdextra_1"
-                                    name="hdextra_1" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
+                                <td>
+                                    <a href="javascript:img_click_hdextra('hdextra_1',10);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_hdextra('hdextra_1',10);" onmouseover="ppSUMMARY = arrayExtraSummary[3]; img_on('hdextra_1',10); return true;">
+                                        <img alt="none" border="0" id="hdextra_1" name="hdextra_1" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                </td>
                                 <td class="innerboxHead">Monthly</td>
-
                                 <td></td>
-
                                 <td>
-                                    <a href=
-                                    "javascript:img_click_hdextra('hdextra_2',11);"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_hdextra('hdextra_2',11);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[3]; img_on('hdextra_2',11); return true;">
-                                    <img alt="none" border="0" id="hdextra_2"
-                                    name="hdextra_2" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_click_hdextra('hdextra_2',11);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_hdextra('hdextra_2',11);" onmouseover="ppSUMMARY = arrayExtraSummary[3]; img_on('hdextra_2',11); return true;">
+                                        <img alt="none" border="0" id="hdextra_2" name="hdextra_2" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
                                 <td class="innerboxHead">Remove</td>
                             </tr>
-                            
-                            
                             <!--Protection Plan Premier-->
-
                             <tr>
-                              <td colspan="6">&nbsp;</td>
-                              <td>&nbsp;</td>
-                              <td class="innerboxHead">&nbsp;</td>
-                              <td></td>
-                              <td>&nbsp;</td>
-                              <td class="innerboxHead">&nbsp;</td>
+                                <td colspan="6">&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td class="innerboxHead">&nbsp;</td>
+                                <td></td>
+                                <td>&nbsp;</td>
+                                <td class="innerboxHead">&nbsp;</td>
                             </tr>
                             <tr>
-                              <td class="innerboxHeadAndLine" colspan="6">
-                                    <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan_premier.html');">
+                                <td class="innerboxHeadAndLine" colspan="6">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan_premier.html');">
                                     Protection Plan Premier</a>
-                              </td>
-                                <td>
-                                    <a href=
-                                    "javascript:img_click_premier('premier_1',12);"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_premier('premier_1',12);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[6]; img_on('premier_1',12); return true;">
-                                    <img alt="none" border="0" id="premier_1"
-                                    name="premier_1" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
+                                <td>
+                                    <a href="javascript:img_click_premier('premier_1',12);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_premier('premier_1',12);" onmouseover="ppSUMMARY = arrayExtraSummary[6]; img_on('premier_1',12); return true;">
+                                        <img alt="none" border="0" id="premier_1" name="premier_1" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                </td>
                                 <td class="innerboxHead">Monthly</td>
-
                                 <td></td>
-
                                 <td>
-                                    <a href=
-                                    "javascript:img_click_premier('premier_2',13);"
-                                    onmouseout=
-                                    "SUMMARY.innerHTML = varDefaultSummary; img_off_premier('premier_2',13);"
-                                    onmouseover=
-                                    "SUMMARY.innerHTML = arrayExtraSummary[6]; img_on('premier_2',13); return true;">
-                                    <img alt="none" border="0" id="premier_2"
-                                    name="premier_2" src=
-                                    "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:img_click_premier('premier_2',13);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_premier('premier_2',13);" onmouseover="ppSUMMARY = arrayExtraSummary[6]; img_on('premier_2',13); return true;">
+                                        <img alt="none" border="0" id="premier_2" name="premier_2" src="http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a>
                                 </td>
-
                                 <td class="innerboxHead">Remove</td>
                             </tr>
                             <!--Protection Plan Premier-->
-                            
                         </tbody>
                     </table>
                 </li>
-
                 <li id="step6Head" style="display: none">
                     <p>other links</p>
                 </li>
-
                 <li id="step6Box">
                     <table width="100%">
                         <tbody>
                             <tr>
                                 <td>
-                                    - <a href=
-                                    "javascript:pop_at('http://agentanswercenter.directv.com/en-us/res/rover_tools/package_compare/package_compare.htm',950,650);"
-                                    style="font-weight: bold">Package Compare
+                                    - <a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/res/rover_tools/package_compare/package_compare.htm',950,650);" style="font-weight: bold">Package Compare
                                     Tool</a>
                                 </td>
-
                                 <td><strong>Packages:</strong></td>
-
                                 <td><strong>Add Ons:</strong></td>
-
                                 <td></td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    - <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/sell_premium/sell_premium_overhaul.htm#/sports/" target="_blank">
-                                    <strong>Sports Sales Tool</strong></a>
+                                    -
+                                    <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/sell_premium/sell_premium_overhaul.htm#/sports/" target="_blank">
+                                        <strong>Sports Sales Tool</strong></a>
                                 </td>
-
                                 <td>
-                                    - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/expired_packages.html');">
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/expired_packages.html');">
                                     Expired</a>
                                 </td>
-
                                 <td>
-                                     - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/encore_a_la_carte.html');">
-                                    Encore (A La Carte)</a>                                   
-                                </td>                                
-                               
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/encore_a_la_carte.html');">
+                                    Encore (A La Carte)</a>
+                                </td>
                                 <td>
-                                    - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/international.html');">
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/international.html');">
                                     International (WorldDirect)</a>
                                 </td>
                             </tr>
-
                             <tr>
                                 <td>
-                                    - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/billing/regional_sports_fee.html');">
-                                    <strong>Regional Sports Fee</strong></a>
+                                    -
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/billing/regional_sports_fee.html');">
+                                        <strong>Regional Sports Fee</strong></a>
                                 </td>
-
                                 <td>
-                                    - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/basic_choice_international.html');">
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/basic_choice_international.html');">
                                     Basic Choice</a>
                                 </td>
-                                
-                                 <td>
-                                     - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/en_espanol.html');">
+                                <td>
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/en_espanol.html');">
                                     En Español</a>
                                 </td>
-
-
                                 <td>
-                                    - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mexico_plus.html');">
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mexico_plus.html');">
                                     México Plus</a>
-                                </td>                                
+                                </td>
                             </tr>
-
                             <tr>
-                                 <td>&nbsp;</td>
                                 <td>&nbsp;</td>
-
+                                <td>&nbsp;</td>
                                 <td>
-                                    - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/americas_plus.html');">
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/americas_plus.html');">
                                     Américas Plus</a>
                                 </td>
-                                
                                 <td>
-                                    - <a href=
-                                    "javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/directv_deportes.html');">
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/directv_deportes.html');">
                                     DIRECTV Deportes</a>
                                 </td>
-
-
-                               
                             </tr>
                         </tbody>
                     </table>
@@ -1369,22 +733,5 @@
             </ul>
             <!--<textarea style="background-color:#fff; color: #000; border{0}; overflow-x:hidden; overflow-y:hidden;" cols="0" rows="0" value="" name="textholder"></textarea>-->
         </div>
-</form>
-
-
-
-<!-- START OF SmartSource Data Collector TAG -->
-<!-- Copyright (c) 1996-2011 WebTrends Inc.  All rights reserved. -->
-<!-- Version: 9.3.0 -->
-<!-- Tag Builder Version: 3.1  -->
-<!-- Created: 2/15/2011 6:47:20 PM -->
-<script src="http://agentanswercenter.directv.com/en-us/res/system/js/webtrends.js" type="text/javascript"></script>
-<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-<!-- Warning: The two script blocks below must remain inline. Moving them to an external -->
-<!-- JavaScript include file can cause serious problems with cross-domain tracking.      -->
-<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
-
-<!-- END OF SmartSource Data Collector TAG -->
-
-</body>
-</html>
+    </form>
+</div>
