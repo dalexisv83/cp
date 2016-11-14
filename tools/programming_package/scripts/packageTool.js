@@ -484,28 +484,28 @@ app.controller('PP_Controller', ['$scope',
         //MDU / JDU
         arrayMDUInnerHTML[2] = '<table width="100%" cellspacing="0" cellpadding="2" border="0">' +
             '<tr>' +
-            '				<td><a href="javascript:img_click_Base(\'Family\',1);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; img_on_Base(\'Family\',1); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a></td>' +
-            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:50px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family</a></td>' +
-            '				<td><a href="javascript:img_click_Base(\'Xtra Add-On FDB\',32);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Select" name="Select" border="0" /></a></td>' +
-            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:40px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/select.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[32]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Select</a></td>' +
-            '				<td><a href="javascript:img_click_Base(\'Preferred Choice\',11);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[7]; img_on_Base(\'Preferred Choice\',11); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Preferred Choice\',11);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" /></a></td>' +
-            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:40px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_choice.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[7]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Preferred Choice</a></td>' +
-            '				<td><a href="javascript:img_click_Base(\'Choice\',2);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; img_on_Base(\'Choice\',2); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a></td>' +
-            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:50px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice</a></td>' +
+            '				<td><a href="" ng-click="img_click_Base(\'Family\',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base(\'Family\',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a></td>' +
+            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:50px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Family</a></td>' +
+            '				<td><a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',32);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Select" name="Select" border="0" /></a></td>' +
+            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:40px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/select.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Select</a></td>' +
+            '				<td><a href="" ng-click="img_click_Base(\'Preferred Choice\',11);" ng-mouseover="ppSUMMARY = arrayBaseSummary[7]; img_on_Base(\'Preferred Choice\',11);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Choice\',11);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" /></a></td>' +
+            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:40px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_choice.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[7]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Preferred Choice</a></td>' +
+            '				<td><a href="" ng-click="img_click_Base(\'Choice\',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base(\'Choice\',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a></td>' +
+            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:50px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Choice</a></td>' +
             '			</tr>' +
             '<tr>' +
-            '	<td><a href="javascript:img_click_Base(\'Xtra\',3);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a></td>' +
-            '	<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra.html\');"  onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Xtra</a></td>' +
-            '	<td><a href="javascript:img_click_Base(\'Ultimate\',4);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a></td>' +
-            '	<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Ultimate</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
-            '	<td><a href="javascript:img_click_Base(\'Premier\',6);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; img_on_Base(\'Premier\',6); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier"  border="0" /></a></td>' +
-            '	<td class="innerboxHeadBig" width="40%"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Premier</a></td>' +
-            '	<td><a href="javascript:img_click_Base(\'Entertainment\',28);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment\',28);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment"  border="0" /></a></td>' +
-            '	<td class="innerboxHeadBig" width="40%"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_2.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment</a></td>' +
+            '	<td><a href="" ng-click="img_click_Base(\'Xtra\',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a></td>' +
+            '	<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra.html\');"  ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Xtra</a></td>' +
+            '	<td><a href="" ng-click="img_click_Base(\'Ultimate\',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a></td>' +
+            '	<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Ultimate</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
+            '	<td><a href="" ng-click="img_click_Base(\'Premier\',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base(\'Premier\',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier"  border="0" /></a></td>' +
+            '	<td class="innerboxHeadBig" width="40%"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Premier</a></td>' +
+            '	<td><a href="" ng-click="img_click_Base(\'Entertainment\',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment\',28);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment"  border="0" /></a></td>' +
+            '	<td class="innerboxHeadBig" width="40%"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_2.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Entertainment</a></td>' +
 
             '</tr>' +
             '<tr>' +
-            '<td><a href="javascript:img_click_Base(\'Preferred Extra\',33);" onmouseout="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);"onmouseover="SUMMARY.innerHTML = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);return true;"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a></td><td width="25%" class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_xtra.html\');" onmouseout="SUMMARY.innerHTML = varDefaultSummary;" onmouseover="SUMMARY.innerHTML = arrayBaseSummary[33]; importXML(); return true;">Preferred Xtra</a></td>' +
+            '<td><a href="" ng-click="img_click_Base(\'Preferred Extra\',33);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);"onmouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);return true;"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a></td><td width="25%" class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_xtra.html\');" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();">Preferred Xtra</a></td>' +
             '<td colspan="7" height="12px"></td>' +
             '</tr>' +
             '<tr>' +
@@ -552,34 +552,34 @@ app.controller('PP_Controller', ['$scope',
             '<tr>' +
             '	<td width="33%" class="innerboxHeadBig4" valign=top><strong>If TC Limited &amp;<br> TC_MDU Tier are on account:</strong>' +
             '	<br>' +
-            '	<a href="javascript:img_click_Base(\'Total Choice for TCD/JCD\',12);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[8]; img_on_Base(\'Total Choice for TCD/JCD\',12); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Total Choice for TCD/JCD\',12);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[8]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >TC Limited & Total Choice MDU Tier</a>' +
+            '	<a href="" ng-click="img_click_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseover="ppSUMMARY = arrayBaseSummary[8]; img_on_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice for TCD/JCD\',12);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[8];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >TC Limited & Total Choice MDU Tier</a>' +
             '	<br>' +
             '	<a id="total_choice_plus_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[10]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Plus MDU Tier</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[10];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Plus MDU Tier</a>' +
             '	</td>' +
             '	<td width="34%" class="innerboxHeadBig4" valign=top bgcolor=#e0e1e1><strong>If TC Limited &amp;<br> Choice_MDU Tier are on account:</strong>' +
             '	<br>' +
-            '	<a href="javascript:img_click_Base(\'Choice Tier for TCD/JCD\',13);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[9]; img_on_Base(\'Choice Tier for TCD/JCD\',13); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[9] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" >TC Limited & Choice MDU Tier</a>' +
+            '	<a href="" ng-click="img_click_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseover="ppSUMMARY = arrayBaseSummary[9]; img_on_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[9] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" >TC Limited & Choice MDU Tier</a>' +
             '	<br>' +
             '	<a id="xtra_tier_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[11]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Xtra Classic MDU Tier</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[11];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Choice Xtra Classic MDU Tier</a>' +
             '	</td>' +
             '	<td width="33%" class="innerboxHeadBig4" valign=top><strong>If Student Preferred Bulk is on account:</strong>' +
             '	<br>' +
 
             '	<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Student Preferred Bulk" name="total_choice_placeholder">' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_preferred_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[25]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Student Preferred Bulk</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_preferred_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[25];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Student Preferred Bulk</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Student Choice Add-On\',29);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[26]; img_on_Base(\'Student Choice Add-On\',29); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Student Choice Add-On\',29);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Student Choice Add-On" name="Student Choice Add-On"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Student Choice Add-On\',29);" ng-mouseover="ppSUMMARY = arrayBaseSummary[26]; img_on_Base(\'Student Choice Add-On\',29);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Student Choice Add-On\',29);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Student Choice Add-On" name="Student Choice Add-On"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[26]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Student Choice Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[26];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Student Choice Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Student Choice Xtra Classic Add-On\',30);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[27]; img_on_Base(\'Student Choice Xtra Classic Add-On\',30); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Student Choice Xtra Classic Add-On\',30);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Student Choice Xtra Classic Add-On\',30);" ng-mouseover="ppSUMMARY = arrayBaseSummary[27]; img_on_Base(\'Student Choice Xtra Classic Add-On\',30);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Student Choice Xtra Classic Add-On\',30);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_xtra_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[27]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Student Choice Xtra Classic Add-On</a><br>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_xtra_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[27];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Student Choice Xtra Classic Add-On</a><br>' +
             '</td>' +
 
 
@@ -626,67 +626,67 @@ app.controller('PP_Controller', ['$scope',
 
             '	<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Choice Digital Bulk" name="total_choice_placeholder">' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[18] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Digital Bulk</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Choice Digital Bulk</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On\',14);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Xtra Add-On\',14);" ng-mouseover="ppSUMMARY = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[29];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Xtra Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On CDB\',25);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Ultimate Add-On CDB\',25);" ng-mouseover="ppSUMMARY = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[30];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Ultimate Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On CDB\',27);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Premier Add-On CDB\',27);" ng-mouseover="ppSUMMARY = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[31];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Premier Add-On</a></td>' +
 
 
             '	<td bgcolor=#e0e1e1 class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Entertainment Digital Bulk" name="total_choice_placeholder">' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Digital Bulk</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Entertainment Digital Bulk</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Choice Add-On EDB\',20);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Choice Add-On EDB\',20);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Choice Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On EDB\',9);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Xtra Add-On EDB\',9);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Xtra Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On EDB\',17);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Ultimate Add-On EDB\',17);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Ultimate Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On EDB\',15);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Premier Add-On EDB\',15);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
 
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Premier Add-On</a></td>' +
 
 
 
             '<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Family Digital Bulk" name="total_choice_placeholder">' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family Digital Bulk</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Family Digital Bulk</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Entertainment Add-On\',31);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Entertainment Add-On\',31);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Entertainment Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Choice Add-On FDB\',21);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Choice Add-On FDB\',21);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Choice Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Choice Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On FDB\',22);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Xtra Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On FDB\',26);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Ultimate Add-On FDB\',26);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Ultimate Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On FDB\',23);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Premier Add-On FDB\',23);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Premier Add-On</a></td>' +
 
             '</tr>' +
             '<tr>' +
@@ -723,14 +723,14 @@ app.controller('PP_Controller', ['$scope',
             '<td colspan="3">&nbsp;</td></tr>' +
             '<tr>' +
             '	<td width="9%" bgcolor=#e0e1e1><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Total Choice Bulk" name="total_choice_placeholder"></td>' +
-            '	<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[14]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Bulk</a></td>' +
+            '	<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[14];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Bulk</a></td>' +
             '	<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '	<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '	<td width="1%" class="innerboxHeadBig">&nbsp;</td>' +
             '</tr>' +
             '<tr>' +
-            '	<td bgcolor=#e0e1e1><a href="javascript:img_click_Base(\'Total Choice Plus TMU\',16);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[16]; img_on_Base(\'Total Choice Plus TMU\',16); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Total Choice Plus TMU\',16);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus MDU Tier" name="Total Choice Plus TMU"></a></td>' +
-            '	<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[15]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Plus_MDU Tier</a></td>' +
+            '	<td bgcolor=#e0e1e1><a href="" ng-click="img_click_Base(\'Total Choice Plus TMU\',16);" ng-mouseover="ppSUMMARY = arrayBaseSummary[16]; img_on_Base(\'Total Choice Plus TMU\',16);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus TMU\',16);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus MDU Tier" name="Total Choice Plus TMU"></a></td>' +
+            '	<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[15];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Plus_MDU Tier</a></td>' +
             '	<td class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '	<td class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '	<td class="innerboxHeadBig">&nbsp;</td>' +
@@ -789,68 +789,68 @@ app.controller('PP_Controller', ['$scope',
 
             '	<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Choice Digital Bulk" name="total_choice_placeholder">' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[18] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Digital Bulk</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Choice Digital Bulk</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On\',14);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Xtra Add-On\',14);" ng-mouseover="ppSUMMARY = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[29];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Xtra Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On CDB\',25);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Ultimate Add-On CDB\',25);" ng-mouseover="ppSUMMARY = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[30];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Ultimate Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On CDB\',27);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Premier Add-On CDB\',27);" ng-mouseover="ppSUMMARY = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[31];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Premier Add-On</a></td>' +
 
 
             '	<td bgcolor=#e0e1e1 class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Entertainment Digital Bulk" name="total_choice_placeholder">' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Digital Bulk</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Entertainment Digital Bulk</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Choice Add-On EDB\',20);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Choice Add-On EDB\',20);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Choice Add-On</a>' +
             ' <br>' +
 
-            '<a href="javascript:img_click_Base(\'Xtra Add-On EDB\',9);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Xtra Add-On EDB\',9);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Xtra Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On EDB\',17);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Ultimate Add-On EDB\',17);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Ultimate Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On EDB\',15);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Premier Add-On EDB\',15);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
 
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Premier Add-On</a></td>' +
 
 
 
             '<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Family Digital Bulk" name="total_choice_placeholder">' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family Digital Bulk</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Family Digital Bulk</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Entertainment Add-On\',31);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Entertainment Add-On\',31);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Entertainment Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Choice Add-On FDB\',21);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Choice Add-On FDB\',21);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Choice Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Choice Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On FDB\',22);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Xtra Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On FDB\',26);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Ultimate Add-On FDB\',26);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Ultimate Add-On</a>' +
             ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On FDB\',23);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
+            '<a href="" ng-click="img_click_Base(\'Premier Add-On FDB\',23);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
             '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Premier Add-On</a></td>' +
 
             '</tr>' +
             '<tr>' +
@@ -887,23 +887,23 @@ app.controller('PP_Controller', ['$scope',
             '<td colspan="6" height="10px"></td>' +
             '</tr>' +
             '<tr>' +
-            '<td><a href="javascript:img_click_Base(\'Family\',1);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; img_on_Base(\'Family\',1); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a></td>' +
-            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family</a></td>' +
-            '<td><a href="javascript:img_click_Base(\'Entertainment\',28);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment\',28);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment" name="Entertainment"/></a></td>' +
-            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/select.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment</a></td>' +
-            '<td><a href="javascript:img_click_Base(\'Choice\',2);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; img_on_Base(\'Choice\',2); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a></td>' +
-            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice</a></td>' +
-            '<td><a href="javascript:img_click_Base(\'Xtra\',3);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a></td>' +
-            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra.html\');"  onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Xtra</a></td>' +
+            '<td><a href="" ng-click="img_click_Base(\'Family\',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base(\'Family\',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Family</a></td>' +
+            '<td><a href="" ng-click="img_click_Base(\'Entertainment\',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment\',28);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment" name="Entertainment"/></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/select.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Entertainment</a></td>' +
+            '<td><a href="" ng-click="img_click_Base(\'Choice\',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base(\'Choice\',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Choice</a></td>' +
+            '<td><a href="" ng-click="img_click_Base(\'Xtra\',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra.html\');"  ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;">Xtra</a></td>' +
             '</tr>' +
             '<tr>' +
             '<td colspan="6" height="10px"></td>' +
             '</tr>' +
             '<tr>' +
-            '<td><a href="javascript:img_click_Base(\'Ultimate\',4);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a></td>' +
-            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Ultimate</a></td>' +
-            '<td><a href="javascript:img_click_Base(\'Premier\',6);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; img_on_Base(\'Premier\',6); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier"  border="0" /></a></td>' +
-            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Premier</a></td>' +
+            '<td><a href="" ng-click="img_click_Base(\'Ultimate\',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Ultimate</a></td>' +
+            '<td><a href="" ng-click="img_click_Base(\'Premier\',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base(\'Premier\',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier"  border="0" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Premier</a></td>' +
             '<td></td>' +
             '<td class="innerboxHeadBig"></td>' +
             '</tr>' +
@@ -1493,8 +1493,8 @@ app.controller('PP_Controller', ['$scope',
         };
 
         var total_choice_plus_on = function() {
-            total_choice_plus_anchor.onMouseOver = 'SUMMARY.innerHTML = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);';
-            total_choice_plus_anchor.onMouseOut = 'SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'; /**/
+            total_choice_plus_anchor.onMouseOver = 'ppSUMMARY = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);';
+            total_choice_plus_anchor.onMouseOut = 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'; /**/
             total_choice_plus_anchor.href = 'javascript:img_click_Base(\'Total Choice Plus\',18);';
         };
 
@@ -1505,8 +1505,8 @@ app.controller('PP_Controller', ['$scope',
         };
 
         var xtra_tier_on = function() {
-            xtra_tier_anchor.onMouseOver = 'SUMMARY.innerHTML = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);';
-            xtra_tier_anchor.onMouseOut = 'SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'; /**/
+            xtra_tier_anchor.onMouseOver = 'ppSUMMARY = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);';
+            xtra_tier_anchor.onMouseOut = 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'; /**/
             xtra_tier_anchor.href = 'javascript:img_click_Base(\'Choice Xtra Classic MDU Tier\',19);';
         };
 
@@ -2314,7 +2314,7 @@ app.controller('PP_Controller', ['$scope',
             //theform.txtTax.value = formatCurrency(varStateTax);
             theform.txtGrandTotal.value = formatCurrency(varGrandTotal);
 
-            get2ndMonthText();
+            get2ndMonthText(varProtectTotal);
 
 
 
@@ -2532,7 +2532,7 @@ app.controller('PP_Controller', ['$scope',
         }
 
 
-        function get2ndMonthText() {
+        function get2ndMonthText(varProtectTotal) {
             var strText = '';
             var numProtect = 0;
             if (varImageOn_Protect == 10 || varImageOn_Premier == 12) {
@@ -2643,8 +2643,7 @@ app.controller('PP_Controller', ['$scope',
             resetAllNoRefresh();
         };
 
-        function fillMDUdiv(value, textEntry) {
-            ddVal = value;
+        var fillMDUdiv = function(textEntry) {
             varMirrorFeeWaiver = 1;
             if (textEntry == 'TMW/JMW') {
                 document.getElementById("MDUselectionInfo").innerHTML = (textEntry + ' : <span style="color:red;">Mirroring fee begins after 3rd receiver</span><br>Mouseover a package for Quick Summary instructions.');
@@ -2654,22 +2653,22 @@ app.controller('PP_Controller', ['$scope',
                 document.getElementById("MDUselectionInfo").innerHTML = ('You selected: ' + textEntry + '<br>Mouseover a package for Quick Summary instructions.');
             }
 
-            if (ddVal == 0) { //default  
+            if ((textEntry == null) || (textEntry == '')) { //default  
                 MDUdiv.innerHTML = arrayMDUInnerHTML[1];
                 document.getElementById("lyrEnglish2").style.display = 'none';
                 document.getElementById("MDUdefault").style.display = 'none';
             }
-            if (ddVal == 1) { //MDU / JDU / MDD / MDL
+            if (textEntry == 'MDU/JDU') { //MDU / JDU / MDD / MDL
                 MDUdiv.innerHTML = arrayMDUInnerHTML[2];
                 document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
             }
-            if (ddVal == 2) { //TCD / JCD
+            if (textEntry == "TCD/JCD") { //TCD / JCD
                 MDUdiv.innerHTML = arrayMDUInnerHTML[3];
                 document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
             }
-            if (ddVal == 3) { //TMW / JMW
+            if (textEntry == "TMW/JMW") { //TMW / JMW
                 MDUdiv.innerHTML = arrayMDUInnerHTML[4];
                 document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
@@ -2685,7 +2684,7 @@ app.controller('PP_Controller', ['$scope',
                 varImageOn_premier_addon_fdb = 0;
                 //setTimeout(xtra_tier_on, 5000);
             }
-            if (ddVal == 4) { // TMU / JMU
+            if (textEntry == "TMU/JMU") { // TMU / JMU
                 MDUdiv.innerHTML = arrayMDUInnerHTML[6];
                 document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
@@ -2775,6 +2774,37 @@ app.controller('PP_Controller', ['$scope',
         $scope.varDefaultSummary = varDefaultSummary;
         $scope.ppSUMMARY = varDefaultSummary;
         $scope.arrayBaseSummary = arrayBaseSummary;
+        $scope.arrayParaSummary = arrayParaSummary;
         $scope.img_click_Base = img_click_Base;
+        $scope.img_on_ds = img_on_ds;
+        $scope.img_off_ds = img_off_ds;
+        $scope.img_click_ds = img_click_ds;
+        $scope.img_click_primaryCredit = img_click_primaryCredit;
+        $scope.img_on_primaryCredit = img_on_primaryCredit;
+        $scope.img_off_primaryCredit = img_off_primaryCredit;
+        $scope.img_Click_ARS = img_Click_ARS;
+        $scope.img_Click_ARS_Extra = img_Click_ARS_Extra;
+        $scope.img_Click_DVR = img_Click_DVR;
+        $scope.img_Click_HD_Access = img_Click_HD_Access;
+        $scope.img_Click_MRV = img_Click_MRV;
+        $scope.img_on = img_on;
+        $scope.img_off_ARS = img_off_ARS;
+        $scope.img_off_DVR = img_off_DVR;
+        $scope.img_off_MRV = img_off_MRV;
+        $scope.img_off_HD_Access = img_off_HD_Access;
+        $scope.img_mouseout_ars_extra = img_mouseout_ars_extra;
+        $scope.img_mouseover_ars_extra = img_mouseover_ars_extra;
+        $scope.img_click_Prem = img_click_Prem;
+        $scope.img_off_Prem = img_off_Prem;
+        $scope.img_click_Protect = img_click_Protect;
+        $scope.img_off_Protect = img_off_Protect;
+        $scope.img_click_hdextra = img_click_hdextra;
+        $scope.img_click_premier = img_click_premier;
+        $scope.swapBasePackageMDU = swapBasePackageMDU;
+        $scope.swapBasePackageLanguage = swapBasePackageLanguage;
+        $scope.img_off_Base = img_off_Base;
+        $scope.img_on_Base = img_on_Base;
+        $scope.fillMDUdiv = fillMDUdiv;
+        $scope.mduoptions = ["MDU/JDU","TCD/JCD","TMW/JMW","TMU/JMU"];
     }
 ]);
