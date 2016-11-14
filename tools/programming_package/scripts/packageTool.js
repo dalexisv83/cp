@@ -277,29 +277,29 @@ app.controller('PP_Controller', ['$scope',
 
 
         // Opcion Especial??
-        //arrayParaSummary[0] =	'NOT USED';
+        //arrayParaSummary[0] = 'NOT USED';
 
         // Optimo Mas
         arrayParaSummary[1] = outputSummary(28);
 
         // Opcion Extra Especial
-        //arrayParaSummary[2] =	'NOT USED';
+        //arrayParaSummary[2] = 'NOT USED';
 
         // Mas Ultra??
-        //arrayParaSummary[3] =	'NOT USED';//outputSummary(17);
+        //arrayParaSummary[3] = 'NOT USED';//outputSummary(17);
 
         // Opcion Ultra Especial
-        //arrayParaSummary[4] =	'NOT USED';
+        //arrayParaSummary[4] = 'NOT USED';
 
         // Lo Maximo
         arrayParaSummary[5] = outputSummary(20);
 
         // Opcion Premier?
-        //arrayParaSummary[6] =	'NOT USED';
+        //arrayParaSummary[6] = 'NOT USED';
 
 
 
-        //arrayParaSummary[8] =	'NOT USED';
+        //arrayParaSummary[8] = 'NOT USED';
 
         // Mas Ultra
         arrayParaSummary[9] = outputSummary(17);
@@ -356,7 +356,7 @@ app.controller('PP_Controller', ['$scope',
             '<tr><td class="nlb">-One year commitment to plan required.</td></tr>' +
             '<tr><td class="nlb">-Customers are not charged until the 2nd month.</td></tr>' +
             '<tr><td class="nlb">-Cancellation fee applies.</td></tr></table>'
-            //ARS-HD Service		
+            //ARS-HD Service        
         arrayExtraSummary[2] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>ARS-HD Service</strong></td></tr>' +
             '<tr><td class="nlb">-Provides access to our superior HD technology.</td></tr>' +
             '<tr><td class="nlb">-Monthly: $10</td></tr>' +
@@ -368,7 +368,7 @@ app.controller('PP_Controller', ['$scope',
             '<tr><td class="nlb">-First 3 months free. (See HD Extra Pack page for details.)</td></tr>' +
             '<tr><td class="nlb">-Includes unique HD channels.</td></tr></table>'
 
-        //MRV		
+        //MRV       
         arrayExtraSummary[4] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Whole-Home DVR</strong></td></tr>' +
             '<tr><td class="nlb">-Provides access to our superior multi-room technology.</td></tr>' +
             '<tr><td class="nlb">-Monthly: $3</td></tr>' +
@@ -420,8 +420,8 @@ app.controller('PP_Controller', ['$scope',
         /*tax info---------------------------------
         //Only states that charge tax on programming are listed.
         function taxObj(varState,varTax) {
-        	this.state = varState;								//name of state
-        	this.tax = varTax;										//tax amount
+            this.state = varState;                              //name of state
+            this.tax = varTax;                                      //tax amount
         }
         counter = 0;
         var myTaxObj = new Array();
@@ -457,92 +457,92 @@ app.controller('PP_Controller', ['$scope',
 
         // Default no selections
         arrayMDUInnerHTML[1] = '<table cellspacing="0" cellpadding="0" border="0" width="100%">' +
-            '	<tr>' +
-            '		<td colspan="6"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/></td>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
-            '		<a id="total_choice_plus_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
-            '		<a id="xtra_tier_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
-            '	</tr>' +
+            '<tr>' +
+            '<td colspan="6"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/></td>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
+            '<a id="total_choice_plus_anchor"><img src="../../all_tools/common_assets/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
+            '<a id="xtra_tier_anchor"><img src="../../all_tools/common_assets/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
+            '</tr>' +
             '</table>' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Tier" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On" name="Premier Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family Digital Bulk" name="Family Digital Bulk" border="0" style="display:none;"/><br />'
-        '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" style="display:none;"/><br />' +
-        '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" style="display:none;"/><br />' +
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
-        '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" style="display:none;"/><br />';
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Tier" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On" name="Premier Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Family Digital Bulk" name="Family Digital Bulk" border="0" style="display:none;"/><br />'
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" style="display:none;"/><br />';
 
 
         //MDU / JDU
         arrayMDUInnerHTML[2] = '<table width="100%" cellspacing="0" cellpadding="2" border="0">' +
             '<tr>' +
-            '				<td><a href="javascript:img_click_Base(\'Family\',1);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; img_on_Base(\'Family\',1); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a></td>' +
-            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:50px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family</a></td>' +
-            '				<td><a href="javascript:img_click_Base(\'Xtra Add-On FDB\',32);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Select" name="Select" border="0" /></a></td>' +
-            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:40px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/select.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[32]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Select</a></td>' +
-            '				<td><a href="javascript:img_click_Base(\'Preferred Choice\',11);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[7]; img_on_Base(\'Preferred Choice\',11); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Preferred Choice\',11);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" /></a></td>' +
-            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:40px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_choice.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[7]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Preferred Choice</a></td>' +
-            '				<td><a href="javascript:img_click_Base(\'Choice\',2);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; img_on_Base(\'Choice\',2); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a></td>' +
-            '				<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:50px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice</a></td>' +
-            '			</tr>' +
+            '<td><a href="javascript:img_click_Base(\'Family\',1);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; img_on_Base(\'Family\',1); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:50px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family</a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Xtra Add-On FDB\',32);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Select" name="Select" border="0" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:40px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/select.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[32]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Select</a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Preferred Choice\',11);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[7]; img_on_Base(\'Preferred Choice\',11); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Preferred Choice\',11);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:40px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_choice.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[7]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Preferred Choice</a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Choice\',2);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; img_on_Base(\'Choice\',2); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;margin-right:50px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice</a></td>' +
+            '</tr>' +
             '<tr>' +
-            '	<td><a href="javascript:img_click_Base(\'Xtra\',3);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a></td>' +
-            '	<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra.html\');"  onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Xtra</a></td>' +
-            '	<td><a href="javascript:img_click_Base(\'Ultimate\',4);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a></td>' +
-            '	<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Ultimate</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
-            '	<td><a href="javascript:img_click_Base(\'Premier\',6);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; img_on_Base(\'Premier\',6); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier"  border="0" /></a></td>' +
-            '	<td class="innerboxHeadBig" width="40%"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Premier</a></td>' +
-            '	<td><a href="javascript:img_click_Base(\'Entertainment\',28);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment\',28);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment"  border="0" /></a></td>' +
-            '	<td class="innerboxHeadBig" width="40%"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_2.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment</a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Xtra\',3);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" style="margin-left:5px;" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra.html\');"  onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Xtra</a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Ultimate\',4);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a></td>' +
+            '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Ultimate</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
+            '<td><a href="javascript:img_click_Base(\'Premier\',6);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; img_on_Base(\'Premier\',6); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier"  border="0" /></a></td>' +
+            '<td class="innerboxHeadBig" width="40%"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Premier</a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Entertainment\',28);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment\',28);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment"  border="0" /></a></td>' +
+            '<td class="innerboxHeadBig" width="40%"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_2.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment</a></td>' +
 
             '</tr>' +
             '<tr>' +
-            '<td><a href="javascript:img_click_Base(\'Preferred Extra\',33);" onmouseout="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);"onmouseover="SUMMARY.innerHTML = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);return true;"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a></td><td width="25%" class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_xtra.html\');" onmouseout="SUMMARY.innerHTML = varDefaultSummary;" onmouseover="SUMMARY.innerHTML = arrayBaseSummary[33]; importXML(); return true;">Preferred Xtra</a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Preferred Extra\',33);" onmouseout="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);"onmouseover="SUMMARY.innerHTML = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);return true;"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="../../all_tools/common_assets/img/greenBoxNorm.gif"></a></td><td width="25%" class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_xtra.html\');" onmouseout="SUMMARY.innerHTML = varDefaultSummary;" onmouseover="SUMMARY.innerHTML = arrayBaseSummary[33]; importXML(); return true;">Preferred Xtra</a></td>' +
             '<td colspan="7" height="12px"></td>' +
             '</tr>' +
             '<tr>' +
-            '	<td colspan="8" height="12px"></td>' +
+            '<td colspan="8" height="12px"></td>' +
             '</tr>' +
             '<tr>' +
-            '	<td class="innerboxText" colspan="8">To add Preferred Choice in Rio: Add/Change Programming > "International" tab.' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
-            '		<a id="total_choice_plus_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
-            '		<a id="xtra_tier_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
-            '	</td>' +
+            '<td class="innerboxText" colspan="8">To add Preferred Choice in Rio: Add/Change Programming > "International" tab.' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
+            '<a id="total_choice_plus_anchor"><img src="../../all_tools/common_assets/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
+            '<a id="xtra_tier_anchor"><img src="../../all_tools/common_assets/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
+            '</td>' +
             '</tr>' +
             '</table>' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On EDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On" name="Premier Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On" name="Ultimate Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family Digital Bulk" name="Family Digital Bulk" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Basico" name="Basico" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Optimo Mas" name="Optimo Mas" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On EDB" name="Ultimate Add-On EDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Familiar Ultra" name="Familiar Ultra" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Lo Maximo" name="Lo Maximo" border="0" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On EDB" name="Premier Add-On EDB" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On" name="Choice Add-On EDB" style="display:none;"/>' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" style="display:none;"/>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" style="display:none;"/><br />';
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On EDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On" name="Premier Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On" name="Ultimate Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Family Digital Bulk" name="Family Digital Bulk" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Basico" name="Basico" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Optimo Mas" name="Optimo Mas" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On EDB" name="Ultimate Add-On EDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Familiar Ultra" name="Familiar Ultra" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Lo Maximo" name="Lo Maximo" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On EDB" name="Premier Add-On EDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On" name="Choice Add-On EDB" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" style="display:none;"/><br />';
 
 
 
@@ -550,68 +550,68 @@ app.controller('PP_Controller', ['$scope',
         //TCD / JCD
         arrayMDUInnerHTML[3] = '<table cellspacing=2 width="680" style="position:relative; top:-2px;" cellpadding=0>' +
             '<tr>' +
-            '	<td width="33%" class="innerboxHeadBig4" valign=top><strong>If TC Limited &amp;<br> TC_MDU Tier are on account:</strong>' +
-            '	<br>' +
-            '	<a href="javascript:img_click_Base(\'Total Choice for TCD/JCD\',12);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[8]; img_on_Base(\'Total Choice for TCD/JCD\',12); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Total Choice for TCD/JCD\',12);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[8]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >TC Limited & Total Choice MDU Tier</a>' +
-            '	<br>' +
-            '	<a id="total_choice_plus_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[10]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Plus MDU Tier</a>' +
-            '	</td>' +
-            '	<td width="34%" class="innerboxHeadBig4" valign=top bgcolor=#e0e1e1><strong>If TC Limited &amp;<br> Choice_MDU Tier are on account:</strong>' +
-            '	<br>' +
-            '	<a href="javascript:img_click_Base(\'Choice Tier for TCD/JCD\',13);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[9]; img_on_Base(\'Choice Tier for TCD/JCD\',13); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[9] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" >TC Limited & Choice MDU Tier</a>' +
-            '	<br>' +
-            '	<a id="xtra_tier_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[11]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Xtra Classic MDU Tier</a>' +
-            '	</td>' +
-            '	<td width="33%" class="innerboxHeadBig4" valign=top><strong>If Student Preferred Bulk is on account:</strong>' +
-            '	<br>' +
+            '<td width="33%" class="innerboxHeadBig4" valign=top><strong>If TC Limited &amp;<br> TC_MDU Tier are on account:</strong>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Total Choice for TCD/JCD\',12);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[8]; img_on_Base(\'Total Choice for TCD/JCD\',12); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Total Choice for TCD/JCD\',12);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[8]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >TC Limited & Total Choice MDU Tier</a>' +
+            '<br>' +
+            '<a id="total_choice_plus_anchor"><img src="../../all_tools/common_assets/img/greenBoxOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[10]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Plus MDU Tier</a>' +
+            '</td>' +
+            '<td width="34%" class="innerboxHeadBig4" valign=top bgcolor=#e0e1e1><strong>If TC Limited &amp;<br> Choice_MDU Tier are on account:</strong>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Choice Tier for TCD/JCD\',13);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[9]; img_on_Base(\'Choice Tier for TCD/JCD\',13); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[9] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" >TC Limited & Choice MDU Tier</a>' +
+            '<br>' +
+            '<a id="xtra_tier_anchor"><img src="../../all_tools/common_assets/img/greenBoxOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[11]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Xtra Classic MDU Tier</a>' +
+            '</td>' +
+            '<td width="33%" class="innerboxHeadBig4" valign=top><strong>If Student Preferred Bulk is on account:</strong>' +
+            '<br>' +
 
-            '	<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Student Preferred Bulk" name="total_choice_placeholder">' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_preferred_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[25]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Student Preferred Bulk</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Student Choice Add-On\',29);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[26]; img_on_Base(\'Student Choice Add-On\',29); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Student Choice Add-On\',29);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Student Choice Add-On" name="Student Choice Add-On"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[26]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Student Choice Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Student Choice Xtra Classic Add-On\',30);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[27]; img_on_Base(\'Student Choice Xtra Classic Add-On\',30); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Student Choice Xtra Classic Add-On\',30);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_xtra_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[27]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Student Choice Xtra Classic Add-On</a><br>' +
+            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Student Preferred Bulk" name="total_choice_placeholder">' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_preferred_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[25]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Student Preferred Bulk</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Student Choice Add-On\',29);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[26]; img_on_Base(\'Student Choice Add-On\',29); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Student Choice Add-On\',29);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Student Choice Add-On" name="Student Choice Add-On"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[26]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Student Choice Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Student Choice Xtra Classic Add-On\',30);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[27]; img_on_Base(\'Student Choice Xtra Classic Add-On\',30); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Student Choice Xtra Classic Add-On\',30);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_xtra_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[27]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Student Choice Xtra Classic Add-On</a><br>' +
             '</td>' +
 
 
             '</tr>' +
             '<tr>' +
             '<td class="innerboxText" colspan="3" style="display:none;">' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice" style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate"  style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On EDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB"  style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Basico" name="Basico" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Optimo Mas" name="Optimo Mas" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Familiar Ultra" name="Familiar Ultra"  style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Lo Maximo" name="Lo Maximo" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On EDB" name="Ultimate Add-On EDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On EDB" name="Premier Add-On EDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On EDB" name="Choice Add-On EDB" style="display:none;"/><br />' +
-            '	</td>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice" style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate"  style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On EDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB"  style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Basico" name="Basico" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Optimo Mas" name="Optimo Mas" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Familiar Ultra" name="Familiar Ultra"  style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Lo Maximo" name="Lo Maximo" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On EDB" name="Ultimate Add-On EDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On EDB" name="Premier Add-On EDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On EDB" name="Choice Add-On EDB" style="display:none;"/><br />' +
+            '</td>' +
             '</tr>' +
             '</table>'
 
@@ -624,96 +624,96 @@ app.controller('PP_Controller', ['$scope',
             '</tr>' +
             '<tr>' +
 
-            '	<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Choice Digital Bulk" name="total_choice_placeholder">' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[18] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Digital Bulk</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On\',14);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On CDB\',25);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On CDB\',27);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            '<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Choice Digital Bulk" name="total_choice_placeholder">' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[18] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Digital Bulk</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Xtra Add-On\',14);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Ultimate Add-On CDB\',25);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Premier Add-On CDB\',27);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
 
 
-            '	<td bgcolor=#e0e1e1 class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Entertainment Digital Bulk" name="total_choice_placeholder">' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Digital Bulk</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Choice Add-On EDB\',20);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On EDB\',9);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On EDB\',17);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On EDB\',15);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
+            '<td bgcolor=#e0e1e1 class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Entertainment Digital Bulk" name="total_choice_placeholder">' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Digital Bulk</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Choice Add-On EDB\',20);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Xtra Add-On EDB\',9);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Ultimate Add-On EDB\',17);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Premier Add-On EDB\',15);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
 
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
 
 
 
             '<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Family Digital Bulk" name="total_choice_placeholder">' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family Digital Bulk</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Entertainment Add-On\',31);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Choice Add-On FDB\',21);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Choice Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On FDB\',22);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On FDB\',26);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On FDB\',23);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family Digital Bulk</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Entertainment Add-On\',31);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Choice Add-On FDB\',21);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Choice Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Xtra Add-On FDB\',22);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Ultimate Add-On FDB\',26);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Premier Add-On FDB\',23);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
 
             '</tr>' +
             '<tr>' +
             '<td colspan="3" height="15px">Note: Some properties may also provide <a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/en_espanol_bulk.html\');">En Espanol Bulk</a> at $0.<br>See <a class="step4" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_digi_bulk.html" target="_blank">Choice Xtra Classic Digital Bulk</a> and <a class="step4" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on.html" target="_blank">Choice Xtra Classic Add-On</a>.</td>' +
             '</tr>' +
             '<tr>' +
-            '	<td class="innerboxText" colspan="4" style="display:none;">' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Family" name="Family" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice" style="display:none;"></br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Mas Latino" name="Mas Latino" style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Optimo Mas" name="Optimo Mas" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Lo Maximo" name="Lo Maximo" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice for TCD/JCD" name="Total Choice for TCD/JCD" style="display:none;"><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Tier for TCD/JCD" name="Choice Tier for TCD/JCD" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"  style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Mas Ultra" name="Mas Ultra" style="display:none;"/><br />' +
-            '	</td>' +
+            '<td class="innerboxText" colspan="4" style="display:none;">' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Family" name="Family" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice" style="display:none;"></br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxOver.gif" border="0" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Mas Latino" name="Mas Latino" style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Optimo Mas" name="Optimo Mas" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Lo Maximo" name="Lo Maximo" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice for TCD/JCD" name="Total Choice for TCD/JCD" style="display:none;"><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Tier for TCD/JCD" name="Choice Tier for TCD/JCD" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"  style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Mas Ultra" name="Mas Ultra" style="display:none;"/><br />' +
+            '</td>' +
             '</tr>' +
             '</table>'
 
@@ -722,59 +722,59 @@ app.controller('PP_Controller', ['$scope',
             '<tr><td colspan="3" nowrap bgcolor=#e0e1e1><strong>If Total Choice Bulk is on account:</strong></td>' +
             '<td colspan="3">&nbsp;</td></tr>' +
             '<tr>' +
-            '	<td width="9%" bgcolor=#e0e1e1><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Total Choice Bulk" name="total_choice_placeholder"></td>' +
-            '	<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[14]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Bulk</a></td>' +
-            '	<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
-            '	<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
-            '	<td width="1%" class="innerboxHeadBig">&nbsp;</td>' +
+            '<td width="9%" bgcolor=#e0e1e1><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Total Choice Bulk" name="total_choice_placeholder"></td>' +
+            '<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[14]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Bulk</a></td>' +
+            '<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
+            '<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
+            '<td width="1%" class="innerboxHeadBig">&nbsp;</td>' +
             '</tr>' +
             '<tr>' +
-            '	<td bgcolor=#e0e1e1><a href="javascript:img_click_Base(\'Total Choice Plus TMU\',16);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[16]; img_on_Base(\'Total Choice Plus TMU\',16); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Total Choice Plus TMU\',16);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus MDU Tier" name="Total Choice Plus TMU"></a></td>' +
-            '	<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[15]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Plus_MDU Tier</a></td>' +
-            '	<td class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
-            '	<td class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
-            '	<td class="innerboxHeadBig">&nbsp;</td>' +
+            '<td bgcolor=#e0e1e1><a href="javascript:img_click_Base(\'Total Choice Plus TMU\',16);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[16]; img_on_Base(\'Total Choice Plus TMU\',16); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Total Choice Plus TMU\',16);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus MDU Tier" name="Total Choice Plus TMU"></a></td>' +
+            '<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[15]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Total Choice Plus_MDU Tier</a></td>' +
+            '<td class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
+            '<td class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
+            '<td class="innerboxHeadBig">&nbsp;</td>' +
             '</tr>' +
             '<tr>' +
-            '	<td colspan="6" height="0px"></td>' +
+            '<td colspan="6" height="0px"></td>' +
             '</tr>' +
             '<tr>' +
-            '	<td class="innerboxText" colspan="6">To add service in Rio: Add/Change Programming > "Other" tab.' +
-            '	</td>' +
-            '	<td width="19%" colspan="6" class="innerboxText" style="display:none;">To add service in Rio: Add/Change Programming > "Other" tab.</td>' +
+            '<td class="innerboxText" colspan="6">To add service in Rio: Add/Change Programming > "Other" tab.' +
+            '</td>' +
+            '<td width="19%" colspan="6" class="innerboxText" style="display:none;">To add service in Rio: Add/Change Programming > "Other" tab.</td>' +
             '</tr>' +
             '<tr>' +
-            '	<td class="innerboxText" colspan="4" style="display:none;">' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Family" name="Family" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice" style="display:none;"></br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Xtra" name="Xtra" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Basico" name="Basico" style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Optimo Mas" name="Optimo Mas" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Familiar Ultra" name="Familiar Ultra"  style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Lo Maximo" name="Lo Maximo" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice for TCD/JCD" name="Total Choice for TCD/JCD" style="display:none;"><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Tier for TCD/JCD" name="Choice Tier for TCD/JCD" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On EDB" name="Premier Add-On EDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On" style="display:none;"><br>' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus" name="Total Choice Plus" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On EDB" name="Choice Add-On EDB" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
-            '	</td>' +
+            '<td class="innerboxText" colspan="4" style="display:none;">' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Family" name="Family" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice" style="display:none;"></br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxOver.gif" border="0" alt="Xtra" name="Xtra" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Basico" name="Basico" style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Optimo Mas" name="Optimo Mas" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Familiar Ultra" name="Familiar Ultra"  style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Lo Maximo" name="Lo Maximo" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice for TCD/JCD" name="Total Choice for TCD/JCD" style="display:none;"><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Tier for TCD/JCD" name="Choice Tier for TCD/JCD" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On CDB" name="Premier Add-On CDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On EDB" name="Premier Add-On EDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus" name="Total Choice Plus" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On EDB" name="Choice Add-On EDB" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
+            '</td>' +
             '</tr>' +
             '</table>'
 
@@ -787,97 +787,97 @@ app.controller('PP_Controller', ['$scope',
             '</tr>' +
             '<tr>' +
 
-            '	<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Choice Digital Bulk" name="total_choice_placeholder">' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[18] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Digital Bulk</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On\',14);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On CDB\',25);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On CDB\',27);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            '<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Choice Digital Bulk" name="total_choice_placeholder">' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[18] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Digital Bulk</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Xtra Add-On\',14);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[29]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Ultimate Add-On CDB\',25);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[30]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Premier Add-On CDB\',27);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[31]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
 
 
-            '	<td bgcolor=#e0e1e1 class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Entertainment Digital Bulk" name="total_choice_placeholder">' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Digital Bulk</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Choice Add-On EDB\',20);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Add-On</a>' +
-            ' <br>' +
+            '<td bgcolor=#e0e1e1 class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Entertainment Digital Bulk" name="total_choice_placeholder">' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28] ; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Digital Bulk</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Choice Add-On EDB\',20);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice Add-On</a>' +
+            '<br>' +
 
-            '<a href="javascript:img_click_Base(\'Xtra Add-On EDB\',9);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On EDB\',17);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On EDB\',15);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
+            '<a href="javascript:img_click_Base(\'Xtra Add-On EDB\',9);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Ultimate Add-On EDB\',17);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Premier Add-On EDB\',15);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
 
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[28]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
 
 
 
             '<td class="innerboxHeadBig4" valign=top><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenDotOver.gif" border="0" alt="Family Digital Bulk" name="total_choice_placeholder">' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family Digital Bulk</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Entertainment Add-On\',31);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Choice Add-On FDB\',21);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Choice Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Xtra Add-On FDB\',22);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Ultimate Add-On FDB\',26);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
-            ' <br>' +
-            '<a href="javascript:img_click_Base(\'Premier Add-On FDB\',23);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
-            '	 ' +
-            '	<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family Digital Bulk</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Entertainment Add-On\',31);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Choice Add-On FDB\',21);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Choice Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Xtra Add-On FDB\',22);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Xtra Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Ultimate Add-On FDB\',26);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Ultimate Add-On</a>' +
+            '<br>' +
+            '<a href="javascript:img_click_Base(\'Premier Add-On FDB\',23);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
+            ' ' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[19]; return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Premier Add-On</a></td>' +
 
             '</tr>' +
             '<tr>' +
             '<td colspan="3" height="15px">Note: Some properties may also provide <a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/en_espanol_bulk.html\');">En Espanol Bulk</a> at $0.<br>See <a class="step4" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_digi_bulk.html" target="_blank">Choice Xtra Classic Digital Bulk</a> and <a class="step4" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on.html" target="_blank">Choice Xtra Classic Add-On</a>.</td>' +
             '</tr>' +
             '<tr>' +
-            '	<td class="innerboxText" colspan="3" style="display:none;">' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Family" name="Family" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice" style="display:none;"></br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Xtra" name="Xtra" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Ultimate" name="Ultimate" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" border="0" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Mas Latino" name="Mas Latino" style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Optimo Mas" name="Optimo Mas" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Lo Maximo" name="Lo Maximo" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" style="display:none;" /><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice for TCD/JCD" name="Total Choice for TCD/JCD" style="display:none;"><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Tier for TCD/JCD" name="Choice Tier for TCD/JCD" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"  style="display:none;"/><br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" border="0" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Mas Ultra" name="Mas Ultra" style="display:none;"/><br />' +
-            '	</td>' +
+            '<td class="innerboxText" colspan="3" style="display:none;">' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Family" name="Family" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice" style="display:none;"></br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxOver.gif" border="0" alt="Xtra" name="Xtra" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxOver.gif" border="0" alt="Ultimate" name="Ultimate" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxOver.gif" border="0" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Mas Latino" name="Mas Latino" style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Optimo Mas" name="Optimo Mas" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Lo Maximo" name="Lo Maximo" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" style="display:none;" /><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice for TCD/JCD" name="Total Choice for TCD/JCD" style="display:none;"><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Tier for TCD/JCD" name="Choice Tier for TCD/JCD" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"  style="display:none;"/><br>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Mas Ultra" name="Mas Ultra" style="display:none;"/><br />' +
+            '</td>' +
             '</tr>' +
             '</table>'
 
@@ -887,22 +887,22 @@ app.controller('PP_Controller', ['$scope',
             '<td colspan="6" height="10px"></td>' +
             '</tr>' +
             '<tr>' +
-            '<td><a href="javascript:img_click_Base(\'Family\',1);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; img_on_Base(\'Family\',1); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Family\',1);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; img_on_Base(\'Family\',1); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a></td>' +
             '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[1]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Family</a></td>' +
-            '<td><a href="javascript:img_click_Base(\'Entertainment\',28);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment\',28);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Entertainment" name="Entertainment"/></a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Entertainment\',28);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Entertainment\',28);" ><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment" name="Entertainment"/></a></td>' +
             '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/select.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[5]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Entertainment</a></td>' +
-            '<td><a href="javascript:img_click_Base(\'Choice\',2);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; img_on_Base(\'Choice\',2); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Choice\',2);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; img_on_Base(\'Choice\',2); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a></td>' +
             '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[2]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Choice</a></td>' +
-            '<td><a href="javascript:img_click_Base(\'Xtra\',3);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Xtra\',3);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a></td>' +
             '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra.html\');"  onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[3]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;">Xtra</a></td>' +
             '</tr>' +
             '<tr>' +
             '<td colspan="6" height="10px"></td>' +
             '</tr>' +
             '<tr>' +
-            '<td><a href="javascript:img_click_Base(\'Ultimate\',4);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Ultimate\',4);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a></td>' +
             '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[4]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Ultimate</a></td>' +
-            '<td><a href="javascript:img_click_Base(\'Premier\',6);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; img_on_Base(\'Premier\',6); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier" name="Premier"  border="0" /></a></td>' +
+            '<td><a href="javascript:img_click_Base(\'Premier\',6);" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; img_on_Base(\'Premier\',6); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier"  border="0" /></a></td>' +
             '<td class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier.html\');" onMouseOver="SUMMARY.innerHTML = arrayBaseSummary[6]; importXML(); return true;" onMouseOut="SUMMARY.innerHTML = varDefaultSummary;" >Premier</a></td>' +
             '<td></td>' +
             '<td class="innerboxHeadBig"></td>' +
@@ -920,48 +920,48 @@ app.controller('PP_Controller', ['$scope',
             '</tr>' +
             '<tr>' +
             '<td class="innerboxText" colspan="6">Base package required for premiums/additional services. See <a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/requirements.html\');">Package Requirements</a>.<br>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
-            '		<a id="total_choice_plus_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
-            '		<a id="xtra_tier_anchor"><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On" name="Premier Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On EDB" name="Xtra Add-On EDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" border="0" style="display:none;"/><br />' +
-            '		<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/><br />'
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" border="0" style="display:none;"/><br />' +
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" border="0" style="display:none;"/><br />' +
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Ultimate Add-On" name="Ultimate Add-On" border="0" style="display:none;"/><br />' +
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
-        '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
+            '<a id="total_choice_plus_anchor"><img src="../../all_tools/common_assets/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
+            '<a id="xtra_tier_anchor"><img src="../../all_tools/common_assets/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On" name="Premier Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On EDB" name="Xtra Add-On EDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/><br />'
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On CDB" name="Ultimate Add-On CDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On FDB" name="Ultimate Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Ultimate Add-On" name="Ultimate Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/><br />' +
 
-        '</td>' +
-        '</tr>' +
-        '</table>'
+            '</td>' +
+            '</tr>' +
+            '</table>'
         // MDUdiv default innerhtml
 
         arrayMDUInnerHTML[8] = '&nbsp;<br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/><br />' +
-            '<a id="total_choice_plus_anchor" onMouseOver=\'return false;\' onMouseOut=\'return false;\' href=\'#\'><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
-            '<a id="xtra_tier_anchor" onMouseOver=\'return false;\' onMouseOut=\'return false;\' href=\'#\'><img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On" name="Premier Add-On" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Xtra Add-On EDB" name="Xtra Add-On EDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
-            '<img src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>';
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/><br />' +
+            '<a id="total_choice_plus_anchor" onMouseOver=\'return false;\' onMouseOut=\'return false;\' href=\'#\'><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
+            '<a id="xtra_tier_anchor" onMouseOver=\'return false;\' onMouseOut=\'return false;\' href=\'#\'><img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On" name="Premier Add-On" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On FDB" name="Xtra Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On EDB" name="Xtra Add-On EDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Choice Add-On FDB" name="Choice Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/><br />' +
+            '<img src="../../all_tools/common_assets/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>';
 
         function xhrSuccess() {
             this.callback.apply(this, this.arguments);
@@ -1041,8 +1041,8 @@ app.controller('PP_Controller', ['$scope',
 
         var isSelectClick = false;
 
-        var image_check_src = 'http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxDown.gif';
-        var image_box_src = 'http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif';
+        var image_check_src = '../../all_tools/common_assets/img/greenBoxDown.gif';
+        var image_box_src = '../../all_tools/common_assets/img/greenBoxNorm.gif';
 
 
         // GLOBALS ////////////////////////////////////////////////////////////////////////////////////
@@ -1160,12 +1160,12 @@ app.controller('PP_Controller', ['$scope',
             dtvImages[i] = new Image();
             dtvImages[i + numRolImages] = new Image();
 
-            dtvImages[i].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif";
-            dtvImages[i + numRolImages].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxDown.gif";
+            dtvImages[i].src = "../../all_tools/common_assets/img/greenBoxNorm.gif";
+            dtvImages[i + numRolImages].src = "../../all_tools/common_assets/img/greenBoxDown.gif";
         }
 
         dtvImages[65] = new Image();
-        dtvImages[65].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxOver.gif";
+        dtvImages[65].src = "../../all_tools/common_assets/img/greenBoxOver.gif";
         var numRolImages_ds = 6; //direct sales preload (for number of tv's)
         var dtvImages_ds = new Array(numRolImages_ds * 2)
         for (i = 1; i <= numRolImages_ds; i++) {
@@ -1173,8 +1173,8 @@ app.controller('PP_Controller', ['$scope',
             dtvImages_ds[i + numRolImages_ds] = new Image();
             var srcPath1PieceOne = "button" + i + "normal.jpg",
             srcPath2PieceOne = "button" + i + "down.jpg";
-            dtvImages_ds[i].src = "http://agentanswercenter.directv.com/en-us/res/system/img/" + srcPath1PieceOne.replace("/", "");
-            dtvImages_ds[i + numRolImages_ds].src = "http://agentanswercenter.directv.com/en-us/res/system/img/" + srcPath2PieceOne.replace("/", "");
+            dtvImages_ds[i].src = "../../all_tools/common_assets/img/" + srcPath1PieceOne.replace("/", "");
+            dtvImages_ds[i + numRolImages_ds].src = "../../all_tools/common_assets/img/" + srcPath2PieceOne.replace("/", "");
             var innerStuff = '\r\n Image:' + i + '.src =' + dtvImages_ds[i].src + '\r\n Image:' + (i + numRolImages_ds) + '.src =' + dtvImages_ds[i + numRolImages_ds].src + '';
         }
 
@@ -1201,39 +1201,39 @@ app.controller('PP_Controller', ['$scope',
         function getPriceMatrix() {
             var AllPackages = xmlDoc2.getElementsByTagName('package');
             varBase[0] = 0.00; //default value
-            varBase[1] = dataProg.packages[10].price; // parseFloat(AllPackages[10].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//29.99;			//Family#
-            varBase[2] = dataProg.packages[3].price; // parseFloat(AllPackages[3].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//52.99;			//Choice#
-            varBase[3] = dataProg.packages[5].price; // parseFloat(AllPackages[135].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//57.99;			//Xtra#
+            varBase[1] = dataProg.packages[10].price; // parseFloat(AllPackages[10].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));      //29.99;            //Family#
+            varBase[2] = dataProg.packages[3].price; // parseFloat(AllPackages[3].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));        //52.99;            //Choice#
+            varBase[3] = dataProg.packages[5].price; // parseFloat(AllPackages[135].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));      //57.99;            //Xtra#
 
-            varBase[4] = dataProg.packages[6].price; // parseFloat(AllPackages[102].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//68.99;			//Ultimate#
-            varBase[5] = 999; // parseFloat(AllPackages[104].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//19.99;			//Basic Choice#
+            varBase[4] = dataProg.packages[6].price; // parseFloat(AllPackages[102].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));      //68.99;            //Ultimate#
+            varBase[5] = 999; // parseFloat(AllPackages[104].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));     //19.99;            //Basic Choice#
 
-            varBase[6] = dataProg.packages[7].price; // parseFloat(AllPackages[27].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//104.99;			//Premier#
-            varBase[7] = dataProg.packages[27].price; // parseFloat(AllPackages[130].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//34.99;			//Mas Latino#
-            varBase[8] = dataProg.packages[28].price; // parseFloat(AllPackages[90].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//36.99;			//Optimo Mas#
-            varBase[9] = dataProg.packages[235].price; // parseFloat(AllPackages[143].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//Xtra Add-On EDB#
-            varBase[10] = dataProg.packages[20].price; // parseFloat(AllPackages[11].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//104.99;			//Lo Maximo#
-            varBase[11] = dataProg.packages[30].price; // parseFloat(AllPackages[26].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//32.99;			//Preferred Choice#
-            varBase[12] = dataProg.packages[233].price; // parseFloat(AllPackages[38].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//10.99;			//Total Choice for TCD/JCD
-            varBase[13] = dataProg.packages[169].price; // parseFloat(AllPackages[59].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//19.99;			//Choice Tier for TCD/JCD
-            varBase[14] = dataProg.packages[62].price; // parseFloat(AllPackages[142].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//17.99->19.99;			//Xtra Add-On
-            varBase[15] = dataProg.packages[244].price; // parseFloat(AllPackages[147].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//17.99;			//Prmeier Add On EDB
-            varBase[16] = dataProg.packages[232].price; // parseFloat(AllPackages[121].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//5.00;			//TC Plus TMU
+            varBase[6] = dataProg.packages[7].price; // parseFloat(AllPackages[27].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //104.99;           //Premier#
+            varBase[7] = dataProg.packages[27].price; // parseFloat(AllPackages[130].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));     //34.99;            //Mas Latino#
+            varBase[8] = dataProg.packages[28].price; // parseFloat(AllPackages[90].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));      //36.99;            //Optimo Mas#
+            varBase[9] = dataProg.packages[235].price; // parseFloat(AllPackages[143].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));        //Xtra Add-On EDB#
+            varBase[10] = dataProg.packages[20].price; // parseFloat(AllPackages[11].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));     //104.99;           //Lo Maximo#
+            varBase[11] = dataProg.packages[30].price; // parseFloat(AllPackages[26].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));     //32.99;            //Preferred Choice#
+            varBase[12] = dataProg.packages[233].price; // parseFloat(AllPackages[38].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));        //10.99;            //Total Choice for TCD/JCD
+            varBase[13] = dataProg.packages[169].price; // parseFloat(AllPackages[59].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));        //19.99;            //Choice Tier for TCD/JCD
+            varBase[14] = dataProg.packages[62].price; // parseFloat(AllPackages[142].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));        //17.99->19.99;         //Xtra Add-On
+            varBase[15] = dataProg.packages[244].price; // parseFloat(AllPackages[147].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //17.99;            //Prmeier Add On EDB
+            varBase[16] = dataProg.packages[232].price; // parseFloat(AllPackages[121].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //5.00;         //TC Plus TMU
             varBase[17] = dataProg.packages[238].price; // parseFloat(AllPackages[146].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));;  //Ultimate Add-On EDB
-            varBase[18] = 990; // parseFloat(AllPackages[36].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//19.99;			//total_choice_plus  Total Choice Plus
+            varBase[18] = 990; // parseFloat(AllPackages[36].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));     //19.99;            //total_choice_plus  Total Choice Plus
             varBase[19] = 0;
-            varBase[20] = dataProg.packages[167].price; // parseFloat(AllPackages[145].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//Choice Add On EDB
-            varBase[21] = dataProg.packages[175].price; // parseFloat(AllPackages[106].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//Choice Add On FDB
-            varBase[22] = dataProg.packages[236].price; // parseFloat(AllPackages[144].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//27.99;			//Xtra Add-On FDB"
-            varBase[23] = dataProg.packages[243].price; // parseFloat(AllPackages[107].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//80.99;			//Premier Add-On FDB
-            varBase[24] = dataProg.packages[17].price; // parseFloat(AllPackages[98].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	// mas ultra
-            varBase[25] = dataProg.packages[62].price; // parseFloat(AllPackages[118].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//29.99 -> 31.99;			//cultimate add on choice digital bulk
-            varBase[26] = dataProg.packages[239].price; // parseFloat(AllPackages[119].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//32.99;			//ultimate add on FDB
-            varBase[27] = dataProg.packages[240].price; // parseFloat(AllPackages[120].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//70.99;			
+            varBase[20] = dataProg.packages[167].price; // parseFloat(AllPackages[145].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //Choice Add On EDB
+            varBase[21] = dataProg.packages[175].price; // parseFloat(AllPackages[106].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //Choice Add On FDB
+            varBase[22] = dataProg.packages[236].price; // parseFloat(AllPackages[144].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //27.99;            //Xtra Add-On FDB"
+            varBase[23] = dataProg.packages[243].price; // parseFloat(AllPackages[107].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //80.99;            //Premier Add-On FDB
+            varBase[24] = dataProg.packages[17].price; // parseFloat(AllPackages[98].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); // mas ultra
+            varBase[25] = dataProg.packages[62].price; // parseFloat(AllPackages[118].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));        //29.99 -> 31.99;           //cultimate add on choice digital bulk
+            varBase[26] = dataProg.packages[239].price; // parseFloat(AllPackages[119].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //32.99;            //ultimate add on FDB
+            varBase[27] = dataProg.packages[240].price; // parseFloat(AllPackages[120].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));       //70.99;            
 
             //Entertainment
-            varBase[28] = dataProg.packages[2].price; // parseFloat(AllPackages[161].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));					
-            varBase[29] = dataProg.packages[69].price; // parseFloat(AllPackages[128].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); // Student Choice Add an	
+            varBase[28] = dataProg.packages[2].price; // parseFloat(AllPackages[161].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));                 
+            varBase[29] = dataProg.packages[69].price; // parseFloat(AllPackages[128].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); // Student Choice Add an   
             varBase[30] = dataProg.packages[68].price; // parseFloat(AllPackages[129].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); // Student Xtra Add on
             varBase[31] = dataProg.packages[39].price; // parseFloat(AllPackages[141].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); // FDB Entertainment Add On
             varBase[32] = dataProg.packages[1].price; // parseFloat(AllPackages[125].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); // Select
@@ -1245,31 +1245,31 @@ app.controller('PP_Controller', ['$scope',
             varBase[35] = dataProg.packages[241].price; // Choice Xtra Classic MDU Tier
 
 
-            varHBOadjust = dataProg.fees[157].price; // parseFloat(AllPackages[65].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//2.00;			//HBO adjustment value
+            varHBOadjust = dataProg.fees[157].price; // parseFloat(AllPackages[65].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));   //2.00;         //HBO adjustment value
 
-            varPREM1 = dataProg.fees[186].price; // parseFloat(AllPackages[66].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//12.99;
-            varPREM2 = dataProg.fees[220].price; // parseFloat(AllPackages[67].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//11.01;
-            varPREM3 = dataProg.fees[228].price; // parseFloat(AllPackages[68].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//10.00;
-            varPREM4 = dataProg.fees[187].price; // parseFloat(AllPackages[69].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//8.00;
-            varPREM5 = dataProg.fees[184].price; // parseFloat(AllPackages[70].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//7.00;
+            varPREM1 = dataProg.fees[186].price; // parseFloat(AllPackages[66].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));   //12.99;
+            varPREM2 = dataProg.fees[220].price; // parseFloat(AllPackages[67].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));   //11.01;
+            varPREM3 = dataProg.fees[228].price; // parseFloat(AllPackages[68].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));   //10.00;
+            varPREM4 = dataProg.fees[187].price; // parseFloat(AllPackages[69].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));   //8.00;
+            varPREM5 = dataProg.fees[184].price; // parseFloat(AllPackages[70].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));   //7.00;
 
             numARS[0] = 0.00;
-            numARS[1] = dataProg.fees[158].price; // parseFloat(AllPackages[134].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//ARS Monthly Fee 25
+            numARS[1] = dataProg.fees[158].price; // parseFloat(AllPackages[134].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); //ARS Monthly Fee 25
             numARS[2] = 0.00;
             //numARS[2] = parseFloat(AllPackages[133].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); //ARS DVR Service
 
 
             numDVR[0] = 0.00; //default value
-            numDVR[1] = dataProg.fees[160].price; // parseFloat(AllPackages[138].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//ARS receiver = DVR Monthly Fee
+            numDVR[1] = dataProg.fees[160].price; // parseFloat(AllPackages[138].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$","")); //ARS receiver = DVR Monthly Fee
             numDVR[2] = 0.00; //advanced products
 
-            varMirrorFee = dataProg.fees[156].price; // parseFloat(AllPackages[75].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));	//4.99;			//mirroring fee per extra receiver
+            varMirrorFee = dataProg.fees[156].price; // parseFloat(AllPackages[75].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));   //4.99;         //mirroring fee per extra receiver
             varHDACCESSmonthly = dataProg.fees[161].price; // parseFloat(AllPackages[139].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));
             varMRVMonthly = dataProg.fees[208].price; // parseFloat(AllPackages[115].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));//3.00
 
-            varHDExtraPackMonthly = dataProg.fees[201].price; // parseFloat(AllPackages[78].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));		//4.99/mo  		//HD Extra Pack Plan (monthly)first 3 months free
+            varHDExtraPackMonthly = dataProg.fees[201].price; // parseFloat(AllPackages[78].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));      //4.99/mo       //HD Extra Pack Plan (monthly)first 3 months free
 
-            varProtect[0] = dataProg.fees[202].price; // parseFloat(AllPackages[79].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));			//5.99/mo Protection Plan (monthly)
+            varProtect[0] = dataProg.fees[202].price; // parseFloat(AllPackages[79].getElementsByTagName("price")[0].childNodes[0].nodeValue.replace("$",""));          //5.99/mo Protection Plan (monthly)
             varProtect[1] = 0.00; //  Protection Plan (1-pay - expired)
             varProtect[2] = 0.00; //  "None" selected 
 
@@ -1426,7 +1426,7 @@ app.controller('PP_Controller', ['$scope',
 
         var img_off_hdextra = function(loc, img) {
             if (rollover) {
-                if (varImageOn_HDExtraPack != img) { //<-----this checks which tab is on and disables "onmouseout" state			
+                if (varImageOn_HDExtraPack != img) { //<-----this checks which tab is on and disables "onmouseout" state            
                     document.images[loc].src = dtvImages[img].src;
                 }
             }
@@ -1435,7 +1435,7 @@ app.controller('PP_Controller', ['$scope',
 
         var img_off_premier = function(loc, img) {
             if (rollover) {
-                if (varImageOn_Premier != img) { //<-----this checks which tab is on and disables "onmouseout" state			
+                if (varImageOn_Premier != img) { //<-----this checks which tab is on and disables "onmouseout" state            
                     document.images[loc].src = dtvImages[img].src;
                 }
             }
@@ -1537,9 +1537,9 @@ app.controller('PP_Controller', ['$scope',
                     varPremierClicked = true;
                     //console.log(document.images);
                     document.images["hbo"].src = image_check_src; //dtvImages[25].src;
-                    document.images["showtime"].src = image_check_src; //dtvImages[26].src;		
-                    document.images["starz"].src = image_check_src; //dtvImages[26].src;		
-                    document.images["cinemax"].src = image_check_src; //dtvImages[26].src;		
+                    document.images["showtime"].src = image_check_src; //dtvImages[26].src;     
+                    document.images["starz"].src = image_check_src; //dtvImages[26].src;        
+                    document.images["cinemax"].src = image_check_src; //dtvImages[26].src;      
                     document.images["sportspack"].src = image_check_src; //dtvImages[27].src;
                     layerSwap();
 
@@ -1591,7 +1591,7 @@ app.controller('PP_Controller', ['$scope',
                     } else if (img == 31) { //
                         img_Click_5_Buck_Base_Upgrade(loc, img);
 
-                        //}else{						// niether Total Choice or Choice Tier was selected, de-activate imgs					
+                        //}else{                        // niether Total Choice or Choice Tier was selected, de-activate imgs                   
                         //total_choice_plus_anchor.onMouseOver='return false;';
                         //total_choice_plus_anchor.href='#';
                         //total_choice_plus_anchor.onMouseOut='return false;';
@@ -1689,12 +1689,12 @@ app.controller('PP_Controller', ['$scope',
             if (rollover) {
                 if (img == 10) {
 
-                    document.images["protect_1"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxDown.gif"; //on
-                    document.images["protect_3"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"; //off			
+                    document.images["protect_1"].src = "../../all_tools/common_assets/img/greenBoxDown.gif"; //on
+                    document.images["protect_3"].src = "../../all_tools/common_assets/img/greenBoxNorm.gif"; //off          
                     varImageOn_Protect = 10;
                 } else if (img == 11) {
-                    document.images["protect_1"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"; //off	
-                    document.images["protect_3"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxDown.gif"; //on					
+                    document.images["protect_1"].src = "../../all_tools/common_assets/img/greenBoxNorm.gif"; //off  
+                    document.images["protect_3"].src = "../../all_tools/common_assets/img/greenBoxDown.gif"; //on                   
                     varImageOn_Protect = 11;
                 }
             }
@@ -1704,13 +1704,13 @@ app.controller('PP_Controller', ['$scope',
         var img_click_hdextra = function(loc, img) {
             if (rollover) {
                 if (img == 10) {
-                    document.images["hdextra_1"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxDown.gif"; //on
-                    document.images["hdextra_2"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"; //off			
+                    document.images["hdextra_1"].src = "../../all_tools/common_assets/img/greenBoxDown.gif"; //on
+                    document.images["hdextra_2"].src = "../../all_tools/common_assets/img/greenBoxNorm.gif"; //off          
 
                     varImageOn_HDExtraPack = 10;
                 } else if (img == 11) {
-                    document.images["hdextra_1"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"; //off	
-                    document.images["hdextra_2"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxDown.gif"; //on
+                    document.images["hdextra_1"].src = "../../all_tools/common_assets/img/greenBoxNorm.gif"; //off  
+                    document.images["hdextra_2"].src = "../../all_tools/common_assets/img/greenBoxDown.gif"; //on
                     varImageOn_HDExtraPack = 11;
                 } else {
                     varImageOn_HDExtraPack = 0;
@@ -1723,12 +1723,12 @@ app.controller('PP_Controller', ['$scope',
         var img_click_premier = function(loc, img) {
             if (rollover) {
                 if (img == 12) {
-                    document.images["premier_1"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxDown.gif"; //on
-                    document.images["premier_2"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"; //off			
+                    document.images["premier_1"].src = "../../all_tools/common_assets/img/greenBoxDown.gif"; //on
+                    document.images["premier_2"].src = "../../all_tools/common_assets/img/greenBoxNorm.gif"; //off          
                     varImageOn_Premier = 12;
                 } else if (img == 13) {
-                    document.images["premier_1"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxNorm.gif"; //off	
-                    document.images["premier_2"].src = "http://agentanswercenter.directv.com/en-us/res/system/img/greenBoxDown.gif"; //on
+                    document.images["premier_1"].src = "../../all_tools/common_assets/img/greenBoxNorm.gif"; //off  
+                    document.images["premier_2"].src = "../../all_tools/common_assets/img/greenBoxDown.gif"; //on
                     varImageOn_Premier = 13;
                 } else {
                     varImageOn_Premier = 0;
@@ -1973,33 +1973,33 @@ app.controller('PP_Controller', ['$scope',
             }
 
             /*if (img == 9){
-		if (varImageOn_choice_ultimate_addon == 1){	
-			varImageOn_choice_ultimate_addon = 0;    //clicked 9 and it's on -- now turn it off
-			varImageOn_premier_addon_mdu = 0;
-			varImageOn_xtra_addon_mdu = 0;
-			varImageOn_familiar_mdu = 0;
-			varImageOn_TC_plus_mdu = 0
-			varImageOn_choice_addon_fdb = 0;
-			varImageOn_choice_xtra_addon_fdb = 0;
-			varImageOn_premier_addon_fdb = 0;
-			varImageOn_premier_addon_cdb = 0;
-			varImageOn_choice_ultimate_addon_cdb = 0;
-			varImageOn_choice_ultimate_addon_fdb = 0;
-		}else{		
-			varImageOn_choice_ultimate_addon = 1;				//clicked 9, turn it on
-			varImageOn_premier_addon_mdu = 0;
-			varImageOn_xtra_addon_mdu = 0;
-			varImageOn_familiar_mdu = 0;
-			varImageOn_TC_plus_mdu = 0
-			varImageOn_choice_addon_fdb = 0;
-			varImageOn_choice_xtra_addon_fdb = 0;
-			varImageOn_premier_addon_fdb = 0;
-			varImageOn_premier_addon_cdb = 0;
-			varImageOn_choice_ultimate_addon_cdb = 0;
-			varImageOn_choice_ultimate_addon_fdb = 0;
-			img += numRolImages;
-		}
-	}*/
+        if (varImageOn_choice_ultimate_addon == 1){ 
+            varImageOn_choice_ultimate_addon = 0;    //clicked 9 and it's on -- now turn it off
+            varImageOn_premier_addon_mdu = 0;
+            varImageOn_xtra_addon_mdu = 0;
+            varImageOn_familiar_mdu = 0;
+            varImageOn_TC_plus_mdu = 0
+            varImageOn_choice_addon_fdb = 0;
+            varImageOn_choice_xtra_addon_fdb = 0;
+            varImageOn_premier_addon_fdb = 0;
+            varImageOn_premier_addon_cdb = 0;
+            varImageOn_choice_ultimate_addon_cdb = 0;
+            varImageOn_choice_ultimate_addon_fdb = 0;
+        }else{      
+            varImageOn_choice_ultimate_addon = 1;               //clicked 9, turn it on
+            varImageOn_premier_addon_mdu = 0;
+            varImageOn_xtra_addon_mdu = 0;
+            varImageOn_familiar_mdu = 0;
+            varImageOn_TC_plus_mdu = 0
+            varImageOn_choice_addon_fdb = 0;
+            varImageOn_choice_xtra_addon_fdb = 0;
+            varImageOn_premier_addon_fdb = 0;
+            varImageOn_premier_addon_cdb = 0;
+            varImageOn_choice_ultimate_addon_cdb = 0;
+            varImageOn_choice_ultimate_addon_fdb = 0;
+            img += numRolImages;
+        }
+    }*/
             if (img == 14) {
                 if (varImageOn_xtra_addon_mdu == 1) { //clicked 14 and it's on -- now turn it off
                     varImageOn_xtra_addon_mdu = 0;
@@ -2029,34 +2029,34 @@ app.controller('PP_Controller', ['$scope',
                 }
             }
             /*
-            	if (img == 15){
-            		if (varImageOn_premier_addon_mdu == 1){										//clicked 15 and it's on -- now turn it off
-            			varImageOn_premier_addon_mdu = 0;
-            			varImageOn_xtra_addon_mdu = 0;
-            			varImageOn_familiar_mdu = 0;
-            			varImageOn_TC_plus_mdu = 0
-            			varImageOn_choice_addon_fdb = 0;
-            			varImageOn_choice_xtra_addon_fdb = 0;
-            			varImageOn_premier_addon_fdb = 0;
-            			varImageOn_premier_addon_cdb = 0;
-            			varImageOn_choice_ultimate_addon = 0;
-            			varImageOn_choice_ultimate_addon_cdb = 0;
-            			varImageOn_choice_ultimate_addon_fdb = 0;
-            		}else{															//clicked 15, turn it on
-            			varImageOn_premier_addon_mdu = 1;
-            			varImageOn_xtra_addon_mdu = 0;
-            			varImageOn_familiar_mdu = 0;
-            			varImageOn_TC_plus_mdu = 0
-            			varImageOn_choice_addon_fdb = 0;
-            			varImageOn_choice_xtra_addon_fdb = 0;
-            			varImageOn_premier_addon_fdb = 0;
-            			varImageOn_premier_addon_cdb = 0;
-            			varImageOn_choice_ultimate_addon = 0;
-            			varImageOn_choice_ultimate_addon_cdb = 0;
-            			varImageOn_choice_ultimate_addon_fdb = 0;
-            			img += numRolImages;
-            		}
-            	}*/
+                if (img == 15){
+                    if (varImageOn_premier_addon_mdu == 1){                                     //clicked 15 and it's on -- now turn it off
+                        varImageOn_premier_addon_mdu = 0;
+                        varImageOn_xtra_addon_mdu = 0;
+                        varImageOn_familiar_mdu = 0;
+                        varImageOn_TC_plus_mdu = 0
+                        varImageOn_choice_addon_fdb = 0;
+                        varImageOn_choice_xtra_addon_fdb = 0;
+                        varImageOn_premier_addon_fdb = 0;
+                        varImageOn_premier_addon_cdb = 0;
+                        varImageOn_choice_ultimate_addon = 0;
+                        varImageOn_choice_ultimate_addon_cdb = 0;
+                        varImageOn_choice_ultimate_addon_fdb = 0;
+                    }else{                                                          //clicked 15, turn it on
+                        varImageOn_premier_addon_mdu = 1;
+                        varImageOn_xtra_addon_mdu = 0;
+                        varImageOn_familiar_mdu = 0;
+                        varImageOn_TC_plus_mdu = 0
+                        varImageOn_choice_addon_fdb = 0;
+                        varImageOn_choice_xtra_addon_fdb = 0;
+                        varImageOn_premier_addon_fdb = 0;
+                        varImageOn_premier_addon_cdb = 0;
+                        varImageOn_choice_ultimate_addon = 0;
+                        varImageOn_choice_ultimate_addon_cdb = 0;
+                        varImageOn_choice_ultimate_addon_fdb = 0;
+                        img += numRolImages;
+                    }
+                }*/
             if (img == 16) {
                 if (varImageOn_TC_plus_mdu == 1) {
                     varImageOn_TC_plus_mdu = 0 //clicked 16 and it's on -- now turn it off
@@ -2088,34 +2088,34 @@ app.controller('PP_Controller', ['$scope',
                 }
             }
             /*
-            	if (img == 21){
-            		if (varImageOn_choice_addon_fdb == 1){	
-            			varImageOn_choice_addon_fdb = 0;
-            			varImageOn_premier_addon_mdu = 0;
-            			varImageOn_xtra_addon_mdu = 0;
-            			varImageOn_familiar_mdu = 0;
-            			varImageOn_TC_plus_mdu = 0
-            			varImageOn_choice_xtra_addon_fdb = 0;
-            			varImageOn_premier_addon_fdb = 0;
-            			varImageOn_premier_addon_cdb = 0;
-            			varImageOn_choice_ultimate_addon = 0;
-            			varImageOn_choice_ultimate_addon_cdb = 0;
-            			varImageOn_choice_ultimate_addon_fdb = 0;
-            		}else{															
-            			varImageOn_choice_addon_fdb = 1;
-            			varImageOn_premier_addon_mdu = 0;
-            			varImageOn_xtra_addon_mdu = 0;
-            			varImageOn_familiar_mdu = 0;
-            			varImageOn_TC_plus_mdu = 0
-            			varImageOn_choice_xtra_addon_fdb = 0;
-            			varImageOn_premier_addon_fdb = 0;
-            			varImageOn_premier_addon_cdb = 0;
-            			varImageOn_choice_ultimate_addon = 0;
-            			varImageOn_choice_ultimate_addon_cdb = 0;
-            			varImageOn_choice_ultimate_addon_fdb = 0;
-            			img += numRolImages;
-            		}
-            	}*/
+                if (img == 21){
+                    if (varImageOn_choice_addon_fdb == 1){  
+                        varImageOn_choice_addon_fdb = 0;
+                        varImageOn_premier_addon_mdu = 0;
+                        varImageOn_xtra_addon_mdu = 0;
+                        varImageOn_familiar_mdu = 0;
+                        varImageOn_TC_plus_mdu = 0
+                        varImageOn_choice_xtra_addon_fdb = 0;
+                        varImageOn_premier_addon_fdb = 0;
+                        varImageOn_premier_addon_cdb = 0;
+                        varImageOn_choice_ultimate_addon = 0;
+                        varImageOn_choice_ultimate_addon_cdb = 0;
+                        varImageOn_choice_ultimate_addon_fdb = 0;
+                    }else{                                                          
+                        varImageOn_choice_addon_fdb = 1;
+                        varImageOn_premier_addon_mdu = 0;
+                        varImageOn_xtra_addon_mdu = 0;
+                        varImageOn_familiar_mdu = 0;
+                        varImageOn_TC_plus_mdu = 0
+                        varImageOn_choice_xtra_addon_fdb = 0;
+                        varImageOn_premier_addon_fdb = 0;
+                        varImageOn_premier_addon_cdb = 0;
+                        varImageOn_choice_ultimate_addon = 0;
+                        varImageOn_choice_ultimate_addon_cdb = 0;
+                        varImageOn_choice_ultimate_addon_fdb = 0;
+                        img += numRolImages;
+                    }
+                }*/
             if (img == 22) {
                 if (varImageOn_choice_xtra_addon_fdb == 1) {
                     varImageOn_choice_xtra_addon_fdb == 0;
@@ -2330,31 +2330,31 @@ app.controller('PP_Controller', ['$scope',
         function getStateTax() {
             // Connecticut Plus DVR additional .0525 ***************
             /*
-	 varTax = document.frmNewPackage.dropdown.value;
-	 if(varTax != "none"){
-	 varTemp = document.frmNewPackage.dropdown.selectedIndex;
-	 varState = document.frmNewPackage.dropdown.options[varTemp].text;
-	 varBasePackTotal = getBasePack();
-	 varPremPackTotal = getPremPack();
-	 varSubTotal = varBasePackTotal + varPremPackTotal;
-	 varTaxTemp = formatCurrency(varTax * 100);
+     varTax = document.frmNewPackage.dropdown.value;
+     if(varTax != "none"){
+     varTemp = document.frmNewPackage.dropdown.selectedIndex;
+     varState = document.frmNewPackage.dropdown.options[varTemp].text;
+     varBasePackTotal = getBasePack();
+     varPremPackTotal = getPremPack();
+     varSubTotal = varBasePackTotal + varPremPackTotal;
+     varTaxTemp = formatCurrency(varTax * 100);
 
-	 if(varState != "Connecticut"){
-			 taxLayer.innerHTML = varState + "'\s State programming<br>tax is " + varTaxTemp + "%. &nbsp;&nbsp;<a class=\"aBlue2\" href=javascript:removeTax();>(remove tax)</a>";
-			 return varSubTotal*varTax;
-		}else{
-			//varState equals to "Connecticut"
-			 taxLayer.innerHTML = varState + "'\s State programming<br>tax is " + varTaxTemp + "% + 5.25%. &nbsp;&nbsp;<a class=\"aBlue2\" href=javascript:removeTax();>(remove tax)</a>";
-			 var varTax1 = varSubTotal*varTax;
-			 var varTax2 =  (varTax1 + varSubTotal)*.0525;
-			 return varTax1 + varTax2;
-		}
-	 }else{
-	 		//varTax equals to "none"
-	  	taxLayer.innerHTML ="";
-	 		return 0;
-	 }
-	 */
+     if(varState != "Connecticut"){
+             taxLayer.innerHTML = varState + "'\s State programming<br>tax is " + varTaxTemp + "%. &nbsp;&nbsp;<a class=\"aBlue2\" href=javascript:removeTax();>(remove tax)</a>";
+             return varSubTotal*varTax;
+        }else{
+            //varState equals to "Connecticut"
+             taxLayer.innerHTML = varState + "'\s State programming<br>tax is " + varTaxTemp + "% + 5.25%. &nbsp;&nbsp;<a class=\"aBlue2\" href=javascript:removeTax();>(remove tax)</a>";
+             var varTax1 = varSubTotal*varTax;
+             var varTax2 =  (varTax1 + varSubTotal)*.0525;
+             return varTax1 + varTax2;
+        }
+     }else{
+            //varTax equals to "none"
+        taxLayer.innerHTML ="";
+            return 0;
+     }
+     */
             /**************  temp till function is restored  ************/
             //taxLayer.innerHTML ="";
             return 0;
@@ -2520,11 +2520,11 @@ app.controller('PP_Controller', ['$scope',
 
 
         function getDVR() {
-            //	if ( varImageOn == 4 || varImageOn == 5 || varImageOn == 7){
-            //		return numDVR[0];				// dvr is free with plus DVR and plus HD DVR and Optimo Mas Plus DVR.
-            //	}else{
+            //  if ( varImageOn == 4 || varImageOn == 5 || varImageOn == 7){
+            //      return numDVR[0];               // dvr is free with plus DVR and plus HD DVR and Optimo Mas Plus DVR.
+            //  }else{
             return numDVR[varImageOn_DVR];
-            //	}	
+            //  }   
         }
 
         function getARS() {
