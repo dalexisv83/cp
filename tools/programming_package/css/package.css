@@ -96,7 +96,7 @@ div#centerContent {
     width:900px;
     margin-left:2.5%;
     padding-right:40px;
-    background:#fff url(/en-us/res/system/img/pkg_tool_interface_english_stretched_new.jpg) no-repeat top left;
+    background:#fff url(../../../../common_assets/img/pkg_tool_interface_english_stretched_new.jpg) no-repeat top left;
     z-index:0;
     text-align:left;
     overflow:hidden
