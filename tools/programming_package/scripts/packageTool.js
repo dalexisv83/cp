@@ -2788,6 +2788,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
         $scope.ppSUMMARY = varDefaultSummary;
         $scope.arrayBaseSummary = arrayBaseSummary;
         $scope.arrayParaSummary = arrayParaSummary;
+        $scope.arrayPremSummary = arrayPremSummary;
         $scope.arrayExtraSummary = arrayExtraSummary;
         $scope.img_click_Base = img_click_Base;
         $scope.img_on_ds = img_on_ds;
