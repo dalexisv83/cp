@@ -1,5 +1,5 @@
-app.controller('PP_Controller', ['$scope',
-    function($scope) {
+app.controller('PP_Controller', ['$scope', '$compile',
+    function($scope, $compile) {
         //"use strict";
         var arrayBaseSummary = new Array();
         var arrayParaSummary = new Array();
@@ -505,7 +505,7 @@ app.controller('PP_Controller', ['$scope',
 
             '</tr>' +
             '<tr>' +
-            '<td><a href="" ng-click="img_click_Base(\'Preferred Extra\',33);" onmouseout="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);"onmouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);return true;"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a></td><td width="25%" class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_xtra.html\');" onmouseout="ppSUMMARY = varDefaultSummary;" onmouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();">Preferred Xtra</a></td>' +
+            '<td><a href="" ng-click="img_click_Base(\'Preferred Extra\',33);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="http://agentanswercenterstg.directv.com/en-us/res/system/img/greenBoxNorm.gif"></a></td><td width="25%" class="innerboxHeadBig"><a class="step3" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_xtra.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();">Preferred Xtra</a></td>' +
             '<td colspan="7" height="12px"></td>' +
             '</tr>' +
             '<tr>' +
@@ -1487,27 +1487,35 @@ app.controller('PP_Controller', ['$scope',
         //=========end mouseout=========
 
         var total_choice_plus_off = function() {
-            total_choice_plus_anchor.onMouseOver = 'return false;';
-            total_choice_plus_anchor.href = '#';
-            total_choice_plus_anchor.onMouseOut = 'return false;';
+            total_choice_plus_anchor.setAttribute('ng-mouseover', '');
+            total_choice_plus_anchor.href = '';
+            total_choice_plus_anchor.setAttribute('ng-click', '');
+            total_choice_plus_anchor.setAttribute('ng-mouseleave', '');
+            $compile(document.getElementById("total_choice_plus_anchor"))($scope);
         };
 
         var total_choice_plus_on = function() {
-            total_choice_plus_anchor.onMouseOver = 'ppSUMMARY = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);';
-            total_choice_plus_anchor.onMouseOut = 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'; /**/
-            total_choice_plus_anchor.href = 'javascript:img_click_Base(\'Total Choice Plus\',18);';
+            total_choice_plus_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);');
+            total_choice_plus_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'); /**/
+            total_choice_plus_anchor.setAttribute('ng-click', 'img_click_Base(\'Total Choice Plus\',18);');
+            total_choice_plus_anchor.href = '';
+            $compile(document.getElementById("total_choice_plus_anchor"))($scope);
         };
 
         var xtra_tier_off = function() {
-            xtra_tier_anchor.onMouseOver = 'return false;';
-            xtra_tier_anchor.href = '#';
-            xtra_tier_anchor.onMouseOut = 'return false;';
+            xtra_tier_anchor.setAttribute('ng-mouseover', '');
+            xtra_tier_anchor.href = '';
+            xtra_tier_anchor.setAttribute('ng-click', '');
+            xtra_tier_anchor.setAttribute('ng-mouseleave', '');
+            $compile(document.getElementById("xtra_tier_anchor"))($scope);
         };
 
         var xtra_tier_on = function() {
-            xtra_tier_anchor.onMouseOver = 'ppSUMMARY = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);';
-            xtra_tier_anchor.onMouseOut = 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'; /**/
-            xtra_tier_anchor.href = 'javascript:img_click_Base(\'Choice Xtra Classic MDU Tier\',19);';
+            xtra_tier_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);');
+            xtra_tier_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'); /**/
+            xtra_tier_anchor.href = '';
+            xtra_tier_anchor.setAttribute('ng-click', 'img_click_Base(\'Choice Xtra Classic MDU Tier\',19);');
+            $compile(document.getElementById("xtra_tier_anchor"))($scope);
         };
 
 
@@ -2655,21 +2663,25 @@ app.controller('PP_Controller', ['$scope',
 
             if ((textEntry == null) || (textEntry == '')) { //default  
                 MDUdiv.innerHTML = arrayMDUInnerHTML[1];
+                $compile(document.getElementById("MDUdiv"))($scope);
                 document.getElementById("lyrEnglish2").style.display = 'none';
                 document.getElementById("MDUdefault").style.display = 'none';
             }
             if (textEntry == 'MDU/JDU') { //MDU / JDU / MDD / MDL
                 MDUdiv.innerHTML = arrayMDUInnerHTML[2];
+                $compile(document.getElementById("MDUdiv"))($scope);
                 document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
             }
             if (textEntry == "TCD/JCD") { //TCD / JCD
                 MDUdiv.innerHTML = arrayMDUInnerHTML[3];
+                $compile(document.getElementById("MDUdiv"))($scope);
                 document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
             }
             if (textEntry == "TMW/JMW") { //TMW / JMW
                 MDUdiv.innerHTML = arrayMDUInnerHTML[4];
+                $compile(document.getElementById("MDUdiv"))($scope);
                 document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
                 varMirrorFeeWaiver = 3;
@@ -2686,6 +2698,7 @@ app.controller('PP_Controller', ['$scope',
             }
             if (textEntry == "TMU/JMU") { // TMU / JMU
                 MDUdiv.innerHTML = arrayMDUInnerHTML[6];
+                $compile(document.getElementById("MDUdiv"))($scope);
                 document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
                 varImageOn_TotChoicePlus = 0;
@@ -2775,6 +2788,7 @@ app.controller('PP_Controller', ['$scope',
         $scope.ppSUMMARY = varDefaultSummary;
         $scope.arrayBaseSummary = arrayBaseSummary;
         $scope.arrayParaSummary = arrayParaSummary;
+        $scope.arrayExtraSummary = arrayExtraSummary;
         $scope.img_click_Base = img_click_Base;
         $scope.img_on_ds = img_on_ds;
         $scope.img_off_ds = img_off_ds;
@@ -2799,6 +2813,8 @@ app.controller('PP_Controller', ['$scope',
         $scope.img_click_Protect = img_click_Protect;
         $scope.img_off_Protect = img_off_Protect;
         $scope.img_click_hdextra = img_click_hdextra;
+        $scope.img_off_hdextra = img_off_hdextra;
+        $scope.img_off_premier = img_off_premier;
         $scope.img_click_premier = img_click_premier;
         $scope.swapBasePackageMDU = swapBasePackageMDU;
         $scope.swapBasePackageLanguage = swapBasePackageLanguage;
