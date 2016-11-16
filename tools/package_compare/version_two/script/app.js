@@ -11,7 +11,9 @@ app.config(['growlProvider', function(growlProvider) {
 }]).directive('chosen',['$timeout',function($timeout){
     'use strict';
     var linker = function(scope,element,attrs){
-       
+       var stopWatching = scope.$watch('$parent.pcLoaded', function() {
+        console.log(scope.$parent);
+        if (scope.$parent.pcLoaded) {
        var list = attrs.chosen;
     
        scope.$watch(list,function(){
@@ -30,7 +32,9 @@ app.config(['growlProvider', function(growlProvider) {
 		window.PIE.attach(angular.element(element).parent().find(".chosen-drop")[0]);	      
 	    });
        }
-       
+       stopWatching();
+     }
+       });
     };
     
     return{

@@ -1,6 +1,12 @@
 app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $filter, $http) {
     'use strict';    
-    $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/PackageCompareRes').then(function successCallback(response) {
+    var stopWatching = $scope.$watch(
+        function() {
+            return $scope.$parent.page;
+        },
+        function(params) {
+            if (params == 'package-compare') {
+                $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/PackageCompareRes').then(function successCallback(response) {
         var alert_message = $(".alert_message"),
             refresher = function() {
                 var diff,
@@ -105,7 +111,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
            if (response.data.package_compare.volumes && $scope.volumes.length === 0){
              $scope.volumes = $scope.dataStore.getVolumes(response.data.package_compare.volumes);
            }
-
+           $scope.$parent.pcLoaded = true;
         };
 
         /**
@@ -314,11 +320,17 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
             $scope.$watchCollection('current_pkg');
             $scope.$apply();
         };
+
+        stopWatching();
     }, function errorCallback(response) {
         // called asynchronously if an error occurs
         // or server returns response with an error status.
         throw new Error('Data request failed: ' + JSON.stringify(response));
     });
+            }
+        },
+        true
+    );
 
     $(".close_notification").on('click', function(){$(".alert_message").parent().css('display','none');});
     $('#cl_genreLegend').click(function(){
