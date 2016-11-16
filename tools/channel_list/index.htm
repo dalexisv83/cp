@@ -1,5 +1,5 @@
 <div id="channel_lineup" ng-controller="CL_Controller">
-    <div class="headers full">
+<!--     <div class="headers full">
         <div id="comment_btn" class="pull-right">
         </div>
         <div class="first">
@@ -8,8 +8,28 @@
         <div class="second">
             <h1 class="tool-title">Channel Lineup</h1>
         </div>
-    </div>
-    <div class="container">
+    </div> -->
+
+        <div class="search-box">
+          <div class="text-holder">
+              <span class="search-label">Search by Call Letters,Channel Name or Number:</span>
+              <input type=text id="txtSearch" placeholder="Search">
+              <span class="reset"><a href="#" id="reset">Reset</a></span>
+              <br />
+              <span id="messageBox" class="result-count red"></span>
+          </div>
+          <div class="link-holder">
+              <ul>
+                  <li><a href="http://agentanswercenter.directv.com/en-us/res/programming/channel_neighborhoods.html" target="_blank">Channel Neighborhoods</a></li>
+                  <li><a href="http://agentanswercenter.directv.com/en-us/res/programming/expired_packages.html" target="_blank">Expired Packages</a></li>
+                  <li><a href="http://agentanswercenter.directv.com/en-us/res/programming/paid_programming_part_time_channels.html" target="_blank">Ad Sales/Paid Program/Part-Time</a></li>
+                  <li><a href="http://lil-lookup.directv.com:8080/lil/lilIndex.htm?site=res&amp;requestor=DORIS" target="_blank">Local Channel Availability</a></li>
+                  <li><a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/res/rover_tools/package/packagetool.htm',990,800);">Programming Package Tool</a></li>
+                  <li><a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/res/rover_tools/package_compare/package_compare.htm',950,675);">Package Compare Tool</a></li>
+              </ul>
+          </div>
+        </div>
+        <!--end search-box-->
         <div id="xtra_notes">
             -See <a href="http://agentanswercenter.directv.com/en-us/res/programming/directv_everywhere.html?fragid=3" target="_blank">DIRECTV Everywhere</a> for a list of available channels offering streaming content.
             <br> -(*) <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/redirectors/bce_redirect.html" target="_blank">DIRECTV On Demand</a> | («) <a href="http://agentanswercenter.directv.com/en-us/res/programming/72hr_rewind_restart.html#fragment=4" target="_blank">Rewind &amp; Restart</a>
@@ -17,31 +37,9 @@
             <span class="red"><b>**REMINDER:</b></span> <b>DO NOT</b> discuss <u>exact</u> channel counts with customers.
             <br /> If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online.
         </div>
-        <div class="link-holder">
-            <ul>
-                <li><a href="http://agentanswercenter.directv.com/en-us/res/programming/channel_neighborhoods.html" target="_blank">Channel Neighborhoods</a></li>
-                <li><a href="http://agentanswercenter.directv.com/en-us/res/programming/expired_packages.html" target="_blank">Expired Packages</a></li>
-                <li><a href="http://agentanswercenter.directv.com/en-us/res/programming/paid_programming_part_time_channels.html" target="_blank">Ad Sales/Paid Program/Part-Time</a></li>
-                <li><a href="http://lil-lookup.directv.com:8080/lil/lilIndex.htm?site=res&amp;requestor=DORIS" target="_blank">Local Channel Availability</a></li>
-                <li><a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/res/rover_tools/package/packagetool.htm',990,800);">Programming Package Tool</a></li>
-                <li><a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/res/rover_tools/package_compare/package_compare.htm',950,675);">Package Compare Tool</a></li>
-            </ul>
-        </div>
-        <div class="text-holder">
-            <span class="search-label">
-        Search by Call Letters,
-        Channel Name or Number: 
-      </span>
-            <input type=text id="txtSearch" placeholder="Search">
-            <span class="reset"><a href="#" id="reset">Reset</a></span>
-            <br />
-            <span id="messageBox" class="result-count red"></span>
-        </div>
-        <div class="search-box">
-        </div>
-        <!--end search-box-->
+        <div class="clearfix"></div>
         <span class="why" id="genreLegend"></span>
-        <div class="row table-header">
+        <div class="table-header">
             <div class="pull-left header" id="mainHeader">
                 <div class="pull-left wide">
                     <div id="nameSorter">
@@ -133,5 +131,5 @@
             </div>
         </div>
         <!--end of div#genreCodes-->
-    </div>
+
 </div>
