@@ -118,29 +118,26 @@ classes should alter those!
   to { box-shadow: none; }
 }
 
-* {
+#channel_lineup {
   font-family: arial;
   font-size: 8pt;
-}
-
-body {
   background: #fff;
   padding: 0;
   margin: 8px;
 }
 
-h2 {
+#channel_lineup h2 {
   font-size: 10pt;
   border-bottom: 1px dotted gray;
 }
 
-ul {
+#channel_lineup ul {
   margin-left: 0;
   padding: 0;
   cursor: default;
 }
 
-li {
+#channel_lineup li {
   background: url("http://agentanswercenter.directv.com/en-us/res/system/img/arrow_right_spearmint.png") no-repeat center left;
   padding: 0 0 0 14px;
   list-style: none;
@@ -345,14 +342,11 @@ input.editor-checkbox {
 }
 /**end of slickgrid styling**/
 
-body{
+#channel_lineup {
     background-repeat: no-repeat;   
     background-position: left top;
     font: 12px Helvetica, Arial, sans-serif;
     overflow: hidden;
-}
-
-html, body {
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -679,7 +673,7 @@ html, body {
    background: #fff;
 }
 
-svg{
+#channel_lineup svg{
    overflow: visible!important; 
 }
 
@@ -855,7 +849,7 @@ input#txtSearch{
     background-image:url(http://agentanswercenter.directv.com/en-us/res/system/img/ui-icons_454545_256x240.png);
 }
 
-body a{
+#channel_lineup body a{
     text-decoration: underline;
 }
 

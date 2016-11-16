@@ -1,33 +1,29 @@
-/* CSS Document */
-html,body {
+#programming_package {
     margin:0;
     padding:0;
     display:inline-block
-}
-
-body {
     text-align:center;
     font:65%/1 Verdana,Arial,sans-serif;
     padding-bottom:0;
     background-color:#051d22;
 }
 
-A:link {
+#programming_package A:link {
     color:#070872;
     text-decoration:none
 }
 
-A:active {
+#programming_package A:active {
     color:#070872;
     text-decoration:none
 }
 
-A:visited {
+#programming_package A:visited {
     color:#070872;
     text-decoration:none
 }
 
-A:hover {
+#programming_package A:hover {
     color:#F60;
     text-decoration:none
 }
