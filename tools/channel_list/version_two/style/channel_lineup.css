@@ -504,11 +504,11 @@ input.editor-checkbox {
 /*start*/
 
 
-.table-header .narrow.genre{
+#channel_lineup .table-header .narrow.genre{
     width:69px;
 }
 
-.table-header{
+#channel_lineup .table-header{
     position:absolute;
     top: 152px;
     left: 41px;
@@ -517,12 +517,12 @@ input.editor-checkbox {
     overflow: hidden;
 }
 
-.table-header .header{
+#channel_lineup .table-header .header{
     background: #e0e0e0;
     text-align: center;   
 }
 
-.table-header .pull-left{
+#channel_lineup .table-header .pull-left{
     height:50px;   
 }
 
@@ -530,27 +530,27 @@ input.editor-checkbox {
    padding-right: 6px;
 }
 
-.table-header .wide{
+#channel_lineup .table-header .wide{
     width:213px;
     padding-top:20px;
     padding-left:67px;    
 }
 
 
-.table-header .narrow{
+#channel_lineup .table-header .narrow{
     width:70px;    
 }
 
-.table-header .call-letters{
+#channel_lineup .table-header .call-letters{
    border-right: 1px solid #fff; 
 }
 
-.table-header .channel-number{
+#channel_lineup .table-header .channel-number{
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
 }
 
-.table-header .narrow.genre{
+#channel_lineup .table-header .narrow.genre{
     padding-top:20px;
 }
 
@@ -862,7 +862,7 @@ a.activeLink {
     font-style: italic;
 }
 
-.why {
+#channel_lineup .why {
      background: url(http://agentanswercenter.directv.com/en-us/res/system/img/why-icon.png) no-repeat;
      width: 14px;
      height: 15px;

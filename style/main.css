@@ -149,13 +149,13 @@ tbody th {
     margin-left: 20px;
 }
 
-.header {
+.main-header {
     position: relative;
     padding: 24px 60px 10px;
     z-index: 0;
 }
 
-.header .grid__item {
+.main-header .grid__item {
     vertical-align: middle;
 }
 
@@ -384,13 +384,13 @@ div#sub {
     text-align: left;
 }
 
-.price {
+/*.price {
     background-color: #E97400;
     color: white;
     font-weight: bold;
     border-radius: 4px;
     padding: 7px 10px 5px;
-}
+}*/
 
 .info--bottom {
     border-left: #E97400 2px solid;
