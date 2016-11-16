@@ -91,6 +91,10 @@ tbody th {
     text-align: left;
 }*/
 
+#include {
+    padding-bottom: 30px;
+}
+
 .outer {
     padding: 0 24px 24px;
 }
@@ -806,6 +810,7 @@ input.ng-valid.zipinp {
     bottom: 0;
     width: 100%;
     height: 30px;
+    z-index: 2;
 }
 
 .datatable td, .dataTable td {
