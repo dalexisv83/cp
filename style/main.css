@@ -10,7 +10,7 @@ html {
   box-sizing: inherit;
 }
 
-body {
+/*body {
     font-size: 95%;
     font-family: 'Franklin Gothic', sans-serif;
     color: #333;
@@ -79,7 +79,6 @@ td {
 }
 
 thead th {
-/*    background-color: #E97400; */
     color: white;
     border: 1px solid #E97400;
     border-bottom: none;
@@ -90,7 +89,7 @@ tbody th {
     color: white;
     border: 1px solid #0072ae;
     text-align: left;
-}
+}*/
 
 .outer {
     padding: 0 24px 24px;
