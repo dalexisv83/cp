@@ -319,6 +319,15 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
         // or server returns response with an error status.
         throw new Error('Data request failed: ' + JSON.stringify(response));
     });
+
+    $(".close_notification").on('click', function(){$(".alert_message").parent().css('display','none');});
+    $('#cl_genreLegend').click(function(){
+        $('#cl_genreCodes').show();
+    });
+    $('#genreX').click(function(e){
+        e.stopPropagation();
+        $('#cl_genreCodes').hide();
+    });
 }]);
 
 app.filter('byGenre', function() {
