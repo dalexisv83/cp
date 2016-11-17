@@ -7,6 +7,7 @@ app.controller('CL_Controller',['$scope', '$http',
         },
         function(params) {
             if (params == 'channel-lineup') {
+                stopWatching();
                 $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ChannelLineupRes').then(function successCallback(response) {
                     /*global AdSales, smallGrid, config, bigGrid, searchBox, programmingHeaders, columnSorter, reset, toolTip, commentBtn */
                     /*jslint newcap: true */
@@ -18,7 +19,6 @@ app.controller('CL_Controller',['$scope', '$http',
                         ad_channels = AdSales.channels,
                         data_type = response.data.type;
 
-                    $(function () {
                         'use strict';
                         var small_grid,
                         columns,
@@ -95,6 +95,7 @@ app.controller('CL_Controller',['$scope', '$http',
                             },
                             function(params) {
                                 if (params == 'channel-lineup') {
+                                    stopRenderWatch();
                                     small_grid.render();
                                     big_grid.render();
                                     programming_headers.render();
@@ -106,13 +107,11 @@ app.controller('CL_Controller',['$scope', '$http',
                                     $('#container .slick-header-columns').children().eq(0).trigger('click');
                                     $('#container .slick-header-columns').children().eq(0).trigger('click');
                                     $scope.clLoaded = true;
-                                    stopRenderWatch();
                                 }
                             },
                             true
                         );
-                        stopWatching();
-                    });
+
                 }, function errorCallback(response) {
                     // called asynchronously if an error occurs
                     // or server returns response with an error status.

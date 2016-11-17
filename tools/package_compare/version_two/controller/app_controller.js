@@ -6,6 +6,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
         },
         function(params) {
             if (params == 'package-compare') {
+                stopWatching();
                 $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/PackageCompareRes').then(function successCallback(response) {
         var alert_message = $(".alert_message"),
             refresher = function() {
@@ -332,7 +333,6 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
             $scope.$apply();
         };
 
-        stopWatching();
     }, function errorCallback(response) {
         // called asynchronously if an error occurs
         // or server returns response with an error status.
