@@ -109,10 +109,10 @@ gridTable.prototype.setColumns = function(className,minWidth){
         if (utility.isInteger(value)) {
           index = cell - 4;
           if (row === 0) {
-             html = '<a href="#" id="hd_btn'+index+'" class="numLink" title="click to show '+value+' HD channels" data="'+cell+'">'+value+'</a>';
+             html = '<a href="" id="hd_btn'+index+'" class="numLink" title="click to show '+value+' HD channels" data="'+cell+'">'+value+'</a>';
           }
           else{
-              html = '<a href="#" id="reg_btn'+index+'" class="numLink" title="click to show all '+value+' channels" data="'+cell+'">'+value+'</a>';
+              html = '<a href="" id="reg_btn'+index+'" class="numLink" title="click to show all '+value+' channels" data="'+cell+'">'+value+'</a>';
           }
           value = html;
         }
@@ -429,7 +429,8 @@ bigGrid.prototype.activateHdChannelsFilter = function(search_box,messageBoxId,re
     $.each(this.featured_packages, function(index, val) {
         context = "hd_btn"+index;
         link = $('#'+context);
-        link.click(function() {
+        link.click(function(e) {
+            e.preventDefault();
             reset_btn.activate(grid,search_box.self,messageBoxId);
             util.normalizeNumLink();
             search_box.self.val('');
@@ -470,7 +471,8 @@ bigGrid.prototype.activateRegularChannelsFilter = function(search_box,messageBox
     $.each(this.featured_packages, function(index, val) {
       context = "reg_btn"+index;
       link = $('#'+context);
-        link.click(function(){
+        link.click(function(e){
+            e.preventDefault();
             reset_btn.activate(grid,search_box.self,messageBoxId);
             util.normalizeNumLink();
             search_box.self.val('');
@@ -1254,7 +1256,8 @@ var reset = function(context, activeClass){
         message_box = new messageBox(messageBoxId,grid);
 
         this.self.addClass(oThis.aClass);
-        this.self.unbind().click(function(){
+        this.self.unbind().click(function(e){
+          e.preventDefault();
           grid.package_channels = false;
           util.normalizeNumLink();
           search_box.val('');
