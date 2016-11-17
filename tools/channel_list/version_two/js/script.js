@@ -105,6 +105,7 @@ app.controller('CL_Controller',['$scope', '$http',
                                     // sort hack
                                     $('#container .slick-header-columns').children().eq(0).trigger('click');
                                     $('#container .slick-header-columns').children().eq(0).trigger('click');
+                                    $scope.clLoaded = true;
                                     stopRenderWatch();
                                 }
                             },
