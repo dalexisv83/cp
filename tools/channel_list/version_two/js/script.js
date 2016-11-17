@@ -7,6 +7,7 @@ app.controller('CL_Controller',['$scope', '$http',
         },
         function(params) {
             if (params == 'channel-lineup') {
+                console.log('loading');
                 $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ChannelLineupRes').then(function successCallback(response) {
                     /*global AdSales, smallGrid, config, bigGrid, searchBox, programmingHeaders, columnSorter, reset, toolTip, commentBtn */
                     /*jslint newcap: true */
@@ -46,7 +47,7 @@ app.controller('CL_Controller',['$scope', '$http',
                         small_grid.setOptions(true,false);
                         small_grid.setColumns();
                         small_grid.setChannels();
-                        small_grid.render();
+                        //small_grid.render();
 
                         //small grid columns are the same with the big grid
                         columns = small_grid.getColumns();
@@ -57,7 +58,7 @@ app.controller('CL_Controller',['$scope', '$http',
                         big_grid.setColumns(columns);
                         big_grid.setChannels(channels);
                         big_grid.setChannels(ad_channels);
-                        big_grid.render();
+                        //big_grid.render();
 
                         //activate the search box
                         search_box = new searchBox('txtSearch',big_grid,'messageBox','reset','active');
@@ -70,10 +71,10 @@ app.controller('CL_Controller',['$scope', '$http',
                         //get the width for each big_grid cell
                         cell_width = big_grid.getNarrowCellWidth();
                         programming_headers = new programmingHeaders('packageHeaderContainer',featured_packages,cell_width);
-                        programming_headers.render();
+                        //programming_headers.render();
 
                         //rotate package headers
-                        programming_headers.rotate(config.localhost,config.deg,config.y_diff);
+                        //programming_headers.rotate(config.localhost,config.deg,config.y_diff);
 
                         //initialize column sorting
                         column_sorter = new columnSorter('channel_name',nameSorter,channelNumberSorter,callLetterSorter,genreSorter,
@@ -96,7 +97,22 @@ app.controller('CL_Controller',['$scope', '$http',
                         // hack
                         $('#container .slick-header-columns').children().eq(0).trigger('click');
                         $('#container .slick-header-columns').children().eq(0).trigger('click');
-
+                        var stopRenderWatch = $scope.$watch(
+                            function() {
+                                return $scope.$parent.page;
+                            },
+                            function(params) {
+                                if (params == 'channel-lineup') {
+                                    console.log('still cL');
+                                    small_grid.render();
+                                    big_grid.render();
+                                    programming_headers.render();
+                                    programming_headers.rotate(config.localhost,config.deg,config.y_diff);
+                                    stopRenderWatch();
+                                }
+                            },
+                            true
+                        );
                         stopWatching();
                     });
                 }, function errorCallback(response) {
