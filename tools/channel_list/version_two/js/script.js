@@ -63,10 +63,6 @@ app.controller('CL_Controller',['$scope', '$http',
                         search_box = new searchBox('txtSearch',big_grid,'messageBox','reset','active');
                         search_box.autoSearch();
 
-                        //activate the package filters
-                        big_grid.activateHdChannelsFilter(search_box,'messageBox','reset','active');
-                        big_grid.activateRegularChannelsFilter(search_box,'messageBox','reset','active');
-
                         //get the width for each big_grid cell
                         cell_width = big_grid.getNarrowCellWidth();
                         programming_headers = new programmingHeaders('packageHeaderContainer',featured_packages,cell_width);
@@ -93,9 +89,6 @@ app.controller('CL_Controller',['$scope', '$http',
                         comment_btn = new commentBtn(btn,class_name,config.baseUrlPath);
                         comment_btn.init();
 
-                        // hack
-                        $('#container .slick-header-columns').children().eq(0).trigger('click');
-                        $('#container .slick-header-columns').children().eq(0).trigger('click');
                         var stopRenderWatch = $scope.$watch(
                             function() {
                                 return $scope.$parent.page;
@@ -106,6 +99,12 @@ app.controller('CL_Controller',['$scope', '$http',
                                     big_grid.render();
                                     programming_headers.render();
                                     programming_headers.rotate(config.localhost,config.deg,config.y_diff);
+                                    //activate the package filters
+                                    big_grid.activateHdChannelsFilter(search_box,'messageBox','reset','active');
+                                    big_grid.activateRegularChannelsFilter(search_box,'messageBox','reset','active');
+                                    // sort hack
+                                    $('#container .slick-header-columns').children().eq(0).trigger('click');
+                                    $('#container .slick-header-columns').children().eq(0).trigger('click');
                                     stopRenderWatch();
                                 }
                             },
