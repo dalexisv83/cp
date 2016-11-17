@@ -12,7 +12,6 @@ app.config(['growlProvider', function(growlProvider) {
     'use strict';
     var linker = function(scope,element,attrs){
        var stopWatching = scope.$watch('$parent.pcLoaded', function() {
-        console.log(scope.$parent);
         if (scope.$parent.pcLoaded) {
        var list = attrs.chosen;
     

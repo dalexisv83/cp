@@ -7,7 +7,6 @@ app.controller('CL_Controller',['$scope', '$http',
         },
         function(params) {
             if (params == 'channel-lineup') {
-                console.log('loading');
                 $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ChannelLineupRes').then(function successCallback(response) {
                     /*global AdSales, smallGrid, config, bigGrid, searchBox, programmingHeaders, columnSorter, reset, toolTip, commentBtn */
                     /*jslint newcap: true */
@@ -103,7 +102,6 @@ app.controller('CL_Controller',['$scope', '$http',
                             },
                             function(params) {
                                 if (params == 'channel-lineup') {
-                                    console.log('still cL');
                                     small_grid.render();
                                     big_grid.render();
                                     programming_headers.render();
