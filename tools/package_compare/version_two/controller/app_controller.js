@@ -111,7 +111,18 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
            if (response.data.package_compare.volumes && $scope.volumes.length === 0){
              $scope.volumes = $scope.dataStore.getVolumes(response.data.package_compare.volumes);
            }
-           $scope.$parent.pcLoaded = true;
+            var stopRenderWatch = $scope.$watch(
+                function() {
+                    return $scope.$parent.page;
+                },
+                function(params) {
+                    if (params == 'package-compare') {
+                        $scope.$parent.pcLoaded = true;
+                        stopRenderWatch();
+                    }
+                },
+                true
+            );
         };
 
         /**
