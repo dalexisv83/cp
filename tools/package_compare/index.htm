@@ -132,16 +132,16 @@
         <!--start of row for show-btn-->
         <div class="show-btn-holder">
             <div class="current pull-left">
-                <div class="show-btn" ng-click="show_current_channels = Utility.show(show_current_channels)" ng-class="{open: show_current_channels}" ng-show="current_channels" ng-cloak></div>
+                <div class="show-btn" ng-click="show_current_channels = !show_current_channels" ng-class="{open: show_current_channels}" ng-show="current_channels" ng-cloak></div>
             </div>
             <div class="gained pull-left">
-                <div class="show-btn" ng-click="show_gained_channels = Utility.show(show_gained_channels)" ng-class="{open: show_gained_channels}" ng-show="gained_channels" ng-cloak></div>
+                <div class="show-btn" ng-click="show_gained_channels = !show_gained_channels" ng-class="{open: show_gained_channels}" ng-show="gained_channels" ng-cloak></div>
             </div>
             <div class="lost pull-left">
-                <div class="show-btn" ng-click="show_lost_channels = Utility.show(show_lost_channels)" ng-class="{open: show_lost_channels}" ng-show="lost_channels" ng-cloak></div>
+                <div class="show-btn" ng-click="show_lost_channels = !show_lost_channels" ng-class="{open: show_lost_channels}" ng-show="lost_channels" ng-cloak></div>
             </div>
             <div class="requested pull-left">
-                <div class="show-btn" ng-click="show_requested_channels = Utility.show(show_requested_channels)" ng-class="{open: show_requested_channels}" ng-show="requested_channels" ng-cloak></div>
+                <div class="show-btn" ng-click="show_requested_channels = !show_requested_channels" ng-class="{open: show_requested_channels}" ng-show="requested_channels" ng-cloak></div>
             </div>
             <div class="clearfix"></div>
         </div>
