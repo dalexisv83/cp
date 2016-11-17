@@ -352,11 +352,11 @@ input.editor-checkbox {
     overflow: hidden;
 }
 
-.full{
-  background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/tool_bg-09212015.jpg);
+#channel_lineup .full{
+/*  background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/tool_bg-09212015.jpg);
   background-repeat: no-repeat;
-  background-position: left -30px;
-  background-color: #black;
+  background-position: left -30px;*/
+  background-color: black;
   max-width: 1000px;
 }
 
