@@ -29,7 +29,7 @@
 .wrapper{
  width:950px;
  position: relative;
- padding: 0 15px;
+ padding: 10px;
 }
 
 .headers .first,
@@ -76,7 +76,7 @@
 
 .border {
   background-color:#fff;
-  margin-top: 5px;
+  margin-top: 10px;
   border: 3px solid #005D9E;
   border-radius: 16px;
   padding: 10px;
@@ -540,10 +540,8 @@ span.btn-feedback:hover {
   font-size:13px;
 }
 
-input[type='button'] {
-  position: absolute;
-  top: 98px;
-  right: 485px;
+#package_compare input[type='button'] {
+  margin-right: -115px;
   background: -moz-linear-gradient(#fff,#ddd);
   background: -webkit-gradient(linear,0 0,0 bottom, from(#fff),to(#ddd));
   background: linear-gradient(#fff,#ddd);
@@ -557,20 +555,20 @@ input[type='button'] {
   text-shadow: 0px 1px 1px white;
 }
     
-input[type='button']:hover {
+#package_compare input[type='button']:hover {
   background: -moz-linear-gradient(#f1f1f1,#ddd);
   background: -webkit-gradient(linear,0 0,0 bottom, from(#f1f1f1),to(#ddd));
   background: linear-gradient(#f1f1f1,#ddd);
   -pie-background: linear-gradient(#f1f1f1,#ddd);
 }    
 
-input[type='button'].default {
+#package_compare input[type='button'].default {
   -webkit-box-shadow: #ccc 0px 0px 3px;
   -moz-box-shadow: #ccc 0px 0px 3px;
   box-shadow: #ccc 0px 0px 3px;
 }
 
-input[type="button"].comReset {
+#package_compare input[type="button"].comReset {
   position: absolute;
   top: 71px;
   left: 50%;
@@ -592,7 +590,7 @@ input[type="button"].comReset {
   display: none !important;
 }
 
-font[color='red'], font[color='#FF0000'], .hdsd {
+#package_compare font[color='red'], font[color='#FF0000'], .hdsd {
   color: #006480;
 }
 
@@ -605,7 +603,8 @@ font[color='red'], font[color='#FF0000'], .hdsd {
   display:block;
   position:relative;
   vertical-align:middle;
-  margin-top:8px
+  margin-top:8px;
+  text-align: center;
 }
 
 .alert{

@@ -1,19 +1,5 @@
 <div id="package_compare" class="full" ng-controller="AppController">
 <div class="wrapper">
-    <div class="headers" style="height:70px">
-            <div class="col-md-4" style="margin-top:25px;display:inline-block">
-                <img src="../common_assets/img/Logo_DTV_ATT.png">            
-            </div>
-            <div class="col-md-5" style="margin-top:10px;display:inline-block">
-                <h1 class="tool-title" style="font-size:1.5em;">Package Compare Tool</h1>
-            </div>
-
-            <div class="col-md-3" style="float:right;margin-top:50px;text-align:right;position:relative">
-                <input type="button" value="Reset" class="default" ng-click="reset();" style="position:absolute;top:-30px;right:10px" ng-window-pie></input>
-                <a href="javascript:pop_at_noresize('http://agentanswercenter.directv.com/en-us/res/rover_tools/channel_list/channel_list.htm',900,760);" style="font-size:1.2em;color:white;text-decoration:underline">
-                <img src='http://agentanswercenter.directv.com/en-us/res/system/img/external-link-icon.png' width=20 height=15 /> Channel Lineup</a>
-            </div>
-        </div>
     <div class="border" ng-window-pie style="height:710px">
         <span style="width:100%;border:2px solid #0a77d5;padding:7px;font-size: 1.2em;display:none;position:relative">
                 <div class="close_notification" style="float:right;cursor:pointer;position:absolute;right:4px;top:0">
@@ -22,6 +8,7 @@
                 <div class="alert_message" style="padding-right:15px"></div>
         </span>
         <div class="headers headers2">
+            <input type="button" value="Reset" class="default" ng-click="reset();" ng-window-pie></input>
             <div style="display:inline-block;float:left">
                 <h2 style="margin-bottom:5px">Current Package</h2>
             </div>
