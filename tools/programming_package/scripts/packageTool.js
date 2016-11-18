@@ -11,7 +11,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         var varDefaultSummary = "<font color='#000000'><center>Rollover package names<br> for a quick summary<br><br>or<br><br>Click on package links for<br> a detailed description.</center></font>",
             outputSummary = function(id) {
-                var smmry = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>' + dataProg.packages[id].name + '<br><br></strong></td></tr>' +
+                var smmry = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>' + dataProg.packages[id].name + '<br><br></strong></td></tr>' +
                     '<tr><td class="nlb">- ' + dataProg.packages[id].price + '/month</td></tr>';
                 if (dataProg.packages[id].noLocal) {
                     smmry += '<tr><td class="nlb">- No Locals/' + dataProg.packages[id].noLocal + '</td></tr>';
@@ -40,30 +40,30 @@ app.controller('PP_Controller', ['$scope', '$compile',
         //preferred_choice
         arrayBaseSummary[7] = outputSummary(30);
         //total_choice  (Total Choice Tier @ 10.99)
-        arrayBaseSummary[8] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Total Choice & TC_MDU Tier<br><br></strong></td></tr>' +
+        arrayBaseSummary[8] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Total Choice & TC_MDU Tier<br><br></strong></td></tr>' +
             '<tr><td class="nlb">- "Total Choice Limited" and "Total Choice_MDU Tier" are provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">- Add "Total Choice Plus_MDU Tier" to give equivalent of Total Choice Plus programming.</td></tr></table>'
 
         //Choice Tier for TCD/JCD
-        arrayBaseSummary[9] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Choice_MDU Tier<br><br></strong></td></tr>' +
+        arrayBaseSummary[9] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Choice_MDU Tier<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-"Total Choice Limited" and "Choice_MDU Tier" are provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Xtra Classic_MDU Tier" to give equivalent of Choice Xtra Classic programming.</td></tr></table>'
 
         //Total Choice Plus MDU Tier
-        arrayBaseSummary[10] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Total Choice Plus_MDU Tier<br><br></strong></td></tr>' +
+        arrayBaseSummary[10] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Total Choice Plus_MDU Tier<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-"Total Choice Limited" and "Total Choice_MDU Tier" are provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Total Choice Plus_MDU Tier" to give equivalent of Total Choice Plus programming.</td></tr></table>'
 
         //Xtra Tier
-        arrayBaseSummary[11] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Choice Xtra Classic_MDU Tier<br><br></strong></td></tr>' +
+        arrayBaseSummary[11] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Choice Xtra Classic_MDU Tier<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-"Total Choice Limited" and "Choice_MDU Tier" are provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Xtra Classic_MDU Tier" to give equivalent of Choice Xtra Classic programming.</td></tr></table>'
             //Customer has total_choice  (Total Choice Tier @ 5.00)
-        arrayBaseSummary[12] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Total Choice_MDU Tier<br><br></strong></td></tr>' +
+        arrayBaseSummary[12] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Total Choice_MDU Tier<br><br></strong></td></tr>' +
             '<tr><td class="nlb">- Customer Has Total Choice_MDU Tier</td></tr>' +
             '<tr><td class="nlb">- Upgrade to Plus for $5.00</td></tr>' +
             '<tr><td class="nlb">- To get over 185 channels.</td></tr>' +
@@ -72,11 +72,11 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         //Customer has Choice_MDU Tier  --   
 
-        arrayBaseSummary[13] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Choice_MDU Tier<br><br></strong></td></tr>' +
+        arrayBaseSummary[13] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Choice_MDU Tier<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-If "Total Choice Limited" is on the account, add "Familiar_MDU Tier" to give equivalent of Familiar programming.</td></tr></table>'
 
         //Customer has total_choice  (Total Choice Tier @ 5.00)
-        arrayBaseSummary[14] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Total Choice Bulk<br><br></strong></td></tr>' +
+        arrayBaseSummary[14] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Total Choice Bulk<br><br></strong></td></tr>' +
             '<tr><td class="nlb">- Total Choice Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">- Add "Total Choice Plus_MDU Tier" to give equivalent of Total Choice Plus programming.</td></tr>' +
@@ -85,7 +85,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Total Choice Plus_MDU Tier for TCD/JCD
-        arrayBaseSummary[15] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Total Choice Plus_MDU Tier<br><br></strong></td></tr>' +
+        arrayBaseSummary[15] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Total Choice Plus_MDU Tier<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Total Choice Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">- Add "Total Choice Plus_MDU Tier" to give equivalent of Total Choice Plus programming.</td></tr>' +
@@ -94,7 +94,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Total Choice Bulk
-        arrayBaseSummary[16] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Total Choice Bulk<br><br></strong></td></tr>' +
+        arrayBaseSummary[16] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Total Choice Bulk<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Total Choice Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Total Choice Plus_MDU Tier" to give equivalent of Total Choice Plus programming.</td></tr>' +
@@ -103,7 +103,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Xtra Digital Bulk for TMU
-        arrayBaseSummary[17] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Xtra Digital Bulk<br><br></strong></td></tr>' +
+        arrayBaseSummary[17] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Xtra Digital Bulk<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Xtra Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Ultimate Add-On_Base Xtra" to give equivalent of Ultimate programming.</td></tr>' +
@@ -114,7 +114,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Choice Digital Bulk for TMU
-        arrayBaseSummary[18] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Choice Digital Bulk<br><br></strong></td></tr>' +
+        arrayBaseSummary[18] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Choice Digital Bulk<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Choice Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Xtra Add-On_Base Choice" to give equivalent of Xtra programming.</td></tr>' +
@@ -127,7 +127,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Family Digital Bulk for TMU
-        arrayBaseSummary[19] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Family Digital Bulk<br><br></strong></td></tr>' +
+        arrayBaseSummary[19] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Family Digital Bulk<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Family Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">-Add "Entertainment Add-On_Base Family" to give the equivalent of Entertainment.</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Add-On_Base Family" to give equivalent of Choice.</td></tr>' +
@@ -138,7 +138,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         // Premier Add On
-        arrayBaseSummary[20] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Premier Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[20] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Premier Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Choice Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Xtra Add-On_Base Choice" to give equivalent of Xtra programming.</td></tr>' +
@@ -149,7 +149,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         // Family Digital Bulk
-        arrayBaseSummary[21] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Family Digital Bulk<br><br></strong></td></tr>' +
+        arrayBaseSummary[21] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Family Digital Bulk<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Family Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Xtra Add-On_Base Family" to give equivalent of Xtra programming.</td></tr>' +
@@ -160,7 +160,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         // Choice Add-On
-        arrayBaseSummary[22] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Choice Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[22] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Choice Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Family Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Add-On_Base Family" to give equivalent of Choice programming.</td></tr>' +
@@ -173,7 +173,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         // Xtra Add-On FDB
-        arrayBaseSummary[23] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Xtra Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[23] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Xtra Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Family Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Add-On_Base Family" to give equivalent of Choice programming.</td></tr>' +
@@ -186,7 +186,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         // Premier Add On FDB
-        arrayBaseSummary[24] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Premier Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[24] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Premier Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Family Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Add-On_Base Family" to give equivalent of Choice programming.</td></tr>' +
@@ -199,28 +199,28 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Student Preferred Bulk
-        arrayBaseSummary[25] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Student Preferred Bulk<br><br></strong></td></tr>' +
+        arrayBaseSummary[25] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Student Preferred Bulk<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Student Preferred Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Add-On_Base Student Preferred" to give the equivalent of Choice programming.</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Xtra Classic Add-On_Base Student Preferred" to give the equivalent of Choice Xtra Classic programming.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr></table>'
 
         //Student Choice Add-On 
-        arrayBaseSummary[26] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Student Choice Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[26] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Student Choice Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Student Preferred Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Add-On_Base Student Preferred" to give the equivalent of Choice programming.</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Xtra Classic Add-On_Base Student Preferred" to give the equivalent of Choice Xtra Classic programming.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr></table>'
 
         //Student Xtra Add-On
-        arrayBaseSummary[27] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Student Choice Xtra Classic Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[27] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Student Choice Xtra Classic Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Student Preferred Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Add-On_Base Student Preferred" to give the equivalent of Choice programming.</td></tr>' +
             '<tr><td class="nlb">-Add "Choice Xtra Classic Add-On_Base Student Preferred" to give the equivalent of Choice Xtra Classic programming.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr></table>'
 
         //Entertainment Digital Bulk
-        arrayBaseSummary[28] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Entertainment Digital Bulk<br><br></strong></td></tr>' +
+        arrayBaseSummary[28] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Entertainment Digital Bulk<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Entertainment Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">-Add Choice Add-On_Base Entertainment to give equivalent of Choice.</td></tr>' +
             '<tr><td class="nlb">-Add Xtra Add-On_Base Entertainment to give the equivalent of Xtra.</td></tr>' +
@@ -230,7 +230,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Xtra Add-On TMW/JMW
-        arrayBaseSummary[29] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Xtra Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[29] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Xtra Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Choice Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Xtra Add-On_Base Choice" to give equivalent of Xtra programming.</td></tr>' +
@@ -243,7 +243,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Ultimate Add-On TMW/JMW
-        arrayBaseSummary[30] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Ultimate Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[30] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Ultimate Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Choice Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Xtra Add-On_Base Choice" to give equivalent of Xtra programming.</td></tr>' +
@@ -256,7 +256,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //Premier Add-On TMW/JMW
-        arrayBaseSummary[31] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Premier Add-On<br><br></strong></td></tr>' +
+        arrayBaseSummary[31] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Premier Add-On<br><br></strong></td></tr>' +
             '<tr><td class="nlb">-Choice Digital Bulk is provided by the property.</td></tr>' +
             '<tr><td class="nlb">&nbsp;</td></tr>' +
             '<tr><td class="nlb">-Add "Xtra Add-On_Base Choice" to give equivalent of Xtra programming.</td></tr>' +
@@ -310,7 +310,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //premium services----------------------------------
-        arrayPremSummary[0] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>HBO</strong></td></tr>' +
+        arrayPremSummary[0] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>HBO</strong></td></tr>' +
             '<tr><td class="nlb">-10 channels (9 available in HD) with a different mix of shows on each channel.</td></tr>' +
             '<tr><td class="nlb">-Hit original programs.</td></tr>' +
             '<tr><td class="nlb">-Hollywood hit movies with a new movie premiering every Saturday.</td></tr>' +
@@ -318,69 +318,69 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<tr><td class="nlb">-Big concerts and events.</td></tr>' +
             '<tr><td class="nlb">-Family programming on HBO Family.</td></tr></table>'
 
-        arrayPremSummary[1] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>SHOWTIME UNLIMITED</strong></td></tr>' +
+        arrayPremSummary[1] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>SHOWTIME UNLIMITED</strong></td></tr>' +
             '<tr><td class="nlb">-13 commercial-free networks featuring original series, Hollywood hits and championship boxing.</td></tr>' +
             '<tr><td class="nlb">-Original series (The L Word).</td></tr>' +
             '<tr><td class="nlb">-Hollywood hot movies.</td></tr>' +
             '<tr><td class="nlb">-More boxing matches than any other premium network.</td></tr>' +
             '<tr><td class="nlb">-Showtime Championship Boxing with exclusive title fights across all weight classes.</td></tr></table>'
 
-        arrayPremSummary[2] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>STARZ SUPER PACK</strong></td></tr>' +
+        arrayPremSummary[2] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>STARZ SUPER PACK</strong></td></tr>' +
             '<tr><td class="nlb">-The best movie value from DIRECTV.</td></tr>' +
             '<tr><td class="nlb">-15 distinct movie channels and over 900 movies each month.</td></tr>' +
             '<tr><td class="nlb">-Programming for 8- to 16-year-olds on WAM.</td></tr>' +
             '<tr><td class="nlb">-Theme channels playing the best Westerns, Romance, Action movies and much more.</td></tr></table>'
 
-        arrayPremSummary[3] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>CINEMAX</strong></td></tr>' +
+        arrayPremSummary[3] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>CINEMAX</strong></td></tr>' +
             '<tr><td class="nlb">-The best place for exclusive Hollywood premieres and the biggest variety of hit movies.</td></tr>' +
             '<tr><td class="nlb">-A new movie premieres every Saturday.</td></tr>' +
             '<tr><td class="nlb">-Hard-to-find independent films and classics.</td></tr>' +
             '<tr><td class="nlb">-3 channels included.</td></tr>' +
             '<tr><td class="nlb">-A great complement to our HBO package.</td></tr></table>'
 
-        arrayPremSummary[4] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>SPORTS PACK</strong></td></tr>' +
+        arrayPremSummary[4] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>SPORTS PACK</strong></td></tr>' +
             '<tr><td class="nlb">-Diverse sports coverage from the U.S. and around the world, including soccer, rugby, cycling, horse racing, surfing, volleyball and more.</td></tr>' +
             '<tr><td class="nlb">-Great college and amateur sports from around the country.</td></tr></table>'
 
 
         //extras----------------------------------
-        arrayExtraSummary[0] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>ACCESS DIRECTV Magazine</strong></td></tr>' +
+        arrayExtraSummary[0] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>ACCESS DIRECTV Magazine</strong></td></tr>' +
             '<tr><td class="nlb">-"Get ACCESS DIRECTV Magazine at a great price."</td></tr>' +
             '<tr><td class="nlb">-$2.99/month when ordered online at DIRECTV.com or by remote control on channel 111.</td></tr>' +
             '<tr><td class="nlb">-$3.99/month when ordered by IVR or CSR.</td></tr>' +
             '<tr><td class="nlb"><ul><li>Easy-to-use</li><li>24-hour grids with easy-to-find listings</li><li>Expert reviews and recommendations</li><li>Exclusive interviews, news, and stories from today\'s hottest celebrities</li></ul></td></tr></table>'
 
-        arrayExtraSummary[1] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>PROTECTION PLAN</strong></td></tr>' +
+        arrayExtraSummary[1] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>PROTECTION PLAN</strong></td></tr>' +
             '<tr><td class="nlb">-Provides complete technical support from DIRECTV</td></tr>' +
             '<tr><td class="nlb">-Gives customers a single contact for technical troubleshooting rather than being referred to manufacturers, dealers or installers for help.</td></tr>' +
             '<tr><td class="nlb">-One year commitment to plan required.</td></tr>' +
             '<tr><td class="nlb">-Customers are not charged until the 2nd month.</td></tr>' +
             '<tr><td class="nlb">-Cancellation fee applies.</td></tr></table>'
             //ARS-HD Service        
-        arrayExtraSummary[2] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>ARS-HD Service</strong></td></tr>' +
+        arrayExtraSummary[2] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>ARS-HD Service</strong></td></tr>' +
             '<tr><td class="nlb">-Provides access to our superior HD technology.</td></tr>' +
             '<tr><td class="nlb">-Monthly: $10</td></tr>' +
             '<tr><td class="nlb">-access to all the HD programming available with your base package and other services.</td></tr></table>'
 
-        arrayExtraSummary[3] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>DIRECTV HD Extra Pack</strong></td></tr>' +
+        arrayExtraSummary[3] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>DIRECTV HD Extra Pack</strong></td></tr>' +
             '<tr><td class="nlb">-Requires HD equipment and service.</td></tr>' +
             '<tr><td class="nlb">-$4.99/month.</td></tr>' +
             '<tr><td class="nlb">-First 3 months free. (See HD Extra Pack page for details.)</td></tr>' +
             '<tr><td class="nlb">-Includes unique HD channels.</td></tr></table>'
 
         //MRV       
-        arrayExtraSummary[4] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Whole-Home DVR</strong></td></tr>' +
+        arrayExtraSummary[4] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Whole-Home DVR</strong></td></tr>' +
             '<tr><td class="nlb">-Provides access to our superior multi-room technology.</td></tr>' +
             '<tr><td class="nlb">-Monthly: $3</td></tr>' +
             '<tr><td class="nlb">-Allows shows recorded on a DIRECTV Plus HD DVR  in one room to be watched in another.</td></tr></table>'
 
         //ARS
-        arrayExtraSummary[5] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Advanced Receiver Service (ARS)</strong></td></tr>' +
+        arrayExtraSummary[5] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Advanced Receiver Service (ARS)</strong></td></tr>' +
             '<tr><td class="nlb">-Combines the DVR, HD, and Whole-Home services into one service.</td></tr>' +
             '<tr><td class="nlb">-Monthly: $20</td></tr>' +
             '<tr><td class="nlb">-Available only to accounts created on/after Feb 9, 2012.</td></tr></table>'
 
-        arrayExtraSummary[6] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#e0e1e1">&nbsp;<strong>Protection Plan Premier</strong></td></tr>' +
+        arrayExtraSummary[6] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" >&nbsp;<strong>Protection Plan Premier</strong></td></tr>' +
             '<tr><td class="nlb">-Covers manufacturer defect and normal wear-and-tear.</td></tr>' +
             '<tr><td class="nlb">-$19.99/month.</td></tr>' +
             '<tr><td class="nlb">-Plan coverage and billing will begin in 1 month.(After the 30-day No Claim period.)</td></tr></table>';
@@ -388,33 +388,33 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         //right sized suggestion ----------------------------------
         arrayLyrSuggestion[1] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#ff6600">&nbsp;<strong>SAVINGS ALERT!</strong></td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Premier has more for less money.</td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Add Premier instead of Xtra and 5 Premiums.</td></tr></table><br>'
+            '<tr><td class="nlb" >-Premier has more for less money.</td></tr>' +
+            '<tr><td class="nlb" >-Add Premier instead of Xtra and 5 Premiums.</td></tr></table><br>'
 
         arrayLyrSuggestion[2] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#ff6600">&nbsp;<strong>SAVINGS ALERT!</strong></td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Premier has more for less money.</td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Add Premier instead of Plus and 5 Premiums.</td></tr></table><br>'
+            '<tr><td class="nlb" >-Premier has more for less money.</td></tr>' +
+            '<tr><td class="nlb" >-Add Premier instead of Plus and 5 Premiums.</td></tr></table><br>'
 
         arrayLyrSuggestion[3] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#ff6600">&nbsp;<strong>SAVINGS ALERT!</strong></td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Premier has more for less money.</td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Add Premier instead of Plus HD and 5 Premiums.</td></tr></table><br>'
+            '<tr><td class="nlb" >-Premier has more for less money.</td></tr>' +
+            '<tr><td class="nlb" >-Add Premier instead of Plus HD and 5 Premiums.</td></tr></table><br>'
 
         arrayLyrSuggestion[4] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#ff6600">&nbsp;<strong>SAVINGS ALERT!</strong></td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Plus includes DVR Service.  </td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Add Plus instead of Xtra.</td></tr></table><br>'
+            '<tr><td class="nlb" >-Plus includes DVR Service.  </td></tr>' +
+            '<tr><td class="nlb" >-Add Plus instead of Xtra.</td></tr></table><br>'
 
         arrayLyrSuggestion[5] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#ff6600">&nbsp;<strong>SAVINGS ALERT!</strong></td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Plus HD includes DVR Service and HD Access.</td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Add Plus HD instead of Xtra.</td></tr></table><br>'
+            '<tr><td class="nlb" >-Plus HD includes DVR Service and HD Access.</td></tr>' +
+            '<tr><td class="nlb" >-Add Plus HD instead of Xtra.</td></tr></table><br>'
 
         arrayLyrSuggestion[6] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#ff6600">&nbsp;</td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Plus HD includes DVR Service and HD Access.</td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Add Plus HD instead of Plus.</td></tr></table><br>'
+            '<tr><td class="nlb" >-Plus HD includes DVR Service and HD Access.</td></tr>' +
+            '<tr><td class="nlb" >-Add Plus HD instead of Plus.</td></tr></table><br>'
 
 
         arrayLyrSuggestion[8] = '<table cellspacing="0" cellpadding="1" border="0" width="100%"><tr><td class="nlb2" bgcolor="#ff6600">&nbsp;<strong>SAVINGS ALERT!</strong></td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Lo M&aacute;ximo has more for less money.</td></tr>' +
-            '<tr><td class="nlb" bgcolor="#e0e1e1">-Add Lo M&aacute;ximo instead of M&aacute;s Ultra Deportes and 5 Premiums.</td></tr></table><br>'
+            '<tr><td class="nlb" >-Lo M&aacute;ximo has more for less money.</td></tr>' +
+            '<tr><td class="nlb" >-Add Lo M&aacute;ximo instead of M&aacute;s Ultra Deportes and 5 Premiums.</td></tr></table><br>'
 
 
         /*tax info---------------------------------
