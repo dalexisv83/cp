@@ -775,13 +775,14 @@ input#txtSearch{
 }
 
 .search-box{
-/*    position: absolute;*/
+    position: relative;
     border: 2px solid #86b9ec;
     width: 422px;
 /*    top: 94px;
     left: 25px;*/
     height: 134px;
     float: left;
+    z-index: 100;
 }
 
 
@@ -988,11 +989,6 @@ span.btn-feedback:hover {
     margin-top: -150px;
 }
 
-
-
-
-
-
-
-
-
+.rotated .pull-left div{
+    overflow: visible!important;
+}
