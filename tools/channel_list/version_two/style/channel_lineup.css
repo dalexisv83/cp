@@ -360,13 +360,13 @@ input.editor-checkbox {
   max-width: 1000px;
 }
 
-.headers {
+#channel_lineup .headers {
   position: relative;
   padding: 0 15px;
 }
 
-.headers .first,
-.headers .second
+#channel_lineup .headers .first,
+#channel_lineup .headers .second
 {
   width: 49.5%;
   display: inline-block;
@@ -374,11 +374,11 @@ input.editor-checkbox {
   text-align: right;
 }
 
-.headers .first {
+#channel_lineup .headers .first {
   text-align: left;
 }
 
-.headers h1 {
+#channel_lineup .headers h1 {
   font-family: Arial, sans-serif;
   color: white;
   font-weight: bold;
@@ -401,13 +401,13 @@ input.editor-checkbox {
   content: "Commercial\a";
 }
 
-.container {
+#channel_lineup .container {
   position: absolute;
   top: -25px;
   width: 750px;
 }
 
-#container,
+#channel_lineup #container,
 #containerSmall {
 /*    position: absolute;
     top: 282px;
@@ -419,7 +419,7 @@ input.editor-checkbox {
 }
 
 #containerSmall .ui-state-default,
-#container .ui-state-default{
+#channel_lineup #container .ui-state-default{
     border:0;
 }
 
@@ -437,7 +437,7 @@ input.editor-checkbox {
     font-weight: normal;
 }
 
-#container{
+#channel_lineup #container{
 /*  top:345px;*/
   height: 415px;  
 }
