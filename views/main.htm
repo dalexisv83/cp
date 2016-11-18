@@ -1,7 +1,7 @@
 <div ng-controller="MainCtrl">
     <div ng-include="'views/header.htm'"></div>
     <ul id="top" class="nav">
-        <li ng-repeat="tool in tools"><a ng-click="goHere(tool.url)" ng-bind="tool.name"></a></li>
+        <li ng-repeat="tool in tools"><a ng-click="goHere(tool.url)" ng-class="{active: page == tool.url}" ng-bind="tool.name"></a></li>
     </ul>
     <div ng-show="page == tool.url" height="100%" width="100%" ng-repeat="tool in tools" ng-include="tool.src"></div>
 </div>
