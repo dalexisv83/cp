@@ -1267,7 +1267,9 @@ var reset = function(context, activeClass){
           grid.updateFilter();
           oThis.self.removeClass(oThis.aClass);
             if (grid.environment !== 'test') {
-              dcsMultiTrack("DCSext.channel_lineup_search_term","reset button hit");
+              try {
+                dcsMultiTrack("DCSext.channel_lineup_search_term","reset button hit");
+              } catch(ignore) {}
           }
         });
     };
