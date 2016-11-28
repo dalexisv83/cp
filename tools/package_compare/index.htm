@@ -137,7 +137,7 @@
             <div class="table-header grid__item one-quarter" ng-cloak>
                 <div class="current label-holder" ng-show="show_current_channels">
                     <span ng-if="current_pkg.url">
-                        <a title="Click to open this package main page." onClick="window.open('http://agentanswercenter.directv.com/en-us/res/programming/{{current_pkg.url}}', '_blank');" href="#">
+                        <a title="Click to open this package main page." onClick="window.open('http://agentanswercenter.directv.com/en-us/res/programming/{{current_pkg.url}}', '_blank');" href="">
                         {{current_pkg.name}}
                         </a>
                     </span>
@@ -161,7 +161,7 @@
             <div class="table-header grid__item one-quarter">
                 <div class="label-holder" ng-cloak ng-show="show_requested_channels" >
                     <span ng-if="requested_pkg.url">
-                        <a title="Click to open this package main page." onClick="window.open('http://agentanswercenter.directv.com/en-us/res/programming/{{requested_pkg.url}}', '_blank');" href="#">
+                        <a title="Click to open this package main page." onClick="window.open('http://agentanswercenter.directv.com/en-us/res/programming/{{requested_pkg.url}}', '_blank');" href="">
                         {{requested_pkg.name}}
                         </a>
                         <span ng-show="requested_pkg.status == '0'"> - </span>
@@ -207,13 +207,13 @@
                     <table>
                         <tr>
                             <td width="20%">
-                               <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('channelnumber', reverse)">#</a> 
+                               <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('channelnumber', reverse)">#</a> 
                             </td>
                             <td width="60%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('channelname',reverse)">Channel Name</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('channelname',reverse)">Channel Name</a>
                             </td>
                             <td width="20%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('genre',reverse)">Genre</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('genre',reverse)">Genre</a>
                             </td>
                         </tr>
                     </table>
@@ -224,13 +224,13 @@
                     <table>
                         <tr>
                             <td width="20%">
-                               <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('channelnumber', reverse)">#</a> 
+                               <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('channelnumber', reverse)">#</a> 
                             </td>
                             <td width="60%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('channelname',reverse)">Channel Name</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('channelname',reverse)">Channel Name</a>
                             </td>
                             <td width="20%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('genre',reverse)">Genre</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('genre',reverse)">Genre</a>
                             </td>
                         </tr>
                     </table>
@@ -241,13 +241,13 @@
                     <table>
                         <tr>
                             <td width="20%">
-                               <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('channelnumber', reverse)">#</a> 
+                               <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('channelnumber', reverse)">#</a> 
                             </td>
                             <td width="60%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('channelname',reverse)">Channel Name</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('channelname',reverse)">Channel Name</a>
                             </td>
                             <td width="20%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('genre',reverse)">Genre</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('genre',reverse)">Genre</a>
                             </td>
                         </tr>
                     </table>
@@ -258,13 +258,13 @@
                     <table>
                         <tr>
                             <td width="20%">
-                               <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('channelnumber', reverse)">#</a> 
+                               <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('channelnumber', reverse)">#</a> 
                             </td>
                             <td width="60%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('channelname',reverse)">Channel Name</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('channelname',reverse)">Channel Name</a>
                             </td>
                             <td width="20%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="#" title="Click to sort." ng-click="reverse=!reverse;sort('genre',reverse)">Genre</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sort('genre',reverse)">Genre</a>
                             </td>
                         </tr>
                     </table>
@@ -281,7 +281,7 @@
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in current_channels | orderBy:sortType:reverse | limitTo:current_pkg_limit">
                             <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20%"></td>
                             <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20%"></td>
-                            <td width="60%"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href="#"><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
+                            <td width="60%"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href=""><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html-unsafe="channel.genre" width="20%"></td>
                         </tr>
                     </table>
@@ -293,7 +293,7 @@
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in gained_channels | orderBy:sortType:reverse  | limitTo:gained_channels_limit">
                             <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20"></td>
                             <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20"></td>
-                            <td width="60"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href="#"><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
+                            <td width="60"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href=""><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html-unsafe="channel.genre" width="20"></td>
                         </tr>
                     </table>
@@ -305,7 +305,7 @@
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in lost_channels | orderBy:sortType:reverse  | limitTo:lost_channels_limit">
                             <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20"></td>
                             <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20"></td>
-                            <td width="60"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href="#"><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
+                            <td width="60"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href=""><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html-unsafe="channel.genre" width="20"></td>
                         </tr>
                     </table>
@@ -317,7 +317,7 @@
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in requested_channels | orderBy:sortType:reverse | limitTo:requested_pkg_limit">
                             <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20"></td>
                             <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20"></td>
-                            <td width="60"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href="#"><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
+                            <td width="60"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href=""><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html-unsafe="channel.genre" width="20"></td>
                         </tr>
                     </table>
