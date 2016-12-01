@@ -9,6 +9,8 @@
 img {
     min-width:12px;
 }
+#step5Box .col-sm-4 a{text-decoration: underline !important;}
+
 .bgwt{background-color: #fff;
     border-radius: 5px;
     padding:20px;
