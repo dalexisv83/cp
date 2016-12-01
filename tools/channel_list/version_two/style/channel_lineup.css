@@ -502,21 +502,22 @@ input.editor-checkbox {
 #mainHeader {
     font-size: 1.25em;
     width: 50%;
-    margin-top: 30px;
 }
 
 #channel_lineup .table-header{
     padding-top:80px;
     overflow: hidden;
-    margin-bottom: -30px;
+    margin-top: -70px;
 }
 
-#channel_lineup .table-header .pull-left{
-    height:50px;   
+#channel_lineup .table-header .pull-left > .pull-left{
+    height:50px;
+    position: relative;
 }
 
 .arrow{
-   padding-right: 6px;
+   position: absolute;
+   left: -10px !important;
 }
 
 #channel_lineup .table-header .wide{
@@ -602,28 +603,17 @@ input.editor-checkbox {
   border-bottom: 2px solid #fff; 
 }
 
-#genreSorter{
-    margin-left:10px;
+#mainHeader .narrow, .r1, .r2, .r3 {
+  text-align: left;
+}
+.r0 .inner, .r1 .inner, .r2 .inner, .r3  .inner {
+  padding-left: 10px !important;
 }
 
-#genreSorter .arrow{
-    padding-right:4px;
-}
-
-.two #genreSorter .arrow{
-    padding-right: 3px;
-    margin-left: -6px;
-}
-
-.two #genreSortStart{
-    margin-right: 15px;
-}
-
-
-
-#channelNumberSorter
-{
-    padding-left: 6px;
+#mainHeader > div > div {
+    position: absolute;
+    bottom: 0;
+    left: 10px;
 }
 
 #mainHeader #nameSorter a,
@@ -632,28 +622,6 @@ input.editor-checkbox {
 #mainHeader #genreSorter a
 {
     color:#ff0000;
-}
-
-
-
-#callLetterSorter{
-    padding-left: 8px;
-}
-
-#channelNumberSorter .arrow,
-#callLetterSorter .arrow
-{
-    padding-top: 6px;
-}
-
-
-#channelNameSortStart{
-    width:120px;
-    text-align: left;
-}
-
-.rotated .narrower{
-   background: #fff;
 }
 
 #channel_lineup svg{
@@ -831,7 +799,7 @@ a.activeLink {
   top:50px;
 }
 .result-count.no-channels-found.search-term{
-	top:44px;
+  top:44px;
 }
 
 .result-count.search-term span{
