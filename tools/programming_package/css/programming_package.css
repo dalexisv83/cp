@@ -15,7 +15,8 @@ img {
     border-radius: 5px;
     padding:20px;
     margin:5px 0;
-    min-height:157px;
+    min-height:147px;
+    overflow: hidden;
 }
 .mnh2{
     min-height:235px;
@@ -35,22 +36,14 @@ img {
     margin-bottom:10px !important;    
 }
 
-.pdr0{
-    padding-right:0 !important;    
-}
-.pdl0{
-    padding-left:0 !important;    
-}
+
 .pd30{
     padding:20px 30px !important;
 }
 .container-fluid{
     height:100%;
 }
-.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, 
-.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-    padding-left: 10px;
-}
+
 #container1 p strong , #container2 p strong{
     text-transform: uppercase;
     font-size: 1.3em
@@ -186,12 +179,7 @@ div#centerContent {
     width:30%
 }
 
-ul#container1 , ul#container2{
-    z-index:5;
-    padding:0;
-    margin-top:20px;
-    margin-bottom:40px;
-}
+
 
 li#totalsBox {
     color:#000;
@@ -243,3 +231,30 @@ li.primaryCredit {
     color:red
 }
 form li {list-style: none}
+
+@media (min-width: 768px){
+    ul#container1 , ul#container2{
+    z-index:5;
+    padding:0;
+    margin-top:20px;
+    margin-bottom:40px;
+    height:80%;
+    }
+    .pdr0{
+        padding-right:0 !important;    
+    }
+    .pdl0{
+        padding-left:0 !important;    
+    }
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, 
+    .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+        padding-left: 10px;
+    }     
+}
+
+@media (max-width: 767px){
+    #step1Box , #step2Box , #step3Box , #step4Box , #step5Box , #step6Box , #centerContent, #container1, #container2{
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+}
