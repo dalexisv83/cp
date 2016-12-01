@@ -1,7 +1,8 @@
-app.controller('CL_Controller',['$scope', '$http',
-    function($scope, $http) {
+app.controller('CL_Controller',['$scope', '$http', '$window', '$timeout',
+    function($scope, $http, $window, $timeout) {
     "use strict";
-    var init = function(response) {
+    var w = angular.element($window),
+        init = function(response) {
             /*global AdSales, smallGrid, config, bigGrid, searchBox, programmingHeaders, columnSorter, reset, toolTip, commentBtn */
             /*jslint newcap: true */
             var featured_packages = response.data.featured_packages.sort(function(a, b) {
@@ -104,6 +105,10 @@ app.controller('CL_Controller',['$scope', '$http',
                     },
                     true
                 );
+            w.bind('resize', function() {
+                big_grid.grid.resizeCanvas();
+                small_grid.grid.resizeCanvas();
+            });
         },
         stopWatching = $scope.$watch(
             function() {

@@ -60,7 +60,7 @@ var gridTable = function(rowHeight,context,featured_packages){
 
 gridTable.prototype.render = function(){
   "use strict";
-   Slick.Grid("#"+this.context, this.data, this.columns, this.options);
+   this.grid = new Slick.Grid("#"+this.context, this.data, this.columns, this.options);
 };
 
 gridTable.prototype.setOptions = function(enableCellNavigation,enableColumnReorder){
@@ -237,8 +237,8 @@ bigGrid.prototype.render = function(){
      /*jslint unparam: true */
 
     this.dataView = new Slick.Data.DataView();
-    var grid = new Slick.Grid("#" + this.context, this.dataView, this.columns, this.options),
-    oThis = this,
+    this.grid = new Slick.Grid("#" + this.context, this.dataView, this.columns, this.options);
+    var oThis = this,
     search_term_len,
     isMatched,
     found = false,
@@ -303,13 +303,13 @@ bigGrid.prototype.render = function(){
     };
 
     this.dataView.onRowCountChanged.subscribe(function (e, args) {
-        grid.updateRowCount();
-        grid.render();
+        oThis.grid.updateRowCount();
+        oThis.grid.render();
     });
 
     this.dataView.onRowsChanged.subscribe(function (e, args) {
-        grid.invalidateRows(args.rows);
-        grid.render();
+        oThis.grid.invalidateRows(args.rows);
+        oThis.grid.render();
     });
 
     this.dataView.setItems(this.data);
@@ -318,13 +318,13 @@ bigGrid.prototype.render = function(){
     });
     this.dataView.setFilter(searchFilter); //set the searchfilter function to use
 
-    grid.onSort.subscribe(function (e, args) {
+    oThis.grid.onSort.subscribe(function (e, args) {
         oThis.sortdir = args.sortAsc ? 1 : -1;
         oThis.sortcol = args.sortCol.field;
         oThis.dataView.sort(oThis.comparer, args.sortAsc);
     });
 
-    grid.setSortColumn("channel_name",true); //channel name ascending on page load
+    oThis.grid.setSortColumn("channel_name",true); //channel name ascending on page load
 };
 
 /**
