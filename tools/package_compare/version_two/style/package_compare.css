@@ -3,10 +3,6 @@
   font-size: 12px;
 }
 
-#package_compare .grid {
-  letter-spacing: -.34em;
-}
-
 #package_compare.full{
   background-color: #ddd;
 /*  background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/tool_bg-09212015.jpg);
