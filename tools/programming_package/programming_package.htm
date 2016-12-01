@@ -1,147 +1,60 @@
 <div id="programming_package" ng-controller="PP_Controller" class="col-sm-8 noflcenter">
-    <div class="col-sm-12">
+    <div class="col-sm-12 container-fluid">
         <form name="frmNewPackage">
             <div id="centerContent" class="col-sm-12">
-                <span class="centerSpan">
-                    <table cellpadding="0" cellspacing="0" class="headerTable">
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a href="" ng-click="swapBasePackageMDU()"
-                                    ng-mouseleave="img_off_Base('MDUbutton',1);"
-                                    ng-mouseover=
-                                    "img_on_Base('MDUbutton',8);"><img border="0" id=
-                                    "MDUbutton" name="MDUbutton" src=
-                                    "../common_assets/img/greenBoxNorm.gif"></a>
-                                </td>
-        
-                                <td>
-                                    <a href="" ng-click="swapBasePackageMDU()"
-                                    ng-mouseleave="img_off_Base('MDUbutton',1);"
-                                    ng-mouseover="img_on_Base('MDUbutton',8);">Multi
-                                    Dwelling Accts.</a>
-                                </td>
-                            </tr>
-        
-                            <tr>
-                                <td>
-                                    <a href="" ng-click="swapBasePackageLanguage()"
-                                    ng-mouseleave="img_off_Base('SpanishButton',1);"
-                                    ng-mouseover=
-                                    "img_on_Base('SpanishButton',7);"><img border="0"
-                                    id="SpanishButton" name="SpanishButton" src=
-                                    "../common_assets/img/greenBoxNorm.gif"></a>
-                                </td>
-        
-                                <td>
-                                    <a href="" ng-click="swapBasePackageLanguage()"
-                                    ng-mouseleave="img_off_Base('SpanishButton',1);"
-                                    ng-mouseover="img_on_Base('SpanishButton',7);">
-                                    <div id="lyrEnglish1" style="display:block;">
-                                        Spanish Programming
-                                    </div>
-        
-                                    <div id="lyrSpanish1" style="display:none;">
-                                        English Programming&nbsp;
-                                    </div></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </span>
                 <ul id="container1" class="col-sm-2">
                     <li id="totalsBox">
-                        <div class="col-sm-12 bgwt marr0 mnh2 pd30">
-                            <table align="center" width="100%">
-                                <tbody>
-                                    <tr>
-                                        <td id="lyrSuggestion" rowspan="2" width="100%">&nbsp;</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <table align="center" width="100%">
-                                <tbody>
-                                    <tr align="center">
-                                        <td width="50%">Base
-                                            <br> $
-                                            <input name="txtBase" readonly size="6" type="text" value="0.00">
-                                        </td>
-                                        <td width="50%">Premium
-                                            <br> $
-                                            <input name="txtPrem" readonly size="6" type="text" value="0.00">
-                                        </td>
-                                    </tr>
-                                    <tr align="center">
-                                        <td>Extras
-                                            <br> $
-                                            <input name="txtExtra" readonly size="6" type="text" value="0.00">
-                                        </td>
-                                        <td>1st Month Total
-                                            <br> $
-                                            <input name="txtGrandTotal" readonly size="6" style="background-color: #FFFFCC; color: #000000; border: 2px solid #003366" type="text" value="0.00"> &nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <table align="center" border="0">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <input onclick="javascript:resetAll();" type="button" value="Reset">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td><span id="lyr2ndMonth"></span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="col-sm-12 bgwt mnh2 pdr0 pdl0">
+                            <div class="col-sm-12 pdr0 pdl0">
+                               <span id="lyrSuggestion">&nbsp;</span>
+                            </div>
+                            <div class="col-sm-12 pdr0 pdl0 marb10">
+                                <div class="col-sm-6">Base<br> $
+                                    <input name="txtBase" readonly size="6" type="text" value="0.00">
+                                </div>
+                                <div class="col-sm-6">Premium<br> $
+                                    <input name="txtPrem" readonly size="6" type="text" value="0.00">
+                                </div>
+                            </div>
+                            <div class="col-sm-12 pdr0 pdl0 marb10">
+                                <div class="col-sm-6">Extras<br> $
+                                    <input name="txtExtra" readonly size="6" type="text" value="0.00">
+                                </div>
+                                <div class="col-sm-6">1st Month Total<br> $
+                                    <input name="txtGrandTotal" readonly size="6" style="background-color: #FFFFCC; color: #000000; border: 2px solid #003366" type="text" value="0.00">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <input onclick="javascript:resetAll();" type="button" value="Reset">
+                            </div>
+                            <div class="col-sm-12 pdr0 pdl0">
+                                <span id="lyr2ndMonth"></span>
+                            </div>
                         </div>
                     </li>
                     <li id="summaryBox">
                         <div class="bgwt marr0 col-sm-12 mnh3">
                             <p>quick summary</p>
-                            <table align="center">
-                                <tbody>
-                                    <tr>
-                                        <td ng-bind-html="ppSUMMARY">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="col-sm-12">
+                                <div ng-bind-html="ppSUMMARY"></div>
+                            </div>
                         </div>
                     </li>
                 </ul>
                 <ul id="container2" class="col-sm-10">
                     <li id="step1Box" class="col-sm-4 primaryCredit pdr0">
-                        <div class="bgwt marr0">
+                        <div class="col-sm-12 bgwt marr0">
                             <p><strong>Step 1: Select # of Tv's:</strong></p>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <a href="" ng-click="img_click_primaryCredit();" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_primaryCredit();" ng-mouseover="ppSUMMARY = varDefaultSummary; img_on_primaryCredit();">
-                                                <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="../common_assets/img/greenBoxNorm.gif">
-                                            </a>
-                                        </td>
-                                        <td class="innerboxHeadBig">
-                                            Click box if Primary TV Credit = No
-                                            <br /> (Rio > Bill Ledger tab)
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="col-sm-12 pdr0 pdl0 marb10">
+                                <a href="" ng-click="img_click_primaryCredit();" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_primaryCredit();" ng-mouseover="ppSUMMARY = varDefaultSummary; img_on_primaryCredit();">
+                                <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="../common_assets/img/greenBoxNorm.gif"></a> Click box if Primary TV Credit = No
+                                <br> &nbsp;&nbsp;&nbsp;&nbsp;(Rio > Bill Ledger tab)
+                            </div>
                             <p>
                                 <a href="" ng-click="img_click_ds('1receiver',1);" ng-mouseleave="img_off_ds('1receiver',1);" ng-mouseover="img_on_ds('1receiver',1);"><img alt="1 receiver" border="0" id="1receiver" name="1receiver" src="../common_assets/img/button1normal.jpg"></a>
                                 <a href="" ng-click="img_click_ds('2receiver',2);" ng-mouseleave="img_off_ds('2receiver',2);" ng-mouseover="img_on_ds('2receiver',2);"><img alt="2 receiver" border="0" id="2receiver" name="2receiver" src="../common_assets/img/button2normal.jpg"></a>
                                 <a href="" ng-click="img_click_ds('3receiver',3);" ng-mouseleave="img_off_ds('3receiver',3);" ng-mouseover="img_on_ds('3receiver',3);"><img alt="3 receiver" border="0" id="3receiver" name="3receiver" src="../common_assets/img/button3normal.jpg"></a>
-                                <a href="" ng-click="img_click_ds('4receiver',4);" ng-mouseleave="img_off_ds('4receiver',4);" ng-mouseover="img_on_ds('4receiver',4);"><img alt="4 receiver" border="0" id="4receiver" name="4receiver" src="../common_assets/img/button4normal.jpg">
-                                </a>
+                                <a href="" ng-click="img_click_ds('4receiver',4);" ng-mouseleave="img_off_ds('4receiver',4);" ng-mouseover="img_on_ds('4receiver',4);"><img alt="4 receiver" border="0" id="4receiver" name="4receiver" src="../common_assets/img/button4normal.jpg"></a>
                                 <a href="" ng-click="img_click_ds('5receiver',5);" ng-mouseleave="img_off_ds('5receiver',5);" ng-mouseover="img_on_ds('5receiver',5);"><img alt="5 receiver" border="0" id="5receiver" name="5receiver" src="../common_assets/img/button5normal.jpg"></a>
                                 <a href="" ng-click="img_click_ds('6receiver',6);" ng-mouseleave="img_off_ds('6receiver',6);" ng-mouseover="img_on_ds('6receiver',6);"><img alt="6 receiver" border="0" id="6receiver" name="6receiver" src="../common_assets/img/button6normal.jpg">
                                 </a>
@@ -149,573 +62,343 @@
                         </div>
                     </li>
                     <li id="step2Box" class="col-sm-8">
-                        <div class="bgwt">
+                        <div class="col-sm-12 bgwt">
                             <p><strong>Step 2: Select Equipment Service</strong></p>
-                            <table cellpadding="2">
-                                <tbody>
-                                    <tr>
-                                        <td colspan="2">
-                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');">
-                                                <strong>ARS</strong></a>
-                                        </td>
-                                        <td colspan="2">
-                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/equipment/dtv_plus_dvr_recording.html');">
-                                                <strong>ARS-DVR</strong></a>
-                                        </td>
-                                        <td colspan="2">
-                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hd_access.html');">
-                                                <strong>ARS-HD</strong></a>
-                                        </td>
-                                        <td colspan="2">
-                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/whole_home_dvr_basics.html');">
-                                                <strong>Whole-Home DVR</strong></a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="" ng-click="img_Click_ARS('ARS1',1)" ng-mouseleave="img_off_ARS('ARS1',2);" ng-mouseover="img_on('ARS1',12);"><img border="0" id="ARS1" name="ARS1" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>Monthly(<span id="ARS_Monthly_Fee">$25</span>)</td>
-                                        <td>
-                                            <a href="" ng-click="img_Click_DVR('DVR1',1)" ng-mouseleave="img_off_DVR('DVR1',2);" ng-mouseover="img_on('DVR1',12);"><img border="0" id="DVR1" name="DVR1" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>Monthly(<span id="ARS_Monthly_DVR_Fee">$10</span>)</td>
-                                        <td>
-                                            <a href="" ng-click="img_Click_HD_Access('HD_Access1',1)" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_HD_Access('HD_Access1',1);" ng-mouseover="ppSUMMARY = arrayExtraSummary[2]; img_on('HD_Access1',10);">
-                                                <img border="0" id="HD_Access1" name="HD_Access1" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>Monthly(<span id="ARS_Monthly_HD_Fee">$10</span>)</td>
-                                        <td>
-                                            <a href="" ng-click="img_Click_MRV('MRV1',1)" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_MRV('MRV1',1);" ng-mouseover="ppSUMMARY = arrayExtraSummary[4]; img_on('MRV1',10);">
-                                                <img border="0" id="MRV1" name="MRV1" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>Monthly(<span id="MRV">$3</span>)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="" ng-click="img_Click_ARS_Extra();" ng-mouseleave="img_mouseout_ars_extra();" ng-mouseover="img_mouseover_ars_extra();"><img border="0" id="MRV3" name="MRV3" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>
-                                            Monthly(<span>$15</span>)
-                                        </td>
-                                        <td>
-                                            <a href="" ng-click="img_Click_DVR('DVR2',2)" ng-mouseleave="img_off_DVR('DVR2',2);" ng-mouseover="img_on('DVR2',12);"><img border="0" id="DVR2" name="DVR2" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>Remove</td>
-                                        <td>
-                                            <a href="" ng-click="img_Click_HD_Access('HD_Access2',2)" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_HD_Access('HD_Access2',2);" ng-mouseover="ppSUMMARY = arrayExtraSummary[2]; img_on('HD_Access2',12);">
-                                                <img border="0" id="HD_Access2" name="HD_Access2" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>Remove</td>
-                                        <td>
-                                            <a href="" ng-click="img_Click_MRV('MRV2',2)" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_MRV('MRV2',2);" ng-mouseover="ppSUMMARY = arrayExtraSummary[4]; img_on('MRV2',12);">
-                                                <img border="0" id="MRV2" name="MRV2" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>Remove</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="" ng-click="img_Click_ARS('ARS2',2)" ng-mouseleave="img_off_ARS('ARS2',2);" ng-mouseover="img_on('ARS2',12);"><img border="0" id="ARS2" name="ARS2" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td>Remove</td>
-                                        <td colspan="7">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="8">
-                                            Accounts may require different <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');">
-                                            Advanced Services (ARS)</a>.
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="col-sm-3 pdr0 pdl0">
+                                <div class="col-sm-12 pdr0 pdl0">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');"><strong>ARS</strong></a>
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_ARS('ARS1',1)" ng-mouseleave="img_off_ARS('ARS1',2);" ng-mouseover="img_on('ARS1',12);"><img border="0" id="ARS1" name="ARS1" src="../common_assets/img/greenBoxNorm.gif"></a> Monthly(<span id="ARS_Monthly_Fee">$25</span>)
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_ARS_Extra();" ng-mouseleave="img_mouseout_ars_extra();" ng-mouseover="img_mouseover_ars_extra();"><img border="0" id="MRV3" name="MRV3" src="../common_assets/img/greenBoxNorm.gif"></a> Monthly(<span>$15</span>)
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_ARS('ARS2',2)" ng-mouseleave="img_off_ARS('ARS2',2);" ng-mouseover="img_on('ARS2',12);"><img border="0" id="ARS2" name="ARS2" src="http://vwecda05.testla.testfrd.directv.com/all_tools_cp/common_assets/img/greenBoxNorm.gif"></a> <span>Remove</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 pdr0 pdl0 marb10">
+                                <div class="col-sm-12 pdr0 pdl0">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/equipment/dtv_plus_dvr_recording.html');"><strong>ARS-DVR</strong></a>
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_DVR('DVR1',1)" ng-mouseleave="img_off_DVR('DVR1',2);" ng-mouseover="img_on('DVR1',12);"><img border="0" id="DVR1" name="DVR1" src="http://vwecda05.testla.testfrd.directv.com/all_tools_cp/common_assets/img/greenBoxNorm.gif"></a> Monthly(<span id="ARS_Monthly_DVR_Fee">$10</span>)
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_DVR('DVR2',2)" ng-mouseleave="img_off_DVR('DVR2',2);" ng-mouseover="img_on('DVR2',12);"><img border="0" id="DVR2" name="DVR2" src="http://vwecda05.testla.testfrd.directv.com/all_tools_cp/common_assets/img/greenBoxNorm.gif"></a> <span>Remove</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 pdr0 pdl0 marb10">
+                                <div class="col-sm-12 pdr0 pdl0">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hd_access.html');"><strong>ARS-HD</strong></a>
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_HD_Access('HD_Access1',1)" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_HD_Access('HD_Access1',1);" ng-mouseover="ppSUMMARY = arrayExtraSummary[2]; img_on('HD_Access1',10);">
+                                    <img border="0" id="HD_Access1" name="HD_Access1" src="http://vwecda05.testla.testfrd.directv.com/all_tools_cp/common_assets/img/greenBoxNorm.gif"></a> Monthly(<span id="ARS_Monthly_HD_Fee">$10</span>)
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_HD_Access('HD_Access2',2)" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_HD_Access('HD_Access2',2);" ng-mouseover="ppSUMMARY = arrayExtraSummary[2]; img_on('HD_Access2',12);">
+                                    <img border="0" id="HD_Access2" name="HD_Access2" src="../common_assets/img/greenBoxNorm.gif"></a> <span>Remove</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-3 pdr0 pdl0 marb10">
+                                <div class="col-sm-12 pdr0 pdl0">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/whole_home_dvr_basics.html');"><strong>Whole-Home DVR</strong></a>
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_MRV('MRV1',1)" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_MRV('MRV1',1);" ng-mouseover="ppSUMMARY = arrayExtraSummary[4]; img_on('MRV1',10);">
+                                    <img border="0" id="MRV1" name="MRV1" src="../common_assets/img/greenBoxNorm.gif"></a> Monthly(<span id="MRV">$3</span>)
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="" ng-click="img_Click_MRV('MRV2',2)" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_MRV('MRV2',2);" ng-mouseover="ppSUMMARY = arrayExtraSummary[4]; img_on('MRV2',12);">
+                                    <img border="0" id="MRV2" name="MRV2" src="../common_assets/img/greenBoxNorm.gif"></a> <span>Remove</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 pdr0 pdl0">
+                                Accounts may require different <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');">
+                                Advanced Services (ARS)</a>.
+                            </div>
                         </div>
                     </li>
                     <li id="step3Box" class="col-sm-12">
-                        <div class="bgwt">                
-                            <p><strong>Step 3: select a base package</strong></p>
+                        <div class="col-sm-12 bgwt">
+                            <div class="col-sm-12 pdr0 pdl0">
+                                <div class="col-sm-4 pdr0 pdl0">
+                                    <p><strong>Step 3: select a base package</strong></p>
+                                </div>
+                                <div class="col-sm-8 pdr0 pdl0">
+                                    <a href="" ng-click="swapBasePackageMDU()" ng-mouseleave="img_off_Base('MDUbutton',1);" ng-mouseover="img_on_Base('MDUbutton',8);"><img border="0" id="MDUbutton" name="MDUbutton" src="../common_assets/img/greenBoxNorm.gif"></a><a href="" ng-click="swapBasePackageMDU()" ng-mouseleave="img_off_Base('MDUbutton',1);" ng-mouseover="img_on_Base('MDUbutton',8);"> Multi Dwelling Accts.</a>&nbsp;&nbsp;&nbsp;
+                                    <a href="" ng-click="swapBasePackageLanguage()" ng-mouseleave="img_off_Base('SpanishButton',1);" ng-mouseover="img_on_Base('SpanishButton',7);"><img border="0" id="SpanishButton" name="SpanishButton" src="../common_assets/img/greenBoxNorm.gif"></a> <a href="" ng-click="swapBasePackageLanguage()" ng-mouseleave="img_off_Base('SpanishButton',1);" ng-mouseover="img_on_Base('SpanishButton',7);" style="display:inline-block"> <span id="lyrEnglish1" style="display:block;"> Spanish Programming</span> <span id="lyrSpanish1" style="display:none;"> English Programming</span></a>
+                                </div>
+                            </div>
                             <div id="lyrEnglish2">
-                                <table width="100%">
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="8" height="10px"></td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" align="center">
-                                                <a href="" ng-click="img_click_Base('Family',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Family',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base('Family',1);">
-                                                    <img alt="Family" border="0" id="Family" name="Family" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td width="12%" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/family.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();">
-                                                Family</a>
-                                            </td>
-                                            <td width="10%" align="center">
-                                                <a href="" ng-click="img_click_Base('Xtra%20Add-On%20FDB',32);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Xtra Add-On FDB',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base('Xtra Add-On FDB',22);">
-                                                    <img alt="Select" border="0" id="Select" name="Select" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td width="14%" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/select.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();">
-                                                Select</a>
-                                            </td>
-                                            <td width="10%" align="center">
-                                                <a href="" ng-click="img_click_Base('Entertainment',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Entertainment',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base('Entertainment',28);">
-                                                    <img alt="Entertainment" border="0" id="Entertainment" name="Entertainment" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td width="16%" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/entertainment_2.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();">
-                                                Entertainment</a>
-                                            </td>
-                                            <td width="10%" align="center">
-                                                <a href="" ng-click="img_click_Base('Choice',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Choice',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base('Choice',2);">
-                                                    <img alt="Choice" border="0" id="Choice" name="Choice" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td width="20%" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();">
-                                                Choice</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="8" height="10px"></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center">
-                                                <a href="" ng-click="img_click_Base('Xtra',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Xtra',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base('Xtra',3);">
-                                                    <img alt="Xtra" border="0" id="Xtra" name="Xtra" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice_xtra_new.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();">
-                                                Xtra</a>
-                                            </td>
-                                            <td align="center">
-                                                <a href="" ng-click="img_click_Base('Ultimate',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Ultimate',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base('Ultimate',4);">
-                                                    <img alt="Ultimate" border="0" id="Ultimate" name="Ultimate" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice_ultimate.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();">
-                                                Ultimate</a>
-                                            </td>
-                                            <td align="center">
-                                                <a href="" ng-click="img_click_Base('Premier',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Premier',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base('Premier',6);">
-                                                    <img alt="Premier" border="0" id="Premier" name="Premier" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/premier.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();">
-                                                Premier</a>
-                                            </td>
-                                            <!--Preferred Extra-->
-                                            <td width="10%" align="center">
-                                                <a href="" ng-click="img_click_Base('Preferred Extra',33);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Preferred Extra',33);" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base('Preferred Extra',33);">
-                                                    <img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td width="25%" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/preferred_xtra.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();">
-                                                Preferred Xtra</a>
-                                            </td>
-                                            <!--Preferred Extra-->
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td class="innerboxText">&nbsp;</td>
-                                            <td></td>
-                                            <td class="innerboxText">&nbsp;</td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="8">&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="innerboxText" colspan="8">
-                                                Base package required for premiums/additional services. See
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html');">
-                                                Package Requirements</a>.
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <div class="col-sm-12 innerboxHeadBig pdr0 pdl0 marb10">
+                                    <div class="col-sm-3 pdr0 pdl0">
+                                        <a href="" ng-click="img_click_Base('Family',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Family',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base('Family',1);">
+                                        <img alt="Family" border="0" id="Family" name="Family" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/family.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();"> Family</a>
+                                    </div>
+                                    <div class="col-sm-3 pdr0 pdl0">
+                                        <a href="" ng-click="img_click_Base('Xtra%20Add-On%20FDB',32);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Xtra Add-On FDB',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base('Xtra Add-On FDB',22);">
+                                        <img alt="Select" border="0" id="Select" name="Select" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/select.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();"> Select</a>
+                                    </div>
+                                    <div class="col-sm-3 pdr0 pdl0">
+                                        <a href="" ng-click="img_click_Base('Entertainment',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Entertainment',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base('Entertainment',28);">
+                                        <img alt="Entertainment" border="0" id="Entertainment" name="Entertainment" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/entertainment_2.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();"> Entertainment</a>
+                                    </div>
+                                    <div class="col-sm-3 pdr0 pdl0">
+                                        <a href="" ng-click="img_click_Base('Choice',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Choice',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base('Choice',2);">
+                                        <img alt="Choice" border="0" id="Choice" name="Choice" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();"> Choice</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 innerboxHeadBig pdr0 pdl0 marb10">
+                                    <div class="col-sm-3 pdr0 pdl0">
+                                        <a href="" ng-click="img_click_Base('Xtra',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Xtra',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base('Xtra',3);">
+                                        <img alt="Xtra" border="0" id="Xtra" name="Xtra" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice_xtra_new.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();"> Xtra</a>
+                                    </div>
+                                    <div class="col-sm-3 pdr0 pdl0">
+                                        <a href="" ng-click="img_click_Base('Ultimate',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Ultimate',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base('Ultimate',4);">
+                                        <img alt="Ultimate" border="0" id="Ultimate" name="Ultimate" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/choice_ultimate.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();"> Ultimate</a>
+                                    </div>
+                                    <div class="col-sm-3 pdr0 pdl0">
+                                        <a href="" ng-click="img_click_Base('Premier',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Premier',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base('Premier',6);">
+                                        <img alt="Premier" border="0" id="Premier" name="Premier" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/premier.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();"> Premier</a>
+                                    </div>
+                                    <div class="col-sm-3 pdr0 pdl0">
+                                        <a href="" ng-click="img_click_Base('Preferred Extra',33);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Preferred Extra',33);" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base('Preferred Extra',33);">
+                                        <img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/preferred_xtra.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();"> Preferred Xtra</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0">
+                                    Base package required for premiums/additional services. See
+                                    <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html');"> Package Requirements</a>.
+                                </div>
                             </div>
-                        </div>
-                        <div id="lyrSpanish2" style="display:none;" class="col-sm-12">
-                            <div class="bgwt">                    
-                                <table>
-                                    <tbody>
-                                        <tr>
-                                            <td colspan="4" height="10"></td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center">
-                                                <a href="" ng-click="img_click_Base('Mas Latino',7);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Mas Latino',7);" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; img_on_Base('Mas Latino',7);">
-                                                    <img alt="Mas Latino" border="0" name="Mas Latino" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td align="left" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_latino.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();">
-                                                Más Latino</a>
-                                            </td>
-                                            <td align="center">
-                                                <a href="" ng-click="img_click_Base('Optimo_Mas',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Optimo_Mas',8);" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; img_on_Base('Optimo_Mas',8);">
-                                                    <img alt="Optimo Mas" border="0" name="Optimo_Mas" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td align="left" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/optimo_mas.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();">
-                                                Optimo Más</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td>&nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td align="center">
-                                                <a href="" ng-click="img_click_Base('Mas Ultra',24);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Mas Ultra',24);" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; img_on_Base('Mas Ultra',24);">
-                                                    <img alt="Mas Ultra" border="0" name="Mas Ultra" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td align="left" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_ultra.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();">
-                                                Más Ultra</a>
-                                            </td>
-                                            <td align="center">
-                                                <a href="" ng-click="img_click_Base('Lo Maximo',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Lo Maximo',10);" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; img_on_Base('Lo Maximo',10);">
-                                                    <img alt="Lo Maximo" border="0" name="Lo Maximo" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                            </td>
-                                            <td align="left" class="innerboxHeadBig">
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/lo_maximo.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();">
-                                                Lo Maximo</a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="innerboxText" colspan="4">
-                                                Base package required for premiums/additional services. See
-                                                <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html');">
-                                                Package Requirements</a>.
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            <div id="lyrSpanish2" style="display:none;">
+                                <div class="col-sm-6 innerboxHeadBig pdr0 pdl0">
+                                    <div class="col-sm-12 ipdr0 pdl0 marb10">
+                                        <a href="" ng-click="img_click_Base('Mas Latino',7);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Mas Latino',7);" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; img_on_Base('Mas Latino',7);">
+                                        <img alt="Mas Latino" border="0" name="Mas Latino" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_latino.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();"> Más Latino</a>
+                                    </div>
+                                    <div class="col-sm-12 pdr0 pdl0 marb10">
+                                        <a href="" ng-click="img_click_Base('Mas Ultra',24);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Mas Ultra',24);" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; img_on_Base('Mas Ultra',24);">
+                                        <img alt="Mas Ultra" border="0" name="Mas Ultra" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_ultra.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();"> Más Ultra</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 innerboxHeadBig pdr0 pdl0">
+                                    <div class="col-sm-12 pdr0 pdl0 marb10">
+                                        <a href="" ng-click="img_click_Base('Optimo_Mas',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Optimo_Mas',8);" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; img_on_Base('Optimo_Mas',8);">
+                                        <img alt="Optimo Mas" border="0" name="Optimo_Mas" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/optimo_mas.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();"> Optimo Más</a>
+                                    </div>
+                                    <div class="col-sm-12 pdr0 pdl0 marb10">
+                                        <a href="" ng-click="img_click_Base('Lo Maximo',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Lo Maximo',10);" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; img_on_Base('Lo Maximo',10);">
+                                        <img alt="Lo Maximo" border="0" name="Lo Maximo" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/lo_maximo.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();"> Lo Maximo</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0">
+                                    Base package required for premiums/additional services. See
+                                    <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html');"> Package Requirements</a>.
+                                    </div>
                             </div>
-                        </div>
-                        <div id="lyrMDU1" style="display:none;">
-                            <table width="100%">
-                                <tbody>
-                                    <tr>
-                                        <td width="5%">
-                                            <select name="MDUselection" ng-model="MDUselection" ng-change="fillMDUdiv(MDUselection)" ng-options="mduoption as mduoption for mduoption in mduoptions" style="margin-right:5px;">
-                                                <option value="" disabled="true">Select One...</option>
-                                            </select>
-                                        </td>
-                                        <td align="left" colspan="5" id="MDUselectionInfo" width="95%">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="5" id="MDUdefault">
-                                            Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="6" id="MDUdiv" style="display:none;">
-                                            &nbsp;
-                                            <br>
-                                            <!-- TMU SECTION   -->
-                                            <img alt="Total Choice Plus TMU" border="0" name="Total Choice Plus TMU" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <!-- Family Digital Bulk column  -->
-                                            <img alt="Family Digital Bulk" border="0" name="Family Digital Bulk" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Xtra Add-On" border="0" name="Xtra Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Xtra Add-On FDB" border="0" name="Xtra Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Xtra Add-On EDB" border="0" name="Xtra Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Choice Add-On FDB" border="0" name="Choice Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Choice Add-On EDB" border="0" name="Choice Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Premier Add-On FDB" border="0" name="Premier Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <!--==============================-->
-                                            <img alt="Entertainment Add-On" border="0" name="Entertainment Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Preferred Choice" border="0" name="Preferred Choice" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Total Choice" border="0" name="Total Choice for TCD/JCD" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Choice Tier" border="0" name="Choice Tier for TCD/JCD" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Ultimate Add-On CDB" border="0" name="Ultimate Add-On CDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Ultimate Add-On FDB" border="0" name="Ultimate Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Ultimate Add-On EDB" border="0" name="Ultimate Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Premier Add-On CDB" border="0" name="Premier Add-On CDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Premier Add-On EDB" border="0" name="Premier Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Xtra Digital Bulk" name="Xtra Digital Bulk" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Student Choice Add-On" name="Student Choice Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                            <br>
-                                            <img alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" style="display:none;">
-                                            <br>
-                                            <a href="" id="total_choice_plus_anchor" ng-mouseleave="" ng-mouseover="" ng-click=""><img alt="Total Choice Plus" border="0" name="Total Choice Plus" src="../common_assets/img/greenBoxNorm.gif" style="display:none;"></a>
-                                            <br>
-                                            <a href="" id="xtra_tier_anchor" ng-mouseleave="" ng-mouseover="" ng-click=""><img alt="Xtra Tier" border="0" name="Xtra Tier" src="../common_assets/img/greenBoxNorm.gif" style="display:none;"></a>
-                                            <br>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div id="lyrMDU1" style="display:none;">
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <select name="MDUselection" ng-model="MDUselection" ng-change="fillMDUdiv(MDUselection)" ng-options="mduoption as mduoption for mduoption in mduoptions" style="margin-right:5px;">
+                                        <option value="" disabled="true">Select One...</option>
+                                    </select>
+                                    <div id="MDUselectionInfo">&nbsp;</div>
+                                    <div id="MDUdefault">
+                                        Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.
+                                    </div>
+                                    <div id="MDUdiv" style="display:none;">
+                                        <!-- TMU SECTION   -->
+                                        <img alt="Total Choice Plus TMU" border="0" name="Total Choice Plus TMU" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <!-- Family Digital Bulk column  -->
+                                        <img alt="Family Digital Bulk" border="0" name="Family Digital Bulk" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Xtra Add-On" border="0" name="Xtra Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Xtra Add-On FDB" border="0" name="Xtra Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Xtra Add-On EDB" border="0" name="Xtra Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Choice Add-On FDB" border="0" name="Choice Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Choice Add-On EDB" border="0" name="Choice Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Premier Add-On FDB" border="0" name="Premier Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <!--==============================-->
+                                        <img alt="Entertainment Add-On" border="0" name="Entertainment Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Preferred Choice" border="0" name="Preferred Choice" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Total Choice" border="0" name="Total Choice for TCD/JCD" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Choice Tier" border="0" name="Choice Tier for TCD/JCD" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Ultimate Add-On CDB" border="0" name="Ultimate Add-On CDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Ultimate Add-On FDB" border="0" name="Ultimate Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Ultimate Add-On EDB" border="0" name="Ultimate Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Premier Add-On CDB" border="0" name="Premier Add-On CDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Premier Add-On EDB" border="0" name="Premier Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Xtra Digital Bulk" name="Xtra Digital Bulk" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Student Choice Add-On" name="Student Choice Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" style="display:none;">
+                                        <a href="" id="total_choice_plus_anchor" ng-mouseleave="" ng-mouseover="" ng-click="">
+                                            <img alt="Total Choice Plus" border="0" name="Total Choice Plus" src="../common_assets/img/greenBoxNorm.gif" style="display:none;"></a>
+                                        <a href="" id="xtra_tier_anchor" ng-mouseleave="" ng-mouseover="" ng-click="">
+                                        <img alt="Xtra Tier" border="0" name="Xtra Tier" src="../common_assets/img/greenBoxNorm.gif" style="display:none;"></a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </li>
-                    <li id="step4Box" class="col-sm-7 pdr0">
-                        <div class="bgwt marr0">
+                    <li id="step4Box" class="col-sm-6 pdr0">
+                        <div class="col-sm-12 bgwt marr0">
                             <p><strong>Step 4: Add premium services</strong></p>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <table cellpadding="1">
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="" ng-click="img_click_Prem('hbo',7); layerSwap();" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('hbo',7);" ng-mouseover="ppSUMMARY = arrayPremSummary[0]; img_on('hbo',7);">
-                                                                <img alt="HBO The Works" border="0" id="hbo" name="hbo" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hbo.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[0];">
-                                                                <img alt="Click here for more info." border="0" src="../common_assets/img/packages_hbo.gif"></a>
-                                                        </td>
-                                                        <td>&nbsp;</td>
-                                                        <td>
-                                                            <a href="" ng-click="img_click_Prem('cinemax',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('cinemax',8);" ng-mouseover="ppSUMMARY = arrayPremSummary[3]; img_on('cinemax',8);">
-                                                                <img alt="Cinemax More Max" border="0" id="cinemax" name="cinemax" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/cinemax.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[3];">
-                                                                <img alt="Click here for more info." border="0" src="../common_assets/img/packages_cinemax.gif"></a>
-                                                        </td>
-                                                        <td>&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="" ng-click="img_click_Prem('starz',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('starz',8);" ng-mouseover="ppSUMMARY = arrayPremSummary[2]; img_on('starz',8);">
-                                                                <img alt="Starz Super Pack" border="0" id="starz" name="starz" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/starz_super_pack.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[2];">
-                                                                <img alt="Click here for more info." border="0" src="../common_assets/img/packages_starz.gif"></a>
-                                                        </td>
-                                                        <td>&nbsp;</td>
-                                                        <td>
-                                                            <a href="" ng-click="img_click_Prem('sportspack',9);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('sportspack',9);" ng-mouseover="ppSUMMARY = arrayPremSummary[4]; img_on('sportspack',9);">
-                                                                <img alt="Sports Pack" border="0" id="sportspack" name="sportspack" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/sports_pack.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[4];">
-                                                                <img alt="Click here for more info." border="0" src="../common_assets/img/packages_sports.gif"></a>
-                                                        </td>
-                                                        <td>&nbsp;</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>
-                                                            <a href="" ng-click="img_click_Prem('showtime',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('showtime',8);" ng-mouseover="ppSUMMARY = arrayPremSummary[1]; img_on('showtime',8);">
-                                                                <img alt="Showtime Unlimited" border="0" id="showtime" name="showtime" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                                        </td>
-                                                        <td>
-                                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/showtime_unlimited.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[1];">
-                                                                <img alt="Click here for more info." border="0" src="../common_assets/img/packages_showtime.gif"></a>
-                                                        </td>
-                                                        <td>&nbsp;</td>
-                                                        <td></td>
-                                                        <td></td>
-                                                        <td></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                        <td>
-                                            <table class="hboPrices">
-                                                <tbody>
-                                                    <tr>
-                                                        <td class="innerboxHeadAndLine">
-                                                            <a href="" ng-click="img_click_Prem('hbo',7);" id="without">without HBO</a>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1st = <span class="prices" id="firstPrem">$13.99</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2nd = <span class="prices" id="secondPrem">$12</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3rd = <span class="prices">$13</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4th = <span class="prices">$10</span></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>5th = <span class="prices" id="fifthPrem">n/a</span></td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="col-sm-4">
+                                <div class="col-sm-12">
+                                    <a href="" ng-click="img_click_Prem('hbo',7); layerSwap();" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('hbo',7);" ng-mouseover="ppSUMMARY = arrayPremSummary[0]; img_on('hbo',7);">
+                                    <img alt="HBO The Works" border="0" id="hbo" name="hbo" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hbo.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[0];">
+                                    <img alt="Click here for more info." border="0" src="../common_assets/img/packages_hbo.gif"></a>
+                                </div>
+                                <div class="col-sm-12">
+                                    <a href="" ng-click="img_click_Prem('starz',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('starz',8);" ng-mouseover="ppSUMMARY = arrayPremSummary[2]; img_on('starz',8);">
+                                    <img alt="Starz Super Pack" border="0" id="starz" name="starz" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/starz_super_pack.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[2];">
+                                    <img alt="Click here for more info." border="0" src="../common_assets/img/packages_starz.gif"></a>
+                                </div>                                
+                                <div class="col-sm-12">
+                                    <a href="" ng-click="img_click_Prem('showtime',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('showtime',8);" ng-mouseover="ppSUMMARY = arrayPremSummary[1]; img_on('showtime',8);">
+                                    <img alt="Showtime Unlimited" border="0" id="showtime" name="showtime" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/showtime_unlimited.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[1];">
+                                    <img alt="Click here for more info." border="0" src="../common_assets/img/packages_showtime.gif"></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="col-sm-12">
+                                    <a href="" ng-click="img_click_Prem('cinemax',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('cinemax',8);" ng-mouseover="ppSUMMARY = arrayPremSummary[3]; img_on('cinemax',8);">
+                                    <img alt="Cinemax More Max" border="0" id="cinemax" name="cinemax" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/cinemax.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[3];">
+                                    <img alt="Click here for more info." border="0" src="../common_assets/img/packages_cinemax.gif"></a>
+                                </div>                            
+                                <div class="col-sm-12">
+                                    <a href="" ng-click="img_click_Prem('sportspack',9);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('sportspack',9);" ng-mouseover="ppSUMMARY = arrayPremSummary[4]; img_on('sportspack',9);">
+                                    <img alt="Sports Pack" border="0" id="sportspack" name="sportspack" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/sports_pack.html')" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayPremSummary[4];">
+                                    <img alt="Click here for more info." border="0" src="../common_assets/img/packages_sports.gif"></a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="col-sm-12">
+                                <table class="hboPrices">
+                                    <tbody>
+                                        <tr>
+                                            <td class="innerboxHeadAndLine">
+                                                <a href="" ng-click="img_click_Prem('hbo',7);" id="without">without HBO</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>1st = <span class="prices" id="firstPrem">$13.99</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2nd = <span class="prices" id="secondPrem">$12</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>3rd = <span class="prices">$13</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>4th = <span class="prices">$10</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>5th = <span class="prices" id="fifthPrem">n/a</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            </div>
                         </div>
                     </li>
-                    <li id="step5Box" class="col-sm-5">
-                        <div class="bgwt">
+                    <li id="step5Box" class="col-sm-6">
+                        <div class="col-sm-12 bgwt">
                             <p><strong>Step 5: add extra services<strong></p>
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        <td class="innerboxHeadAndLine" colspan="6">
-                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan.html');">
-                                            DIRECTV Protection Plan</a>
-                                        </td>
-                                        <td>
+                            <div class="col-sm-4 pdr0 pdl0">
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan.html');"> DIRECTV Protection Plan</a>
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hd_extra_pack.html');"> DIRECTV HD Extra Pack</a>
+                                </div>
+                                <div class="col-sm-12 pdr0 pdl0 marb10">
+                                    <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan_premier.html');"> Protection Plan Premier</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-8 pdr0 pdl0">
+                                    <div class="col-sm-12 pdr0 pdl0">
+                                        <div class="col-sm-6 pdr0 pdl0 marb10">
                                             <a href="" ng-click="img_click_Protect('protect_1',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Protect('protect_1',10);" ng-mouseover="ppSUMMARY = arrayExtraSummary[1]; img_on('protect_1',10);">
-                                                <img alt="Standard Receiver ($5.99/mo.)" border="0" id="protect_1" name="protect_1" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td class="innerboxHead">Monthly</td>
-                                        <td></td>
-                                        <td>
+                                            <img alt="Standard Receiver ($5.99/mo.)" border="0" id="protect_1" name="protect_1" src="../common_assets/img/greenBoxNorm.gif"> Monthly</a>
+                                        </div>
+                                        <div class="col-sm-6 pdr0 pdl0 marb10">
                                             <a href="" ng-click="img_click_Protect('protect_3',11);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Protect('protect_3',11);" ng-mouseover="ppSUMMARY = arrayExtraSummary[1]; img_on('protect_3',11);">
-                                                <img alt="none" border="0" id="protect_3" name="protect_3" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td class="innerboxHead">Remove</td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="6">&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td class="innerboxHead">&nbsp;</td>
-                                        <td></td>
-                                        <td>&nbsp;</td>
-                                        <td class="innerboxHead">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="innerboxHeadAndLine" colspan="6">
-                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/hd_extra_pack.html');">
-                                            DIRECTV HD Extra Pack</a>
-                                        </td>
-                                        <td>
+                                            <img alt="none" border="0" id="protect_3" name="protect_3" src="../common_assets/img/greenBoxNorm.gif"> Remove</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 pdr0 pdl0">
+                                        <div class="col-sm-6 pdr0 pdl0 marb10">
                                             <a href="" ng-click="img_click_hdextra('hdextra_1',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_hdextra('hdextra_1',10);" ng-mouseover="ppSUMMARY = arrayExtraSummary[3]; img_on('hdextra_1',10);">
-                                                <img alt="none" border="0" id="hdextra_1" name="hdextra_1" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td class="innerboxHead">Monthly</td>
-                                        <td></td>
-                                        <td>
-                                            <a href="" ng-click="img_click_hdextra('hdextra_2',11);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_hdextra('hdextra_2',11);" ng-mouseover="ppSUMMARY = arrayExtraSummary[3]; img_on('hdextra_2',11);">
-                                                <img alt="none" border="0" id="hdextra_2" name="hdextra_2" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td class="innerboxHead">Remove</td>
-                                    </tr>
-                                    <!--Protection Plan Premier-->
-                                    <tr>
-                                        <td colspan="6">&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td class="innerboxHead">&nbsp;</td>
-                                        <td></td>
-                                        <td>&nbsp;</td>
-                                        <td class="innerboxHead">&nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="innerboxHeadAndLine" colspan="6">
-                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan_premier.html');">
-                                            Protection Plan Premier</a>
-                                        </td>
-                                        <td>
+                                            <img alt="none" border="0" id="hdextra_1" name="hdextra_1" src="../common_assets/img/greenBoxNorm.gif"> Monthly</a>
+                                        </div>
+                                        <div class="col-sm-6 pdr0 pdl0 marb10">
+                                           <a href="" ng-click="img_click_hdextra('hdextra_2',11);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_hdextra('hdextra_2',11);" ng-mouseover="ppSUMMARY = arrayExtraSummary[3]; img_on('hdextra_2',11);">
+                                           <img alt="none" border="0" id="hdextra_2" name="hdextra_2" src="../common_assets/img/greenBoxNorm.gif"> Remove</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 pdr0 pdl0">
+                                        <div class="col-sm-6 pdr0 pdl0 marb10">                                    
                                             <a href="" ng-click="img_click_premier('premier_1',12);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_premier('premier_1',12);" ng-mouseover="ppSUMMARY = arrayExtraSummary[6]; img_on('premier_1',12);">
-                                                <img alt="none" border="0" id="premier_1" name="premier_1" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td class="innerboxHead">Monthly</td>
-                                        <td></td>
-                                        <td>
+                                            <img alt="none" border="0" id="premier_1" name="premier_1" src="../common_assets/img/greenBoxNorm.gif"> Monthly</a>
+                                        </div>
+                                        <div class="col-sm-6 pdr0 pdl0 marb10">
                                             <a href="" ng-click="img_click_premier('premier_2',13);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_premier('premier_2',13);" ng-mouseover="ppSUMMARY = arrayExtraSummary[6]; img_on('premier_2',13);">
-                                                <img alt="none" border="0" id="premier_2" name="premier_2" src="../common_assets/img/greenBoxNorm.gif"></a>
-                                        </td>
-                                        <td class="innerboxHead">Remove</td>
-                                    </tr>
-                                    <!--Protection Plan Premier-->
-                                </tbody>
-                            </table>
-                        </div>
+                                            <img alt="none" border="0" id="premier_2" name="premier_2" src="../common_assets/img/greenBoxNorm.gif"> Remove</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </li>
                     <li id="step6Box" class="col-sm-12">
-                        <div class="bgwt">                
+                        <div class="col-sm-12 bgwt">                
                             <p><strong>other links</strong></p>                
-                            <table width="100%">
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            - <a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/res/rover_tools/package_compare/package_compare.htm',950,650);" style="font-weight: bold">Package Compare
-                                            Tool</a>
-                                        </td>
-                                        <td><strong>Packages:</strong></td>
-                                        <td><strong>Add Ons:</strong></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            -
-                                            <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/sell_premium/sell_premium_overhaul.htm#/sports/" target="_blank">
-                                                <strong>Sports Sales Tool</strong></a>
-                                        </td>
-                                        <td>
-                                            - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/expired_packages.html');">
-                                            Expired</a>
-                                        </td>
-                                        <td>
-                                            - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/encore_a_la_carte.html');">
-                                            Encore (A La Carte)</a>
-                                        </td>
-                                        <td>
-                                            - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/international.html');">
-                                            International (WorldDirect)</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            -
-                                            <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/billing/regional_sports_fee.html');">
-                                                <strong>Regional Sports Fee</strong></a>
-                                        </td>
-                                        <td>
-                                            - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/basic_choice_international.html');">
-                                            Basic Choice</a>
-                                        </td>
-                                        <td>
-                                            - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/en_espanol.html');">
-                                            En Español</a>
-                                        </td>
-                                        <td>
-                                            - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mexico_plus.html');">
-                                            México Plus</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>&nbsp;</td>
-                                        <td>&nbsp;</td>
-                                        <td>
-                                            - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/americas_plus.html');">
-                                            Américas Plus</a>
-                                        </td>
-                                        <td>
-                                            - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/directv_deportes.html');">
-                                            DIRECTV Deportes</a>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12">
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/billing/regional_sports_fee.html');"><strong>Regional Sports Fee</strong></a>  
+                                </div>
+                            </div>
+                            <div class="col-sm-2">
+                                <div class="col-sm-12">
+                                    <strong>Packages:</strong><br><br>
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/expired_packages.html');"> Expired</a><br><br>
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/basic_choice_international.html');"> Basic Choice</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="col-sm-12">
+                                    <strong>Add Ons:</strong><br><br>
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/encore_a_la_carte.html');"> Encore (A La Carte)</a><br><br>
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/en_espanol.html');"> En Español</a><br><br>
+                                   - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/americas_plus.html');"> Américas Plus</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="col-sm-12">                                          
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/international.html');"> International (WorldDirect)</a><br><br>
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mexico_plus.html');"> México Plus</a><br><br>
+                                    - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/directv_deportes.html');"> DIRECTV Deportes</a>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </ul>
