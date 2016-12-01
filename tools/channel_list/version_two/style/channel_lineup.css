@@ -121,14 +121,13 @@ classes should alter those!
 #channel_lineup {
   font-family: arial;
   font-size: 8pt;
-  background: #fff;
   padding: 0;
   margin: 8px;
 }
 
 #channel_lineup h2 {
-  font-size: 10pt;
-  border-bottom: 1px dotted gray;
+  font-size: 2em;
+  color: #E97400;
 }
 
 #channel_lineup ul {
@@ -138,8 +137,7 @@ classes should alter those!
 }
 
 #channel_lineup li {
-  background: url("http://agentanswercenter.directv.com/en-us/res/system/img/arrow_right_spearmint.png") no-repeat center left;
-  padding: 0 0 0 14px;
+  padding: 0;
   list-style: none;
   margin: 0;
 }
@@ -429,8 +427,8 @@ input.editor-checkbox {
 
 #containerSmall{
     height:60px;
-    font-weight: bold;
-    margin-top: -77px;
+    font-weight: bold;/*
+    margin-top: -77px;*/
 }
 
 #containerSmall .wide{
@@ -479,10 +477,6 @@ input.editor-checkbox {
    border-color:#fff; 
 }
 
-#container .narrower,.header .narrow{
-    padding-top:13px;
-}
-
 #containerSmall .slick-viewport{
     background: #fafafa;
 }
@@ -505,23 +499,16 @@ input.editor-checkbox {
 
 /*start*/
 
-
-#channel_lineup .table-header .narrow.genre{
-    width:69px;
+#mainHeader {
+    font-size: 1.25em;
+    width: 50%;
+    margin-top: 30px;
 }
 
 #channel_lineup .table-header{
-    position: relative;
-    top: -77px;
-    left: 0;
-    min-width:900px;
     padding-top:80px;
     overflow: hidden;
-}
-
-#channel_lineup .table-header .header{
-    background: #e0e0e0;
-    text-align: center;   
+    margin-bottom: -30px;
 }
 
 #channel_lineup .table-header .pull-left{
@@ -533,14 +520,12 @@ input.editor-checkbox {
 }
 
 #channel_lineup .table-header .wide{
-    width:213px;
-    padding-top:20px;
-    padding-left:67px;    
+    width: 50%;
 }
 
 
 #channel_lineup .table-header .narrow{
-    width:70px;    
+    width: 16.5%;
 }
 
 #channel_lineup .table-header .call-letters{
@@ -550,10 +535,6 @@ input.editor-checkbox {
 #channel_lineup .table-header .channel-number{
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
-}
-
-#channel_lineup .table-header .narrow.genre{
-    padding-top:20px;
 }
 
 .narrower.even{
@@ -684,13 +665,15 @@ input.editor-checkbox {
     overflow-y:scroll!important;
 }
 
-.red{
-    color:#454545;
+.red {
+    color: gray;
 }
 
 input#txtSearch{
-    width:135px;
-    height: 20px;
+    width: 50%;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 1.5em;
 }
 
 /**start pager**/
@@ -753,7 +736,8 @@ input#txtSearch{
 
 .reset a{
   display: inline-block;
-  padding: 3px 5px;
+  font-size: 1.5em;
+  padding: 8px 20px;
   margin-left: 4px;
   background-color: #e6e6e6;
   color: #838383;
@@ -774,71 +758,18 @@ input#txtSearch{
     color:#000;
 }
 
-.search-box{
-    position: relative;
-    border: 2px solid #86b9ec;
-    width: 422px;
-/*    top: 94px;
-    left: 25px;*/
-    height: 134px;
-    float: left;
-    z-index: 100;
-}
 
-
-
-.text-holder,
-.link-holder
-{
-   /*position:absolute;*/
-   width: 50%;
-   float: left;
-}
-
-.link-holder{
-    top: 110px;
-    left: 263px;
-    z-index: 100;
-}
-
-.text-holder{
-    top: 115px;
-    left: 34px;
-    z-index: 100;
-}
-
-.link-holder li{
+.link-holder div {
+    display: inline-block;
+    width: 50%;
+    min-width: 195px;
     line-height: 18px;
-}
-
-.result-count{
-    display: block;
-    /*position:absolute;*/
-    width: 230px;
-    top:95px;
-    line-height: 1.2;
+    padding-right: 10px;
+    float: left;
 }
 
 .result-count b{
     text-decoration: none;
-}
-
-#xtra_notes{
-/*    position: absolute;
-    top: 91px;
-    left: 480px;*/
-    font-size: 11px;
-    width: 464px; 
-    float: left;
-}
-
-.search-label{
-    display: block;
-    font-weight: bold;
-/*    width: 170px;
-    margin-top: -10px;*/
-    margin-bottom: 2px;
-    text-align: center;
 }
 
 .text-holder .ui-state-default{
@@ -881,15 +812,15 @@ a.activeLink {
      display:none;
 }    
 
-.qtip-content .wrapper .code{
+.qtip-content .wwrapper .code{
   width:50px;
   font-weight:bold;
 }
-.qtip-content .wrapper{
+.qtip-content .wwrapper{
   margin-bottom: 7px;
 }
 
-.qtip-content .wrapper.last{
+.qtip-content .wwrapper.last{
   margin-bottom: 0;
 }
 

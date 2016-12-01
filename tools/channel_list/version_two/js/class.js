@@ -54,7 +54,7 @@ var gridTable = function(rowHeight,context,featured_packages){
     }
 
     this.getNarrowCellWidth = function(){
-        return this.k_width/this.featured_packages.length;
+        return (($('#' + this.context).innerWidth() / 2) -16) / this.featured_packages.length;
     };
 };
 
@@ -142,10 +142,10 @@ gridTable.prototype.setColumns = function(className,minWidth){
 
     //initatiate fix headers
     columns = [
-      { id: "channel_name", name: "Channel Name", field: "channel_name", width: 212, formatter: fixRowFormatter, sortable: true, cssClass:'wide' },
-      { id: "channel_number", name: "Channel Number", field: "channel_number", width: 70, sortable: true , cssClass:'narrow', formatter: fixRowFormatter  },
-      { id: "call_letters", name: "Call Letters", field: "call_letters", width: 70, sortable: true, cssClass:'narrow', formatter: fixRowFormatter },
-      { id: "genre", name: "Genre", field: "genre", width: 70, formatter: fixRowFormatter, sortable: true, cssClass:'narrow genre' }
+      { id: "channel_name", name: "Channel Name", field: "channel_name", width: $('#' + this.context).innerWidth() / 4, formatter: fixRowFormatter, sortable: true, cssClass:'wide'},
+      { id: "channel_number", name: "Channel Number", field: "channel_number", width: $('#' + this.context).innerWidth() / 12, sortable: true , cssClass:'narrow', formatter: fixRowFormatter},
+      { id: "call_letters", name: "Call Letters", field: "call_letters", width: $('#' + this.context).innerWidth() / 12, sortable: true, cssClass:'narrow', formatter: fixRowFormatter},
+      { id: "genre", name: "Genre", field: "genre", width: $('#' + this.context).innerWidth() / 12, formatter: fixRowFormatter, sortable: true, cssClass:'narrow genre'}
     ];
 
     len = columns.length;
