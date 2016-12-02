@@ -94,6 +94,7 @@ app.controller('CL_Controller',['$scope', '$http',
                             programming_headers.render();
                             programming_headers.rotate(config.localhost,config.deg,config.y_diff);
                             $('#channel_lineup .table-header').width($('#channel_lineup #container').width() + 16);
+                            $('.slick-viewport').width($('#channel_lineup #container').width());
                             //activate the package filters
                             big_grid.activateHdChannelsFilter(search_box,'messageBox','reset','active');
                             big_grid.activateRegularChannelsFilter(search_box,'messageBox','reset','active');
