@@ -407,10 +407,7 @@ input.editor-checkbox {
 
 #channel_lineup #container,
 #containerSmall {
-/*    position: absolute;
-    top: 282px;
-    left: 26px;
-    width:850px;*/
+    min-width: 905px;
     height:100%;
    top: 0;
    left: 0;
@@ -502,6 +499,10 @@ input.editor-checkbox {
 #mainHeader {
     font-size: 1.25em;
     width: 50%;
+}
+
+#packageHeaderContainer {
+    margin-left: -7px;
 }
 
 #channel_lineup .table-header{
