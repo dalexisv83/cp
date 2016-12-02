@@ -121,6 +121,7 @@
 
 .label-holder {
   font-weight:bold;
+  text-align: center;
 }
 
 #package_compare .table-header a,
