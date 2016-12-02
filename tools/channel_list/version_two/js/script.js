@@ -93,7 +93,7 @@ app.controller('CL_Controller',['$scope', '$http',
                             big_grid.render();
                             programming_headers.render();
                             programming_headers.rotate(config.localhost,config.deg,config.y_diff);
-                            $('.table-header').width($('#container').width() + 16);
+                            $('#channel_lineup .table-header').width($('#channel_lineup #container').width() + 16);
                             //activate the package filters
                             big_grid.activateHdChannelsFilter(search_box,'messageBox','reset','active');
                             big_grid.activateRegularChannelsFilter(search_box,'messageBox','reset','active');
