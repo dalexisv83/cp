@@ -5,6 +5,7 @@
                 <ul id="container1" class="col-sm-2">
                     <li id="totalsBox">
                         <div class="col-sm-12 bgwt mnh2 pdr0 pdl0">
+                            <div class="steps title1"></div>
                             <div class="col-sm-12 pdr0 pdl0">
                                <span id="lyrSuggestion">&nbsp;</span>
                             </div>
@@ -34,7 +35,7 @@
                     </li>
                     <li id="summaryBox">
                         <div class="bgwt marr0 col-sm-12 mnh3">
-                            <p>quick summary</p>
+                            <div class="steps title2"></div>
                             <div class="col-sm-12">
                                 <div ng-bind-html="ppSUMMARY"></div>
                             </div>
@@ -44,7 +45,9 @@
                 <ul id="container2" class="col-sm-10">
                     <li id="step1Box" class="col-sm-4 primaryCredit pdr0">
                         <div class="col-sm-12 bgwt marr0">
-                            <p><strong>Step 1: Select # of Tv's:</strong></p>
+                            <div class="col-sm-12 hdr">
+                                <div class="steps stp1"></div><p><strong>Select # of Tv's</strong></p>
+                            </div>
                             <div class="col-sm-12 pdr0 pdl0 marb10">
                                 <a href="" ng-click="img_click_primaryCredit();" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_primaryCredit();" ng-mouseover="ppSUMMARY = varDefaultSummary; img_on_primaryCredit();">
                                 <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="../common_assets/img/greenBoxNorm.gif"></a> Click box if Primary TV Credit = No
@@ -63,7 +66,9 @@
                     </li>
                     <li id="step2Box" class="col-sm-8">
                         <div class="col-sm-12 bgwt">
-                            <p><strong>Step 2: Select Equipment Service</strong></p>
+                            <div class="col-sm-12 hdr">
+                                <div class="steps stp2"></div><p><strong>Select Equipment Service</strong></p>
+                            </div>
                             <div class="col-sm-3 pdr0 pdl0">
                                 <div class="col-sm-12 pdr0 pdl0">
                                     <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/advanced_receiver_services_ars.html');"><strong>ARS</strong></a>
@@ -123,11 +128,11 @@
                     </li>
                     <li id="step3Box" class="col-sm-12">
                         <div class="col-sm-12 bgwt">
-                            <div class="col-sm-12 pdr0 pdl0">
-                                <div class="col-sm-4 pdr0 pdl0">
-                                    <p><strong>Step 3: select a base package</strong></p>
+                            <div class="col-sm-12 hdr">
+                                <div class="col-sm-5 pdr0 pdl0">
+                                    <div class="steps stp3"></div><p><strong>Select a base package</strong></p>
                                 </div>
-                                <div class="col-sm-8 pdr0 pdl0">
+                                <div class="col-sm-7 pdr0 pdl0">
                                     <a href="" ng-click="swapBasePackageMDU()" ng-mouseleave="img_off_Base('MDUbutton',1);" ng-mouseover="img_on_Base('MDUbutton',8);"><img border="0" id="MDUbutton" name="MDUbutton" src="../common_assets/img/greenBoxNorm.gif"></a><a href="" ng-click="swapBasePackageMDU()" ng-mouseleave="img_off_Base('MDUbutton',1);" ng-mouseover="img_on_Base('MDUbutton',8);"> Multi Dwelling Accts.</a>&nbsp;&nbsp;&nbsp;
                                     <a href="" ng-click="swapBasePackageLanguage()" ng-mouseleave="img_off_Base('SpanishButton',1);" ng-mouseover="img_on_Base('SpanishButton',7);"><img border="0" id="SpanishButton" name="SpanishButton" src="../common_assets/img/greenBoxNorm.gif"></a> <a href="" ng-click="swapBasePackageLanguage()" ng-mouseleave="img_off_Base('SpanishButton',1);" ng-mouseover="img_on_Base('SpanishButton',7);" style="display:inline-block"> <span id="lyrEnglish1" style="display:block;"> Spanish Programming</span> <span id="lyrSpanish1" style="display:none;"> English Programming</span></a>
                                 </div>
@@ -256,7 +261,9 @@
                     </li>
                     <li id="step4Box" class="col-sm-6 pdr0">
                         <div class="col-sm-12 bgwt marr0">
-                            <p><strong>Step 4: Add premium services</strong></p>
+                            <div class="col-sm-12 hdr">
+                                <div class="steps stp4"></div><p><strong>Add premium services</strong></p>
+                            </div>
                             <div class="col-sm-4">
                                 <div class="col-sm-12">
                                     <a href="" ng-click="img_click_Prem('hbo',7); layerSwap();" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Prem('hbo',7);" ng-mouseover="ppSUMMARY = arrayPremSummary[0]; img_on('hbo',7);">
@@ -323,7 +330,9 @@
                     </li>
                     <li id="step5Box" class="col-sm-6">
                         <div class="col-sm-12 bgwt">
-                            <p><strong>Step 5: add extra services<strong></p>
+                            <div class="col-sm-12 hdr">
+                                <div class="steps stp5"></div><p><strong>add extra services</strong></p>
+                            </div>
                             <div class="col-sm-4 pdr0 pdl0">
                                 <div class="col-sm-12 pdr0 pdl0 marb10">
                                     <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan.html');"> DIRECTV Protection Plan</a>
@@ -371,7 +380,9 @@
                     </li>
                     <li id="step6Box" class="col-sm-12">
                         <div class="col-sm-12 bgwt">                
-                            <p><strong>other links</strong></p>                
+                            <div class="col-sm-12">
+                                <div class="steps title3"></div>
+                            </div>
                             <div class="col-sm-3">
                                 <div class="col-sm-12">
                                     - <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/billing/regional_sports_fee.html');"><strong>Regional Sports Fee</strong></a>  

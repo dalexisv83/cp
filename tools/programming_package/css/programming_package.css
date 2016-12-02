@@ -17,6 +17,7 @@ img {
     margin:5px 0;
     min-height:147px;
     overflow: hidden;
+    padding-top:0
 }
 .mnh2{
     min-height:235px;
@@ -35,24 +36,89 @@ img {
 .marb10{
     margin-bottom:10px !important;    
 }
+.steps {
+    background-image:url('../../../../common_assets/img/pp_headings_sprite.png');
+    background-repeat: no-repeat;
+}
+.stp1 {
+    height: 30px;
+    width: 70px;
+    background-position: -10px -40px;
+    display: inline-block;
+}
+.stp2 {
+    height: 30px;
+    width: 70px;
+    background-position: -10px -77px;
+    display: inline-block;
+}
+.stp3{
+    height: 30px;
+    width: 70px;
+    background-position: -10px -113px;
+    display: inline-block;
+}
+.stp4 {
+    height: 30px;
+    width: 70px;
+    background-position: -10px -150px;
+    display: inline-block;
+}
+.stp5 {
+    height: 30px;
+    width: 70px;
+    background-position: -10px -185px;
+    display: inline-block;
+}
 
+.title1 {
+    height: 33px;
+    width: 150px;
+    background-position: -7px -5px;
+    margin:0 auto;
+}
+.title2 {
+    height: 33px;
+    width: 140px;
+    background-position: -10px -220px;
+    margin:0 auto;
+}
+.title3 {
+    height: 33px;
+    width: 95px;
+    background-position: -10px -258px;
+    display: inline-block;
+}
 
-.pd30{
+.pd30 {
     padding:20px 30px !important;
 }
-.container-fluid{
+.container-fluid {
     height:100%;
 }
 
-#container1 p strong , #container2 p strong{
+#container1 p strong , #container2 p strong {
     text-transform: uppercase;
-    font-size: 1.3em
+    font-size: 1.4em;
+    color:#e97400;
+}
+
+#container1 p , #container2 p {
+    display: inline-block;
+}
+.hdr p {
+    position: absolute;
+    top: 8px;
+    left: 95px;
+}
+.hdr {
+    margin-bottom: 10px;
 }
 #step1Box div.bgwt.marr0 p ~ p {
     margin-top:5px !important;
 }
-#summaryBox table tr td{
-    padding:0 10px 0 0 ;
+#summaryBox table tr td {
+    padding:0 10px 0 0;
     overflow:hidden;
 }
 li#summaryBox {
@@ -73,7 +139,6 @@ li#summaryBox {
     text-align:center;
     font:10.4px/1 Verdana,Arial,sans-serif;
     padding-bottom:0;
-
 }
 
 #programming_package A:link {
@@ -179,12 +244,9 @@ div#centerContent {
     width:30%
 }
 
-
-
 li#totalsBox {
     color:#000;
 }
-
 
 li.primaryCredit {
     color:#000
