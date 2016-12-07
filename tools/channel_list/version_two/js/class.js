@@ -568,7 +568,7 @@ var packageFilter = function(grid,message_box){
       //start hooking-up to the grid
       this.grid.package_channels = property;
       this.grid.search_terms = [];
-      this.grid.searchString = 'x';
+      this.grid.searchString = '&bull;';
       this.grid.updateFilter(); //update the grid
 
       // count = this.grid.dataView.getLength();
