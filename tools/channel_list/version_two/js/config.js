@@ -27,8 +27,8 @@ var getServerPath = function(localhost){
 var config = {    
     localhost:false, //important to set this value to true when running on local computer
     k_width: 410, //total width of the div that holds the featured packages
-    rowHeightTall:38, //row height for the big grid
-    rowHeightShort:30, //row height for the small grid
+    rowHeightTall: 50, //row height for the big grid
+    rowHeightShort: 25, //row height for the small grid
     y_diff:14, //constant used for calculating distance on rotated text to the bottom
     adChannelUrl: "document.location.href='"+getServerPath(this.localhost)+"programming/paid_programming_part_time_channels.html'", //forms the url for networks classified as Ad Channels
     deg: 10, //degree of rotation of the featured packages divs; 

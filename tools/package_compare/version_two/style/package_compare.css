@@ -142,14 +142,6 @@
   padding: 3px 0;
 }
 
-.odd{
-  background: #DEEDF7;
-}
-
-.even{
-  background: #fff;
-}
-
 #package_compare .table-header-inner {
   height:20px;
   width:100%;

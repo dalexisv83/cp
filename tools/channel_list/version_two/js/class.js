@@ -392,7 +392,7 @@ bigGrid.prototype.setChannels = function(data){
             num = n + 1;
             property = 'p' + num;
             if (channel[property]) {
-               this.data[id][property] = channel[property];
+               this.data[id][property] = '<span class="dot">&bull;</span>';
             }
             else{
                 this.data[id][property] = " ";
@@ -517,9 +517,9 @@ smallGrid.prototype.setChannels = function(){
     num;
 
     for (i = 0; i < 2; i++ ){
-        channel_name = "Approximate number of HD channels";
+        channel_name = "<small>Approximate number of HD channels</small>";
         if (i > 0) {
-          channel_name = "Approximate channels in per package<span class='red'>**</span>";
+          channel_name = "<small>Approximate channels in per package<span class='red'>**</span></small>";
         }
 
         this.data[i] = {
@@ -998,13 +998,13 @@ programmingHeaders.prototype.rotate = function(localhost,rect_deg, y_diff){
         rect = R.rect(rect_x_coord, rect_y_coord, width, rect_height),
 
         is_odd = (0 !== index % 2),
-        rect_fill = is_even_count ? (is_odd ? '#86b9ec':'#cde1f5') : (is_odd ? '#cde1f5':'#86b9ec'),
+        rect_fill = is_even_count ? (is_odd ? '#f5f5f5':'#e9e9e9') : (is_odd ? '#e9e9e9':'#f5f5f5'),
         tool_tip = new toolTip(div);
 
 
         rect.attr({
             'fill': rect_fill,
-            'stroke':'#fff'
+            'stroke':rect_fill
         }).rotate(rect_deg,0,0).click(function(){
             window.open(formatter.adjustUrl(url), '_blank');
         }).hover(
@@ -1014,10 +1014,11 @@ programmingHeaders.prototype.rotate = function(localhost,rect_deg, y_diff){
         paper = R.text(calc_text_x_coord, text_y_coord);
         paper.attr({
                 "font-family":"helvetica",
-                "font-size":"12",
+                "font-size":"14",
+                "font-weight": "bold",
                 "text-anchor":"center",
                 "text": text,
-                "fill":"#000"
+                "fill":"#0567AE"
         }).rotate(text_deg,false)
         .click(function(){
              window.open(url, '_blank');
