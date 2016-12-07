@@ -1,3 +1,13 @@
+.wrapper{
+    max-width: 1260px;
+    position: relative;
+    padding: 20px;
+    margin: 0 auto;
+}
+.undrl a{
+    text-decoration: underline !important;
+}
+
 #programming_package table {
     width: 100%;
 }
@@ -21,11 +31,9 @@ img {
 }
 .mnh2{
     min-height:243px;
-    height: 40%;
 }
 .mnh3{
     min-height:365px;
-    height: 60%;
 }
 .marr0{
     margin-right:0;    
@@ -307,9 +315,7 @@ form li {list-style: none}
     ul#container1 , ul#container2{
     z-index:5;
     padding:0;
-    margin-top:20px;
     margin-bottom:40px;
-    height:80%;
     }
     .pdr0{
         padding-right:0 !important;    
