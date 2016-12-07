@@ -1,5 +1,6 @@
-<div id="programming_package" ng-controller="PP_Controller" class="col-sm-8 noflcenter">
-    <div class="col-sm-12 container-fluid">
+<div class="wrapper">
+<script src="../common_assets/js/jquery.matchHeight-min.js" type="text/javascript"></script>
+    <div id="programming_package" ng-controller="PP_Controller" class="col-sm-12 noflcenter">
         <form name="frmNewPackage">
             <div id="centerContent" class="col-sm-12">
                 <ul id="container1" class="col-sm-2">
@@ -22,11 +23,11 @@
                                     <input name="txtExtra" readonly size="6" type="text" value="0.00">
                                 </div>
                                 <div class="col-sm-6">1st Month Total<br> $
-                                    <input name="txtGrandTotal" readonly size="6" style="background-color: #FFFFCC; color: #000000; border: 2px solid #003366" type="text" value="0.00">
+                                    <input class="firstmonth" name="txtGrandTotal" readonly size="6" type="text" value="0.00">
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <input onclick="javascript:resetAll();" type="button" value="Reset">
+                                <input type="button" value="Reset" class="btn btn-default rst">
                             </div>
                             <div class="col-sm-12 pdr0 pdl0">
                                 <span id="lyr2ndMonth"></span>
@@ -44,7 +45,7 @@
                 </ul>
                 <ul id="container2" class="col-sm-10">
                     <li id="step1Box" class="col-sm-4 primaryCredit pdr0">
-                        <div class="col-sm-12 bgwt marr0">
+                        <div class="col-sm-12 bgwt marr0 stp12">
                             <div class="col-sm-12 hdr">
                                 <div class="steps stp1"></div><p><strong>Select # of Tv's</strong></p>
                             </div>
@@ -53,19 +54,49 @@
                                 <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="../common_assets/img/greenBoxNorm.gif"></a> Click box if Primary TV Credit = No
                                 <br> &nbsp;&nbsp;&nbsp;&nbsp;(Rio > Bill Ledger tab)
                             </div>
-                            <p>
+
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <a href="" ng-click="img_click_ds('1receiver',1);" ><img alt="1 receiver" border="0" id="1receiver" name="1receiver" src="../common_assets/img/button1normal.png"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <a href="" ng-click="img_click_ds('2receiver',2);" ><img alt="2 receiver" border="0" id="2receiver" name="2receiver" src="../common_assets/img/button2normal.png"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <a href="" ng-click="img_click_ds('3receiver',3);" ><img alt="3 receiver" border="0" id="3receiver" name="3receiver" src="../common_assets/img/button3normal.png"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <a href="" ng-click="img_click_ds('4receiver',4);" ><img alt="4 receiver" border="0" id="4receiver" name="4receiver" src="../common_assets/img/button4normal.png"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <a href="" ng-click="img_click_ds('5receiver',5);" ><img alt="5 receiver" border="0" id="5receiver" name="5receiver" src="../common_assets/img/button5normal.png"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <a href="" ng-click="img_click_ds('6receiver',6);" ><img alt="6 receiver" border="0" id="6receiver" name="6receiver" src="../common_assets/img/button6normal.png"></a>
+                            </div>
+
+<!--                             <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('1receiver',1);" ng-mouseleave="img_off_ds('1receiver',1);" ng-mouseover="img_on_ds('1receiver',1);"><img alt="1 receiver" border="0" id="1receiver" name="1receiver" src="../common_assets/img/button1normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('2receiver',2);" ng-mouseleave="img_off_ds('2receiver',2);" ng-mouseover="img_on_ds('2receiver',2);"><img alt="2 receiver" border="0" id="2receiver" name="2receiver" src="../common_assets/img/button2normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('3receiver',3);" ng-mouseleave="img_off_ds('3receiver',3);" ng-mouseover="img_on_ds('3receiver',3);"><img alt="3 receiver" border="0" id="3receiver" name="3receiver" src="../common_assets/img/button3normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('4receiver',4);" ng-mouseleave="img_off_ds('4receiver',4);" ng-mouseover="img_on_ds('4receiver',4);"><img alt="4 receiver" border="0" id="4receiver" name="4receiver" src="../common_assets/img/button4normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('5receiver',5);" ng-mouseleave="img_off_ds('5receiver',5);" ng-mouseover="img_on_ds('5receiver',5);"><img alt="5 receiver" border="0" id="5receiver" name="5receiver" src="../common_assets/img/button5normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('6receiver',6);" ng-mouseleave="img_off_ds('6receiver',6);" ng-mouseover="img_on_ds('6receiver',6);"><img alt="6 receiver" border="0" id="6receiver" name="6receiver" src="../common_assets/img/button6normal.jpg">
                                 </a>
-                            </p>
-                        </div>
+                            </div>
+ -->                        </div>
                     </li>
                     <li id="step2Box" class="col-sm-8">
-                        <div class="col-sm-12 bgwt">
+                        <div class="col-sm-12 bgwt stp12">
                             <div class="col-sm-12 hdr">
                                 <div class="steps stp2"></div><p><strong>Select Equipment Service</strong></p>
                             </div>
@@ -260,7 +291,7 @@
                         </div>
                     </li>
                     <li id="step4Box" class="col-sm-6 pdr0">
-                        <div class="col-sm-12 bgwt marr0">
+                        <div class="col-sm-12 bgwt marr0 stp45">
                             <div class="col-sm-12 hdr">
                                 <div class="steps stp4"></div><p><strong>Add premium services</strong></p>
                             </div>
@@ -329,11 +360,11 @@
                         </div>
                     </li>
                     <li id="step5Box" class="col-sm-6">
-                        <div class="col-sm-12 bgwt">
+                        <div class="col-sm-12 bgwt stp45">
                             <div class="col-sm-12 hdr">
                                 <div class="steps stp5"></div><p><strong>add extra services</strong></p>
                             </div>
-                            <div class="col-sm-4 pdr0 pdl0">
+                            <div class="col-sm-6 pdr0 pdl0 undrl">
                                 <div class="col-sm-12 pdr0 pdl0 marb10">
                                     <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan.html');"> DIRECTV Protection Plan</a>
                                 </div>
@@ -344,7 +375,7 @@
                                     <a href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/protection_plan_premier.html');"> Protection Plan Premier</a>
                                 </div>
                             </div>
-                            <div class="col-sm-8 pdr0 pdl0">
+                            <div class="col-sm-6 pdr0 pdl0">
                                     <div class="col-sm-12 pdr0 pdl0">
                                         <div class="col-sm-6 pdr0 pdl0 marb10">
                                             <a href="" ng-click="img_click_Protect('protect_1',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Protect('protect_1',10);" ng-mouseover="ppSUMMARY = arrayExtraSummary[1]; img_on('protect_1',10);">

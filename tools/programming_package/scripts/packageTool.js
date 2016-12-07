@@ -1065,8 +1065,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
         for (i = 1; i <= numRolImages_ds; i++) {
             dtvImages_ds[i] = new Image();
             dtvImages_ds[i + numRolImages_ds] = new Image();
-            var srcPath1PieceOne = "button" + i + "normal.jpg",
-            srcPath2PieceOne = "button" + i + "down.jpg";
+            var srcPath1PieceOne = "button" + i + "normal.png",
+            srcPath2PieceOne = "button" + i + "down.png";
             dtvImages_ds[i].src = "../common_assets/img/" + srcPath1PieceOne.replace("/", "");
             dtvImages_ds[i + numRolImages_ds].src = "../common_assets/img/" + srcPath2PieceOne.replace("/", "");
             var innerStuff = '\r\n Image:' + i + '.src =' + dtvImages_ds[i].src + '\r\n Image:' + (i + numRolImages_ds) + '.src =' + dtvImages_ds[i + numRolImages_ds].src + '';
@@ -2612,7 +2612,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         //resets all forms in all frames
 
-        function resetAll() {
+        $('input.rst').on('click', function() {
             var arrElements = document.getElementsByTagName('form');
             var numLen = arrElements.length;
             for (var j = 0; j < numLen; j++) {
@@ -2622,7 +2622,12 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 }
             }
             document.location.reload();
-        };
+        });
+
+        $(function() {
+            $('.stp45').matchHeight();
+            $('.stp12').matchHeight();
+        });
 
         function resetAllNoRefresh() {
             var arrElements = document.getElementsByTagName('form');
