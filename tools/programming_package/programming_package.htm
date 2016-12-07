@@ -1,4 +1,4 @@
-<div id="programming_package" ng-controller="PP_Controller" class="col-sm-8 noflcenter">
+<div id="programming_package" ng-controller="PP_Controller" class="col-sm-11 noflcenter">
     <div class="col-sm-12 container-fluid">
         <form name="frmNewPackage">
             <div id="centerContent" class="col-sm-12">
@@ -22,11 +22,11 @@
                                     <input name="txtExtra" readonly size="6" type="text" value="0.00">
                                 </div>
                                 <div class="col-sm-6">1st Month Total<br> $
-                                    <input name="txtGrandTotal" readonly size="6" style="background-color: #FFFFCC; color: #000000; border: 2px solid #003366" type="text" value="0.00">
+                                    <input class="firstmonth" name="txtGrandTotal" readonly size="6" type="text" value="0.00">
                                 </div>
                             </div>
                             <div class="col-sm-12">
-                                <input onclick="javascript:resetAll();" type="button" value="Reset">
+                                <input type="button" value="Reset" class="btn btn-default rst">
                             </div>
                             <div class="col-sm-12 pdr0 pdl0">
                                 <span id="lyr2ndMonth"></span>
@@ -53,16 +53,46 @@
                                 <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="../common_assets/img/greenBoxNorm.gif"></a> Click box if Primary TV Credit = No
                                 <br> &nbsp;&nbsp;&nbsp;&nbsp;(Rio > Bill Ledger tab)
                             </div>
-                            <p>
+
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <input type="button" value="1" class="btn btn-default" ng-click="img_click_ds('1receiver',1);" />
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <input type="button" value="2" class="btn btn-default" ng-click="img_click_ds('2receiver',2);" />
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <input type="button" value="3" class="btn btn-default" ng-click="img_click_ds('3receiver',3);" />
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <input type="button" value="4" class="btn btn-default" ng-click="img_click_ds('4receiver',4);" />
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <input type="button" value="5" class="btn btn-default" ng-click="img_click_ds('5receiver',5);" />
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
+                                <input type="button" value="6" class="btn btn-default" ng-click="img_click_ds('6receiver',6);" />
+                            </div>
+
+<!--                             <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('1receiver',1);" ng-mouseleave="img_off_ds('1receiver',1);" ng-mouseover="img_on_ds('1receiver',1);"><img alt="1 receiver" border="0" id="1receiver" name="1receiver" src="../common_assets/img/button1normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('2receiver',2);" ng-mouseleave="img_off_ds('2receiver',2);" ng-mouseover="img_on_ds('2receiver',2);"><img alt="2 receiver" border="0" id="2receiver" name="2receiver" src="../common_assets/img/button2normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('3receiver',3);" ng-mouseleave="img_off_ds('3receiver',3);" ng-mouseover="img_on_ds('3receiver',3);"><img alt="3 receiver" border="0" id="3receiver" name="3receiver" src="../common_assets/img/button3normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('4receiver',4);" ng-mouseleave="img_off_ds('4receiver',4);" ng-mouseover="img_on_ds('4receiver',4);"><img alt="4 receiver" border="0" id="4receiver" name="4receiver" src="../common_assets/img/button4normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('5receiver',5);" ng-mouseleave="img_off_ds('5receiver',5);" ng-mouseover="img_on_ds('5receiver',5);"><img alt="5 receiver" border="0" id="5receiver" name="5receiver" src="../common_assets/img/button5normal.jpg"></a>
+                            </div>
+                            <div class="col-sm-2 pdr0 pdl0">
                                 <a href="" ng-click="img_click_ds('6receiver',6);" ng-mouseleave="img_off_ds('6receiver',6);" ng-mouseover="img_on_ds('6receiver',6);"><img alt="6 receiver" border="0" id="6receiver" name="6receiver" src="../common_assets/img/button6normal.jpg">
                                 </a>
-                            </p>
-                        </div>
+                            </div>
+ -->                        </div>
                     </li>
                     <li id="step2Box" class="col-sm-8">
                         <div class="col-sm-12 bgwt">

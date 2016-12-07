@@ -1646,9 +1646,9 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
                 for (var m = 1; m <= 6; ++m) { //<-----this loop checks what image is at its "on" state and turns "off" the rest
                     if (myTab_ds[m] != loc) {
-                        document.images[myTab_ds[m]].src = dtvImages_ds[m].src; //<-- turns everything "off"
+                     //   document.images[myTab_ds[m]].src = dtvImages_ds[m].src; //<-- turns everything "off"
                     } else {
-                        document.images[loc].src = dtvImages_ds[img].src; //<-- turns selected item "on"
+                       // document.images[loc].src = dtvImages_ds[img].src; //<-- turns selected item "on"
                         varImageOn_ds = (img - numRolImages_ds);
                     }
                 }
@@ -2612,7 +2612,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         //resets all forms in all frames
 
-        function resetAll() {
+        $('input.rst').on('click', function() {
             var arrElements = document.getElementsByTagName('form');
             var numLen = arrElements.length;
             for (var j = 0; j < numLen; j++) {
@@ -2622,7 +2622,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 }
             }
             document.location.reload();
-        };
+        });
 
         function resetAllNoRefresh() {
             var arrElements = document.getElementsByTagName('form');
