@@ -2167,8 +2167,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
         // Calculations //////////////////////////////////////////////////////////////////////////////////
 
         function motherCalc() { // this is the mother brain of the calcuations...
-            var theform = document.frmNewPackage;
-            var varPremPackTotal = 0,
+            var theform = document.frmNewPackage,
+            varPremPackTotal = 0,
             addPrimaryCreditValue = 0,
 
             addMonthlyArsExtraValue = 0,
@@ -2210,11 +2210,11 @@ app.controller('PP_Controller', ['$scope', '$compile',
             varExtraTotal = varExtraReceiverTotal + varDVR + varARS + varHD_AccessTotal + varMRVTotal + varHD_ExtraTotal + addPrimaryCredit + addMonthlyArsExtraValue,
             varGrandTotal = varBasePackTotal + varPremPackTotal + varStateTax + varExtraTotal;
 
-            theform.txtBase.value = formatCurrency(varBasePackTotal);
-            theform.txtPrem.value = formatCurrency(varPremPackTotal);
-            theform.txtExtra.value = formatCurrency(varExtraTotal);
+            document.getElementsByName('txtBase')[0].textContent = formatCurrency(varBasePackTotal);
+            document.getElementsByName('txtPrem')[0].textContent = formatCurrency(varPremPackTotal);
+            document.getElementsByName('txtExtra')[0].textContent = formatCurrency(varExtraTotal);
             //theform.txtTax.value = formatCurrency(varStateTax);
-            theform.txtGrandTotal.value = formatCurrency(varGrandTotal);
+            document.getElementsByName('txtGrandTotal')[0].textContent = formatCurrency(varGrandTotal);
 
             get2ndMonthText(varProtectTotal);
 

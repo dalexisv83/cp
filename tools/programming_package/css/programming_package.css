@@ -16,6 +16,9 @@
     float:none !important;
     margin:0 auto !important;
 }
+.nlb ul{
+    padding-left:0;
+}
 img {
     min-width:12px;
 }
@@ -33,7 +36,7 @@ img {
     min-height:243px;
 }
 .mnh3{
-    min-height:365px;
+    min-height:329px;
 }
 .marr0{
     margin-right:0;    
@@ -126,7 +129,7 @@ img {
     margin-top:5px !important;
 }
 #summaryBox table tr td {
-    padding:0 10px 0 0;
+    /*padding:0 10px 0 0;*/
     overflow:hidden;
 }
 li#summaryBox {
@@ -135,11 +138,11 @@ li#summaryBox {
 }
 
 #summaryBox table{
-    margin-right:20px;
+    /*margin-right:20px;*/
 }
 
 #summaryBox table td font{
-    padding-right:60px;
+    /*padding-right:60px;*/
 }
 #programming_package {
     margin:0;
@@ -156,7 +159,6 @@ li#summaryBox {
 .firstmonth {
     background-color: #FFFFCC;
     color: #000000;
-    border: 2px solid #003366
 }
 #programming_package A:link {
     color:#070872;
