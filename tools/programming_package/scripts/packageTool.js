@@ -1437,7 +1437,6 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
                 if ((img == 6) || (img == 10)) { //<-- if premier is selected, this turns on all premium services
                     varPremierClicked = true;
-                    //console.log(document.images);
                     document.images["hbo"].src = image_check_src; //dtvImages[25].src;
                     document.images["showtime"].src = image_check_src; //dtvImages[26].src;     
                     document.images["starz"].src = image_check_src; //dtvImages[26].src;        
@@ -2167,8 +2166,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
         // Calculations //////////////////////////////////////////////////////////////////////////////////
 
         function motherCalc() { // this is the mother brain of the calcuations...
-            var theform = document.frmNewPackage;
-            var varPremPackTotal = 0,
+            var theform = document.frmNewPackage,
+            varPremPackTotal = 0,
             addPrimaryCreditValue = 0,
 
             addMonthlyArsExtraValue = 0,
@@ -2210,11 +2209,11 @@ app.controller('PP_Controller', ['$scope', '$compile',
             varExtraTotal = varExtraReceiverTotal + varDVR + varARS + varHD_AccessTotal + varMRVTotal + varHD_ExtraTotal + addPrimaryCredit + addMonthlyArsExtraValue,
             varGrandTotal = varBasePackTotal + varPremPackTotal + varStateTax + varExtraTotal;
 
-            theform.txtBase.value = formatCurrency(varBasePackTotal);
-            theform.txtPrem.value = formatCurrency(varPremPackTotal);
-            theform.txtExtra.value = formatCurrency(varExtraTotal);
+            document.getElementsByName('txtBase')[0].textContent = formatCurrency(varBasePackTotal);
+            document.getElementsByName('txtPrem')[0].textContent = formatCurrency(varPremPackTotal);
+            document.getElementsByName('txtExtra')[0].textContent = formatCurrency(varExtraTotal);
             //theform.txtTax.value = formatCurrency(varStateTax);
-            theform.txtGrandTotal.value = formatCurrency(varGrandTotal);
+            document.getElementsByName('txtGrandTotal')[0].textContent = formatCurrency(varGrandTotal);
 
             get2ndMonthText(varProtectTotal);
 
@@ -2438,7 +2437,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             var strText = '';
             var numProtect = 0;
             if (varImageOn_Protect == 10 || varImageOn_Premier == 12) {
-                numProtect = formatCurrency(parseFloat(document.frmNewPackage.txtGrandTotal.value) + varProtectTotal);
+                numProtect = formatCurrency(parseFloat(document.getElementsByName('txtGrandTotal')[0].textContent) + varProtectTotal);
                 strText = 'Customers are not charged for Protection Plan until the 2nd month.  The total with <b>DIRECTV Protection Plan</b> is $' + numProtect + '.';
                 if (varImageOn_Protect == 10 && varImageOn_Premier == 12) {
                     strText = 'Customers are not charged for Protection Plan until the 2nd month.  The total with <b>DIRECTV Protection Plan</b> and <b>Protection Plan Premier</b> is $' + numProtect + '.';
@@ -2612,7 +2611,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         //resets all forms in all frames
 
-        $('input.rst').on('click', function() {
+        function resetAll() {
             var arrElements = document.getElementsByTagName('form');
             var numLen = arrElements.length;
             for (var j = 0; j < numLen; j++) {
@@ -2621,8 +2620,69 @@ app.controller('PP_Controller', ['$scope', '$compile',
                     myObj.reset();
                 }
             }
-            document.location.reload();
-        });
+            document.getElementsByName('txtBase')[0].textContent = '0.00';
+            document.getElementsByName('txtPrem')[0].textContent = '0.00';
+            document.getElementsByName('txtExtra')[0].textContent = '0.00';
+            document.getElementsByName('txtGrandTotal')[0].textContent = '0.00';
+            var packages = ['HD_Access2','HD_Access1','DVR2','DVR1','MRV3','MRV2','MRV1','ARS2','ARS1','Family',
+            'Select','Entertainment','Choice','Xtra','Ultimate','Premier','Preferred Extra','Mas Latino',
+            'Mas Ultra','Optimo_Mas','Lo Maximo','Family Digital Bulk','Xtra Add-On','Xtra Add-On FDB',
+            'Xtra Add-On EDB','Choice Add-On FDB','Choice Add-On EDB','Premier Add-On FDB','Entertainment Add-On',
+            'Preferred Choice','Total Choice for TCD/JCD','Choice Tier for TCD/JCD','Ultimate Add-On CDB','Ultimate Add-On FDB',
+            'Ultimate Add-On EDB','Premier Add-On CDB','Premier Add-On EDB','Xtra Digital Bulk','Student Choice Add-On',
+            'Total Choice Plus','Xtra Tier','hbo','starz','showtime','cinemax','sportspack','protect_1','protect_3',
+            'hdextra_1','hdextra_2','premier_1','premier_2'];
+            for(var i=0; i < packages.length ; i++){
+                document.getElementsByName(packages[i])[0].src = "../common_assets/img/greenBoxNorm.gif";
+            }
+            for(var i=1; i < 7 ; i++){
+                link = "../common_assets/img/button"+i+"normal.png"
+                document.getElementsByName(i+'receiver')[0].src = link;
+            }
+            layerSwap();
+            document.getElementById('lyr2ndMonth').textContent = '';
+
+            myFlag_Prem[1] = false; //<-- variables are set to "true" to disable "rollout" 
+            myFlag_Prem[2] = false;
+            myFlag_Prem[3] = false;
+            myFlag_Prem[4] = false;
+            myFlag_Prem[5] = false;
+
+            varImageOn = 0, //Base Package flag
+            xImageOn = 0,
+            spanishLayerVis = 0, //Show the spanish layer? 0=no, 1=yes
+            MDULayerVis = 0, //Show the MDU layer? 0=no, 1=yes
+            varImageOn_ds = 0, //Number of tv's
+            varImageOn_Protect = 0, //Protection Plan flag
+            varImageOn_DVR = 0, //DVR service flag
+            varImageOn_ARS = 0,
+            varImageOn_HD_Access = 0, //HD Access flag
+            varImageOn_MRV = 0, //MRV flag
+            varImageOn_HDExtraPack = 0, //HD Extra Pack flag
+            varImageOn_TotChoicePlus = 0, //For the $5 add on package for select
+            varImageOn_Xtier = 0, //For the xtra tier $5 add on package 
+            varImageOn_familiar_mdu = 0, //For the Familiar MDU Tier $5 add on package
+            varImageOn_TC_plus_mdu = 0, //For the TC PLus MDU Tier $5 add on package
+            varImageOn_xtra_addon_mdu = 0, // Xtra Add_On TMU $14.99 addition
+            varImageOn_premier_addon_mdu = 0, // Premier Add_On TMU $65.99 addition
+            varImageOn_choice_addon_fdb = 0,
+            varImageOn_choice_xtra_addon_fdb = 0,
+            varImageOn_choice_ultimate_addon_cdb = 0,
+            varImageOn_choice_ultimate_addon_fdb = 0,
+            varImageOn_choice_premier_addon_cdb = 0,
+            varImageOn_choice_xtra_digital_bulk = 0,
+            varImageOn_choice_ultimate_addon = 0,
+            varImageOn_premier_addon_fdb = 0,
+            varImageOn_premier_addon_cdb = 0,
+            varPremierClicked = false, //Premier Package flag - true when premier base package is clicked
+            varMirrorFeeWaiver = 1, // 1 for normal, 3 for TMW or JMW account selected
+            varProtectTotal = 0.00,
+            varHD_ExtraTotal = 0.00,
+            varHD_AccessTotal = 0.00,
+            siteBit = "", //This is the bit that determines what site they're coming from
+            varImageOn_Premier = 0,
+            varMRVMonthly = 0;
+        };
 
         $(function() {
             $('.stp45').matchHeight();
@@ -2722,5 +2782,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
         $scope.img_on_Base = img_on_Base;
         $scope.fillMDUdiv = fillMDUdiv;
         $scope.mduoptions = ["MDU/JDU","TCD/JCD","TMW/JMW","TMU/JMU"];
+        $scope.resetAllNoRefresh = resetAllNoRefresh;
+        $scope.resetAll = resetAll;
     }
 ]);
