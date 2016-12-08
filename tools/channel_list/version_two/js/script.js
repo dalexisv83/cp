@@ -35,34 +35,10 @@ app.controller('CL_Controller',['$scope', '$http',
                 class_name,
                 comment_btn;
 
-                small_grid = new smallGrid(config.rowHeightShort,'containerSmall',featured_packages);
-                small_grid.setOptions(true,false);
-                small_grid.setColumns();
-                small_grid.setChannels();
-                //small_grid.render();
-
-                //small grid columns are the same with the big grid
-                columns = small_grid.getColumns();
-
-                //initialize the big grid
-                big_grid = new bigGrid(config.rowHeightTall,'container',featured_packages,data_type);
-                big_grid.setOptions(true,false);
-                big_grid.setColumns(columns);
-                big_grid.setChannels(channels);
-                big_grid.setChannels(ad_channels);
-                //big_grid.render();
 
                 //activate the search box
                 search_box = new searchBox('txtSearch',big_grid,'messageBox','reset','active');
                 search_box.autoSearch();
-
-                //get the width for each big_grid cell
-                cell_width = big_grid.getNarrowCellWidth();
-                programming_headers = new programmingHeaders('packageHeaderContainer',featured_packages,cell_width);
-                //programming_headers.render();
-
-                //rotate package headers
-                //programming_headers.rotate(config.localhost,config.deg,config.y_diff);
 
                 //initialize column sorting
                 column_sorter = new columnSorter('channel_name',nameSorter,channelNumberSorter,callLetterSorter,genreSorter,
@@ -89,10 +65,32 @@ app.controller('CL_Controller',['$scope', '$http',
                     function(params) {
                         if (params == 'channel-lineup') {
                             stopRenderWatch();
+
+                            small_grid = new smallGrid(config.rowHeightShort,'containerSmall',featured_packages);
+                            small_grid.setOptions(true,false);
+                            small_grid.setColumns();
+                            small_grid.setChannels();
                             small_grid.render();
+
+                            //small grid columns are the same with the big grid
+                            columns = small_grid.getColumns();
+
+                            //initialize the big grid
+                            big_grid = new bigGrid(config.rowHeightTall,'container',featured_packages,data_type);
+                            big_grid.setOptions(true,false);
+                            big_grid.setColumns(columns);
+                            big_grid.setChannels(channels);
+                            big_grid.setChannels(ad_channels);
                             big_grid.render();
+
+                            //get the width for each big_grid cell
+                            cell_width = big_grid.getNarrowCellWidth();
+                            programming_headers = new programmingHeaders('packageHeaderContainer',featured_packages,cell_width);
                             programming_headers.render();
+
+                            //rotate package headers
                             programming_headers.rotate(config.localhost,config.deg,config.y_diff);
+
                             $('#channel_lineup .table-header').width($('#channel_lineup #container').width() + 16);
                             $('.slick-viewport').width($('#channel_lineup #container').width());
                             //activate the package filters
