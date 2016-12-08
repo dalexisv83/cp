@@ -2209,11 +2209,11 @@ app.controller('PP_Controller', ['$scope', '$compile',
             varExtraTotal = varExtraReceiverTotal + varDVR + varARS + varHD_AccessTotal + varMRVTotal + varHD_ExtraTotal + addPrimaryCredit + addMonthlyArsExtraValue,
             varGrandTotal = varBasePackTotal + varPremPackTotal + varStateTax + varExtraTotal;
 
-            document.getElementsByName('txtBase')[0].textContent = formatCurrency(varBasePackTotal);
-            document.getElementsByName('txtPrem')[0].textContent = formatCurrency(varPremPackTotal);
-            document.getElementsByName('txtExtra')[0].textContent = formatCurrency(varExtraTotal);
+            document.getElementById('txtBase').innerHTML = formatCurrency(varBasePackTotal);
+            document.getElementById('txtPrem').innerHTML = formatCurrency(varPremPackTotal);
+            document.getElementById('txtExtra').innerHTML = formatCurrency(varExtraTotal);
             //theform.txtTax.value = formatCurrency(varStateTax);
-            document.getElementsByName('txtGrandTotal')[0].textContent = formatCurrency(varGrandTotal);
+            document.getElementById('txtGrandTotal').innerHTML = formatCurrency(varGrandTotal);
 
             get2ndMonthText(varProtectTotal);
 
@@ -2437,7 +2437,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             var strText = '';
             var numProtect = 0;
             if (varImageOn_Protect == 10 || varImageOn_Premier == 12) {
-                numProtect = formatCurrency(parseFloat(document.getElementsByName('txtGrandTotal')[0].textContent) + varProtectTotal);
+                numProtect = formatCurrency(parseFloat(document.getElementById('txtGrandTotal').textContent) + varProtectTotal);
                 strText = 'Customers are not charged for Protection Plan until the 2nd month.  The total with <b>DIRECTV Protection Plan</b> is $' + numProtect + '.';
                 if (varImageOn_Protect == 10 && varImageOn_Premier == 12) {
                     strText = 'Customers are not charged for Protection Plan until the 2nd month.  The total with <b>DIRECTV Protection Plan</b> and <b>Protection Plan Premier</b> is $' + numProtect + '.';
@@ -2620,10 +2620,10 @@ app.controller('PP_Controller', ['$scope', '$compile',
                     myObj.reset();
                 }
             }
-            document.getElementsByName('txtBase')[0].textContent = '0.00';
-            document.getElementsByName('txtPrem')[0].textContent = '0.00';
-            document.getElementsByName('txtExtra')[0].textContent = '0.00';
-            document.getElementsByName('txtGrandTotal')[0].textContent = '0.00';
+            document.getElementById('txtBase').innerHTML = '0.00';
+            document.getElementById('txtPrem').innerHTML = '0.00';
+            document.getElementById('txtExtra').innerHTML = '0.00';
+            document.getElementById('txtGrandTotal').innerHTML = '0.00';
             var packages = ['HD_Access2','HD_Access1','DVR2','DVR1','MRV3','MRV2','MRV1','ARS2','ARS1','Family',
             'Select','Entertainment','Choice','Xtra','Ultimate','Premier','Preferred Extra','Mas Latino',
             'Mas Ultra','Optimo_Mas','Lo Maximo','Family Digital Bulk','Xtra Add-On','Xtra Add-On FDB',
@@ -2633,14 +2633,18 @@ app.controller('PP_Controller', ['$scope', '$compile',
             'Total Choice Plus','Xtra Tier','hbo','starz','showtime','cinemax','sportspack','protect_1','protect_3',
             'hdextra_1','hdextra_2','premier_1','premier_2'];
             for(var i=0; i < packages.length ; i++){
-                document.getElementsByName(packages[i])[0].src = "../common_assets/img/greenBoxNorm.gif";
+                a = document.getElementById(packages[i]);
+                if (a !== null)
+                    a.src = "../common_assets/img/greenBoxNorm.gif";
             }
             for(var i=1; i < 7 ; i++){
-                link = "../common_assets/img/button"+i+"normal.png"
-                document.getElementsByName(i+'receiver')[0].src = link;
+                link = "../common_assets/img/button"+i+"normal.png";
+                a = document.getElementById(i+'receiver');
+                if (a !== null)
+                    a.src = link;
             }
             layerSwap();
-            document.getElementById('lyr2ndMonth').textContent = '';
+            document.getElementById('lyr2ndMonth').innerHTML = '';
 
             myFlag_Prem[1] = false; //<-- variables are set to "true" to disable "rollout" 
             myFlag_Prem[2] = false;

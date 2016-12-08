@@ -159,7 +159,6 @@ img {
     margin-top:5px !important;
 }
 #summaryBox table tr td {
-    /*padding:0 10px 0 0;*/
     overflow:hidden;
 }
 li#summaryBox {
@@ -172,14 +171,20 @@ li#summaryBox {
     padding:0;
     text-align:center;
     font:10.4px/1 Arial,sans-serif;
-    /*font-family: Arial;*/
     padding-bottom:0;
 }
 .btn-default{
-    background-color: #009EDB;
-    color: #ffffff;
+    background-color: #0567AE;
+    color: #fff;
     border-radius: 0px;
     border:0;
+}
+.btn-default:hover,.btn-default:focus{
+    background-color:#0567AE !important;
+    color: #fff !important;
+}
+.btn-default:active{
+    background-color: #009EDB !important;
 }
 
 #programming_package A:link {
@@ -194,11 +199,6 @@ li#summaryBox {
 
 #programming_package A:visited {
     color:#070872;
-    text-decoration:none
-}
-
-#programming_package A:hover {
-    color:#F60;
     text-decoration:none
 }
 
