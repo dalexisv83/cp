@@ -40,7 +40,6 @@
             </ul>
         </div>
         <div class="clearfix"></div>
-        <span class="why" id="genreLegend"></span>
         <div class="table-header">
             <div class="pull-left header" id="mainHeader">
                 <div class="pull-left wide">
@@ -74,10 +73,10 @@
                     <div id="genreSorter" style="display:none">
                         <div class="arrow down pull-left">&darr;</div>
                         <div class="arrow up pull-left hidden">&uarr;</div>
-                        <div class="pull-left"><a href="" title="click to sort">Genre</a></div>
+                        <div class="pull-left"><a href="" title="click to sort">Genre</a><span class="alert" id="genreLegend">?</span></div>
                         <div class="clearfix"></div>
                     </div>
-                    <div id="genreSortStart"><a href="" title="click to sort">Genre</a></div>
+                    <div id="genreSortStart"><a href="" title="click to sort">Genre</a><span class="alert" id="genreLegend">?</span></div>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -88,6 +87,53 @@
             <div class="clearfix"></div>
             <p ng-if="clLoaded != true">Loading&hellip;</p>
         </div>
+
+                    <div id="genreCodes" class="qtip-bootstrap">
+                        <div class="qtip-content">
+                            <img id="cl_genreX" src="http://agentanswercenter.directv.com/en-us/res/system/img/close_button.jpg" width=10 height=10 />
+                            <div class="wwrapper">
+                                <div class="pull-left code">FAM</div>
+                                <div class="pull-left title">Family</div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="wwrapper">
+                                <div class="pull-left code">INT</div>
+                                <div class="pull-left title">International</div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="wwrapper">
+                                <div class="pull-left code">LIF</div>
+                                <div class="pull-left title">Lifestyle</div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="wwrapper">
+                                <div class="pull-left code">MOV</div>
+                                <div class="pull-left title">Movie</div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="wwrapper">
+                                <div class="pull-left code">NEW</div>
+                                <div class="pull-left title">News</div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="wwrapper">
+                                <div class="pull-left code">SNC</div>
+                                <div class="pull-left title">Sonic</div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="wwrapper">
+                                <div class="pull-left code">SPA</div>
+                                <div class="pull-left title">Spanish</div>
+                                <div style="clear:both"></div>
+                            </div>
+                            <div class="wwrapper last">
+                                <div class="pull-left code">SPT</div>
+                                <div class="pull-left title">Sports</div>
+                                <div style="clear:both"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--end of div#genreCodes-->
     <div class="grid">
         <div class="grid__item">
         <!--end of div.table-header-->
@@ -95,49 +141,6 @@
         <div id="container"></div>
         </div>
     </div>
-        <div id="genreCodes" style="display:none">
-            <div class="wwrapper">
-                <div class="pull-left code">FAM</div>
-                <div class="pull-left title">Family</div>
-                <div style="clear:both"></div>
-            </div>
-            <div class="wwrapper">
-                <div class="pull-left code">INT</div>
-                <div class="pull-left title">International</div>
-                <div style="clear:both"></div>
-            </div>
-            <div class="wwrapper">
-                <div class="pull-left code">LIF</div>
-                <div class="pull-left title">Lifestyle</div>
-                <div style="clear:both"></div>
-            </div>
-            <div class="wwrapper">
-                <div class="pull-left code">MOV</div>
-                <div class="pull-left title">Movie</div>
-                <div style="clear:both"></div>
-            </div>
-            <div class="wwrapper">
-                <div class="pull-left code">NEW</div>
-                <div class="pull-left title">News</div>
-                <div style="clear:both"></div>
-            </div>
-            <div class="wwrapper">
-                <div class="pull-left code">SNC</div>
-                <div class="pull-left title">Sonic</div>
-                <div style="clear:both"></div>
-            </div>
-            <div class="wwrapper">
-                <div class="pull-left code">SPA</div>
-                <div class="pull-left title">Spanish</div>
-                <div style="clear:both"></div>
-            </div>
-            <div class="wwrapper last">
-                <div class="pull-left code">SPT</div>
-                <div class="pull-left title">Sports</div>
-                <div style="clear:both"></div>
-            </div>
-        </div>
-        <!--end of div#genreCodes-->
 </div>
 </div>
 </div>

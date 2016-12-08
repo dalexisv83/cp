@@ -603,3 +603,17 @@ span.btn-feedback:hover {
 .rotated .pull-left div{
     overflow: visible!important;
 }
+
+#genreCodes {
+    display: none;
+    width: 150px;
+    position: absolute;
+    left: 575px;
+    z-index: 99;
+}
+
+#cl_genreX {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}

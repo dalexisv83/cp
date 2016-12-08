@@ -51,7 +51,7 @@ app.controller('CL_Controller',['$scope', '$http',
                 //initialize tooltip
                 tooltip = new toolTip(tool_tip_btn);
                 //activate the genre codes tooltip
-                tooltip.genreToolTip(genre_codes_container);
+                //tooltip.genreToolTip(genre_codes_container);
 
                 //initiate the comment btn
                 class_name = 'comment-btn'; //add a class of comment-btn
@@ -99,6 +99,15 @@ app.controller('CL_Controller',['$scope', '$http',
                             // sort hack
                             $('#container .slick-header-columns').children().eq(0).trigger('click');
                             $('#container .slick-header-columns').children().eq(0).trigger('click');
+
+                            $('#channel_lineup .alert').click(function(){
+                                $('#genreCodes').show();
+                            });
+                            $('#cl_genreX').click(function(e){
+                                e.stopPropagation();
+                                $('#genreCodes').hide();
+                            });
+
                             $scope.clLoaded = true;
                         }
                     },
