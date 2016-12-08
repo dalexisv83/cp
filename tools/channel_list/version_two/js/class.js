@@ -633,9 +633,6 @@ var toolTip = function(obj){
               my: 'right top',
               at: 'bottom right',
               target: this
-            },
-            style: {
-              classes: 'qtip-youtube'
             }
         });
     };

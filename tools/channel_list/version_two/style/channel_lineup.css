@@ -1,7 +1,7 @@
 #channel_lineup {
   font-family: arial;
   padding: 0;
-    font: 14px Helvetica, Arial, sans-serif;
+    font: 14px Arial, Helvetica, sans-serif;
     overflow: hidden;
     margin: 0;
 }
@@ -100,14 +100,6 @@
 
 #channel_lineup .headers .first {
   text-align: left;
-}
-
-#channel_lineup .headers h1 {
-  font-family: Arial, sans-serif;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 22px;
 }
 
 .tool-title {
@@ -264,12 +256,21 @@
     height: 50px;
 }
 
+#containerSmall .odd {
+    background-color: #c3e7fb;
+}
+
+#containerSmall .even {
+    background-color: #e9f7ff;
+}
+
 #containerSmall .even .r0 , #containerSmall .even .r1, #containerSmall .even .r2, #containerSmall .even .r3 {
   border-top: 1px solid #ddd;
 }
 
 #containerSmall .r0 {
   border-left: 1px solid #ddd;
+  color: #47a3e6;
 }
 
 #containerSmall .grid-canvas {
@@ -477,6 +478,10 @@ a.activeLink {
      display:none;
 }    
 
+.qtip {
+  line-height: 1.25;
+}
+
 .qtip-content .wwrapper .code{
   width:50px;
   font-weight:bold;
@@ -567,6 +572,10 @@ span.btn-feedback:hover {
 
 .slick-row {
   line-height: 1;
+}
+
+#container .slick-row:hover .slick-cell {
+    background-color: #e9f7ff;
 }
 
 .slick-cell {
