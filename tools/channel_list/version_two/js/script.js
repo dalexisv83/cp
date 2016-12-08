@@ -35,29 +35,6 @@ app.controller('CL_Controller',['$scope', '$http',
                 class_name,
                 comment_btn;
 
-
-                //activate the search box
-                search_box = new searchBox('txtSearch',big_grid,'messageBox','reset','active');
-                search_box.autoSearch();
-
-                //initialize column sorting
-                column_sorter = new columnSorter('channel_name',nameSorter,channelNumberSorter,callLetterSorter,genreSorter,
-                                            channelNameSortStart,channelNumberSortStart,callLetterSortStart,genreSortStart);
-                column_sorter.enableChannelNameSort();
-                column_sorter.enableChannelNumberSort();
-                column_sorter.enableCallLetterSort();
-                column_sorter.enableGenreSort();
-
-                //initialize tooltip
-                tooltip = new toolTip(tool_tip_btn);
-                //activate the genre codes tooltip
-                //tooltip.genreToolTip(genre_codes_container);
-
-                //initiate the comment btn
-                class_name = 'comment-btn'; //add a class of comment-btn
-                comment_btn = new commentBtn(btn,class_name,config.baseUrlPath);
-                comment_btn.init();
-
                 var stopRenderWatch = $scope.$watch(
                     function() {
                         return $scope.$parent.page;
@@ -90,6 +67,28 @@ app.controller('CL_Controller',['$scope', '$http',
 
                             //rotate package headers
                             programming_headers.rotate(config.localhost,config.deg,config.y_diff);
+
+                            //activate the search box
+                            search_box = new searchBox('txtSearch',big_grid,'messageBox','reset','active');
+                            search_box.autoSearch();
+
+                            //initialize column sorting
+                            column_sorter = new columnSorter('channel_name',nameSorter,channelNumberSorter,callLetterSorter,genreSorter,
+                                                        channelNameSortStart,channelNumberSortStart,callLetterSortStart,genreSortStart);
+                            column_sorter.enableChannelNameSort();
+                            column_sorter.enableChannelNumberSort();
+                            column_sorter.enableCallLetterSort();
+                            column_sorter.enableGenreSort();
+
+                            //initialize tooltip
+                            tooltip = new toolTip(tool_tip_btn);
+                            //activate the genre codes tooltip
+                            //tooltip.genreToolTip(genre_codes_container);
+
+                            //initiate the comment btn
+                            class_name = 'comment-btn'; //add a class of comment-btn
+                            comment_btn = new commentBtn(btn,class_name,config.baseUrlPath);
+                            comment_btn.init();
 
                             $('#channel_lineup .table-header').width($('#channel_lineup #container').width() + 16);
                             $('.slick-viewport').width($('#channel_lineup #container').width());
