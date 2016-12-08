@@ -481,6 +481,8 @@ span.btn-feedback:hover {
   padding: 10px;
   box-shadow: 0px 0px 10px #d2d2d2;
   z-index: 2000;
+    left: 50%;
+    margin-left: -120px;
 }
 
 #package_compare #genreX {
