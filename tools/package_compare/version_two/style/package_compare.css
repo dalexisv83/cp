@@ -1,6 +1,6 @@
 #package_compare {
-  font-family: Verdana, Geneva, sans-serif;
-  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
 #package_compare.full{
@@ -27,13 +27,6 @@
  position: relative;
  padding: 20px;
  margin: 0 auto;
-}
-
-
-.headers h2 {
-  font-size: 1.25em;
-  margin-top: 0;
-  color: #333;
 }
 
 .border {
@@ -71,7 +64,7 @@
 }
 
 .count{
-    color:#337c31; /*default*/
+    color:#0567ae; /*default*/
     font-size: 40px;
     font-weight: bold;
     width: 170px;
@@ -85,21 +78,20 @@
 }
 
 .current.count {
-    color:#31517c;
     background-position: -10px 0px;
 }
 
 .gained.count {
+    color: #00793d;
     background-position: -236px 0px;
 }
 
 .lost.count {
-    color:#d00404;
+    color:#cf2a2a;
     background-position: -463px 0;
 }
 
 .requested.count {
-    color: #31517c;
     background-position: -696px 0;
 }
 
@@ -215,40 +207,6 @@ table td.channel-number{
   background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/chan_minus.png);
 }
 
-#package_compare .why {
-  color: black;
-  background-repeat: no-repeat;
-  background-position: 49px 1px;
-  width: 66px;
-  height: 20px;
-  cursor: pointer;
-  position: absolute;
-  top: 102px;
-  left: 485px;
-  font-size: 12px;
-  display: none;
-}
-
-#package_compare .why:hover {
-  padding-right: 240px;
-}
-
-#package_compare .why span {
-    margin: 0 4px;
-    background: #d0e4f7;
-    background: -ms-linear-gradient(top, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
-    background: linear-gradient(to bottom, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
-    -pie-background: linear-gradient(#87bcea, #0a77d5);
-    text-align: center;
-    color: white;
-    font-size: .9em;
-    font-weight: bold;
-    padding: 1px 4px;
-    -webkit-border-radius: 16px;
-    -moz-border-radius: 16px;
-    border-radius: 16px;    
-}
-
 .qtip-content .wrapper .code{
   width:50px;
   font-weight:bold;
@@ -282,7 +240,7 @@ table td.channel-number{
 }
 
 .saved-amt{
-  color:#337c31;  
+  color: #00793d;
 }
 
 .pay-more-amt{
@@ -481,19 +439,21 @@ span.btn-feedback:hover {
 
 .alert{
   margin:0 4px;
-  background: #d0e4f7;
-  background: -ms-linear-gradient(top, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
-  background: linear-gradient(to bottom, #d0e4f7 0%,#73b1e7 24%,#0a77d5 50%,#539fe1 79%,#87bcea 100%);
-  -pie-background: linear-gradient(#87bcea, #0a77d5);
+  background: #009EDB;
   text-align: center;
-  font-size: .85em;
+  font-size: 10px;
   font-weight: bold;
   padding: 1px 4px;
   -webkit-border-radius: 16px;
   -moz-border-radius: 16px;
   border-radius: 16px;
   position:relative;
-  color:white
+  color:white;
+  cursor: pointer;
+}
+
+.alert.bang {
+  padding: 1px 5px;
 }
 
 #package_compare #cl_genreLegend{
@@ -576,8 +536,9 @@ span.btn-feedback:hover {
 }
 
 .alert_box {
-    border: 2px solid #0a77d5;
+    border: 3px solid #ccc;
     padding: 7px;
+    margin-bottom: 20px;
     font-size: 1.2em;
     display: none;
     position: relative;

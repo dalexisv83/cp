@@ -92,6 +92,11 @@ tbody th {
     text-align: left;
 }*/
 
+h2 {
+  font-size: 1.5em !important;
+  color: #E97400 !important;
+}
+
 #include {
     padding-bottom: 30px;
 }
