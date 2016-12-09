@@ -201,7 +201,6 @@
 /*start*/
 
 #mainHeader {
-    font-size: 1.25em;
     width: 50%;
 }
 
@@ -222,7 +221,7 @@
 
 .arrow{
    position: absolute;
-   left: -10px !important;
+   left: -20px !important;
 }
 
 #channel_lineup .table-header .wide{
@@ -296,16 +295,8 @@
 
 #mainHeader > div > div {
     position: absolute;
-    bottom: 0;
-    left: 10px;
-}
-
-#mainHeader #nameSorter a,
-#mainHeader #channelNumberSorter a,
-#mainHeader #callLetterSorter a,
-#mainHeader #genreSorter a
-{
-    color:#ff0000;
+    bottom: 3px;
+    left: 20px;
 }
 
 #channel_lineup svg{
@@ -445,7 +436,7 @@ input#txtSearch{
 }
 
 a.activeLink {
-    color: #ff0000;
+    color: black;
     font-style: italic;
 }
 
