@@ -333,6 +333,14 @@ input#txtSearch{
     height: 40px;
     padding: 0 20px;
     font-size: 1.5em;
+    line-height: 1.5em;
+    vertical-align: bottom;
+}
+
+#reset {
+    font-size: 1.5em;
+    height: 40px;
+    vertical-align: bottom;
 }
 
 /**start pager**/
@@ -391,26 +399,6 @@ input#txtSearch{
     border: 1px solid #ccc;
 }
 /**end of pager**/
-
-
-.reset a{
-  display: inline-block;
-  font-size: 1.5em;
-  padding: 8px 20px;
-  margin-left: 4px;
-  background-color: #e6e6e6;
-  color: #838383;
-  text-decoration: none;
-  cursor: default;
-  border: 1px solid #d3d3d3;
-}
-
-.reset a.active {
-  background-color: red;
-  cursor: pointer;
-  color: white;
-  border: 1px solid #d34545;
-}
 
 #mainHeader a{
     font-weight:bold;

@@ -198,6 +198,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
                 }
 
                 $scope.$broadcast("items_changed");
+                $scope.resetActive = true;
             }
 
         };
@@ -258,6 +259,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
                     alert_message.parent().css('display','none');
                     alert_message.html('');
                 }
+                $scope.resetActive = true;
             }
         };
 
@@ -326,6 +328,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
             };
 
             $scope.resetLimit();
+            $scope.resetActive = false;
         };
 
         $scope.reloadit =  function(){

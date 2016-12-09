@@ -838,3 +838,19 @@ input.ng-valid.zipinp {
 .even {
     background-color: #f5f5f5;
 }
+
+.reset {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #e6e6e6;
+  color: #838383;
+  text-decoration: none;
+  cursor: default;
+  border: none;
+}
+
+.reset.active {
+  background-color: #009EDB;
+  cursor: pointer;
+  color: white;
+}
