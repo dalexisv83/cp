@@ -6,24 +6,24 @@
                 <ul id="container1" class="col-sm-2">
                     <li id="totalsBox">
                         <div class="col-sm-12 blbg mnh2 pdr0 pdl0">
-                            <h5 class="header">Package Total</h5>
+                            <h5 class="header"> PACKAGE TOTAL </h5>
                             <div class="col-sm-12 pdr0 pdl0">
                                <span id="lyrSuggestion">&nbsp;</span>
                             </div>
                             <div class="col-sm-12 marb10">
-                                <h5>Base: <span>$</span><span name="txtBase" >0.00</span></h5>
+                                <h5>Base: <span>$</span><span id="txtBase" name="txtBase" >0.00</span></h5>
                             </div>
                             <div class="col-sm-12 marb10">                                
-                                <h5>Premium: <span>$</span><span name="txtPrem">0.00</span></h5>
+                                <h5>Premium: <span>$</span><span id="txtPrem" name="txtPrem">0.00</span></h5>
                             </div>
                             <div class="col-sm-12 marb10">
-                                <h5>Extras: <span>$</span><span name="txtExtra" >0.00</span></h5>
+                                <h5>Extras: <span>$</span><span id="txtExtra" name="txtExtra" >0.00</span></h5>
                             </div>
                             <div class="col-sm-12 marb10">
-                                <h5>1<sup>st</sup> Month Total: <span>$</span><span name="txtGrandTotal" >0.00</span></h5>
+                                <h5>1<sup>st</sup> Month Total: <span>$</span><span id="txtGrandTotal" name="txtGrandTotal" >0.00</span></h5>
                             </div>
-                            <div class="col-sm-12">
-                                <input ng-click="resetAll();" type="button" value="Reset" class="btn btn-default rst">
+                            <div class="col-sm-12 cntr">
+                                <input ng-click="resetAll();" type="button" value="RESET" class="btn btn-default rst">
                             </div>
                             <div class="col-sm-12 pdr0 pdl0">
                                 <div id="lyr2ndMonth"></div>
@@ -32,8 +32,8 @@
                     </li>
                     <li id="summaryBox">
                         <div class="orbg marr0 col-sm-12 mnh3">
-                            <h5 class="header"> Quick Summary </h5>
-                            <div class="col-sm-12">
+                            <h5 class="header"> QUICK SUMMARY </h5>
+                            <div class="col-sm-12 detail">
                                 <div ng-bind-html="ppSUMMARY"></div>
                             </div>
                         </div>
@@ -198,24 +198,24 @@
                                 <div class="col-sm-6 innerboxHeadBig pdr0 pdl0">
                                     <div class="col-sm-12 ipdr0 pdl0 marb10">
                                         <a href="" ng-click="img_click_Base('Mas Latino',7);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Mas Latino',7);" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; img_on_Base('Mas Latino',7);">
-                                        <img alt="Mas Latino" border="0" name="Mas Latino" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <img alt="Mas Latino" border="0" id="Mas Latino" name="Mas Latino" src="../common_assets/img/greenBoxNorm.gif"></a>
                                         <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_latino.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();"> Más Latino</a>
                                     </div>
                                     <div class="col-sm-12 pdr0 pdl0 marb10">
                                         <a href="" ng-click="img_click_Base('Mas Ultra',24);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Mas Ultra',24);" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; img_on_Base('Mas Ultra',24);">
-                                        <img alt="Mas Ultra" border="0" name="Mas Ultra" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <img alt="Mas Ultra" border="0" id="Mas Ultra" name="Mas Ultra" src="../common_assets/img/greenBoxNorm.gif"></a>
                                         <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/mas_ultra.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();"> Más Ultra</a>
                                     </div>
                                 </div>
                                 <div class="col-sm-6 innerboxHeadBig pdr0 pdl0">
                                     <div class="col-sm-12 pdr0 pdl0 marb10">
                                         <a href="" ng-click="img_click_Base('Optimo_Mas',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Optimo_Mas',8);" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; img_on_Base('Optimo_Mas',8);">
-                                        <img alt="Optimo Mas" border="0" name="Optimo_Mas" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <img alt="Optimo Mas" border="0" id="Optimo_Mas" name="Optimo_Mas" src="../common_assets/img/greenBoxNorm.gif"></a>
                                         <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/optimo_mas.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();"> Optimo Más</a>
                                     </div>
                                     <div class="col-sm-12 pdr0 pdl0 marb10">
                                         <a href="" ng-click="img_click_Base('Lo Maximo',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base('Lo Maximo',10);" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; img_on_Base('Lo Maximo',10);">
-                                        <img alt="Lo Maximo" border="0" name="Lo Maximo" src="../common_assets/img/greenBoxNorm.gif"></a>
+                                        <img alt="Lo Maximo" border="0" id="Lo Maximo" name="Lo Maximo" src="../common_assets/img/greenBoxNorm.gif"></a>
                                         <a class="step3" href="javascript:newWindow('http://agentanswercenter.directv.com/en-us/res/programming/lo_maximo.html');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();"> Lo Maximo</a>
                                     </div>
                                 </div>
@@ -235,32 +235,32 @@
                                     </div>
                                     <div id="MDUdiv" style="display:none;">
                                         <!-- TMU SECTION   -->
-                                        <img alt="Total Choice Plus TMU" border="0" name="Total Choice Plus TMU" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Total Choice Plus TMU" border="0" id="Total Choice Plus TMU" name="Total Choice Plus TMU" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
                                         <!-- Family Digital Bulk column  -->
-                                        <img alt="Family Digital Bulk" border="0" name="Family Digital Bulk" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Xtra Add-On" border="0" name="Xtra Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Xtra Add-On FDB" border="0" name="Xtra Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Xtra Add-On EDB" border="0" name="Xtra Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Choice Add-On FDB" border="0" name="Choice Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Choice Add-On EDB" border="0" name="Choice Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Premier Add-On FDB" border="0" name="Premier Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Family Digital Bulk" border="0" id="Family Digital Bulk" name="Family Digital Bulk" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Xtra Add-On" border="0" id="Xtra Add-On" name="Xtra Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Xtra Add-On FDB" border="0" id="Xtra Add-On FDB" name="Xtra Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Xtra Add-On EDB" border="0" id="Xtra Add-On EDB" name="Xtra Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Choice Add-On FDB" border="0" id="Choice Add-On FDB" name="Choice Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Choice Add-On EDB" border="0" id="Choice Add-On EDB" name="Choice Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Premier Add-On FDB" border="0" id="Premier Add-On FDB" name="Premier Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
                                         <!--==============================-->
-                                        <img alt="Entertainment Add-On" border="0" name="Entertainment Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Preferred Choice" border="0" name="Preferred Choice" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Total Choice" border="0" name="Total Choice for TCD/JCD" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Choice Tier" border="0" name="Choice Tier for TCD/JCD" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Ultimate Add-On CDB" border="0" name="Ultimate Add-On CDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Ultimate Add-On FDB" border="0" name="Ultimate Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Ultimate Add-On EDB" border="0" name="Ultimate Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Premier Add-On CDB" border="0" name="Premier Add-On CDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Premier Add-On EDB" border="0" name="Premier Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Xtra Digital Bulk" name="Xtra Digital Bulk" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
-                                        <img alt="Student Choice Add-On" name="Student Choice Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Entertainment Add-On" border="0" id="Entertainment Add-On" name="Entertainment Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Preferred Choice" border="0" id="Preferred Choice" name="Preferred Choice" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Total Choice" border="0" id="Total Choice for TCD/JCD" name="Total Choice for TCD/JCD" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Choice Tier" border="0" id="Choice Tier for TCD/JCD" name="Choice Tier for TCD/JCD" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Ultimate Add-On CDB" border="0" id="Ultimate Add-On CDB" name="Ultimate Add-On CDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Ultimate Add-On FDB" border="0" id="Ultimate Add-On FDB" name="Ultimate Add-On FDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Ultimate Add-On EDB" border="0" id="Ultimate Add-On EDB" name="Ultimate Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Premier Add-On CDB" border="0" id="Premier Add-On CDB" name="Premier Add-On CDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Premier Add-On EDB" border="0" id="Premier Add-On EDB" name="Premier Add-On EDB" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Xtra Digital Bulk" id="Xtra Digital Bulk" name="Xtra Digital Bulk" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
+                                        <img alt="Student Choice Add-On" id="Student Choice Add-On" name="Student Choice Add-On" src="../common_assets/img/greenBoxNorm.gif" style="display:none;">
                                         <img alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" style="display:none;">
                                         <a href="" id="total_choice_plus_anchor" ng-mouseleave="" ng-mouseover="" ng-click="">
-                                            <img alt="Total Choice Plus" border="0" name="Total Choice Plus" src="../common_assets/img/greenBoxNorm.gif" style="display:none;"></a>
+                                            <img alt="Total Choice Plus" border="0" id="Total Choice Plus" name="Total Choice Plus" src="../common_assets/img/greenBoxNorm.gif" style="display:none;"></a>
                                         <a href="" id="xtra_tier_anchor" ng-mouseleave="" ng-mouseover="" ng-click="">
-                                        <img alt="Xtra Tier" border="0" name="Xtra Tier" src="../common_assets/img/greenBoxNorm.gif" style="display:none;"></a>
+                                        <img alt="Xtra Tier" border="0" id="Xtra Tier" name="Xtra Tier" src="../common_assets/img/greenBoxNorm.gif" style="display:none;"></a>
                                     </div>
                                 </div>
                             </div>
@@ -388,7 +388,7 @@
                     <li id="step6Box" class="col-sm-12">
                         <div class="col-sm-12 bgwt">                
                             <div class="col-sm-12">
-                                <div class="steps title3"></div>
+                                <p style="margin-top:10px"><strong>OTHER LINKS</strong></p>
                             </div>
                             <div class="col-sm-3">
                                 <div class="col-sm-12">
