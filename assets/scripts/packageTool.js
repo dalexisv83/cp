@@ -1089,7 +1089,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 xmlDoc2 = this.responseXML;
                 getPriceMatrix();
             }
-            loadFile('tools/programming_package/packagepricesx.xml', showMessage);
+            loadFile('assets/packagepricesx.xml', showMessage);
         }
 
         function getPriceMatrix() {
