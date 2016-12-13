@@ -5,12 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
     <title>Channels And Packages</title>
-
-    <script src="../common_assets/js/modernizr-inputtypes.js"></script>
-    <script src="../common_assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
-    <script src="../common_assets/js/angular.js"></script>
-    <script src="app/app.js"></script>
-    <script src="controllers/MainCtrl.js?@@BUSTER@@"></script>
     <link rel="stylesheet" type="text/css" href="../common_assets/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="style/csswizardry-grids.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
@@ -30,12 +24,11 @@
     <link rel="stylesheet" href="../common_assets/css/jquery.qtip.min.css">
     <link rel="stylesheet" href="../common_assets/css/chosen.css">
     <link rel="stylesheet" href="../common_assets/css/growl.css">
-    <link rel="stylesheet" href="tools/package_compare/version_two/style/package_compare.css?v=01">
-    <script type="text/javascript" src="../common_assets/js/chosen_jquery.js"></script>
+    <link rel="stylesheet" href="assets/css/package_compare.css?v=01">
     <!-- Package Compare Assets -->
     <!-- Channel Lineup Compare Assets -->
       <link rel="stylesheet" href="../common_assets/css/slick-grid.css" type="text/css"/>
-      <link rel="stylesheet" href="tools/channel_list/version_two/style/channel_lineup.css" type="text/css"/>
+      <link rel="stylesheet" href="assets/css/channel_lineup.css" type="text/css"/>
     <!-- Channel Lineup Compare Assets -->
     <!-- Programming Package Assets -->
     <link rel="stylesheet" type="text/css" href="assets/css/programming_package.css?v1">
@@ -66,16 +59,20 @@
     <input type="hidden" id="tool-author-id" value="David Velasquez">
     <!-- START OF SmartSource Data Collector TAG -->
     <script src="http://agentanswercenter.directv.com/en-us/res/system/js/webtrends.js" type="text/javascript"></script>
-
+    <script src="../common_assets/js/modernizr-inputtypes.js"></script>
+    <script src="../common_assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="../common_assets/js/angular.js"></script>
+    <script src="app/app.js"></script>
+    <script src="controllers/MainCtrl.js?@@BUSTER@@"></script>
     <!-- Package Compare Assets -->
     <script type="text/javascript" src="../common_assets/js/angular-sanitize.js"></script>
     <script type="text/javascript" src="../common_assets/js/polyfills.js"></script>
     <script type="text/javascript" src="../common_assets/js/angular-growl.js"></script>
     <script type="text/javascript" src="../common_assets/js/underscore.js"></script>
     <script type="text/javascript" src="../common_assets/js/jquery.qtip.min.js"></script>
-    <script type="text/javascript" src="tools/package_compare/version_two/script/app.js"></script>
     <!-- moved here due to Tridion parsing the > symbol incorrectly -->
     <!-- TODO: moved this back to app.js once the issue in Tridion is fixed -->
+    <script type="text/javascript" src="../common_assets/js/chosen_jquery.js"></script>
     <script type="text/javascript">
         app.directive('whenScrolled', function() {
             'use strict';
@@ -89,8 +86,8 @@
             };
         });
     </script>
-    <script type="text/javascript" src="tools/package_compare/version_two/script/class.js"></script>
-    <script type="text/javascript" src="tools/package_compare/version_two/controller/app_controller.js"></script>
+    <script type="text/javascript" src="assets/scripts/pc_class.js"></script>
+    <script type="text/javascript" src="controllers/pc_controller.js"></script>
     <!-- Package Compare Assets -->
     <!-- Channel Lineup Compare Assets -->
     <script src="../common_assets/js/raphael.js"></script>
@@ -105,15 +102,15 @@
     <!--end of two are the datasources-->
 
     <!--holds the configuration values-->
-    <script src="tools/channel_list/version_two/js/config.js"></script>
+    <script src="config/cl_config.js"></script>
     <!--the main library classes-->
-    <script src="tools/channel_list/version_two/js/class.js"></script>
+    <script src="assets/scripts/cl_class.js"></script>
     <!--the entrance script-->
-    <script src="tools/channel_list/version_two/js/script.js"></script>
+    <script src="controllers/cl_controller.js"></script>
     <!-- Channel Lineup Compare Assets -->
     <!-- Programming Package Assets -->
     <script type="text/javascript" src="http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ProgrammingPackage"></script>
-    <script language="javascript" src="assets/scripts/packageTool.js?v2"></script>
+    <script language="javascript" src="controllers/packageTool.js?v2"></script>
     <!-- Programming Package Assets -->
 </body>
 
