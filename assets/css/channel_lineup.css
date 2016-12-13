@@ -28,7 +28,6 @@
   border: 1px solid gray;
   border-bottom: 0;
   border-top: 0;
-  background: url('http://agentanswercenter.directv.com/en-us/res/system/img/header-bg.gif') repeat-x center top;
   color: black;
   height: 24px;
   line-height: 24px;
@@ -72,9 +71,6 @@
 }
 
 #channel_lineup .full{
-/*  background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/tool_bg-09212015.jpg);
-  background-repeat: no-repeat;
-  background-position: left -30px;*/
   background-color: black;
   max-width: 1000px;
 }
@@ -340,7 +336,6 @@ input#txtSearch{
   height: 26px;
   border: 1px solid gray;
   border-top: 0;
-  background: url('http://agentanswercenter.directv.com/en-us/res/system/img/header-columns-bg.gif') repeat-x center bottom;*/
   vertical-align: middle;
 }
 
@@ -422,7 +417,6 @@ input#txtSearch{
 
 .ui-state-default .ui-icon:hover{
     cursor: pointer;
-    background-image:url(http://agentanswercenter.directv.com/en-us/res/system/img/ui-icons_454545_256x240.png);
 }
 
 #channel_lineup body a{
@@ -441,7 +435,6 @@ a.activeLink {
 }
 
 #channel_lineup .why {
-     background: url(http://agentanswercenter.directv.com/en-us/res/system/img/why-icon.png) no-repeat;
      width: 14px;
      height: 15px;
      cursor: pointer;
@@ -493,7 +486,7 @@ a.activeLink {
 }
 
 /**these will display a fake table images while grid is re-rendering the table during scroll**/
-.fake-table0{
+/*.fake-table0{
   background-image:url(http://agentanswercenter.directv.com/en-us/res/system/img/fake_table0.jpg);
   background-position: -2px -2px;
 }
@@ -506,7 +499,7 @@ a.activeLink {
 .fake-table2{
   background-image:url(http://agentanswercenter.directv.com/en-us/res/system/img/fake_table2.jpg);
   background-position: -1px -2px;
-}
+}*/
 
 .link-holder.com{
   top:125px;
@@ -536,8 +529,7 @@ span.btn-feedback:hover {
     display: block;
     width: 44px;
     height: 16px;
-    background: url(http://agentanswercenter.directv.com/en-us/res/system/img/content_btns.gif) left -192px no-repeat;
-    text-indent: -9999px;    
+    text-indent: -9999px;
 }
 
 .comment-btn span:hover{
@@ -562,7 +554,6 @@ span.btn-feedback:hover {
 
 .loader{
     display: block;
-    background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/image-loader-large.gif);
     background-position: 50% 50%;
     background-repeat: no-repeat;
     width: 300px;

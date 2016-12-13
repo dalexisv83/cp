@@ -1,7 +1,7 @@
 /*jslint unparam: true*/
 (function(angular) {
     'use strict';
-    angular.module('channelspackages', ['angular-growl','ngSanitize'])
+    angular.module('channelspackages', ['ngSanitize'])
         .config(['$httpProvider', function ($httpProvider) {
             cache: true
         }]);
@@ -14,11 +14,7 @@ var max_limit = 10000, //the maximum limit for ng-repeat to display
     app = angular.module('channelspackages'); // angular.module('App', ['angular-growl','ngSanitize']);
 
 
-app.config(['growlProvider', function(growlProvider) {
-    'use strict';
-    growlProvider.globalEnableHtml(true);
-    
-}]).directive('chosen',['$timeout',function($timeout){
+app.directive('chosen',['$timeout',function($timeout){
     'use strict';
     var linker = function(scope,element,attrs){
        var stopWatching = scope.$watch('$parent.pcLoaded', function() {

@@ -5,9 +5,6 @@
 
 #package_compare.full{
   background-color: #ddd;
-/*  background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/tool_bg-09212015.jpg);
-  background-repeat: no-repeat; 
-  background-position: left -30px;*/
 }
 
 .clearfix{
@@ -71,7 +68,7 @@
     height: 80px;
     text-align: center;
     cursor: pointer;
-    background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/channels_back.png);
+    background-image: url('../img/channels_back.png');
     background-repeat: no-repeat;
     margin: 0 auto;
     padding-top: 15px;
@@ -189,7 +186,7 @@ table td.channel-number{
 }
 
 .show-btn{ 
-  background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/chan_plus.png);
+  background-image: url(../img/chan_plus.png);
   background-position: center center;
   background-repeat: no-repeat;  
 }
@@ -204,7 +201,7 @@ table td.channel-number{
 }
 
 .open{
-  background-image: url(http://agentanswercenter.directv.com/en-us/res/system/img/chan_minus.png);
+  background-image: url(../img/chan_minus.png);
 }
 
 .qtip-content .wrapper .code{
@@ -322,7 +319,6 @@ span.btn-feedback:hover {
     display: block;
     width: 44px;
     height: 16px;
-    background: url(http://agentanswercenter.directv.com/en-us/res/system/img/content_btns.gif) left -192px no-repeat;
     text-indent: -9999px;    
 }
 

@@ -90,7 +90,7 @@ img {
     margin-bottom:10px !important;    
 }
 .steps {
-    background-image:url('../../../common_assets/img/pp_headings_sprite.png');
+    background-image:url('../img/pp_headings_sprite.png');
     background-repeat: no-repeat;
 }
 .stp1 {
