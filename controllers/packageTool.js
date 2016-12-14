@@ -2476,28 +2476,36 @@ app.controller('PP_Controller', ['$scope', '$compile',
             }
         }
 
-        function swapBasePackageLanguage() {
+        function englishPackageLanguage() {
             MDULayerVis = 0;
             document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
-            if (spanishLayerVis == 0) {
-                document.getElementById("lyrEnglish1").style.display = 'none';
-                document.getElementById("lyrEnglish2").style.display = 'none';
-                document.getElementById("lyrSpanish1").style.display = 'block';
-                document.getElementById("lyrSpanish2").style.display = 'block';
-                document.getElementById("lyrMDU1").style.display = 'none';
-                document.getElementById("MDUdiv").style.display = 'none';
-                spanishLayerVis = 1;
-            } else {
-                document.getElementById("lyrEnglish1").style.display = 'block';
-                document.getElementById("lyrEnglish2").style.display = 'block';
-                document.getElementById("lyrSpanish1").style.display = 'none';
-                document.getElementById("lyrSpanish2").style.display = 'none';
-                document.getElementById("lyrMDU1").style.display = 'none';
-                document.getElementById("MDUdiv").style.display = 'none';
-                spanishLayerVis = 0;
-            }
-            resetAllNoRefresh();
+
+            document.getElementById("EnglishButton").src = image_check_src;
+            document.getElementById("SpanishButton").src = image_box_src;
+
+            document.getElementById("lyrEnglish2").style.display = 'block';
+            document.getElementById("lyrSpanish2").style.display = 'none';
+            document.getElementById("lyrMDU1").style.display = 'none';
+            document.getElementById("MDUdiv").style.display = 'none';
+            spanishLayerVis = 0;
+            //resetAllNoRefresh();
+        };
+
+        function spanishPackageLanguage() {
+            MDULayerVis = 0;
+            document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+            document.getElementById("MDUdefault").style.display = 'none';
+
+            document.getElementById("EnglishButton").src = image_box_src;
+            document.getElementById("SpanishButton").src = image_check_src;
+
+            document.getElementById("lyrEnglish2").style.display = 'none';
+            document.getElementById("lyrSpanish2").style.display = 'block';
+            document.getElementById("lyrMDU1").style.display = 'none';
+            document.getElementById("MDUdiv").style.display = 'none';
+            spanishLayerVis = 1;
+            //resetAllNoRefresh();
         };
 
         function swapBasePackageMDU() {
@@ -2509,14 +2517,10 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("MDUselectionInfo").style.display = 'block';
                 document.getElementById("MDUselectionInfo").innerHTML = '';
                 if (spanishLayerVis == 0) {
-                    document.getElementById("lyrEnglish1").style.display = 'block';
                     document.getElementById("lyrEnglish2").style.display = 'none';
-                    document.getElementById("lyrSpanish1").style.display = 'none';
                     document.getElementById("lyrSpanish2").style.display = 'none';
                 } else {
-                    document.getElementById("lyrEnglish1").style.display = 'none';
                     document.getElementById("lyrEnglish2").style.display = 'none';
-                    document.getElementById("lyrSpanish1").style.display = 'block';
                     document.getElementById("lyrSpanish2").style.display = 'none';
                 }
                 MDULayerVis = 1;
@@ -2526,14 +2530,10 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("lyrMDU1").style.display = 'none';
                 document.getElementById("MDUdiv").style.display = 'none';
                 if (spanishLayerVis == 0) {
-                    document.getElementById("lyrEnglish1").style.display = 'block';
                     document.getElementById("lyrEnglish2").style.display = 'block';
-                    document.getElementById("lyrSpanish1").style.display = 'none';
                     document.getElementById("lyrSpanish2").style.display = 'none';
                 } else {
-                    document.getElementById("lyrEnglish1").style.display = 'none';
                     document.getElementById("lyrEnglish2").style.display = 'none';
-                    document.getElementById("lyrSpanish1").style.display = 'block';
                     document.getElementById("lyrSpanish2").style.display = 'block';
                 }
                 MDULayerVis = 0;
@@ -2785,7 +2785,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
         $scope.img_off_premier = img_off_premier;
         $scope.img_click_premier = img_click_premier;
         $scope.swapBasePackageMDU = swapBasePackageMDU;
-        $scope.swapBasePackageLanguage = swapBasePackageLanguage;
+        $scope.englishPackageLanguage = englishPackageLanguage;
+        $scope.spanishPackageLanguage = spanishPackageLanguage;
         $scope.img_off_Base = img_off_Base;
         $scope.img_on_Base = img_on_Base;
         $scope.fillMDUdiv = fillMDUdiv;
