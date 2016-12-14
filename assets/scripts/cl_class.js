@@ -524,10 +524,10 @@ smallGrid.prototype.setChannels = function(){
 
         this.data[i] = {
             id:  "id_" + i,
-            channel_name: channel_name,
+            channel_name: " ",
             channel_number: " ",
-            call_letters: " ",
-            genre:" "
+            call_letters: channel_name,
+            genre: " "
         };
 
 
