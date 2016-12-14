@@ -89,6 +89,10 @@ img {
 .marb10{
     margin-bottom:10px !important;    
 }
+.marb5{
+    margin-bottom:5px !important;    
+}
+
 .steps {
     background-image:url('../img/pp_headings_sprite.png');
     background-repeat: no-repeat;
