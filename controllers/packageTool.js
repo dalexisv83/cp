@@ -461,8 +461,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<td colspan="6"><img src="../common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/></td>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
-            '<a id="total_choice_plus_anchor"><img src="../common_assets/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
-            '<a id="xtra_tier_anchor"><img src="../common_assets/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
+            '<a id="total_choice_plus_anchor"><img src="../common_assets/img/greenDotOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a><br />' +
+            '<a id="xtra_tier_anchor"><img src="../common_assets/img/greenDotOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a><br />' +
             '</tr>' +
             '</table>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/>' +
@@ -512,8 +512,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<div class="col-sm-12 innerboxText" >To add Preferred Choice in Rio: Add/Change Programming > "International" tab.' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
-            '<a id="total_choice_plus_anchor"><img src="../common_assets/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a>' +
-            '<a id="xtra_tier_anchor"><img src="../common_assets/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a>' +
+            '<a id="total_choice_plus_anchor"><img src="../common_assets/img/greenDotOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a>' +
+            '<a id="xtra_tier_anchor"><img src="../common_assets/img/greenDotOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a>' +
             '</div>' +
 
             '<div class="col-sm-12">' +
@@ -547,14 +547,14 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<div class="innerboxHeadBig4 col-sm-4 marb10"><strong>If TC Limited &amp;<br> TC_MDU Tier are on account:</strong><br>' +
             '<div class="col-sm-12 marb10"><a href="" ng-click="img_click_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseover="ppSUMMARY = arrayBaseSummary[8]; img_on_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice for TCD/JCD\',12);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[8];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > TC Limited & Total Choice MDU Tier</a></div>' +
-            '<div class="col-sm-12 marb10"><a id="total_choice_plus_anchor"><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
+            '<div class="col-sm-12 marb10"><a id="total_choice_plus_anchor"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[10];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Total Choice Plus MDU Tier</a></div>' +
             '</div>' +
 
             '<div class="innerboxHeadBig4 col-sm-4 marb10" background-color:#e0e1e1"><strong>If TC Limited &amp;<br> Choice_MDU Tier are on account:</strong><br>' +
             '<div class="col-sm-12 marb10"><a href="" ng-click="img_click_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseover="ppSUMMARY = arrayBaseSummary[9]; img_on_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[9] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" > TC Limited & Choice MDU Tier</a></div>' +
-            '<div class="col-sm-12 marb10"><a id="xtra_tier_anchor"><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
+            '<div class="col-sm-12 marb10"><a id="xtra_tier_anchor"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[11];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Xtra Classic MDU Tier</a></div>' +
             '</div>' +
 
@@ -644,7 +644,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Xtra" name="Xtra" border="0" style="display:none;">' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Ultimate" name="Ultimate" border="0" style="display:none;">' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Total Choice Plus TMU" name="Total Choice Plus TMU" border="0" style="display:none;" />' +
-            '<img src="../common_assets/img/greenBoxOver.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" border="0" style="display:none;">' +
+            '<img src="../common_assets/img/greenDotOver.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" border="0" style="display:none;">' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Mas Latino" name="Mas Latino" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Optimo Mas" name="Optimo Mas" border="0" style="display:none;" />' +
@@ -690,7 +690,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" style="display:none;">' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Choice" name="Choice" border="0" style="display:none;">' +
-            '<img src="../common_assets/img/greenBoxOver.gif" alt="Xtra" name="Xtra" border="0" style="display:none;">' +
+            '<img src="../common_assets/img/greenDotOver.gif" alt="Xtra" name="Xtra" border="0" style="display:none;">' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Ultimate" name="Ultimate" border="0"  style="display:none;">' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Basico" name="Basico" border="0" style="display:none;"/>' +
@@ -769,9 +769,9 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" style="display:none;" />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment" border="0" style="display:none;" />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Choice" name="Choice" border="0" style="display:none;" />' +
-            '<img src="../common_assets/img/greenBoxOver.gif" alt="Xtra" name="Xtra" border="0" style="display:none;" />' +
-            '<img src="../common_assets/img/greenBoxOver.gif" alt="Ultimate" name="Ultimate" border="0" style="display:none;" />' +
-            '<img src="../common_assets/img/greenBoxOver.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" border="0" style="display:none;" />' +
+            '<img src="../common_assets/img/greenDotOver.gif" alt="Xtra" name="Xtra" border="0" style="display:none;" />' +
+            '<img src="../common_assets/img/greenDotOver.gif" alt="Ultimate" name="Ultimate" border="0" style="display:none;" />' +
+            '<img src="../common_assets/img/greenDotOver.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" border="0" style="display:none;" />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" style="display:none;" />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Mas Latino" name="Mas Latino" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Optimo Mas" name="Optimo Mas" border="0" style="display:none;" />' +
@@ -1059,7 +1059,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
         }
 
         dtvImages[65] = new Image();
-        dtvImages[65].src = "../common_assets/img/greenBoxOver.gif";
+        dtvImages[65].src = "../common_assets/img/greenDotOver.gif";
         var numRolImages_ds = 6; //direct sales preload (for number of tv's)
         var dtvImages_ds = new Array(numRolImages_ds * 2)
         for (i = 1; i <= numRolImages_ds; i++) {
