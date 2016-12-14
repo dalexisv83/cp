@@ -11,6 +11,7 @@ app.controller('CL_Controller',['$scope', '$http',
                 channels = response.data.channels,
                 ad_channels = AdSales.channels,
                 data_type = response.data.type;
+                $scope.type = response.data.type;
 
                 'use strict';
                 var small_grid,
