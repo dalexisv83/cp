@@ -12,13 +12,13 @@
                     "src": "views/programming_package.htm"
                 },
                 tools = [{
-                    "name": "Package Compare",
-                    "url": "package-compare",
-                    "src": "views/package_compare.htm"
-                }, {
                     "name": "Channel Lineup",
                     "url": "channel-lineup",
                     "src": "views/channel_lineup.htm"
+                }, {
+                    "name": "Package Compare",
+                    "url": "package-compare",
+                    "src": "views/package_compare.htm"
                 }];
                 if (dataProg) {
                     tools.push(ppObj);
