@@ -3,6 +3,9 @@
     angular.module('channelspackages')
         .controller('MainCtrl', ['$scope', '$location',
             function($scope, $location) {
+                if ($location.path() == '/channels_packages.htm') {
+                    $location.path('channel-lineup');
+                }
                 $scope.goHere = function(here) {
                     $location.path(here);
                 }
