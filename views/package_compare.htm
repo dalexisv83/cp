@@ -8,9 +8,11 @@
         <div class="headers grid">
             <div class="grid__item one-quarter">
                 <h2>Current Package</h2>
-            </div><div class="grid__item one-half" style="text-align: center;">
+            </div>
+            <div class="grid__item one-half" style="text-align: center;">
                 <input type="button" class="reset" ng-class="{'active': resetActive}" value="RESET" ng-click="reset();" ng-window-pie></input>
-            </div><div class="grid__item one-quarter">
+            </div>
+            <div class="grid__item one-quarter">
                 <h2>Requested Package</h2>
             </div>
         </div>
@@ -18,13 +20,14 @@
         <div class="grid">
             <div class="current grid__item one-quarter">
                 <select ng-hide="pcLoaded"><option value="" disabled selected>Loading&hellip;</option></select>
-                <select ng-show="pcLoaded" data-placeholder="Type or Select Package:" tabindex="2" ng-model="current_pkg" ng-options="current_pkg as (current_pkg.dname + ' ' + dataStore.getDisplayPrice(current_pkg.price) + ' (' + current_pkg.count + ')') group by current_pkg.company for current_pkg in current_pkgs | orderBy:'dname'" name="current_package" class="convert-from chosen-select" chosen="current_pkgs" required>
+                <select ng-show="pcLoaded" data-placeholder="Type or Select Package:" tabindex="2" ng-model="current_pkg" ng-options="current_pkg as (current_pkg.dname + ' ' + dataStore.getDisplayPrice(current_pkg.price,volume) + ' (' + current_pkg.count + ')') group by current_pkg.company for current_pkg in current_pkgs | orderBy:'dname'" name="current_package" class="convert-from chosen-select" chosen="current_pkgs" required>
                 </select>
             </div>
             <div class="grid__item one-half">
-                <div id="cl_genreLegend" >Legend/Filter<span class="alert" ng-window-pie>?</span>
+                <div id="cl_genreLegend" >
+                    <span id="filterText">Legend/Filter<span class="alert" ng-window-pie>?</span></span>
                     <div id="cl_genreCodes">
-                    <img id="genreX" src="../common_assets/img/close_button.jpg" width=10 height=10 />
+                        <img id="genreX" src="../common_assets/img/close_button.jpg" width=10 height=10 />
                         <div class="last">
                            <div class="pull-left code">*</div>
                            <div class="pull-left title"><a href="/en-us/res/ace/vod_index.html" target="_blank">DIRECTV On Demand</a></div>
@@ -87,12 +90,15 @@
                            <div style="clear:both"></div>
                         </div>
                     </div><!--end of div#genreCodes-->
+                    <select ng-show="volumes" class="volumes" ng-model="volume" ng-options="volume for volume in volumes" name="volume">
+                        <option value="">Select EVO:</option>
+                    </select>
                 </div>
             </div>
 
             <div class="requested grid__item one-quarter">
                 <select ng-hide="pcLoaded"><option value="" disabled selected>Loading&hellip;</option></select>
-                <select ng-show="pcLoaded" data-placeholder="Type or Select Package:" tabindex="2" ng-model="requested_pkg" ng-options="requested_pkg as (requested_pkg.dname + ' ' + dataStore.getDisplayPrice(requested_pkg.price) + ' (' + requested_pkg.count + ')') group by requested_pkg.company for requested_pkg in requested_pkgs | orderBy:'dname'" name="requested_package" class="convert-from chosen-select" chosen="requested_pkgs" required>
+                <select ng-show="pcLoaded" data-placeholder="Type or Select Package:" tabindex="2" ng-model="requested_pkg" ng-options="requested_pkg as (requested_pkg.dname + ' ' + dataStore.getDisplayPrice(requested_pkg.price,volume) + ' (' + requested_pkg.count + ')') group by requested_pkg.company for requested_pkg in requested_pkgs | orderBy:'dname'" name="requested_package" class="convert-from chosen-select" chosen="requested_pkgs" required>
                 </select>
             </div>
         </div>

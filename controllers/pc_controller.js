@@ -347,7 +347,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
     );
 
     $(".close_notification").on('click', function(){$(".alert_message").parent().css('display','none');});
-    $('#cl_genreLegend').click(function(){
+    $('#filterText').click(function(){
         $('#cl_genreCodes').show();
     });
     $('#genreX').click(function(e){

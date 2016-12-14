@@ -15,8 +15,8 @@
   max-height:460px;
 }
 
-#package_compare select{
-  width: 100%;
+#package_compare select {
+    width: 100%;
 }
 
 .wrapper{
@@ -365,13 +365,8 @@ span.btn-feedback:hover {
 
 /**comment button**/
 
-.volumes {
-  width: 150px;
-  position: absolute;
-  top: 22px;
-  left: 50%;
-  margin-left: -75px;
-  font-size:13px;
+#package_compare select.volumes {
+    width: 150px;
 }
 
 .chosen-container .chosen-drop{
@@ -416,9 +411,11 @@ span.btn-feedback:hover {
 }
 
 #package_compare #cl_genreLegend{
-  cursor: pointer;
-  font-size: 12px;
   text-align: center;
+}
+
+#filterText {
+    cursor: pointer;
 }
 
 #package_compare #cl_genreLegend.comLegend {
