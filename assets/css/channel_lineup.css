@@ -582,4 +582,4 @@ span.btn-feedback:hover {
     right: 5px;
     top: 5px;
 }
-#containerSmall div:nth-child(3) {z-index: 10;position: relative;float: left;margin-left:-55px;color: #47a3e6;}
+#containerSmall .slick-cell.l2.r2.narrow {z-index: 10;position: relative;float: left;margin-left:-55px;color: #47a3e6;}
