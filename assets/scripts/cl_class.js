@@ -923,7 +923,7 @@ var programmingHeaders = function(context, featured_packages, column_width){
     this.render = function(){
         this.featured_packages.reverse();
         for(i = 0; i < featured_pkg_len; i++){
-            rotated_header = $('<div class="pull-left narrower" id="head_'+i+'"><span>'+this.featured_packages[i].display_name+'</span></div>');
+            rotated_header = $('<div class="pull-left narrower" id="head_'+i+'"><span>'+this.featured_packages[i].display_name.replace('Business','Biz.').replace('Commercial','Com.')+'</span></div>');
             this.headers.push(rotated_header); //fill the headers property
             this.container.prepend(rotated_header);
         }
@@ -958,7 +958,7 @@ programmingHeaders.prototype.rotate = function(localhost,rect_deg, y_diff){
     var formatter = new UrlFormatter(localhost),
     util = new Utility(),
     oThis = this,
-    rect_height = 150, //height of the rotated wrapper
+    rect_height = 210, //height of the rotated wrapper
     text_deg = rect_deg - 90, //calculate degree of rotattion of text to be parallel w/ container div
     featured_packages = this.featured_packages,
     width = this.column_width,

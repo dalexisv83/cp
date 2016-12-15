@@ -210,6 +210,11 @@
     margin-top: -70px;
 }
 
+#channel_lineup.com .table-header {
+    padding-top: 140px;
+    margin-top: -130px;
+}
+
 #channel_lineup .table-header .pull-left > .pull-left{
     height:50px;
     position: relative;
