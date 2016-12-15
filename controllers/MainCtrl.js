@@ -12,16 +12,16 @@
                 var ppObj = {
                     "name": "Programming Package",
                     "url": "programming-package",
-                    "src": "views/programming_package.htm"
+                    "src": "views/programming_package.htm?@@BUSTER@@"
                 },
                 tools = [{
                     "name": "Channel Lineup",
                     "url": "channel-lineup",
-                    "src": "views/channel_lineup.htm"
+                    "src": "views/channel_lineup.htm?@@BUSTER@@"
                 }, {
                     "name": "Package Compare",
                     "url": "package-compare",
-                    "src": "views/package_compare.htm"
+                    "src": "views/package_compare.htm?@@BUSTER@@"
                 }];
                 if (dataProg) {
                     tools.push(ppObj);
