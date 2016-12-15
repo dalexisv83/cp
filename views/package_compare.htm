@@ -312,6 +312,7 @@
                     <table>                    
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in lost_channels | orderBy:sortType:reverse  | limitTo:lost_channels_limit">
                             <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20"></td>
+                            <td ng-if="current_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20"></td>
                             <td width="60"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href=""><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html-unsafe="channel.genre" width="20"></td>
@@ -324,6 +325,7 @@
                     <table>                  
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in requested_channels | orderBy:sortType:reverse | limitTo:requested_pkg_limit">
                             <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20"></td>
+                            <td ng-if="requested_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20"></td>
                             <td width="60"><a onClick="window.open('{{UrlFormatter.formatUrl(channel.url)}}', '_blank');" href=""><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html-unsafe="channel.genre" width="20"></td>
