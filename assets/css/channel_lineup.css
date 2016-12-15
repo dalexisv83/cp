@@ -582,3 +582,9 @@ span.btn-feedback:hover {
     right: 5px;
     top: 5px;
 }
+
+.qtip-default {
+    background-color:#fffebd !important;
+    color:#000000 !important;
+    border-color:#333333 !important;
+}
