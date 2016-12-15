@@ -264,8 +264,18 @@
 }
 
 #containerSmall .r0 {
-  border-left: 1px solid #ddd;
-  color: #47a3e6;
+    border-left: 1px solid #ddd;
+}
+
+#containerSmall .r3 {
+    color: #47a3e6;
+    font-weight: normal;
+    margin-left: -17%;
+    padding-right: 21px;
+    text-align: right;
+    background-repeat: no-repeat;
+    background-position: 99% 40%;
+    background-image: url(data:image/gif;base64,R0lGODlhDwAJAMQAAPb9+r7X5P39+ff4/Zq74Ja87GaN18fa6yNjsv75/v788Le90GZ+sJ3F6EFtvZyi2YqoznCWyF5/vM/W4aq945qzx5Oz2Nbj6idYpMrc7Zm30LLE4c3e7Y2u3AVHpf3+/iH5BAAAAAAALAAAAAAPAAkAAAU74CeO4/QMZDoGXgGIC9TNdBd5nqYkEu7/OITlYwAaPY4L4/hzUD6cA2c6zXAIuI0qFcA0RgIBKjWpkEIAOw==);
 }
 
 #containerSmall .grid-canvas {
