@@ -107,16 +107,16 @@
         <!--start row for channels count-->
         <div class="channels-count-holder grid" ng-cloak ng-show="current_channels || gained_channels || lost_channels || requested_channels">
             <div class="grid__item one-quarter">
-                <div class="current count" ng-click="show_current_channels = Utility.show(show_current_channels)" ng-cloak>{{ (current_channels).length }}</div>
+                <div class="current count" ng-click="show_current_channels = !show_current_channels" ng-cloak>{{ (current_channels).length }}</div>
             </div>
             <div class="grid__item one-quarter">
-                <div class="gained count" ng-click="show_gained_channels = Utility.show(show_gained_channels)" ng-cloak>{{ (gained_channels).length }}</div>
+                <div class="gained count" ng-click="show_gained_channels = !show_gained_channels" ng-cloak>{{ (gained_channels).length }}</div>
             </div>
             <div class="grid__item one-quarter">
-                <div class="lost count" ng-click="show_lost_channels = Utility.show(show_lost_channels)" ng-cloak>{{ (lost_channels).length }}</div>
+                <div class="lost count" ng-click="show_lost_channels = !show_lost_channels" ng-cloak>{{ (lost_channels).length }}</div>
             </div>
             <div class="grid__item one-quarter">
-                <div class="requested count" ng-click="show_requested_channels = Utility.show(show_requested_channels)" ng-cloak>{{ (requested_channels).length }}</div>
+                <div class="requested count" ng-click="show_requested_channels = !show_requested_channels" ng-cloak>{{ (requested_channels).length }}</div>
             </div>
         </div>
         <!--end row for channels count-->
