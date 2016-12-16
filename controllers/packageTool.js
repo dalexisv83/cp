@@ -2480,7 +2480,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             MDULayerVis = 0;
             document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
-
+            document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_check_src;
             document.getElementById("SpanishButton").src = image_box_src;
 
@@ -2496,7 +2496,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             MDULayerVis = 0;
             document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
-
+            document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_box_src;
             document.getElementById("SpanishButton").src = image_check_src;
 
@@ -2512,6 +2512,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             if (MDULayerVis == 0) {
                 document.getElementById("lyrMDU1").style.display = 'block';
                 document.getElementById("MDUdiv").style.display = 'block';
+                document.getElementById("MDUbutton").src = image_check_src;
                 //document.getElementById("MDUdiv").innerHTML = '';
                 document.getElementById("MDUdefault").style.display = 'block';
                 document.getElementById("MDUselectionInfo").style.display = 'block';
@@ -2525,6 +2526,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 }
                 MDULayerVis = 1;
             } else {
+                document.getElementById("MDUbutton").src = image_box_src;
                 document.getElementById("MDUdefault").style.display = 'none';
                 document.getElementById("MDUselectionInfo").style.display = 'none';
                 document.getElementById("lyrMDU1").style.display = 'none';
