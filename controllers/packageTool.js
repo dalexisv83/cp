@@ -547,14 +547,14 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<div class="innerboxHeadBig4 col-sm-4 marb5"><strong>If TC Limited &amp;<br> TC_MDU Tier are on account:</strong><br>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseover="ppSUMMARY = arrayBaseSummary[8]; img_on_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice for TCD/JCD\',12);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[8];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > TC Limited & Total Choice MDU Tier</a></div>' +
-            '<div class="col-sm-12 marb5"><a id="total_choice_plus_anchor"><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
+            '<div class="col-sm-12 marb5" style="display:none"><a id="total_choice_plus_anchor" ><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[10];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Total Choice Plus MDU Tier</a></div>' +
             '</div>' +
 
             '<div class="innerboxHeadBig4 col-sm-4 marb5" background-color:#e0e1e1"><strong>If TC Limited &amp;<br> Choice_MDU Tier are on account:</strong><br>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseover="ppSUMMARY = arrayBaseSummary[9]; img_on_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[9] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" > TC Limited & Choice MDU Tier</a></div>' +
-            '<div class="col-sm-12 marb5"><a id="xtra_tier_anchor"><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
+            '<div class="col-sm-12 marb5" style="display:none"><a id="xtra_tier_anchor" ><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[11];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Xtra Classic MDU Tier</a></div>' +
             '</div>' +
 
@@ -797,7 +797,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/family.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();"> Family</a>' +
             '</div>' +
             '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Xtra%20Add-On%20FDB\',32);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22);">' +
+            '<a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',32);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22);">' +
             '<img alt="Select" border="0" id="Select" name="Select" src="../common_assets/img/greenBoxNorm.gif"></a>' +
             '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/select.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();"> Select</a>' +
             '</div>' +
@@ -1071,7 +1071,6 @@ app.controller('PP_Controller', ['$scope', '$compile',
             dtvImages_ds[i + numRolImages_ds].src = "../common_assets/img/" + srcPath2PieceOne.replace("/", "");
             var innerStuff = '\r\n Image:' + i + '.src =' + dtvImages_ds[i].src + '\r\n Image:' + (i + numRolImages_ds) + '.src =' + dtvImages_ds[i + numRolImages_ds].src + '';
         }
-
 
         //=========end preloading images=========
 
@@ -1381,6 +1380,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
         //=========end mouseout=========
 
         var total_choice_plus_off = function() {
+            total_choice_plus_anchor.parentNode.style.display = "none";
             total_choice_plus_anchor.setAttribute('ng-mouseover', '');
             total_choice_plus_anchor.href = '';
             total_choice_plus_anchor.setAttribute('ng-click', '');
@@ -1389,6 +1389,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
         };
 
         var total_choice_plus_on = function() {
+            total_choice_plus_anchor.parentNode.style.display = "block";
             total_choice_plus_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);');
             total_choice_plus_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'); /**/
             total_choice_plus_anchor.setAttribute('ng-click', 'img_click_Base(\'Total Choice Plus\',18);');
@@ -1397,6 +1398,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
         };
 
         var xtra_tier_off = function() {
+            xtra_tier_anchor.parentNode.style.display = "none";
             xtra_tier_anchor.setAttribute('ng-mouseover', '');
             xtra_tier_anchor.href = '';
             xtra_tier_anchor.setAttribute('ng-click', '');
@@ -1405,6 +1407,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
         };
 
         var xtra_tier_on = function() {
+            xtra_tier_anchor.parentNode.style.display = "block";
             xtra_tier_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);');
             xtra_tier_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'); /**/
             xtra_tier_anchor.href = '';
@@ -1552,7 +1555,6 @@ app.controller('PP_Controller', ['$scope', '$compile',
                     isSelectClick = false;
                 }
             }
-
 
             resetLayer(lyrSuggestion);
             motherCalc();
@@ -2480,7 +2482,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             MDULayerVis = 0;
             document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
-
+            document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_check_src;
             document.getElementById("SpanishButton").src = image_box_src;
 
@@ -2496,7 +2498,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             MDULayerVis = 0;
             document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
-
+            document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_box_src;
             document.getElementById("SpanishButton").src = image_check_src;
 
@@ -2510,25 +2512,23 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         function swapBasePackageMDU() {
             if (MDULayerVis == 0) {
+                document.getElementById("MDUbutton").src = image_check_src;                
                 document.getElementById("lyrMDU1").style.display = 'block';
                 document.getElementById("MDUdiv").style.display = 'block';
                 //document.getElementById("MDUdiv").innerHTML = '';
                 document.getElementById("MDUdefault").style.display = 'block';
                 document.getElementById("MDUselectionInfo").style.display = 'block';
                 document.getElementById("MDUselectionInfo").innerHTML = '';
-                if (spanishLayerVis == 0) {
-                    document.getElementById("lyrEnglish2").style.display = 'none';
-                    document.getElementById("lyrSpanish2").style.display = 'none';
-                } else {
-                    document.getElementById("lyrEnglish2").style.display = 'none';
-                    document.getElementById("lyrSpanish2").style.display = 'none';
-                }
+                document.getElementById("lyrEnglish2").style.display = 'none';
+                document.getElementById("lyrSpanish2").style.display = 'none';
                 MDULayerVis = 1;
             } else {
+                document.getElementById("MDUbutton").src = image_box_src;
+                document.getElementById("lyrMDU1").style.display = 'none';                
+                document.getElementById("MDUdiv").style.display = 'none';                
                 document.getElementById("MDUdefault").style.display = 'none';
                 document.getElementById("MDUselectionInfo").style.display = 'none';
-                document.getElementById("lyrMDU1").style.display = 'none';
-                document.getElementById("MDUdiv").style.display = 'none';
+                document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
                 if (spanishLayerVis == 0) {
                     document.getElementById("lyrEnglish2").style.display = 'block';
                     document.getElementById("lyrSpanish2").style.display = 'none';
@@ -2617,6 +2617,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
                     myObj.reset();
                 }
             }
+            xtra_tier_anchor.parentNode.style.display = "none";
+            total_choice_plus_anchor.parentNode.style.display = "none";
             document.getElementById('txtBase').innerHTML = '0.00';
             document.getElementById('txtPrem').innerHTML = '0.00';
             document.getElementById('txtExtra').innerHTML = '0.00';
