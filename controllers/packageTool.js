@@ -2521,6 +2521,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("MDUselectionInfo").innerHTML = '';
                 document.getElementById("lyrEnglish2").style.display = 'none';
                 document.getElementById("lyrSpanish2").style.display = 'none';
+                document.getElementById("EnglishButton").src = image_box_src;
+                document.getElementById("SpanishButton").src = image_box_src;
                 MDULayerVis = 1;
             } else {
                 document.getElementById("MDUbutton").src = image_box_src;
