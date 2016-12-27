@@ -223,50 +223,40 @@ A.step3:link {
 }
 
 A.step3:active {
-    color:#070872;
     text-decoration:underline;
     white-space:nowrap
 }
 
 A.step3:visited {
-    color:#070872;
     text-decoration:underline;
     white-space:nowrap
 }
 
 A.step3:hover {
-    color:#F60;
     text-decoration:underline;
     white-space:nowrap
 }
 
 /* used only for the MDU:TMU package table  */
 A.step4:link {
-    color:#070872;
     text-decoration:underline;
     white-space:nowrap;
-    font-size:smaller
 }
 
 A.step4:active {
-    color:#070872;
     text-decoration:underline;
     white-space:nowrap;
-    font-size:smaller
 }
 
 A.step4:visited {
-    color:#070872;
     text-decoration:underline;
     white-space:nowrap;
-    font-size:smaller
 }
 
 A.step4:hover {
     color:#F60;
     text-decoration:underline;
     white-space:nowrap;
-    font-size:smaller
 }
 
 div#centerContent {
@@ -325,12 +315,15 @@ li.primaryCredit {
     border-bottom-color:#000
 }
 
+#MDUselectionInfo{
+    line-height: 1.2em;
+    margin-bottom: 5px;
+}
 .innerboxHeadBig {
     font:bold 105% Verdana,Arial,sans-serif
 }
 
 .innerboxText {
-    font-stretch:extra-condensed;
     white-space:nowrap
 }
 
