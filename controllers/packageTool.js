@@ -2481,7 +2481,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         function englishPackageLanguage() {
             MDULayerVis = 0;
-            document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+            //document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
             document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_check_src;
@@ -2497,7 +2497,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         function spanishPackageLanguage() {
             MDULayerVis = 0;
-            document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+            //document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
             document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_box_src;
@@ -2531,7 +2531,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("MDUdiv").style.display = 'none';                
                 document.getElementById("MDUdefault").style.display = 'none';
                 document.getElementById("MDUselectionInfo").style.display = 'none';
-                document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+                //document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
                 if (spanishLayerVis == 0) {
                     document.getElementById("lyrEnglish2").style.display = 'block';
                     document.getElementById("lyrSpanish2").style.display = 'none';
@@ -2563,19 +2563,19 @@ app.controller('PP_Controller', ['$scope', '$compile',
             if (textEntry == 'MDU/JDU') { //MDU / JDU / MDD / MDL
                 MDUdiv.innerHTML = arrayMDUInnerHTML[2];
                 $compile(document.getElementById("MDUdiv"))($scope);
-                document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
+                //document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
             }
             if (textEntry == "TCD/JCD") { //TCD / JCD
                 MDUdiv.innerHTML = arrayMDUInnerHTML[3];
                 $compile(document.getElementById("MDUdiv"))($scope);
-                document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
+                //document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
             }
             if (textEntry == "TMW/JMW") { //TMW / JMW
                 MDUdiv.innerHTML = arrayMDUInnerHTML[4];
                 $compile(document.getElementById("MDUdiv"))($scope);
-                document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
+                //document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
                 varMirrorFeeWaiver = 3;
                 varImageOn_TotChoicePlus = 0;
@@ -2592,7 +2592,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             if (textEntry == "TMU/JMU") { // TMU / JMU
                 MDUdiv.innerHTML = arrayMDUInnerHTML[6];
                 $compile(document.getElementById("MDUdiv"))($scope);
-                document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
+                //document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
                 varImageOn_TotChoicePlus = 0;
                 varImageOn_Xtier = 0;
