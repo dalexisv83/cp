@@ -2518,7 +2518,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             document.getElementById("SpanishButton").src = image_box_src;
 
             document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
-            //document.getElementById("lyrEnglish2").style.display = 'block';
+            document.getElementById("lyrEnglish2").style.display = 'block';
             document.getElementById("lyrSpanish2").style.display = 'none';
             document.getElementById("lyrMDU1").style.display = 'none';
             document.getElementById("MDUdiv").style.display = 'none';
@@ -2535,7 +2535,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
             document.getElementById("lyrEnglish2").style.display = 'none';
             document.getElementById("lyrSpanish2").innerHTML = arrayMDUInnerHTML[9];
-            //document.getElementById("lyrSpanish2").style.display = 'block';
+            document.getElementById("lyrSpanish2").style.display = 'block';
             document.getElementById("lyrMDU1").style.display = 'none';
             document.getElementById("MDUdiv").style.display = 'none';
             spanishLayerVis = 1;
