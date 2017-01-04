@@ -509,7 +509,7 @@ inheritPrototype(smallGrid, gridTable);
 smallGrid.prototype.setChannels = function(){
     "use strict";
     var i,
-    channel_name,
+    genre,
     n,
     featured_package,
     featured_pkg_len = this.featured_packages.length,
@@ -517,17 +517,17 @@ smallGrid.prototype.setChannels = function(){
     num;
 
     for (i = 0; i < 2; i++ ){
-        channel_name = "<small>Approximate number of HD channels</small>";
+        genre = "<small>Approximate number of HD channels</small>";
         if (i > 0) {
-          channel_name = "<small>Approximate channels in per package<span class='red'>**</span></small>";
+          genre = "<small>Approximate channels in per package**</small>";
         }
 
         this.data[i] = {
             id:  "id_" + i,
-            channel_name: channel_name,
+            channel_name: " ",
             channel_number: " ",
             call_letters: " ",
-            genre:" "
+            genre: genre
         };
 
 
