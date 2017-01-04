@@ -592,7 +592,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Choice Add-On EDB" name="Choice Add-On EDB" style="display:none;"/>' +
-            '</div></div>'
+            '</div></div>';
 
         //TMW / JMW
         arrayMDUInnerHTML[4] = 
@@ -717,7 +717,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
             '</td>' +
             '</tr>' +
-            '</table>'
+            '</table>';
 
         //TMU / JMU
         arrayMDUInnerHTML[6] = '<div class="col-sm-12">' +
@@ -837,8 +837,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
             'Base package required for premiums/additional services. See' +
             '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html\');"> Package Requirements</a>.' +
             '</div>';
-        // MDUdiv default innerhtml
 
+        // MDUdiv default innerhtml
         arrayMDUInnerHTML[8] = '&nbsp;<br />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
@@ -855,6 +855,36 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>';
+
+        // spanish MDU div
+        arrayMDUInnerHTML[9] = '<div class="col-sm-6 innerboxHeadBig pdr0 pdl0">'+
+                                    '<div class="col-sm-12 ipdr0 pdl0 marb10">'+
+                                        '<a href="" ng-click="img_click_Base(\'Mas Latino\',7);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Mas Latino\',7);" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; img_on_Base(\'Mas Latino\',7);">'+
+                                        '<img alt="Mas Latino" border="0" id="Mas Latino" name="Mas Latino" src="assets/img/greenBoxNorm.gif"></a>'+
+                                        '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/mas_latino.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();"> Más Latino</a>'+
+                                    '</div>'+
+                                    '<div class="col-sm-12 pdr0 pdl0 marb10">'+
+                                        '<a href="" ng-click="img_click_Base(\'Mas Ultra\',24);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Mas Ultra\',24);" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; img_on_Base(\'Mas Ultra\',24);">'+
+                                        '<img alt="Mas Ultra" border="0" id="Mas Ultra" name="Mas Ultra" src="assets/img/greenBoxNorm.gif"></a>'+
+                                        '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/mas_ultra.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();"> Más Ultra</a>'+
+                                    '</div>'+
+                                '</div>'+
+                                '<div class="col-sm-6 innerboxHeadBig pdr0 pdl0">'+
+                                    '<div class="col-sm-12 pdr0 pdl0 marb10">'+
+                                        '<a href="" ng-click="img_click_Base(\'Optimo_Mas\',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Optimo_Mas\',8);" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; img_on_Base(\'Optimo_Mas\',8);">'+
+                                        '<img alt="Optimo Mas" border="0" id="Optimo_Mas" name="Optimo_Mas" src="assets/img/greenBoxNorm.gif"></a>'+
+                                        '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/optimo_mas.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();"> Optimo Más</a>'+
+                                    '</div>'+
+                                    '<div class="col-sm-12 pdr0 pdl0 marb10">'+
+                                        '<a href="" ng-click="img_click_Base(\'Lo Maximo\',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Lo Maximo\',10);" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; img_on_Base(\'Lo Maximo\',10);">'+
+                                        '<img alt="Lo Maximo" border="0" id="Lo Maximo" name="Lo Maximo" src="assets/img/greenBoxNorm.gif"></a>'+
+                                        '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/lo_maximo.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();"> Lo Maximo</a>'+
+                                    '</div>'+
+                                '</div>'+
+                                '<div class="col-sm-12 pdr0 pdl0">'+
+                                    'Base package required for premiums/additional services. See'+
+                                    '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html\');"> Package Requirements</a>.'+
+                                    '</div>';
 
         function xhrSuccess() {
             this.callback.apply(this, this.arguments);
@@ -1389,8 +1419,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         var total_choice_plus_on = function() {
             total_choice_plus_anchor.parentNode.style.display = "block";
-            total_choice_plus_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);');
-            total_choice_plus_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'); /**/
+        //  total_choice_plus_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);');
+        //  total_choice_plus_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'); /**/
             total_choice_plus_anchor.setAttribute('ng-click', 'img_click_Base(\'Total Choice Plus\',18);');
             total_choice_plus_anchor.href = '';
             $compile(document.getElementById("total_choice_plus_anchor"))($scope);
@@ -1449,7 +1479,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
                     myFlag_Prem[1] = myFlag_Prem[2] = myFlag_Prem[3] = myFlag_Prem[4] = myFlag_Prem[5] = true; //<-- variables are set to "true" to disable "rollout" 
 
                 } else if ((img != 6) && (img != 10)) { //<-- if Plus is selected, this turns off all premium services
-                    myFlag_Prem[1] = myFlag_Prem[2] = myFlag_Prem[3] = myFlag_Prem[4] = myFlag_Prem[5] = false;
+                    //myFlag_Prem[1] = myFlag_Prem[2] = myFlag_Prem[3] = myFlag_Prem[4] = myFlag_Prem[5] = false;
 
                     if (img == 12) { // /Total Choice Was selected, activate total_choice_plus_anchor for Total Choice Plus
                         xtra_tier_off();
@@ -1864,7 +1894,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 }
             }
             if (img == 18) {
-                if (document.images['Total Choice Plus'].src != image_box_src) { // if pic not purple, turn pic off
+                if (document.images['Total Choice Plus'].src != dtvImages[65].src) { // if pic not purple, turn pic off
                     document.images['Total Choice Plus'].src = dtvImages[14].src; // turn 14, Total Choice Plus, off
                     varImageOn_TotChoicePlus = 0;
                 }
@@ -2482,13 +2512,13 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         function englishPackageLanguage() {
             MDULayerVis = 0;
-            //document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
             document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_check_src;
             document.getElementById("SpanishButton").src = image_box_src;
 
-            document.getElementById("lyrEnglish2").style.display = 'block';
+            document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+            //document.getElementById("lyrEnglish2").style.display = 'block';
             document.getElementById("lyrSpanish2").style.display = 'none';
             document.getElementById("lyrMDU1").style.display = 'none';
             document.getElementById("MDUdiv").style.display = 'none';
@@ -2498,14 +2528,14 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         function spanishPackageLanguage() {
             MDULayerVis = 0;
-            //document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
             document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_box_src;
             document.getElementById("SpanishButton").src = image_check_src;
 
             document.getElementById("lyrEnglish2").style.display = 'none';
-            document.getElementById("lyrSpanish2").style.display = 'block';
+            document.getElementById("lyrSpanish2").innerHTML = arrayMDUInnerHTML[9];
+            //document.getElementById("lyrSpanish2").style.display = 'block';
             document.getElementById("lyrMDU1").style.display = 'none';
             document.getElementById("MDUdiv").style.display = 'none';
             spanishLayerVis = 1;
@@ -2517,12 +2547,13 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("MDUbutton").src = image_check_src;                
                 document.getElementById("lyrMDU1").style.display = 'block';
                 document.getElementById("MDUdiv").style.display = 'block';
-                //document.getElementById("MDUdiv").innerHTML = '';
                 document.getElementById("MDUdefault").style.display = 'block';
                 document.getElementById("MDUselectionInfo").style.display = 'block';
                 document.getElementById("MDUselectionInfo").innerHTML = '';
-                document.getElementById("lyrEnglish2").style.display = 'none';
-                document.getElementById("lyrSpanish2").style.display = 'none';
+                eng = document.getElementById("lyrEnglish2");
+                while ( eng.firstChild ) eng.removeChild( eng.firstChild );
+                //document.getElementById("lyrEnglish2").style.display = 'none';
+                //document.getElementById("lyrSpanish2").style.display = 'none';
                 document.getElementById("EnglishButton").src = image_box_src;
                 document.getElementById("SpanishButton").src = image_box_src;
                 MDULayerVis = 1;
@@ -2532,13 +2563,14 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("MDUdiv").style.display = 'none';                
                 document.getElementById("MDUdefault").style.display = 'none';
                 document.getElementById("MDUselectionInfo").style.display = 'none';
-                //document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
                 if (spanishLayerVis == 0) {
-                    document.getElementById("lyrEnglish2").style.display = 'block';
+                    document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+                    //document.getElementById("lyrEnglish2").style.display = 'block';
                     document.getElementById("lyrSpanish2").style.display = 'none';
                 } else {
+                    document.getElementById("lyrSpanish2").innerHTML = arrayMDUInnerHTML[9];
                     document.getElementById("lyrEnglish2").style.display = 'none';
-                    document.getElementById("lyrSpanish2").style.display = 'block';
+                    //document.getElementById("lyrSpanish2").style.display = 'block';
                 }
                 MDULayerVis = 0;
             }
