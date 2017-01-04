@@ -543,24 +543,24 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //TCD / JCD
-        arrayMDUInnerHTML[3] = '<div class="col-sm-12">' +
-            '<div class="innerboxHeadBig4 col-sm-4 marb5"><strong>If TC Limited &amp;<br> TC_MDU Tier are on account:</strong><br>' +
+        arrayMDUInnerHTML[3] = '<div class="col-sm-12 pdr0 pdl0">' +
+            '<div class="innerboxHeadBig4 col-sm-4"><div class="marb5"><strong>If TC Limited &amp; TC_MDU Tier are on account:</strong></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseover="ppSUMMARY = arrayBaseSummary[8]; img_on_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice for TCD/JCD\',12);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[8];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > TC Limited & Total Choice MDU Tier</a></div>' +
             '<div class="col-sm-12 marb5" style="display:none"><a id="total_choice_plus_anchor" ><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_plus_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[10];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Total Choice Plus MDU Tier</a></div>' +
             '</div>' +
 
-            '<div class="innerboxHeadBig4 col-sm-4 marb5" background-color:#e0e1e1"><strong>If TC Limited &amp;<br> Choice_MDU Tier are on account:</strong><br>' +
+            '<div class="innerboxHeadBig4 col-sm-4"><div class="marb5"><strong>If TC Limited &amp; Choice_MDU Tier are on account:</strong></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseover="ppSUMMARY = arrayBaseSummary[9]; img_on_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[9] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" > TC Limited & Choice MDU Tier</a></div>' +
             '<div class="col-sm-12 marb5" style="display:none"><a id="xtra_tier_anchor" ><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_mdu_tier.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[11];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Xtra Classic MDU Tier</a></div>' +
             '</div>' +
 
-            '<div class="innerboxHeadBig4 col-sm-4 marb5"><strong>If Student Preferred Bulk is on account:</strong><br>' +
-            '<div class="col-sm-12 marb5"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Student Preferred Bulk" name="total_choice_placeholder">' +
-            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_preferred_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[25];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Student Preferred Bulk</a></div>' +
+            '<div class="innerboxHeadBig4 col-sm-4"><div class="marb5"><strong>If Student Preferred Bulk is on account:</strong></div>' +
+            '<div class="col-sm-12 marb5">' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_preferred_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[25];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Student Preferred Bulk</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Student Choice Add-On\',29);" ng-mouseover="ppSUMMARY = arrayBaseSummary[26]; img_on_Base(\'Student Choice Add-On\',29);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Student Choice Add-On\',29);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Student Choice Add-On" name="Student Choice Add-On"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/student_choice_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[26];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Student Choice Add-On</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Student Choice Xtra Classic Add-On\',30);" ng-mouseover="ppSUMMARY = arrayBaseSummary[27]; img_on_Base(\'Student Choice Xtra Classic Add-On\',30);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Student Choice Xtra Classic Add-On\',30);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On"></a>' +
@@ -592,13 +592,13 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Xtra Digital Bulk" name="Xtra Digital Bulk" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Choice Add-On EDB" name="Choice Add-On EDB" style="display:none;"/>' +
-            '</div></div>'
+            '</div></div>';
 
         //TMW / JMW
-        arrayMDUInnerHTML[4] = '<div class="col-sm-12 pdr0 pdl0">' +
-            '<div class="col-sm-4 pdr0 pdl0 marb5"><strong>If Choice Digital Bulk is on account:</strong><br><br>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb10"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Choice Digital Bulk" name="total_choice_placeholder">' +
-            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Digital Bulk</a><br>' +
+        arrayMDUInnerHTML[4] = 
+            '<div class="col-sm-4 pdr0 pdl0"><div class="marb5"><strong>If Choice Digital Bulk is on account:</strong></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Choice Digital Bulk</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On\',14);" ng-mouseover="ppSUMMARY = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[29];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On CDB\',25);" ng-mouseover="ppSUMMARY = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
@@ -607,9 +607,9 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[31];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
             '</div>' +
 
-            '<div class="col-sm-4 pdr0 pdl0 marb10" style="background-color:#e0e1e1"><strong>If Entertainment Digital Bulk is on account:</strong><br><br>' +
-            '<div class="innerboxHeadBig4 col-sm-12" style="background-color:#e0e1e1"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Entertainment Digital Bulk" name="total_choice_placeholder">' +
-            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment Digital Bulk</a><br>' +
+            '<div class="col-sm-4 pdr0 pdl0"><div class="marb5"><strong>If Entertainment Digital Bulk is on account:</strong></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Entertainment Digital Bulk</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On EDB\',20);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Add-On</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On EDB\',9);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
@@ -620,11 +620,11 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
             '</div>' +
 
-            '<div class="col-sm-4 pdr0 pdl0 marb10"><strong>If Family Digital Bulk is on account:</strong><br><br>' +
-            '<div class="col-sm-12 innerboxHeadBig4"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Family Digital Bulk" name="total_choice_placeholder">' +
-            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Family Digital Bulk</a>' +
+            '<div class="col-sm-4 pdr0 pdl0"><div class="marb5"><strong>If Family Digital Bulk is on account:</strong></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Family Digital Bulk</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Entertainment Add-On\',31);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
-            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Entertainment Add-On</a></div>' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment Add-On</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On FDB\',21);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Choice Add-On</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
@@ -633,7 +633,6 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate_addon.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
             '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On FDB\',23);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/premier_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
-            '</div>' +
             '</div>' +
 
             '<div class="col-sm-12">Note: Some properties may also provide <a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/en_espanol_bulk.html\');">En Espanol Bulk</a> at $0.<br>See <a class="step4" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_digi_bulk.html" target="_blank">Choice Xtra Classic Digital Bulk</a> and <a class="step4" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on.html" target="_blank">Choice Xtra Classic Add-On</a>.</div>' +
@@ -664,8 +663,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<tr><td colspan="3" nowrap bgcolor=#e0e1e1><strong>If Total Choice Bulk is on account:</strong></td>' +
             '<td colspan="3">&nbsp;</td></tr>' +
             '<tr>' +
-            '<td width="9%" bgcolor=#e0e1e1><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Total Choice Bulk" name="total_choice_placeholder"></td>' +
-            '<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[14];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Bulk</a></td>' +
+            '<td width="9%" ></td>' +
+            '<td colspan=2 valign=left><a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/total_choice_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[14];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Bulk</a></td>' +
             '<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '<td width="1%" class="innerboxHeadBig">&nbsp;</td>' +
@@ -718,13 +717,13 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment Add-On" name="Entertainment Add-On" style="display:none;"/>' +
             '</td>' +
             '</tr>' +
-            '</table>'
+            '</table>';
 
         //TMU / JMU
         arrayMDUInnerHTML[6] = '<div class="col-sm-12">' +
-            '<div class="col-sm-4"><strong>If Choice Digital Bulk is on account:</strong><br>' + 
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Choice Digital Bulk" name="total_choice_placeholder">' +
-            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Digital Bulk</a></div>' +
+            '<div class="col-sm-4"><div class="marb5"><strong>If Choice Digital Bulk is on account:</strong></div>' + 
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Choice Digital Bulk</a></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On\',14);" ng-mouseover="ppSUMMARY = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra_add_on_new.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[29];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On CDB\',25);" ng-mouseover="ppSUMMARY = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
@@ -734,9 +733,9 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
             '</div>' +
 
-            '<div class="col-sm-4" style="background-color:#e0e1e1"><strong>If Entertainment Digital Bulk is on account:</strong><br>'+ 
-            '<div style="background-color:#e0e1e1" class="col-sm-12 innerboxHeadBig4 pdr0 pdl0"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Entertainment Digital Bulk" name="total_choice_placeholder">' +
-            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Entertainment Digital Bulk</a></div>' +
+            '<div class="col-sm-4"><div class="marb5"><strong>If Entertainment Digital Bulk is on account:</strong></div>'+ 
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_digital_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline">Entertainment Digital Bulk</a></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On EDB\',20);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/choice_add_on.html\')" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Add-On</a></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On EDB\',9);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
@@ -748,9 +747,9 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
             '</div>' +
 
-            '<div class="col-sm-4"><strong>If Family Digital Bulk is on account:</strong><br>'+ 
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0"><img src="../common_assets/img/greenDotOver.gif" border="0" alt="Family Digital Bulk" name="total_choice_placeholder">' +
-            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Family Digital Bulk</a></div>' +
+            '<div class="col-sm-4"><div class="marb5"><strong>If Family Digital Bulk is on account:</strong></div>'+ 
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
+            '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/family_digi_bulk.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Family Digital Bulk</a></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Entertainment Add-On\',31);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
             '<a class="step4" href="javascript:newWindow(\'http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_add_on.html\');" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment Add-On</a></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On FDB\',21);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
@@ -838,8 +837,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
             'Base package required for premiums/additional services. See' +
             '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html\');"> Package Requirements</a>.' +
             '</div>';
-        // MDUdiv default innerhtml
 
+        // MDUdiv default innerhtml
         arrayMDUInnerHTML[8] = '&nbsp;<br />' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
@@ -856,6 +855,36 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Premier Add-On FDB" name="Premier Add-On FDB" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Student Choice Add-On" name="Student Choice Add-On" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Student Xtra Add-On" name="Student Xtra Add-On" style="display:none;"/>';
+
+        // spanish MDU div
+        arrayMDUInnerHTML[9] = '<div class="col-sm-6 innerboxHeadBig pdr0 pdl0">'+
+                                    '<div class="col-sm-12 ipdr0 pdl0 marb10">'+
+                                        '<a href="" ng-click="img_click_Base(\'Mas Latino\',7);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Mas Latino\',7);" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; img_on_Base(\'Mas Latino\',7);">'+
+                                        '<img alt="Mas Latino" border="0" id="Mas Latino" name="Mas Latino" src="assets/img/greenBoxNorm.gif"></a>'+
+                                        '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/mas_latino.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();"> Más Latino</a>'+
+                                    '</div>'+
+                                    '<div class="col-sm-12 pdr0 pdl0 marb10">'+
+                                        '<a href="" ng-click="img_click_Base(\'Mas Ultra\',24);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Mas Ultra\',24);" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; img_on_Base(\'Mas Ultra\',24);">'+
+                                        '<img alt="Mas Ultra" border="0" id="Mas Ultra" name="Mas Ultra" src="assets/img/greenBoxNorm.gif"></a>'+
+                                        '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/mas_ultra.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();"> Más Ultra</a>'+
+                                    '</div>'+
+                                '</div>'+
+                                '<div class="col-sm-6 innerboxHeadBig pdr0 pdl0">'+
+                                    '<div class="col-sm-12 pdr0 pdl0 marb10">'+
+                                        '<a href="" ng-click="img_click_Base(\'Optimo_Mas\',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Optimo_Mas\',8);" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; img_on_Base(\'Optimo_Mas\',8);">'+
+                                        '<img alt="Optimo Mas" border="0" id="Optimo_Mas" name="Optimo_Mas" src="assets/img/greenBoxNorm.gif"></a>'+
+                                        '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/optimo_mas.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();"> Optimo Más</a>'+
+                                    '</div>'+
+                                    '<div class="col-sm-12 pdr0 pdl0 marb10">'+
+                                        '<a href="" ng-click="img_click_Base(\'Lo Maximo\',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Lo Maximo\',10);" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; img_on_Base(\'Lo Maximo\',10);">'+
+                                        '<img alt="Lo Maximo" border="0" id="Lo Maximo" name="Lo Maximo" src="assets/img/greenBoxNorm.gif"></a>'+
+                                        '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/lo_maximo.html\');" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();"> Lo Maximo</a>'+
+                                    '</div>'+
+                                '</div>'+
+                                '<div class="col-sm-12 pdr0 pdl0">'+
+                                    'Base package required for premiums/additional services. See'+
+                                    '<a class="step3" href="javascript:newWindow(\'http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html\');"> Package Requirements</a>.'+
+                                    '</div>';
 
         function xhrSuccess() {
             this.callback.apply(this, this.arguments);
@@ -1390,8 +1419,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         var total_choice_plus_on = function() {
             total_choice_plus_anchor.parentNode.style.display = "block";
-            total_choice_plus_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);');
-            total_choice_plus_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'); /**/
+        //  total_choice_plus_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[10]; img_on_Base(\'Total Choice Plus\',18);');
+        //  total_choice_plus_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus\',18);'); /**/
             total_choice_plus_anchor.setAttribute('ng-click', 'img_click_Base(\'Total Choice Plus\',18);');
             total_choice_plus_anchor.href = '';
             $compile(document.getElementById("total_choice_plus_anchor"))($scope);
@@ -1408,8 +1437,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         var xtra_tier_on = function() {
             xtra_tier_anchor.parentNode.style.display = "block";
-            xtra_tier_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);');
-            xtra_tier_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'); /**/
+          //  xtra_tier_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);');
+          //  xtra_tier_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'); /**/
             xtra_tier_anchor.href = '';
             xtra_tier_anchor.setAttribute('ng-click', 'img_click_Base(\'Choice Xtra Classic MDU Tier\',19);');
             $compile(document.getElementById("xtra_tier_anchor"))($scope);
@@ -1459,6 +1488,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
                         document.images['Choice Xtra Classic MDU Tier'].src = dtvImages[65].src;
                         total_choice_plus_on();
                         document.images['Total Choice Plus'].src = dtvImages[14].src;
+
                     } else if (img == 13) { // Choice Tier was selected, activate xtra_tier_anchor for Xtra Tier
                         total_choice_plus_off();
                         varImageOn_TotChoicePlus = 0;
@@ -1853,6 +1883,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             if (img == 19) { // 14, Total Choice Plus, was clicked
                 if (document.images["Choice Xtra Classic MDU Tier"].src != dtvImages[65].src) { // if pic not purple, turn pic off
                     document.images["Choice Xtra Classic MDU Tier"].src = dtvImages[15].src; // turn 15, Xtra Tier, off
+                    varImageOn_Xtier = 0;
                 }
                 varImageOn_TotChoicePlus = 0;
                 if (varImageOn_Xtier == 1) { //clicked 15 and it's on -- now turn it off
@@ -1865,6 +1896,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             if (img == 18) {
                 if (document.images['Total Choice Plus'].src != dtvImages[65].src) { // if pic not purple, turn pic off
                     document.images['Total Choice Plus'].src = dtvImages[14].src; // turn 14, Total Choice Plus, off
+                    varImageOn_TotChoicePlus = 0;
                 }
                 varImageOn_Xtier = 0;
                 if (varImageOn_TotChoicePlus == 1) { //clicked 14 and it's on -- now turn it off
@@ -2480,12 +2512,13 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         function englishPackageLanguage() {
             MDULayerVis = 0;
-            document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
             document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_check_src;
             document.getElementById("SpanishButton").src = image_box_src;
 
+            document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+            $compile(document.getElementById("lyrEnglish2"))($scope);
             document.getElementById("lyrEnglish2").style.display = 'block';
             document.getElementById("lyrSpanish2").style.display = 'none';
             document.getElementById("lyrMDU1").style.display = 'none';
@@ -2496,13 +2529,14 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         function spanishPackageLanguage() {
             MDULayerVis = 0;
-            document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
             document.getElementById("MDUdefault").style.display = 'none';
             document.getElementById("MDUbutton").src = image_box_src;
             document.getElementById("EnglishButton").src = image_box_src;
             document.getElementById("SpanishButton").src = image_check_src;
 
             document.getElementById("lyrEnglish2").style.display = 'none';
+            document.getElementById("lyrSpanish2").innerHTML = arrayMDUInnerHTML[9];
+            $compile(document.getElementById("lyrSpanish2"))($scope);
             document.getElementById("lyrSpanish2").style.display = 'block';
             document.getElementById("lyrMDU1").style.display = 'none';
             document.getElementById("MDUdiv").style.display = 'none';
@@ -2515,12 +2549,15 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("MDUbutton").src = image_check_src;                
                 document.getElementById("lyrMDU1").style.display = 'block';
                 document.getElementById("MDUdiv").style.display = 'block';
-                //document.getElementById("MDUdiv").innerHTML = '';
                 document.getElementById("MDUdefault").style.display = 'block';
                 document.getElementById("MDUselectionInfo").style.display = 'block';
                 document.getElementById("MDUselectionInfo").innerHTML = '';
-                document.getElementById("lyrEnglish2").style.display = 'none';
-                document.getElementById("lyrSpanish2").style.display = 'none';
+                eng = document.getElementById("lyrEnglish2");
+                while ( eng.firstChild ) eng.removeChild( eng.firstChild );
+                esp = document.getElementById("lyrSpanish2");
+                while ( esp.firstChild ) esp.removeChild( esp.firstChild );                
+                document.getElementById("EnglishButton").src = image_box_src;
+                document.getElementById("SpanishButton").src = image_box_src;
                 MDULayerVis = 1;
             } else {
                 document.getElementById("MDUbutton").src = image_box_src;
@@ -2528,13 +2565,14 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("MDUdiv").style.display = 'none';                
                 document.getElementById("MDUdefault").style.display = 'none';
                 document.getElementById("MDUselectionInfo").style.display = 'none';
-                document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
                 if (spanishLayerVis == 0) {
-                    document.getElementById("lyrEnglish2").style.display = 'block';
+                    document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+                    $compile(document.getElementById("lyrEnglish2"))($scope);
                     document.getElementById("lyrSpanish2").style.display = 'none';
                 } else {
+                    document.getElementById("lyrSpanish2").innerHTML = arrayMDUInnerHTML[9];
+                    $compile(document.getElementById("lyrSpanish2"))($scope);
                     document.getElementById("lyrEnglish2").style.display = 'none';
-                    document.getElementById("lyrSpanish2").style.display = 'block';
                 }
                 MDULayerVis = 0;
             }
@@ -2544,11 +2582,11 @@ app.controller('PP_Controller', ['$scope', '$compile',
         var fillMDUdiv = function(textEntry) {
             varMirrorFeeWaiver = 1;
             if (textEntry == 'TMW/JMW') {
-                document.getElementById("MDUselectionInfo").innerHTML = (textEntry + ' : <span style="color:red;">Mirroring fee begins after 3rd receiver</span><br>Mouseover a package for Quick Summary instructions.');
+                document.getElementById("MDUselectionInfo").innerHTML = ('<span style="color:red;">Mirroring fee begins after 3rd receiver</span><br>Mouseover a package for Quick Summary instructions.');
             } else if (textEntry == 'TCD/JCD') {
-                document.getElementById("MDUselectionInfo").innerHTML = (textEntry + ': Verify Customer\'s current programming<br>(Mouseover a package for Quick Summary instructions.)');
+                document.getElementById("MDUselectionInfo").innerHTML = ('Verify Customer\'s current programming<br>Mouseover a package for Quick Summary instructions.');
             } else {
-                document.getElementById("MDUselectionInfo").innerHTML = ('You selected: ' + textEntry + '<br>Mouseover a package for Quick Summary instructions.');
+                document.getElementById("MDUselectionInfo").innerHTML = ('Mouseover a package for Quick Summary instructions.');
             }
 
             if ((textEntry == null) || (textEntry == '')) { //default  
@@ -2560,19 +2598,19 @@ app.controller('PP_Controller', ['$scope', '$compile',
             if (textEntry == 'MDU/JDU') { //MDU / JDU / MDD / MDL
                 MDUdiv.innerHTML = arrayMDUInnerHTML[2];
                 $compile(document.getElementById("MDUdiv"))($scope);
-                document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
+                //document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
             }
             if (textEntry == "TCD/JCD") { //TCD / JCD
                 MDUdiv.innerHTML = arrayMDUInnerHTML[3];
                 $compile(document.getElementById("MDUdiv"))($scope);
-                document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
+                //document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
             }
             if (textEntry == "TMW/JMW") { //TMW / JMW
                 MDUdiv.innerHTML = arrayMDUInnerHTML[4];
                 $compile(document.getElementById("MDUdiv"))($scope);
-                document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
+                //document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
                 varMirrorFeeWaiver = 3;
                 varImageOn_TotChoicePlus = 0;
@@ -2589,7 +2627,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             if (textEntry == "TMU/JMU") { // TMU / JMU
                 MDUdiv.innerHTML = arrayMDUInnerHTML[6];
                 $compile(document.getElementById("MDUdiv"))($scope);
-                document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
+                //document.getElementById("lyrEnglish2").innerHTML = "&nbsp;";
                 document.getElementById("MDUdefault").style.display = 'none';
                 varImageOn_TotChoicePlus = 0;
                 varImageOn_Xtier = 0;
