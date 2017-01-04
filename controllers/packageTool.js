@@ -1407,8 +1407,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         var xtra_tier_on = function() {
             xtra_tier_anchor.parentNode.style.display = "block";
-            xtra_tier_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);');
-            xtra_tier_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'); /**/
+          //  xtra_tier_anchor.setAttribute('ng-mouseover', 'ppSUMMARY = arrayBaseSummary[11]; img_on_Base(\'Choice Xtra Classic MDU Tier\',19);');
+          //  xtra_tier_anchor.setAttribute('ng-mouseleave', 'ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Xtra Classic MDU Tier\',19);'); /**/
             xtra_tier_anchor.href = '';
             xtra_tier_anchor.setAttribute('ng-click', 'img_click_Base(\'Choice Xtra Classic MDU Tier\',19);');
             $compile(document.getElementById("xtra_tier_anchor"))($scope);
@@ -1449,7 +1449,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
                     myFlag_Prem[1] = myFlag_Prem[2] = myFlag_Prem[3] = myFlag_Prem[4] = myFlag_Prem[5] = true; //<-- variables are set to "true" to disable "rollout" 
 
                 } else if ((img != 6) && (img != 10)) { //<-- if Plus is selected, this turns off all premium services
-                    //myFlag_Prem[1] = myFlag_Prem[2] = myFlag_Prem[3] = myFlag_Prem[4] = myFlag_Prem[5] = false;
+                    myFlag_Prem[1] = myFlag_Prem[2] = myFlag_Prem[3] = myFlag_Prem[4] = myFlag_Prem[5] = false;
 
                     if (img == 12) { // /Total Choice Was selected, activate total_choice_plus_anchor for Total Choice Plus
                         xtra_tier_off();
@@ -1853,6 +1853,7 @@ app.controller('PP_Controller', ['$scope', '$compile',
             if (img == 19) { // 14, Total Choice Plus, was clicked
                 if (document.images["Choice Xtra Classic MDU Tier"].src != dtvImages[65].src) { // if pic not purple, turn pic off
                     document.images["Choice Xtra Classic MDU Tier"].src = dtvImages[15].src; // turn 15, Xtra Tier, off
+                    varImageOn_Xtier = 0;
                 }
                 varImageOn_TotChoicePlus = 0;
                 if (varImageOn_Xtier == 1) { //clicked 15 and it's on -- now turn it off
@@ -1863,9 +1864,9 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 }
             }
             if (img == 18) {
-                alert(document.images['Total Choice Plus'].src);
                 if (document.images['Total Choice Plus'].src != image_box_src) { // if pic not purple, turn pic off
                     document.images['Total Choice Plus'].src = dtvImages[14].src; // turn 14, Total Choice Plus, off
+                    varImageOn_TotChoicePlus = 0;
                 }
                 varImageOn_Xtier = 0;
                 if (varImageOn_TotChoicePlus == 1) { //clicked 14 and it's on -- now turn it off
