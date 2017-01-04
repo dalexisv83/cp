@@ -2554,6 +2554,8 @@ app.controller('PP_Controller', ['$scope', '$compile',
                 document.getElementById("MDUselectionInfo").innerHTML = '';
                 eng = document.getElementById("lyrEnglish2");
                 while ( eng.firstChild ) eng.removeChild( eng.firstChild );
+                esp = document.getElementById("lyrSpanish2");
+                while ( esp.firstChild ) esp.removeChild( esp.firstChild );                
                 document.getElementById("EnglishButton").src = image_box_src;
                 document.getElementById("SpanishButton").src = image_box_src;
                 MDULayerVis = 1;
