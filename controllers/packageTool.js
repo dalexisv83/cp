@@ -1556,8 +1556,10 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
                 if (img < 32 || img != 18 || img != 19 || img != 31) {
                     for (var m = 1; m < 18; ++m) { //<-----this loop checks what image is at its "on" state and turns "off" the rest
+                        
                         if (myTab[m] != loc) {
-                            document.images[myTab[m]].src = dtvImages[myTab_BaseNum[m]].src; //<-- turns everything "off"
+                            if(document.images[myTab[m]] != null)
+                                document.images[myTab[m]].src = dtvImages[myTab_BaseNum[m]].src; //<-- turns everything "off"
                         } else {
                             document.images[loc].src = dtvImages[myTab_BaseNum[img] + numRolImages].src; //<-- turns selected item "on"
                             varImageOn = img;
