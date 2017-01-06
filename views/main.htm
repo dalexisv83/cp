@@ -1,5 +1,5 @@
 <div ng-controller="MainCtrl">
-    <div ng-include="'views/header.htm'"></div>
+    <div ng-include="'views/header.htm?@@BUSTER@@'"></div>
     <ul id="top" class="nav">
         <li ng-repeat="tool in tools"><a href="" ng-click="goHere(tool.url)" ng-class="{active: page == tool.url}" ng-bind="tool.name"></a></li>
     </ul>
