@@ -157,10 +157,10 @@
             </div>
             <div class="table-header grid__item one-half">
                  <div class="label-holder saved-amt" ng-show="saved_amt > 0" ng-cloak>
-                    Customer will save <span class="price">&#36;<span ng-bind-html-unsafe="saved_amt"></span></span>
+                    Customer will save <span class="price">&#36;<span ng-bind-html="saved_amt"></span></span>
                 </div>
                 <div class="label-holder pay-more-amt" ng-show="pay_more_amt > 0" ng-cloak>
-                    Customer will pay <span class="price">&#36;<span ng-bind-html-unsafe="pay_more_amt"></span></span> more
+                    Customer will pay <span class="price">&#36;<span ng-bind-html="pay_more_amt"></span></span> more
                 </div>
                 
             </div>          
@@ -285,11 +285,11 @@
                 <div class="table-wrapper" ng-cloak ng-show="current_channels && show_current_channels" scroll-to-top-when="items_changed" when-scrolled="current_pkg_limit = loadMore(current_pkg_limit);">
                     <table>
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in current_channels | orderBy:sortType:reverse | limitTo:current_pkg_limit">
-                            <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20%"></td>
+                            <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20%"></td>
                             <td ng-if="current_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
-                            <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20%"></td>
-                            <td width="60%"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
-                            <td class="genre" ng-bind-html-unsafe="channel.genre" width="20%"></td>
+                            <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20%"></td>
+                            <td width="60%"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td class="genre" ng-bind-html="channel.genre" width="20%"></td>
                         </tr>
                     </table>
                 </div>
@@ -298,11 +298,11 @@
                 <div class="table-wrapper" ng-cloak  ng-show="gained_channels && show_gained_channels" scroll-to-top-when="items_changed" when-scrolled="gained_channels_limit = loadMore(gained_channels_limit);">
                     <table>
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in gained_channels | orderBy:sortType:reverse  | limitTo:gained_channels_limit">
-                            <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20"></td>
+                            <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="requested_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
-                            <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
-                            <td class="genre" ng-bind-html-unsafe="channel.genre" width="20"></td>
+                            <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
+                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>
                 </div>
@@ -311,11 +311,11 @@
                 <div class="table-wrapper" ng-cloak  ng-show="lost_channels && show_lost_channels" scroll-to-top-when="items_changed" when-scrolled="lost_channels_limit = loadMore(lost_channels_limit);">
                     <table>                    
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in lost_channels | orderBy:sortType:reverse  | limitTo:lost_channels_limit">
-                            <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20"></td>
+                            <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="current_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
-                            <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
-                            <td class="genre" ng-bind-html-unsafe="channel.genre" width="20"></td>
+                            <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
+                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>
                 </div>
@@ -324,11 +324,11 @@
                 <div class="table-wrapper" ng-cloak  ng-show="requested_channels && show_requested_channels" scroll-to-top-when="items_changed" when-scrolled="requested_pkg_limit = loadMore(requested_pkg_limit);">
                     <table>                  
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in requested_channels | orderBy:sortType:reverse | limitTo:requested_pkg_limit">
-                            <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html-unsafe="channel.channelnumber" width="20"></td>
+                            <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="requested_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
-                            <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html-unsafe="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html-unsafe="channel.channelname"></font></a></td>
-                            <td class="genre" ng-bind-html-unsafe="channel.genre" width="20"></td>
+                            <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
+                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>
                 </div>
