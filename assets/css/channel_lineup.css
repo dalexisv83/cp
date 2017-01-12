@@ -328,6 +328,7 @@
     top: 5px;
     font-size: 35px;
     color: #0567AE;
+    text-align: center;
 }
 
 input#txtSearch{
@@ -602,4 +603,37 @@ span.btn-feedback:hover {
     background-color:#fffebd !important;
     color:#000000 !important;
     border-color:#333333 !important;
+}
+
+#vsrepeat {
+    height: 400px;
+    overflow: auto;
+}
+
+.rotate {
+    white-space: nowrap;
+    position: relative;
+}
+
+.rotate > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+}
+
+.rotate div div {
+    transform: rotate(10deg) skewY(-10deg);
+    transform-origin: bottom center;
+    width: 100%;
+    height: 100%;
+    background: blue;
+}
+
+.rotate span {
+    position: absolute;
+    transform: rotate(-80deg);
+    transform-origin: left center;
+    left: 50%;
+    bottom: 0;
 }

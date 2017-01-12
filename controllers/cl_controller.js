@@ -11,8 +11,18 @@ app.controller('CL_Controller',['$scope', '$http',
                 channels = response.data.channels,
                 ad_channels = AdSales.channels,
                 data_type = response.data.type;
-                $scope.type = response.data.type,
+                $scope.type = response.data.type;
+                $scope.packages = featured_packages;
+                $scope.width = 50 / featured_packages.length + '%';
                 $scope.channels = response.data.channels;
+                $scope.pActive = null;
+                $scope.hdActive = false;
+                $scope.pFilter = function(sortOrder,hd) {
+                    $scope.pActive = sortOrder;
+                    $scope.hdActive = hd;
+                };
+                $scope.sortType = 'channelnamebold';
+                $scope.reverse = false;
 
                 'use strict';
                 var small_grid,
@@ -138,3 +148,43 @@ app.controller('CL_Controller',['$scope', '$http',
             true
         );
 }]);
+
+app.filter('comReplace', [
+    function() {
+        return function(input) {
+            return input.replace('Business','Biz.').replace('Commercial','Com.');
+        }
+    }
+]).filter('xToBull', [
+    function() {
+        return function(input) {
+            return input.replace('x','&bull;');
+        }
+    }
+]).filter('byPackage', [
+    function() {
+        return function(input,sortOrder,hd) {
+            if (input) {
+                if (typeof sortOrder == 'number') {
+                    var matches=[],
+                        i,
+                        len = input.length;
+                    for (i=0;i<len;i++) {
+                        if (input[i]['p'+(sortOrder)] == 'x') {
+                            if (hd) {
+                                if (input[i].isHD == 1) {
+                                    matches.push(input[i]);
+                                }
+                            } else {
+                                matches.push(input[i]);
+                            }
+                        }
+                    }
+                    return matches;
+                } else {
+                    return input;
+                }
+            }
+        }
+    }
+]);

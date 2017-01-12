@@ -854,8 +854,3 @@ input.ng-valid.zipinp {
   cursor: pointer;
   color: white;
 }
-
-#vsrepeat {
-    height: 400px;
-    overflow: auto;
-}

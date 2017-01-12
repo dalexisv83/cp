@@ -136,11 +136,32 @@
                     <!--end of div#genreCodes-->
     <div class="grid">
         <div class="grid__item">
+            <div style="padding-right: 16px;">
+                <table style="width: 100%;">
+                    <thead>
+                        <tr height="200" style="vertical-align: bottom;">
+                            <td width="25%"><a ng-class="{'sort-true sorted': sorted_column == 'channelnamebold sort-true', 'sort-false sorted': sorted_column == 'channelnamebold sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='channelnamebold'">Channel Name</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='channelnumber'">Channel #</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'callletters sort-true', 'sort-false sorted': sorted_column == 'callletters sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='callletters'">Call Letters</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='genre'">Genre</a></td><td class="rotate" width="{{width}}" ng-repeat="package in packages"><div><div></div></div><span ng-bind="package.display_name | comReplace"></span></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+            <div style="padding-right: 16px;">
+                <table style="width: 100%;">
+                    <thead>
+                        <tr>
+                            <td width="50%"><small>Approximate number of HD channels</small></td><td width="{{width}}" ng-repeat="package in packages"><a href ng-click="pFilter(package.sortOrder,true)" ng-bind="package.hdChannelCount"></a></td>
+                        </tr>
+                        <tr>
+                            <td width="50%"><small>Approximate number of total channels</small></td><td width="{{width}}" ng-repeat="package in packages"><a href ng-click="pFilter(package.sortOrder,false)" ng-bind="package.channelCount"></a></td>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
             <div id="vsrepeat">
                 <table style="width: 100%">
                     <tbody vs-repeat vs-scroll-parent="#vsrepeat">
-                        <tr style="height:50px;" ng-repeat="channel in channels">
-                            <td ng-bind-html="channel.channelnamebold"></td><td width="16%" ng-bind-html="channel.channelnumber"></td><td width="16%" ng-bind-html="channel.callletters"></td><td width="16%" ng-bind-html="channel.genre"></td>
+                        <tr style="height:50px;" ng-repeat="channel in fChannels = (channels | byPackage:pActive:hdActive | orderBy:sortType:reverse)">
+                            <td width="25%" ng-bind-html="channel.channelnamebold"></td><td width="8.33%" ng-bind-html="channel.channelnumber"></td><td width="8.33%" ng-bind-html="channel.callletters"></td><td width="8.33%" ng-bind-html="channel.genre"></td><td class="dot" width="{{width}}" ng-repeat="package in packages" ng-bind-html="channel['p' + ($index + 1)] | xToBull"></td>
                         </tr>
                     </tbody>
                 </table>
