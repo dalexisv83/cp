@@ -152,13 +152,17 @@ app.controller('CL_Controller',['$scope', '$http',
 app.filter('comReplace', [
     function() {
         return function(input) {
-            return input.replace('Business','Biz.').replace('Commercial','Com.');
+            if(input) {
+                return input.replace('Business','Biz.').replace('Commercial','Com.');
+            }
         }
     }
 ]).filter('xToBull', [
     function() {
         return function(input) {
-            return input.replace('x','&bull;');
+            if(input) {
+                return input.replace('x','&bull;');
+            }
         }
     }
 ]).filter('byPackage', [
@@ -185,6 +189,31 @@ app.filter('comReplace', [
                     return input;
                 }
             }
+        }
+    }
+]).filter('clSearch', [
+    function() {
+        return function(objs,model) {
+            if (objs && model) {
+                var matches = [],
+                    parts = model.replace(/\, /g, ',').split(','),
+                    columns = ['channelnamebold','channelnumber','callletters','anchors'];
+                objs.forEach(function(obj) {
+                    var objStr = '';
+                    for (prop in obj) {
+                        if (obj[prop] && obj.hasOwnProperty(prop) && columns.indexOf(prop) > -1) {
+                            objStr += obj[prop];
+                        }
+                    }
+                    parts.forEach(function(part) {
+                        if ((part != '') && (new RegExp(part, 'i').test(objStr))) {
+                            matches.push(obj);
+                        }
+                    });
+                });
+                return matches;
+            }
+            return objs;
         }
     }
 ]);
