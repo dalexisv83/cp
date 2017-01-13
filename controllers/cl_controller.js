@@ -23,6 +23,14 @@ app.controller('CL_Controller',['$scope', '$http',
                 };
                 $scope.sortType = 'channelnamebold';
                 $scope.reverse = false;
+                $scope.sorter = function(clickType) {
+                    if ($scope.sortType == clickType) {
+                        $scope.reverse = !$scope.reverse;
+                    } else {
+                        $scope.reverse = false;
+                    }
+                    $scope.sortType = clickType;
+                };
 
                 'use strict';
                 var small_grid,

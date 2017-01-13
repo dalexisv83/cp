@@ -140,7 +140,24 @@
                 <table style="width: 100%;">
                     <thead>
                         <tr height="200" style="vertical-align: bottom;">
-                            <td width="25%"><a ng-class="{'sort-true sorted': sorted_column == 'channelnamebold sort-true', 'sort-false sorted': sorted_column == 'channelnamebold sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='channelnamebold'">Channel Name</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='channelnumber'">Channel #</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'callletters sort-true', 'sort-false sorted': sorted_column == 'callletters sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='callletters'">Call Letters</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='genre'">Genre</a></td><td class="rotate" width="{{width}}" ng-repeat="package in packages"><div><div class="bg--blue"></div></div><span ng-bind="package.display_name | comReplace"></span></td>
+                            <td width="25%">
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelnamebold sort-true', 'sort-false sorted': sorted_column == 'channelnamebold sort-false'}" href title="Click to sort" ng-click="sorter('channelnamebold')">Channel Name</a>
+                            </td>
+                            <td width="8.33%">
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href title="Click to sort" ng-click="sorter('channelnumber')">Channel #</a>
+                            </td>
+                            <td width="8.33%">
+                                <a ng-class="{'sort-true sorted': sorted_column == 'callletters sort-true', 'sort-false sorted': sorted_column == 'callletters sort-false'}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
+                            </td>
+                            <td width="8.33%">
+                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
+                            </td>
+                            <td class="rotate" width="{{width}}" ng-repeat="package in packages">
+                                <div>
+                                    <div class="bg--blue"></div>
+                                </div>
+                                <span ng-bind="package.display_name | comReplace"></span>
+                            </td>
                         </tr>
                     </thead>
                 </table>
