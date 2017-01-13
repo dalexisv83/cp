@@ -1,0 +1,36 @@
+<div id="package_details" class="full" ng-controller="PD_Controller">
+    <div class="wrapper">
+        <div class="border" ng-window-pie>
+            <select ng-options="package.id as package.name for package in packages | filter:{platform:'DTVRES'}:true" ng-model="pid"></select>
+            <div ng-repeat="package in packages | filter:{id:pid}:true">
+                <table style="width:calc(50% - 16px);">
+                    <tr>
+                        <td width="50%" ng-bind="package.name"></td><td width="50%" ng-bind="package.channel_count + ' Channels'"></td>
+                    </tr>
+                </table>
+                <table style="width:calc(50% - 16px);">
+                    <tr>
+                        <td width="50%">Price</td><td width="50%">No Locals Price</td>
+                    </tr>
+                    <tr>
+                        <td ng-bind="package.price"></td><td ng-bind="package.noLocal"></td>
+                    </tr>
+                </table>
+                <table style="width:calc(50% - 16px);">
+                    <tr>
+                        <td width="50%">Channel Name</td><td width="25%">Channel #</td><td width="25%">Genre</td>
+                    </tr>
+                </table>
+                <div style="width:50%;height:400px;overflow:auto;">
+                    <table width="100%">
+                        <tr ng-repeat="c in package.channels">
+                            <td width="50%" ng-repeat-start="channel in channels | filter:{id:c.id}:true" ng-bind="channel.channelname"></td>
+                            <td width="25%" ng-bind-html="channel.channelnumber"></td>
+                            <td width="25%" ng-repeat-end ng-bind="channel.genre"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
