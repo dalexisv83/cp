@@ -11,16 +11,52 @@ app.controller('PD_Controller',['$scope', '$http', '$location',
                         if (params == 'package-details') {
                             stopRenderWatch();
 
+                            $scope.selPackages = response.data.package_compare.datasource;
+
                             $scope.$watch(function() {
                                 return $location.search();
                             }, function(params) {
                                 $scope.pid = params.pid;
+                                // $scope.package = $scope.selPackages.find(function(qPack) {
+                                //     if ($scope.pid) {
+                                //         console.log(qPack.platform + "\n" + qPack.id + "\n" + $scope.pid);
+                                //         return qPack.platform === 'DTVRES' && qPack.id === $scope.pid;
+                                //     }
+                                // });
+
+                                // $scope.channels = response.data.channels.filter(function(qChan) {
+                                //     if ($scope.package) {
+                                //             var i,
+                                //             len = $scope.package.channels.length;
+                                //         for (i=0;i<len;i++) {
+                                //             if ($scope.package.channels[i].id === qChan.id){
+                                //                 return true;
+                                //             }
+                                //         }
+                                //     }
+                                // });
                             });
                             $scope.$watch('pid', function() {
                                 $location.search('pid', $scope.pid);
+
+                                $scope.package = $scope.selPackages.find(function(qPack) {
+                                    if ($scope.pid) {
+                                        return qPack.platform === 'DTVRES' && qPack.id === $scope.pid;
+                                    }
+                                });
+
+                                $scope.channels = response.data.channels.filter(function(qChan) {
+                                    if ($scope.package) {
+                                            var i,
+                                            len = $scope.package.channels.length;
+                                        for (i=0;i<len;i++) {
+                                            if ($scope.package.channels[i].id === qChan.id){
+                                                return true;
+                                            }
+                                        }
+                                    }
+                                });
                             });
-                            $scope.packages = response.data.package_compare.datasource;
-                            $scope.channels = response.data.channels;
 
                             $scope.pdLoaded = true;
                         }
