@@ -71,7 +71,7 @@ app.controller('PD_Controller',['$scope', '$http', '$location',
             function(params) {
                 if (params == 'package-details') {
                     stopWatching();
-                    $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/PageListRes').then(function successCallback(response) {
+                    $http.get('data/PageListRes.json').then(function successCallback(response) {
                         init(response);
                     }, function errorCallback(response) {
                         $http.get('http://localhost/rover_tools/channelsjs/channels.js').then(function successCallback(response) {
