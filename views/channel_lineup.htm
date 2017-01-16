@@ -4,10 +4,12 @@
     <div class="grid">
         <div class="grid__item one-half">
           <h2 class="search-label">Search by Call Letters, Channel Name or Number:</h2>
-          <input type=text id="txtSearch" placeholder="Search" ng-model="inputText" />
+          <input type=text id="txtSearch" placeholder="Search" ng-model="tempText" ng-keypress="clKeyPress($event)"/>
           <input type="button" class="reset" value="RESET" id="reset" />
           <br />
-          <small id="messageBox" class="result-count red"></small>
+          <small ng-if="msgQuery && tempText == null" class="result-count red">You searched for: &ldquo;<b ng-bind="msgQuery"></b>&rdquo;
+          <br /><br /></small>
+          <small ng-if="inputText" class="result-count red"><b><span ng-bind="fChannels.result.length"></span> channel(s) found</b><span ng-if="fChannels.result.length == 0"><br />See <a target="_blank" href="/en-us/res/programming/commercials.html">Programming Requests</a> for points about channels not currently available on DIRECTV</span></small>
         </div>
         <div class="grid__item one-half">
             <div class="link-holder">
@@ -177,7 +179,7 @@
             <div id="vsrepeat">
                 <table style="width: 100%">
                     <tbody vs-repeat vs-scroll-parent="#vsrepeat">
-                        <tr style="height:50px;" ng-repeat="channel in channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse track by $index">
+                        <tr style="height:50px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
                             <td width="25%" ng-bind-html="channel.channelnamebold"></td><td width="8.33%" ng-bind-html="channel.channelnumber"></td><td width="8.33%" ng-bind-html="channel.callletters"></td><td width="8.33%" ng-bind-html="channel.genre"></td><td class="dot" width="{{width}}" ng-repeat="package in packages" ng-bind-html="channel['p' + ($index + 1)] | xToBull"></td>
                         </tr>
                     </tbody>

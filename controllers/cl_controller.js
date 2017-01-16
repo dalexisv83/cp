@@ -31,6 +31,18 @@ app.controller('CL_Controller',['$scope', '$http',
                     }
                     $scope.sortType = clickType;
                 };
+                $scope.$watch('tempText', function(newValue) {
+                    if (newValue) {
+                        $scope.inputText = newValue;
+                    }
+                });
+                $scope.clKeyPress = function($event){
+                    var keyCode = $event.which || $event.keyCode;
+                    if (keyCode === 13) {
+                        $scope.msgQuery = $scope.tempText;
+                        $scope.tempText = null;
+                    }
+                };
 
                 'use strict';
                 var small_grid,
@@ -155,6 +167,7 @@ app.controller('CL_Controller',['$scope', '$http',
             },
             true
         );
+        $scope.fChannels = {};
 }]);
 
 app.filter('comReplace', [
