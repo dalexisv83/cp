@@ -15,38 +15,6 @@ app.controller('CL_Controller',['$scope', '$http',
                 $scope.packages = featured_packages;
                 $scope.width = 50 / featured_packages.length + '%';
                 $scope.channels = response.data.channels;
-                $scope.pActive = null;
-                $scope.hdActive = false;
-                $scope.pFilter = function(sortOrder,hd) {
-                    $scope.tempText = null;
-                    $scope.inputText = null;
-                    $scope.pActive = sortOrder;
-                    $scope.hdActive = hd;
-                };
-                $scope.sortType = 'channelnamebold';
-                $scope.reverse = false;
-                $scope.sorter = function(clickType) {
-                    if ($scope.sortType == clickType) {
-                        $scope.reverse = !$scope.reverse;
-                    } else {
-                        $scope.reverse = false;
-                    }
-                    $scope.sortType = clickType;
-                };
-                $scope.$watch('tempText', function(newValue) {
-                    if (newValue) {
-                        $scope.inputText = newValue;
-                    }
-                });
-                $scope.clKeyPress = function($event){
-                    var keyCode = $event.which || $event.keyCode;
-                    $scope.pActive = null;
-                    $scope.hdActive = null;
-                    if (keyCode === 13) {
-                        $scope.msgQuery = $scope.tempText;
-                        $scope.tempText = null;
-                    }
-                };
 
                 'use strict';
                 var small_grid,
@@ -171,7 +139,46 @@ app.controller('CL_Controller',['$scope', '$http',
             },
             true
         );
-        $scope.fChannels = {};
+    $scope.fChannels = {};
+    $scope.pActive = null;
+    $scope.hdActive = false;
+    $scope.pFilter = function(sortOrder,hd) {
+        $scope.tempText = null;
+        $scope.inputText = null;
+        $scope.pActive = sortOrder;
+        $scope.hdActive = hd;
+    };
+    $scope.sortType = 'channelnamebold';
+    $scope.reverse = false;
+    $scope.sorter = function(clickType) {
+        if ($scope.sortType == clickType) {
+            $scope.reverse = !$scope.reverse;
+        } else {
+            $scope.reverse = false;
+        }
+        $scope.sortType = clickType;
+    };
+    $scope.$watch('tempText', function(newValue) {
+        if (newValue) {
+            $scope.inputText = newValue;
+        }
+    });
+    $scope.clKeyPress = function($event){
+        var keyCode = $event.which || $event.keyCode;
+        $scope.pActive = null;
+        $scope.hdActive = null;
+        if (keyCode === 13) {
+            $scope.msgQuery = $scope.tempText;
+            $scope.tempText = null;
+        }
+    };
+    $scope.clReset = function() {
+        $scope.tempText = null;
+        $scope.inputText = null;
+        $scope.pActive = null;
+        $scope.hdActive = null;
+        $scope.msgQuery = null;
+    }
 }]);
 
 app.filter('comReplace', [

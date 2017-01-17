@@ -5,7 +5,7 @@
         <div class="grid__item one-half">
           <h2 class="search-label">Search by Call Letters, Channel Name or Number:</h2>
           <input type=text id="txtSearch" placeholder="Search" ng-model="tempText" ng-keypress="clKeyPress($event)"/>
-          <input type="button" class="reset" value="RESET" id="reset" />
+          <input type="button" class="reset" ng-class="{'active': tempText || inputText || pActive}" value="RESET" id="reset" ng-click="clReset()" />
           <br />
           <small ng-if="msgQuery && tempText == null" class="result-count red">You searched for: &ldquo;<b ng-bind="msgQuery"></b>&rdquo;
           <br /><br /></small>
