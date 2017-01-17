@@ -1,4 +1,4 @@
-﻿<div id="channel_lineup" ng-controller="CL_Controller" ng-class="{'com': type=='commercial'}">
+<div id="channel_lineup" ng-controller="CL_Controller" ng-class="{'com': type=='commercial'}">
 <div class="wrapper">
 <div class="border">
     <div class="grid">
@@ -140,72 +140,25 @@
                 <table style="width: 100%;">
                     <thead>
                         <tr height="200" style="vertical-align: bottom;">
-                            <td width="25%"><a style="color:#333; font-weight:bold; ng-class="{'sort-true sorted': sorted_column == 'channelnamebold sort-true', 'sort-false sorted': sorted_column == 'channelnamebold sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='channelnamebold'">Channel Name</a></td><td width="8.33%"><a style="color:#333; font-weight:bold; ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='channelnumber'">Channel #</a></td><td width="8.33%"><a style="color:#333; font-weight:bold; ng-class="{'sort-true sorted': sorted_column == 'callletters sort-true', 'sort-false sorted': sorted_column == 'callletters sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='callletters'">Call Letters</a></td><td width="8.33%"><a a style="color:#333; font-weight:bold; ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='genre'">Genre</a></td><td class="rotate" width="{{width}}" ng-repeat="package in packages"><div><div class="grey-border"></div></div><span ng-bind="package.display_name | comReplace"></span></td>
+                            <td width="25%"><a ng-class="{'sort-true sorted': sorted_column == 'channelnamebold sort-true', 'sort-false sorted': sorted_column == 'channelnamebold sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='channelnamebold'">Channel Name</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='channelnumber'">Channel #</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'callletters sort-true', 'sort-false sorted': sorted_column == 'callletters sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='callletters'">Call Letters</a></td><td width="8.33%"><a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href title="Click to sort" ng-click="reverse=!reverse;sortType='genre'">Genre</a></td><td class="rotate" width="{{width}}" ng-repeat="package in packages"><div><div class="bg--blue"></div></div><span ng-bind="package.display_name | comReplace"></span></td>
                         </tr>
                     </thead>
                 </table>
             </div>
             <div style="padding-right: 16px;">
-                <table class="outline" style="width: 100%;">
-
-
-  <colgroup>
-       	 <col span="1" style="background-color:white">
-       	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-       	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-       	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-       	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-       	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-       	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-       	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-       	 <col span="1" style="background-color:#e9f7ff">
-       	 <col span="1" style="background-color:#c3e7fb">
-  </colgroup>
-
+                <table style="width: 100%;">
                     <thead>
                         <tr>
-                            <td class="n-c"><small>Approximate number of HD channels<small><div class="arrow-icon"><img src="assets/img/arrow-icon.gif"></div></td><td width="{{width}}" ng-repeat="package in packages"><a href ng-click="pFilter(package.sortOrder,true)" ng-bind="package.hdChannelCount"></a></td>
+                            <td width="50%"><small>Approximate number of HD channels</small></td><td width="{{width}}" ng-repeat="package in packages"><a href ng-click="pFilter(package.sortOrder,true)" ng-bind="package.hdChannelCount"></a></td>
                         </tr>
                         <tr>
-                            <td class="n-c"><small>Approximate number of total channels</small><div class="arrow-icon"><img src="assets/img/arrow-icon.gif"></div></td><td width="{{width}}" ng-repeat="package in packages"><a href ng-click="pFilter(package.sortOrder,false)" ng-bind="package.channelCount"></a></td>
+                            <td width="50%"><small>Approximate number of total channels</small></td><td width="{{width}}" ng-repeat="package in packages"><a href ng-click="pFilter(package.sortOrder,false)" ng-bind="package.channelCount"></a></td>
                         </tr>
                     </thead>
                 </table>
             </div>
             <div id="vsrepeat">
                 <table style="width: 100%">
-
-  <colgroup>
-       	 <col span="4" style="background-color:white">
-       	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-       	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-       	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-       	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-       	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-       	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-       	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-       	 <col span="1" style="background-color:#f5f5f5">
-       	 <col span="1" style="background-color:#e9e9e9">
-  </colgroup>
-
                     <tbody vs-repeat vs-scroll-parent="#vsrepeat">
                         <tr style="height:50px;" ng-repeat="channel in channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse track by $index">
                             <td width="25%" ng-bind-html="channel.channelnamebold"></td><td width="8.33%" ng-bind-html="channel.channelnumber"></td><td width="8.33%" ng-bind-html="channel.callletters"></td><td width="8.33%" ng-bind-html="channel.genre"></td><td class="dot" width="{{width}}" ng-repeat="package in packages" ng-bind-html="channel['p' + ($index + 1)] | xToBull"></td>
