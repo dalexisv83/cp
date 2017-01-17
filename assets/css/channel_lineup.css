@@ -653,9 +653,6 @@ table.outline {border-top: 1px solid #ddd;
     border-left: .5px solid #ddd;
 }
 
-td.ng-binding {
-    padding-left: 5px;
-}
 
 td.dot.ng-binding.ng-scope {
     padding-left: 0px;
@@ -675,7 +672,7 @@ td.rotate.ng-scope {
 
 .n-c {
     color: #428bca;
-	float: right;
+    text-align: right;
 	font-style: italic;
 	}
 	
@@ -687,4 +684,34 @@ td.rotate.ng-scope {
 
 span.ng-binding {
     color: #0567ae;
+}
 
+.c-name {
+	color: #0567ae;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.c-num {
+    color: #666;
+    padding-left: 5px;
+    font-size: 12px;
+}
+
+.note {
+    font-size: 11px;
+    color: #838383;
+    font-weight: normal;
+	}
+	
+.rewind {
+    color: #0567ae;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.ondemand {
+    color: #0567ae;
+    font-weight: bold;
+    font-size: 16px;
+}
