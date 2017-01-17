@@ -144,16 +144,16 @@
                     <thead>
                         <tr height="200" style="vertical-align: bottom;">
                             <td width="25%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelnamebold sort-true', 'sort-false sorted': sorted_column == 'channelnamebold sort-false'}" href title="Click to sort" ng-click="sorter('channelnamebold')">Channel Name</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Channel Name</a>
                             </td>
                             <td width="8.33%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href title="Click to sort" ng-click="sorter('channelnumber')">Channel #</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Channel #</a>
                             </td>
                             <td width="8.33%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'callletters sort-true', 'sort-false sorted': sorted_column == 'callletters sort-false'}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
                             </td>
                             <td width="8.33%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
                             </td>
                             <td class="rotate" width="{{width}}" ng-repeat="package in packages">
                                 <div>
