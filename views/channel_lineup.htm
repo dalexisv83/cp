@@ -10,6 +10,7 @@
           <small ng-if="msgQuery && tempText == null" class="result-count red">You searched for: &ldquo;<b ng-bind="msgQuery"></b>&rdquo;
           <br /><br /></small>
           <small ng-if="inputText" class="result-count red"><b><span ng-bind="fChannels.result.length"></span> channel(s) found</b><span ng-if="fChannels.result.length == 0"><br />See <a target="_blank" href="/en-us/res/programming/commercials.html">Programming Requests</a> for points about channels not currently available on DIRECTV</span></small>
+          <small ng-if="pActive" class="result-count red">Displaying <b ng-bind="fChannels.result.length"></b><span ng-if="hdActive"> HD</span> channels for <a ng-href="{{pActive | findPackage:pActive:packages:'url'}}">{{pActive | findPackage:pActive:packages:'display_name'}}</a> package</small>
         </div>
         <div class="grid__item one-half">
             <div class="link-holder">

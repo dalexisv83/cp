@@ -18,6 +18,8 @@ app.controller('CL_Controller',['$scope', '$http',
                 $scope.pActive = null;
                 $scope.hdActive = false;
                 $scope.pFilter = function(sortOrder,hd) {
+                    $scope.tempText = null;
+                    $scope.inputText = null;
                     $scope.pActive = sortOrder;
                     $scope.hdActive = hd;
                 };
@@ -38,6 +40,8 @@ app.controller('CL_Controller',['$scope', '$http',
                 });
                 $scope.clKeyPress = function($event){
                     var keyCode = $event.which || $event.keyCode;
+                    $scope.pActive = null;
+                    $scope.hdActive = null;
                     if (keyCode === 13) {
                         $scope.msgQuery = $scope.tempText;
                         $scope.tempText = null;
@@ -235,6 +239,20 @@ app.filter('comReplace', [
                 return matches;
             }
             return objs;
+        }
+    }
+]).filter('findPackage', [
+    function() {
+        return function(input,sortOrder,packages,prop) {
+            if (input && sortOrder) {
+                var found = null;
+                packages.forEach(function(package) {
+                    if (package.sortOrder == sortOrder) {
+                        found = package;
+                    }
+                });
+                return found[prop];
+            }
         }
     }
 ]);
