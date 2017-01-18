@@ -650,3 +650,20 @@ span.btn-feedback:hover {
 #containerSmall a {
     color: #0567AE;
 }
+
+.sortHead {
+    color: black;
+    font-weight: bold;
+    padding-left: 19px;
+    padding-bottom: 1px;
+    display: inline-block;
+    background: url('../../../common_assets/img/sort_both.png') no-repeat center left;
+}
+
+.asc {
+    background: url('../../../common_assets/img/sort_asc_orange.png') no-repeat center left;
+}
+
+.desc {
+    background: url('../../../common_assets/img/sort_desc_orange.png') no-repeat center left;
+}
