@@ -70,10 +70,6 @@
   left: 650px;
 }
 
-#channel_lineup .border{
-  min-width: 984px;
-}
-
 #channel_lineup .headers {
   position: relative;
   padding: 0 15px;
@@ -417,10 +413,6 @@ a.activeLink {
   top:125px;
 }
 
-#xtra_notes {
-    width: 50%;
-}
-
 /**comment button**/
 
 #comment_btn{
@@ -530,7 +522,6 @@ span.btn-feedback:hover {
 
 #headerTbl {
     padding-right: 17px;
-    margin-top: -140px
 }
 
 #headerTbl table {
@@ -542,6 +533,9 @@ span.btn-feedback:hover {
     border-bottom: 1px solid #ddd;
 }
 
+#xtra_notes {
+    padding: 0 20px 20px 0;
+}
 .rotate {
     white-space: nowrap;
     position: relative;
@@ -554,7 +548,7 @@ span.btn-feedback:hover {
 .rotate > div {
     position: absolute;
     width: 100%;
-    height: 70%;
+    height: 80%;
     bottom: 0;
 }
 

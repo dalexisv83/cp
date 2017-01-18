@@ -24,17 +24,6 @@
         </div>
     </div>
         <!--end search-box-->
-        <div id="xtra_notes">
-            <h2>Reminders</h2>
-            <ul>
-                <li ng-if="type == 'residential'">See <a href="http://agentanswercenter.directv.com/en-us/res/programming/directv_everywhere.html?fragid=3" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
-                <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/redirectors/bce_redirect.html" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">«</span>) <a href="http://agentanswercenter.directv.com/en-us/res/programming/72hr_rewind_restart.html#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
-                <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/com/equipment/audio_problems.html',850,600);">mono sound</a>.</li>
-                <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
-                <li><b>REMINDER:</b> <b>DO NOT</b> discuss <em>exact</em> channel counts with customers</li>
-                <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
-            </ul>
-        </div>
 <!--         <div class="clearfix"></div>
         <div class="table-header">
             <div class="pull-left header" id="mainHeader">
@@ -144,7 +133,28 @@
             <div id="headerTbl">
                 <table>
                     <thead>
-                        <tr height="200" style="vertical-align: bottom;">
+                        <tr>
+                            <td colspan="4">
+                                <div id="xtra_notes">
+                                    <h2>Reminders</h2>
+                                    <ul>
+                                        <li ng-if="type == 'residential'">See <a href="http://agentanswercenter.directv.com/en-us/res/programming/directv_everywhere.html?fragid=3" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
+                                        <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/redirectors/bce_redirect.html" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">«</span>) <a href="http://agentanswercenter.directv.com/en-us/res/programming/72hr_rewind_restart.html#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
+                                        <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/com/equipment/audio_problems.html',850,600);">mono sound</a>.</li>
+                                        <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
+                                        <li><b>REMINDER:</b> <b>DO NOT</b> discuss <em>exact</em> channel counts with customers</li>
+                                        <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td rowspan="2" class="rotate" width="{{width}}" ng-repeat="package in packages">
+                                <div>
+                                    <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}"></div>
+                                </div>
+                                <span ng-bind="package.display_name | comReplace"></span>
+                            </td>
+                        </tr>
+                        <tr style="vertical-align: bottom;">
                             <td width="25%">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Channel Name</a>
                             </td>
@@ -156,12 +166,6 @@
                             </td>
                             <td width="8.33%">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
-                            </td>
-                            <td class="rotate" width="{{width}}" ng-repeat="package in packages">
-                                <div>
-                                    <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}"></div>
-                                </div>
-                                <span ng-bind="package.display_name | comReplace"></span>
                             </td>
                         </tr>
                     </thead>
