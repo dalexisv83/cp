@@ -137,7 +137,8 @@
                         </div>
                     </div>
                     <!--end of div#genreCodes-->
-    <div class="grid">
+    <p ng-if="clLoaded != true">Loading&hellip;</p>
+    <div ng-show="clLoaded" class="grid">
         <div class="grid__item">
             <div id="headerTbl">
                 <table>
