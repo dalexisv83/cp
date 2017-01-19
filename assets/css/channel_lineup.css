@@ -512,6 +512,7 @@ span.btn-feedback:hover {
 }
 
 #vsrepeat td {
+    background-clip: padding-box;
     border: 1px solid #ddd;
     border-top: none;
 }
