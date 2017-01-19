@@ -283,4 +283,22 @@ app.filter('comReplace', [
             }
         }
     }
-]);
+]).directive('qTip', [function() {
+    return {
+        link: function(scope, elem, attrs) {
+            $(elem).qtip({
+                content: {
+                    text: scope.package.description
+                },
+                position: {
+                    my: 'top right',
+                    at: 'bottom left',
+                    target: this,
+                    adjust: {
+                        y: 50
+                    }
+                }
+            });
+        }
+    };
+}]);
