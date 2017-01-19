@@ -151,7 +151,7 @@
                                 <div>
                                     <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}"></div>
                                 </div>
-                                <span ng-bind="package.display_name | comReplace"></span>
+                                <span q-tip><a ng-href="{{package.url}}" target="_blank" ng-bind="package.display_name | comReplace"></a></span>
                             </td>
                         </tr>
                         <tr style="vertical-align: bottom;">

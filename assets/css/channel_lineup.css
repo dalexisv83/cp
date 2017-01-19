@@ -542,6 +542,9 @@ span.btn-feedback:hover {
     border: none;
     text-align: center;
     font-weight: bold;
+}
+
+.rotate a {
     color: #0567ae;
 }
 
