@@ -1,5 +1,5 @@
-app.controller('CL_Controller',['$scope', '$http',
-    function($scope, $http) {
+app.controller('CL_Controller',['$scope', '$http', '$window',
+    function($scope, $http, $window) {
     "use strict";
     var init = function(response) {
             /*global AdSales, smallGrid, config, bigGrid, searchBox, programmingHeaders, columnSorter, reset, toolTip, commentBtn */
@@ -11,9 +11,30 @@ app.controller('CL_Controller',['$scope', '$http',
                 channels = response.data.channels,
                 ad_channels = AdSales.channels,
                 data_type = response.data.type;
+                if ($window.matchMedia) {
+                    var mql = $window.matchMedia('screen and (min-width: 1024px)'),
+                        handleMediaMatch = function(mql) {
+                            if (mql.matches) {
+                                $scope.width = 50 / featured_packages.length + '%';
+                                if(!$scope.$$phase) {
+                                    $scope.$apply();
+                                }
+                                console.log($scope.width);
+                            } else {
+                                $scope.width = 66 / featured_packages.length + '%';
+                                if(!$scope.$$phase) {
+                                    $scope.$apply();
+                                }
+                                console.log($scope.width);
+                            }
+                        };
+                    mql.addListener(handleMediaMatch);
+                    handleMediaMatch(mql);
+                } else {
+                    $scope.width = 66 / featured_packages.length + '%';
+                }
                 $scope.type = response.data.type;
                 $scope.packages = featured_packages;
-                $scope.width = 50 / featured_packages.length + '%';
                 $scope.channels = response.data.channels;
 
                 'use strict';

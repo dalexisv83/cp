@@ -130,12 +130,25 @@
     <p ng-if="clLoaded != true">Loading&hellip;</p>
     <div ng-show="clLoaded" class="grid">
         <div class="grid__item">
+            <div id="xtra_notes">
+                <h2>Reminders</h2>
+                <ul>
+                    <li ng-if="type == 'residential'">See <a href="http://agentanswercenter.directv.com/en-us/res/programming/directv_everywhere.html?fragid=3" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
+                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/redirectors/bce_redirect.html" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">«</span>) <a href="http://agentanswercenter.directv.com/en-us/res/programming/72hr_rewind_restart.html#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
+                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/com/equipment/audio_problems.html',850,600);">mono sound</a>.</li>
+                    <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
+                    <li><b>REMINDER:</b> <b>DO NOT</b> discuss <em>exact</em> channel counts with customers</li>
+                    <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid__item">
             <div id="headerTbl">
                 <table>
                     <thead>
-                        <tr>
+                        <tr style="min-height: 100px;">
                             <td colspan="4">
-                                <div id="xtra_notes">
+                                <div id="xtra_notes_tbl">
                                     <h2>Reminders</h2>
                                     <ul>
                                         <li ng-if="type == 'residential'">See <a href="http://agentanswercenter.directv.com/en-us/res/programming/directv_everywhere.html?fragid=3" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
@@ -145,7 +158,7 @@
                                         <li><b>REMINDER:</b> <b>DO NOT</b> discuss <em>exact</em> channel counts with customers</li>
                                         <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
                                     </ul>
-                                </div>
+                                </div>&nbsp;
                             </td>
                             <td rowspan="2" class="rotate" width="{{width}}" ng-repeat="package in packages">
                                 <div>
@@ -155,16 +168,22 @@
                             </td>
                         </tr>
                         <tr style="vertical-align: bottom;">
-                            <td width="25%">
+                            <td width="25%" class="unmerged">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Channel Name</a>
                             </td>
-                            <td width="8.33%">
+                            <td width="8.33%" class="unmerged">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Channel #</a>
                             </td>
-                            <td width="8.33%">
+                            <td width="8.33%" class="unmerged">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
                             </td>
-                            <td width="8.33%">
+                            <td width="8.33%" class="unmerged">
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
+                            </td>
+                            <td class="merged">
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Name</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Num</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
                             </td>
                         </tr>
@@ -195,10 +214,16 @@
                 <table>
                     <tbody vs-repeat vs-scroll-parent="#vsrepeat">
                         <tr style="height:50px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
-                            <td class="c-name" width="25%" ng-bind-html="channel.channelnamebold"></td>
-                            <td class="c-num" width="8.33333%" ng-bind-html="channel.channelnumber"></td>
-                            <td class="c-num" width="8.33333%" ng-bind-html="channel.callletters"></td>
-                            <td class="c-num" width="8.33333%" ng-bind-html="channel.genre"></td>
+                            <td class="c-name unmerged" width="25%" ng-bind-html="channel.channelnamebold"></td>
+                            <td class="c-num unmerged" width="8.33333%" ng-bind-html="channel.channelnumber"></td>
+                            <td class="c-num unmerged" width="8.33333%" ng-bind-html="channel.callletters"></td>
+                            <td class="c-num unmerged" width="8.33333%" ng-bind-html="channel.genre"></td>
+                            <td class="merged">
+                                <p class="c-name" ng-bind-html="channel.channelnamebold"></p>
+                                <span class="c-num" ng-bind-html="channel.channelnumber.replace('\u003Cbr \/\u003E',', ')"></span>
+                                <span class="c-num" ng-bind-html="channel.callletters.replace('\u003Cbr\/\u003E',', ')"></span>
+                                <span class="c-num" ng-bind-html="channel.genre"></span>
+                            </td>
                             <td class="dot" width="{{width}}" ng-class="{'odd': $odd, 'even': $even}" ng-repeat="package in packages" ng-bind-html="channel['p' + ($index + 1)] | xToBull"></td>
                         </tr>
                     </tbody>

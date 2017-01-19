@@ -548,7 +548,7 @@ span.btn-feedback:hover {
 .rotate > div {
     position: absolute;
     width: 100%;
-    height: 80%;
+    height: 100%;
     bottom: 0;
 }
 
@@ -627,6 +627,7 @@ span.btn-feedback:hover {
 #containerSmall .even {
     font-weight: bold;
     text-align: center;
+    font-size: 1.4vw;
 }
 
 #containerSmall .odd {
@@ -660,4 +661,48 @@ span.btn-feedback:hover {
 
 .desc {
     background: url('../../../common_assets/img/sort_desc_orange.png') no-repeat center left;
+}
+
+.unmerged {
+    display: none;
+}
+
+#xtra_notes_tbl {
+    min-height: 100px;
+    padding: 0 20px 20px 0;
+}
+
+#xtra_notes_tbl h2,
+#xtra_notes_tbl ul {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .unmerged {
+        display: table-cell;
+    }
+
+    .merged {
+        display: none;
+    }
+
+    #xtra_notes_tbl h2,
+    #xtra_notes_tbl ul {
+        display: block;
+    }
+
+    #xtra_notes {
+        display: none;
+    }
+
+    .rotate > div {
+        height: 80%;
+    }
+}
+
+@media (min-width: 950px) {
+    #containerSmall .odd,
+    #containerSmall .even {
+        font-size: 14px;
+    }
 }
