@@ -1,0 +1,51 @@
+<div id="package_details" class="full" ng-controller="PD_Controller">
+    <div class="wrapper">
+        <h2 ng-hide="pdLoaded">Loading&hellip;</h2>
+        <div ng-show="pdLoaded" class="border" ng-window-pie>
+            <h2 class="select-package">Select Package:</h2>
+            <div class="select-style">
+                <select ng-options="selPackage.id as selPackage.name for selPackage in selPackages | filter:{platform:'DTVRES'}:true | orderBy:'name'" ng-model="pid"></select>
+            </div>
+            <div>
+                <hr />
+                <table class="price">
+                    <thead>
+                        <tr>
+                            <th width="15%">Total Channels</th>
+                            <th ng-if="package.price" width="18%">Price</th>
+                            <th ng-if="package.noLocal" width="18%">No Locals Price</th>
+                            <th ng-if="package.allInc" width="18%">All-Included Price</th>
+                            <th ng-if="package.noLocal" width="20%">All-Included No Locals Price</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td ng-bind="package.channel_count"></td>
+                        <td ng-if="package.price" ng-bind="package.price"></td>
+                        <td ng-if="package.noLocal" ng-bind="package.noLocal"></td>
+                        <td ng-if="package.allInc" ng-bind="package.allInc"></td>
+                        <td ng-if="package.allIncNoLocal" ng-bind="package.allIncNoLocal"></td>
+                    </tr>
+                </table>
+                <hr />
+                <table style="width:calc(50% - 16px);">
+                    <thead>
+                        <tr>
+                            <th width="50%">Channel Name</th>
+                            <th width="25%">Channel #</th>
+                            <th width="25%">Genre</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div style="width:50%;height:400px;overflow:auto;">
+                    <table class="packages" width="100%">
+                        <tr ng-repeat="c in package.channels">
+                            <td width="50%" ng-repeat-start="channel in channels | filter:{id:c.id}:true" ng-bind="channel.channelname"></td>
+                            <td width="25%" ng-bind-html="channel.channelnumber"></td>
+                            <td width="25%" ng-repeat-end ng-bind="channel.genre"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

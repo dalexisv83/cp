@@ -22,9 +22,13 @@
                     "name": "Package Compare",
                     "url": "package-compare",
                     "src": "views/package_compare.htm?@@BUSTER@@"
+                }, {
+                    "name": "Package Details",
+                    "url": "package-details",
+                    "src": "views/package_details.htm?@@BUSTER@@"
                 }];
                 if (dataProg) {
-                    tools.push(ppObj);
+                    tools.splice(2, 0, ppObj);
                 }
                 $scope.tools = tools;
                 // $scope.trusted = {};
