@@ -544,12 +544,12 @@ span.btn-feedback:hover {
     text-align: center;
     font-weight: bold;
     color: #0567ae;
+    vertical-align: bottom;
 }
 
 .rotate > div {
-    position: absolute;
     width: 100%;
-    height: 80%;
+    height: 150px;
     bottom: 0;
 }
 
