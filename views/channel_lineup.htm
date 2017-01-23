@@ -162,7 +162,7 @@
                             </td>
                             <td rowspan="2" class="rotate" ng-style="{'width': width}" ng-repeat="package in packages">
                                 <div>
-                                    <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}"></div>
+                                    <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}" q-tip></div>
                                 </div>
                                 <span q-tip><a ng-href="{{package.url}}" target="_blank" ng-bind="package.display_name | comReplace"></a></span>
                             </td>
