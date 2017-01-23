@@ -517,6 +517,18 @@ span.btn-feedback:hover {
     border-top: none;
 }
 
+#vsrepeat tr:hover td {
+    background-color: #e9f7ff;
+}
+
+#vsrepeat tr:hover .even {
+    background-color: #e0edf5;
+}
+
+#vsrepeat tr:hover .odd {
+    background-color: #d5e2e9;
+}
+
 .outline {
     border: 1px solid #ddd;
 }
