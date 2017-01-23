@@ -19,13 +19,11 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
                                 if(!$scope.$$phase) {
                                     $scope.$apply();
                                 }
-                                console.log($scope.width);
                             } else {
                                 $scope.width = 66 / featured_packages.length + '%';
                                 if(!$scope.$$phase) {
                                     $scope.$apply();
                                 }
-                                console.log($scope.width);
                             }
                         };
                     mql.addListener(handleMediaMatch);
