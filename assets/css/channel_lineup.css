@@ -500,7 +500,7 @@ span.btn-feedback:hover {
 #vsrepeat {
     height: 400px;
     padding-bottom: 1px;
-    overflow: auto;
+    overflow-y: scroll;
 }
 
 #vsrepeat table {
