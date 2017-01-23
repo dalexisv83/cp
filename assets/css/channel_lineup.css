@@ -588,6 +588,14 @@ span.btn-feedback:hover {
     margin-right: 5px;
 }
 
+.name {
+  width: 25%;
+}
+
+.num {
+  width: 8.33%;
+}
+
 .c-name {
     color: #0567ae;
     font-weight: bold;

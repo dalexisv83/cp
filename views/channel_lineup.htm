@@ -160,7 +160,7 @@
                                     </ul>
                                 </div>&nbsp;
                             </td>
-                            <td rowspan="2" class="rotate" width="{{width}}" ng-repeat="package in packages">
+                            <td rowspan="2" class="rotate" ng-style="{'width': width}" ng-repeat="package in packages">
                                 <div>
                                     <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}"></div>
                                 </div>
@@ -168,16 +168,16 @@
                             </td>
                         </tr>
                         <tr style="vertical-align: bottom;">
-                            <td width="25%" class="unmerged">
+                            <td class="unmerged name">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Channel Name</a>
                             </td>
-                            <td width="8.33%" class="unmerged">
+                            <td class="unmerged num">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Channel #</a>
                             </td>
-                            <td width="8.33%" class="unmerged">
+                            <td class="unmerged num">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
                             </td>
-                            <td width="8.33%" class="unmerged">
+                            <td class="unmerged num">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
                             </td>
                             <td class="merged">
@@ -214,17 +214,17 @@
                 <table>
                     <tbody vs-repeat vs-scroll-parent="#vsrepeat">
                         <tr style="height:50px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
-                            <td class="c-name unmerged" width="25%" ng-bind-html="channel.channelnamebold"></td>
-                            <td class="c-num unmerged" width="8.33333%" ng-bind-html="channel.channelnumber"></td>
-                            <td class="c-num unmerged" width="8.33333%" ng-bind-html="channel.callletters"></td>
-                            <td class="c-num unmerged" width="8.33333%" ng-bind-html="channel.genre"></td>
+                            <td class="c-name unmerged name" ng-bind-html="channel.channelnamebold"></td>
+                            <td class="c-num unmerged num" ng-bind-html="channel.channelnumber"></td>
+                            <td class="c-num unmerged num" ng-bind-html="channel.callletters"></td>
+                            <td class="c-num unmerged num" ng-bind-html="channel.genre"></td>
                             <td class="merged">
                                 <p class="c-name" ng-bind-html="channel.channelnamebold"></p>
                                 <span class="c-num" ng-bind-html="channel.channelnumber.replace('\u003Cbr \/\u003E',', ')"></span>
                                 <span class="c-num" ng-bind-html="channel.callletters.replace('\u003Cbr\/\u003E',', ')"></span>
                                 <span class="c-num" ng-bind-html="channel.genre"></span>
                             </td>
-                            <td class="dot" width="{{width}}" ng-class="{'odd': $odd, 'even': $even}" ng-repeat="package in packages" ng-bind-html="channel['p' + ($index + 1)] | xToBull"></td>
+                            <td class="dot" ng-style="{'width': width}" ng-class="{'odd': $odd, 'even': $even}" ng-repeat="package in packages" ng-bind-html="channel['p' + ($index + 1)] | xToBull"></td>
                         </tr>
                     </tbody>
                 </table>
