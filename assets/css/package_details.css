@@ -8,7 +8,7 @@
     width: 300px;
     border-radius: 5px;
     overflow: hidden;
-    background: #fafafa url("../../assets/img/select_icon.png") no-repeat 95% 50%;
+    background: #fafafa url("../img/select_icon.png") no-repeat 95% 50%;
     box-shadow: 1px 1px 3px #ddd;
     font-size: 18px;
     margin-top: 15px;
