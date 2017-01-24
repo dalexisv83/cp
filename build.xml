@@ -152,6 +152,11 @@
 		</replace>
 		<replace dir="${build.dir}">
 			<include name="**/*.*"/>
+			<replacetoken>../../../common_assets/img/</replacetoken>
+			<replacevalue>%%pub%%system/img/</replacevalue>
+		</replace>
+		<replace dir="${build.dir}">
+			<include name="**/*.*"/>
 			<replacetoken>../common_assets/img/</replacetoken>
 			<replacevalue>%%pub%%system/img/</replacevalue>
 		</replace>
@@ -168,17 +173,22 @@
 		<replace dir="${build.dir}">
 			<include name="**/*.*"/>
 			<replacetoken>http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ChannelLineupRes</replacetoken>
-			<replacevalue>%%pub%%rover_tools/all_tools/channels_packages/assets/datasources/ChannelLineupRes.js</replacevalue>
+			<replacevalue>%%pub%%rover_tools/all_tools/channels_packages/assets/datasources/ChannelLineupRes.js?@@BUSTER@@</replacevalue>
 		</replace>
 		<replace dir="${build.dir}">
 			<include name="**/*.*"/>
 			<replacetoken>http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/PackageCompareRes</replacetoken>
-			<replacevalue>%%pub%%rover_tools/all_tools/channels_packages/assets/datasources/PackageCompareRes.js</replacevalue>
+			<replacevalue>%%pub%%rover_tools/all_tools/channels_packages/assets/datasources/PackageCompareRes.js?@@BUSTER@@</replacevalue>
 		</replace>
 		<replace dir="${build.dir}">
 			<include name="**/*.*"/>
 			<replacetoken>http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ProgrammingPackage</replacetoken>
-			<replacevalue>%%pub%%rover_tools/all_tools/channels_packages/assets/datasources/ProgrammingPackage.js</replacevalue>
+			<replacevalue>%%pub%%rover_tools/all_tools/channels_packages/assets/datasources/ProgrammingPackage.js?@@BUSTER@@</replacevalue>
+		</replace>
+		<replace dir="${build.dir}">
+			<include name="**/*.*"/>
+			<replacetoken>data/PageListRes.js</replacetoken>
+			<replacevalue>%%pub%%rover_tools/channel_list/version_two/iframe/data/pagelistres.js?@@BUSTER@@</replacevalue>
 		</replace>
 		<replace dir="${build.dir}" token="@@BUSTER@@" value="${AACDATE}">
 			<include name="**/*.*"/>
