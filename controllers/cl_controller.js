@@ -9,7 +9,6 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
                     return a.sortOrder - b.sortOrder;
                 }),
                 channels = response.data.channels,
-                ad_channels = AdSales.channels,
                 data_type = response.data.type;
                 if ($window.matchMedia) {
                     var mql = $window.matchMedia('screen and (min-width: 1024px)'),
@@ -143,16 +142,10 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
             function(params) {
                 if (params == 'channel-lineup') {
                     stopWatching();
-                    $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ChannelLineupRes').then(function successCallback(response) {
+                    $http.get('assets/data/ChannelLineupRes.js').then(function successCallback(response) {
                         init(response);
                     }, function errorCallback(response) {
-                        $http.get('http://localhost/rover_tools/channelsjs/channels.js').then(function successCallback(response) {
-                            init(response);
-                        }, function errorCallback(response) {
-                            // called asynchronously if an error occurs
-                            // or server returns response with an error status.
-                            throw new Error('Data request failed: ' + JSON.stringify(response));
-                        });
+                        throw new Error('Data request failed:\n' + JSON.stringify(response));
                     });
                 }
             },

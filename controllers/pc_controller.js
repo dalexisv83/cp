@@ -7,7 +7,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
         function(params) {
             if (params == 'package-compare') {
                 stopWatching();
-                $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/PackageCompareRes').then(function successCallback(response) {
+                $http.get('assets/data/PackageCompareRes.js').then(function successCallback(response) {
         var alert_message = $(".alert_message"),
             refresher = function() {
                 var diff,
@@ -337,9 +337,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
         };
 
     }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-        throw new Error('Data request failed: ' + JSON.stringify(response));
+        throw new Error('Data request failed:\n' + JSON.stringify(response));
     });
             }
         },
