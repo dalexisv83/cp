@@ -4,7 +4,7 @@
         <div ng-show="pdLoaded" class="border" ng-window-pie>
             <h2 class="select-package">Select Package:</h2>
             <div class="select-style">
-                <select ng-options="selPackage.id as selPackage.name for selPackage in selPackages | filter:{platform:'DTVRES'}:true | filter:{id: ''} | orderBy:'name'" ng-model="pid"></select>
+                <select ng-options="selPackage.id as selPackage.name for selPackage in selPackages | filter:{platform:'!FEE'}:true | filter:{id: ''} | orderBy:'name'" ng-model="pid"></select>
             </div>
             <div>
                 <hr />

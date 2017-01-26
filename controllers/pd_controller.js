@@ -41,7 +41,7 @@ app.controller('PD_Controller',['$scope', '$http', '$location',
 
                                 $scope.package = $scope.selPackages.find(function(qPack) {
                                     if ($scope.pid) {
-                                        return qPack.platform === 'DTVRES' && qPack.id === $scope.pid;
+                                        return qPack.platform !== 'FEE' && qPack.id === $scope.pid;
                                     }
                                 });
 
