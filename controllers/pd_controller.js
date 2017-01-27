@@ -1,5 +1,5 @@
-app.controller('PD_Controller',['$scope', '$http', '$location',
-    function($scope, $http, $location) {
+app.controller('PD_Controller',['$scope', '$filter', '$http', '$location',
+    function($scope, $filter, $http, $location) {
     "use strict";
     var init = function(response) {
 
@@ -11,7 +11,9 @@ app.controller('PD_Controller',['$scope', '$http', '$location',
                         if (params == 'package-details') {
                             stopRenderWatch();
 
-                            $scope.selPackages = response.data.package_compare.datasource;
+                            $scope.selPackages = $filter('filter')(response.data.package_compare.datasource, {platform: '!FEE'});
+                            $scope.selPackages = $filter('filter')($scope.selPackages, {id: ''});
+                            $scope.selPackages = $filter('orderBy')($scope.selPackages, 'name');
 
                             $scope.$watch(function() {
                                 return $location.search();
@@ -45,17 +47,20 @@ app.controller('PD_Controller',['$scope', '$http', '$location',
                                     }
                                 });
 
-                                $scope.channels = response.data.channels.filter(function(qChan) {
-                                    if ($scope.package) {
-                                            var i,
-                                            len = $scope.package.channels.length;
-                                        for (i=0;i<len;i++) {
-                                            if ($scope.package.channels[i].id === qChan.id){
-                                                return true;
+                                $scope.channels = $filter('orderBy')(response.data.channels, 'channelname');
+                                $scope.channels = $scope.channels.filter(
+                                    function(qChan) {
+                                        if ($scope.package) {
+                                                var i,
+                                                len = $scope.package.channels.length;
+                                            for (i=0;i<len;i++) {
+                                                if ($scope.package.channels[i].id === qChan.id){
+                                                    return true;
+                                                }
                                             }
                                         }
                                     }
-                                });
+                                );
                             });
 
                             $scope.pdLoaded = true;
