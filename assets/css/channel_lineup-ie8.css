@@ -603,3 +603,21 @@ span.btn-feedback:hover {
     color:#000000 !important;
     border-color:#333333 !important;
 }
+
+.note {
+    font-size: 11px;
+    color: #838383;
+    font-weight: normal;
+}
+
+.rewind {
+    color: #0567ae;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.ondemand {
+    color: #0567ae;
+    font-weight: bold;
+    font-size: 16px;
+}
