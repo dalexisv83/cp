@@ -481,7 +481,9 @@ span.btn-feedback:hover {
     display: none;
     width: 150px;
     position: absolute;
-    left: 575px;
+    left: 50%;
+    margin-top: 220px;
+    margin-left: -75px;
     z-index: 99;
 }
 

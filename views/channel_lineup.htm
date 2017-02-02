@@ -94,6 +94,7 @@
             <div class="clearfix"></div>
             <p ng-if="clLoaded != true">Loading&hellip;</p>
         </div>
+        <![endif]-->
         <div id="genreCodes" class="qtip-bootstrap">
             <div class="qtip-content">
                 <img id="cl_genreX" src="../common_assets/img/close_button.jpg" width=10 height=10 />
@@ -139,6 +140,7 @@
                 </div>
             </div>
         </div>
+        <!--[if IE 8]>
         <div id="containerSmall"></div>
         <div id="container"></div>
         <![endif]-->
@@ -194,13 +196,13 @@
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
                             </td>
                             <td class="unmerged num">
-                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a><span class="alert" id="genreLegend" ng-window-pie>?</span>
                             </td>
                             <td class="merged">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Name</a>
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Num</a>
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
-                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a><span class="alert" id="genreLegend" ng-window-pie>?</span>
                             </td>
                         </tr>
                     </thead>
