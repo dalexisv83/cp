@@ -23,8 +23,8 @@
             </div>
         </div>
     </div>
-        <!--end search-box-->
-<!--         <div class="clearfix"></div>
+        <!--[if IE 8]>
+        <div class="clearfix"></div>
         <div class="table-header">
             <div class="pull-left header" id="mainHeader">
                 <div class="pull-left wide">
@@ -72,14 +72,16 @@
                     </div>
                 </div>
                 <div class="clearfix"></div>
-            </div> -->
-            <!--end of div#mainHeader-->
-<!--             <div class="pull-left header rotated" id="packageHeaderContainer">
+            </div>
+            <div class="pull-left header rotated" id="packageHeaderContainer">
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
             <p ng-if="clLoaded != true">Loading&hellip;</p>
-        </div> -->
+        </div>
+        <div id="containerSmall"></div>
+        <div id="container"></div>
+        <![endif]-->
 
                     <div id="genreCodes" class="qtip-bootstrap">
                         <div class="qtip-content">
@@ -126,7 +128,7 @@
                             </div>
                         </div>
                     </div>
-                    <!--end of div#genreCodes-->
+    <!--[if !IE]> -->
     <p ng-if="clLoaded != true">Loading&hellip;</p>
     <div ng-show="clLoaded" class="grid">
         <div class="grid__item">
@@ -229,9 +231,7 @@
                     </tbody>
                 </table>
             </div>
-            <!--end of div.table-header-->
-<!--             <div id="containerSmall"></div>
-            <div id="container"></div> -->
+            <!-- <![endif]-->
         </div>
     </div>
 </div>

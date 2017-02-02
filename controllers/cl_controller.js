@@ -11,7 +11,7 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
                 channels = response.data.channels,
                 ad_channels = AdSales.channels,
                 data_type = response.data.type;
-                if ($window.matchMedia) {
+                if (($window.matchMedia) && (!isIE())) {
                     var mql = $window.matchMedia('screen and (min-width: 1024px)'),
                         handleMediaMatch = function(mql) {
                             if (mql.matches) {
@@ -66,62 +66,63 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
                         if (params == 'channel-lineup') {
                             stopRenderWatch();
 
-                            // small_grid = new smallGrid(config.rowHeightShort,'containerSmall',featured_packages);
-                            // small_grid.setOptions(true,false);
-                            // small_grid.setColumns();
-                            // small_grid.setChannels();
-                            // small_grid.render();
+                        if (isIE() == 8) {
+                            small_grid = new smallGrid(config.rowHeightShort,'containerSmall',featured_packages);
+                            small_grid.setOptions(true,false);
+                            small_grid.setColumns();
+                            small_grid.setChannels();
+                            small_grid.render();
 
-                            // //small grid columns are the same with the big grid
-                            // columns = small_grid.getColumns();
+                            //small grid columns are the same with the big grid
+                            columns = small_grid.getColumns();
 
-                            // //initialize the big grid
-                            // big_grid = new bigGrid(config.rowHeightTall,'container',featured_packages,data_type);
-                            // big_grid.setOptions(true,false);
-                            // big_grid.setColumns(columns);
-                            // big_grid.setChannels(channels);
-                            // big_grid.setChannels(ad_channels);
-                            // big_grid.render();
+                            //initialize the big grid
+                            big_grid = new bigGrid(config.rowHeightTall,'container',featured_packages,data_type);
+                            big_grid.setOptions(true,false);
+                            big_grid.setColumns(columns);
+                            big_grid.setChannels(channels);
+                            big_grid.setChannels(ad_channels);
+                            big_grid.render();
 
-                            // //get the width for each big_grid cell
-                            // cell_width = big_grid.getNarrowCellWidth();
-                            // programming_headers = new programmingHeaders('packageHeaderContainer',featured_packages,cell_width);
-                            // programming_headers.render();
+                            //get the width for each big_grid cell
+                            cell_width = big_grid.getNarrowCellWidth();
+                            programming_headers = new programmingHeaders('packageHeaderContainer',featured_packages,cell_width);
+                            programming_headers.render();
 
-                            // //rotate package headers
-                            // programming_headers.rotate(config.localhost,config.deg,config.y_diff);
+                            //rotate package headers
+                            programming_headers.rotate(config.localhost,config.deg,config.y_diff);
 
-                            // //activate the search box
-                            // search_box = new searchBox('txtSearch',big_grid,'messageBox','reset','active');
-                            // search_box.autoSearch();
+                            //activate the search box
+                            search_box = new searchBox('txtSearch',big_grid,'messageBox','reset','active');
+                            search_box.autoSearch();
 
-                            // //initialize column sorting
-                            // column_sorter = new columnSorter('channel_name',nameSorter,channelNumberSorter,callLetterSorter,genreSorter,
-                            //                             channelNameSortStart,channelNumberSortStart,callLetterSortStart,genreSortStart);
-                            // column_sorter.enableChannelNameSort();
-                            // column_sorter.enableChannelNumberSort();
-                            // column_sorter.enableCallLetterSort();
-                            // column_sorter.enableGenreSort();
+                            //initialize column sorting
+                            column_sorter = new columnSorter('channel_name',nameSorter,channelNumberSorter,callLetterSorter,genreSorter,
+                                                        channelNameSortStart,channelNumberSortStart,callLetterSortStart,genreSortStart);
+                            column_sorter.enableChannelNameSort();
+                            column_sorter.enableChannelNumberSort();
+                            column_sorter.enableCallLetterSort();
+                            column_sorter.enableGenreSort();
 
-                            // //initialize tooltip
-                            // tooltip = new toolTip(tool_tip_btn);
-                            // //activate the genre codes tooltip
-                            // //tooltip.genreToolTip(genre_codes_container);
+                            //initialize tooltip
+                            tooltip = new toolTip(tool_tip_btn);
+                            //activate the genre codes tooltip
+                            tooltip.genreToolTip(genre_codes_container);
 
-                            // //initiate the comment btn
-                            // class_name = 'comment-btn'; //add a class of comment-btn
-                            // comment_btn = new commentBtn(btn,class_name,config.baseUrlPath);
-                            // comment_btn.init();
+                            //initiate the comment btn
+                            class_name = 'comment-btn'; //add a class of comment-btn
+                            comment_btn = new commentBtn(btn,class_name,config.baseUrlPath);
+                            comment_btn.init();
 
-                            // $('#channel_lineup .table-header').width($('#channel_lineup #container').width() + 16);
-                            // $('.slick-viewport').width($('#channel_lineup #container').width());
-                            // //activate the package filters
-                            // big_grid.activateHdChannelsFilter(search_box,'messageBox','reset','active');
-                            // big_grid.activateRegularChannelsFilter(search_box,'messageBox','reset','active');
-                            // // sort hack
-                            // $('#container .slick-header-columns').children().eq(0).trigger('click');
-                            // $('#container .slick-header-columns').children().eq(0).trigger('click');
-
+                            $('#channel_lineup .table-header').width($('#channel_lineup #container').width() + 16);
+                            $('.slick-viewport').width($('#channel_lineup #container').width());
+                            //activate the package filters
+                            big_grid.activateHdChannelsFilter(search_box,'messageBox','reset','active');
+                            big_grid.activateRegularChannelsFilter(search_box,'messageBox','reset','active');
+                            // sort hack
+                            $('#container .slick-header-columns').children().eq(0).trigger('click');
+                            $('#container .slick-header-columns').children().eq(0).trigger('click');
+                        }
                             $('#channel_lineup .alert').click(function(){
                                 $('#genreCodes').show();
                             });
@@ -158,6 +159,7 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
             },
             true
         );
+    if (!isIE()) {
     $scope.fChannels = {};
     $scope.pActive = null;
     $scope.hdActive = false;
@@ -197,6 +199,7 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
         $scope.pActive = null;
         $scope.hdActive = null;
         $scope.msgQuery = null;
+    }
     }
 }]);
 
@@ -300,3 +303,9 @@ app.filter('comReplace', [
         }
     };
 }]);
+
+
+var isIE = function() {
+      var myNav = navigator.userAgent.toLowerCase();
+      return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
+    };
