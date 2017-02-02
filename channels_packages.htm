@@ -27,8 +27,14 @@
     <link rel="stylesheet" href="assets/css/package_compare.css?v=01">
     <!-- Package Compare Assets -->
     <!-- Channel Lineup Compare Assets -->
-      <link rel="stylesheet" href="../common_assets/css/slick-grid.css" type="text/css"/>
-      <link rel="stylesheet" href="assets/css/channel_lineup.css?@@BUSTER@@" type="text/css"/>
+        <!--[if lt IE 9]>
+        <link rel="stylesheet" href="../common_assets/css/slick-grid.css" type="text/css"/>
+        <link rel="stylesheet" href="assets/css/channel_lineup-ie8.css?@@BUSTER@@" type="text/css"/>
+        <![endif]-->
+        <!--[if !IE]> -->
+        <link rel="stylesheet" href="assets/css/channel_lineup.css?@@BUSTER@@" type="text/css"/>
+        <!-- <![endif]-->
+
     <!-- Channel Lineup Compare Assets -->
     <!-- Programming Package Assets -->
     <link rel="stylesheet" type="text/css" href="assets/css/programming_package.css?v1"/>
@@ -89,13 +95,14 @@
     <script type="text/javascript" src="controllers/pc_controller.js"></script>
     <!-- Package Compare Assets -->
     <!-- Channel Lineup Compare Assets -->
+    <!--[if lt IE 9]>
     <script src="../common_assets/js/raphael.js"></script>
     <script src="../common_assets/js/jquery-event-drag.js"></script>
     <script src="../common_assets/js/slick-core.js"></script>
     <script src="../common_assets/js/slick-grid.js"></script>
     <script src="../common_assets/js/slick-dataview.js"></script>
+    <![endif]-->
     <script src="../common_assets/js/angular_directives/vs-repeat/angular-vs-repeat.min.js"></script>
-
     <!--start of two are the datasources-->
     <script src="http://agentanswercenter.directv.com/en-us/res/rover_tools/channel_list/version_two/data/ad_channels.js"></script>
     <!--<script src="ad_channels_big.js"></script>-->
