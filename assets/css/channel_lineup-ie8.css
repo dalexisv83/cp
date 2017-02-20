@@ -500,22 +500,6 @@ a.activeLink {
   top:105px;
 }
 
-/**these will display a fake table images while grid is re-rendering the table during scroll**/
-/*.fake-table0{
-  background-image:url(http://agentanswercenter.directv.com/en-us/res/system/img/fake_table0.jpg);
-  background-position: -2px -2px;
-}
-
-.fake-table1{
-  background-image:url(http://agentanswercenter.directv.com/en-us/res/system/img/fake_table1.jpg);
-  background-position: -2px -2px;
-}
-
-.fake-table2{
-  background-image:url(http://agentanswercenter.directv.com/en-us/res/system/img/fake_table2.jpg);
-  background-position: -1px -2px;
-}*/
-
 .link-holder.com{
   top:125px;
 }
