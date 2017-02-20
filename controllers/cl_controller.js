@@ -80,7 +80,6 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
                             big_grid.setOptions(true,false);
                             big_grid.setColumns(columns);
                             big_grid.setChannels(channels);
-                            big_grid.setChannels(ad_channels);
                             big_grid.render();
 
                             //get the width for each big_grid cell
