@@ -71,12 +71,7 @@ app.directive('chosen',['$timeout',function($timeout){
 }]);
 /*jslint unparam: false*/
 
-
-/**
- * Please leave this code commented for now till Ankam and team fix the issue on Tridion parsing incorrectly the > symbol
- */
-
-/*app.directive('whenScrolled', function() {
+app.directive('whenScrolled', function() {
     'use strict';
     return function(scope, elm, attr) {
         var raw = elm[0];
@@ -87,4 +82,4 @@ app.directive('chosen',['$timeout',function($timeout){
         });
     };
     
-});*/
+});
