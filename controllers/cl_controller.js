@@ -142,7 +142,7 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
             function(params) {
                 if (params == 'channel-lineup') {
                     stopWatching();
-                    $http.get('assets/data/ChannelLineupRes.js').then(function successCallback(response) {
+                    $http.get('assets/datasource/ChannelLineupRes.js').then(function successCallback(response) {
                         init(response);
                     }, function errorCallback(response) {
                         throw new Error('Data request failed:\n' + JSON.stringify(response));

@@ -58,7 +58,7 @@ app.controller('PD_Controller',['$scope', '$filter', '$http', '$location',
             function(params) {
                 if (params == 'package-details') {
                     stopWatching();
-                    $http.get('assets/data/PageListRes.js').then(function successCallback(response) {
+                    $http.get('assets/datasource/PageListRes.js').then(function successCallback(response) {
                         init(response);
                     }, function errorCallback(response) {
                         throw new Error('Data request failed:\n' + JSON.stringify(response));

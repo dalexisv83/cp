@@ -7,7 +7,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
         function(params) {
             if (params == 'package-compare') {
                 stopWatching();
-                $http.get('assets/data/PackageCompareRes.js').then(function successCallback(response) {
+                $http.get('assets/datasource/PackageCompareRes.js').then(function successCallback(response) {
         var alert_message = $(".alert_message"),
             refresher = function() {
                 var diff,
