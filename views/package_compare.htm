@@ -142,15 +142,15 @@
         <div class="grid">
             <div class="table-header grid__item one-quarter" ng-cloak>
                 <div class="current label-holder" ng-show="show_current_channels">
-                    <span ng-if="current_pkg.url">
-                        <a title="Click to open this package main page." ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{current_pkg.url}}" target="_blank">
+                    <span ng-if="current_pkg.cspUrl">
+                        <a title="Click to open this package main page." ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{current_pkg.cspUrl}}" target="_blank">
                         {{current_pkg.name}}
                         </a>
                     </span>
                     <span ng-show="current_pkg.status == '0'"> - </span>
                     <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank" class="expired" ng-show="current_pkg.status == '0'">Expired</a>
                     </span>
-                    <span ng-if="!current_pkg.url">
+                    <span ng-if="!current_pkg.cspUrl">
                         {{current_pkg.name}}
                     </span>
                 </div>               
@@ -166,14 +166,14 @@
             </div>          
             <div class="table-header grid__item one-quarter">
                 <div class="label-holder" ng-cloak ng-show="show_requested_channels" >
-                    <span ng-if="requested_pkg.url">
-                        <a title="Click to open this package main page." ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{requested_pkg.url}}" target="_blank">
+                    <span ng-if="requested_pkg.cspUrl">
+                        <a title="Click to open this package main page." ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{requested_pkg.cspUrl}}" target="_blank">
                         {{requested_pkg.name}}
                         </a>
                         <span ng-show="requested_pkg.status == '0'"> - </span>
                         <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank" class="expired" ng-show="requested.status == '0'">Expired</a>
                     </span>
-                    <span ng-if="!requested_pkg.url">
+                    <span ng-if="!requested_pkg.cspUrl">
                         {{requested_pkg.name}}
                     </span>
                 </div>                
@@ -288,7 +288,7 @@
                             <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20%"></td>
                             <td ng-if="current_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20%"></td>
-                            <td width="60%"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td width="60%"><a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html="channel.genre" width="20%"></td>
                         </tr>
                     </table>
@@ -301,7 +301,7 @@
                             <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="requested_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td width="60"><a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>
@@ -314,7 +314,7 @@
                             <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="current_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td width="60"><a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>
@@ -327,7 +327,7 @@
                             <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="requested_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td width="60"><a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>

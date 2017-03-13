@@ -11,7 +11,7 @@
           <small ng-if="msgQuery && tempText == null" class="result-count red">You searched for: &ldquo;<b ng-bind="msgQuery"></b>&rdquo;
           <br /><br /></small>
           <small ng-if="inputText" class="result-count red"><b><span ng-bind="fChannels.result.length"></span> channel(s) found</b><span ng-if="fChannels.result.length == 0"><br />See <a target="_blank" href="/en-us/res/programming/commercials.html">Programming Requests</a> for points about channels not currently available on DIRECTV</span></small>
-          <small ng-if="pActive" class="result-count red">Displaying <b ng-bind="fChannels.result.length"></b><span ng-if="hdActive"> HD</span> channels for <a ng-href="{{pActive | findPackage:pActive:packages:'url'}}" target="_blank">{{pActive | findPackage:pActive:packages:'display_name'}}</a> package</small>
+          <small ng-if="pActive" class="result-count red">Displaying <b ng-bind="fChannels.result.length"></b><span ng-if="hdActive"> HD</span> channels for <a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{pActive | findPackage:pActive:packages:'cspUrl'}}" target="_blank">{{pActive | findPackage:pActive:packages:'display_name'}}</a> package</small>
         </div>
         <div class="grid__item one-half">
             <div class="link-holder">
@@ -182,7 +182,7 @@
                                 <div>
                                     <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}" q-tip></div>
                                 </div>
-                                <span q-tip><a href ng-href="{{package.url}}" target="_blank" ng-bind="package.display_name | comReplace"></a></span>
+                                <span q-tip><a href ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{package.cspUrl}}" target="_blank" ng-bind="package.display_name | comReplace"></a></span>
                             </td>
                         </tr>
                         <tr style="vertical-align: bottom;">
@@ -232,12 +232,12 @@
                 <table>
                     <tbody vs-repeat vs-scroll-parent="#vsrepeat">
                         <tr style="height:50px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
-                            <td class="c-name unmerged name"><a ng-href="{{channel.url}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></td>
+                            <td class="c-name unmerged name"><a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.channelnumber"></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.callletters"></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.genre"></td>
                             <td class="merged">
-                                <p class="c-name"><a ng-href="{{channel.url}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></p>
+                                <p class="c-name"><a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></p>
                                 <span class="c-num" ng-bind-html="channel.channelnumber.replace('\u003Cbr \/\u003E',', ')"></span>
                                 <span class="c-num" ng-bind-html="channel.callletters.replace('\u003Cbr\/\u003E',', ')"></span>
                                 <span class="c-num" ng-bind-html="channel.genre"></span>
