@@ -30,12 +30,12 @@
                         <img id="genreX" src="../common_assets/img/close_button.jpg" width=10 height=10 />
                         <div class="last">
                            <div class="pull-left code">*</div>
-                           <div class="pull-left title"><a href="http://agentanswercenterstg.directv.com/en-us/res/ace/vod_index.html" target="_blank">DIRECTV On Demand</a></div>
+                           <div class="pull-left title"><a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_544889" target="_blank">DIRECTV On Demand</a></div>
                            <div style="clear:both"></div>
                         </div>
                         <div class="last">
                            <div class="pull-left code">&#171;</div>
-                           <div class="pull-left title"><a href="http://agentanswercenterstg.directv.com/en-us/res/programming/72hr_rewind_restart.html" target="_blank">Rewind &amp; Restart</a></div>
+                           <div class="pull-left title"><a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049" target="_blank">Rewind &amp; Restart</a></div>
                            <div style="clear:both"></div>
                         </div>
                         <hr />
@@ -143,12 +143,12 @@
             <div class="table-header grid__item one-quarter" ng-cloak>
                 <div class="current label-holder" ng-show="show_current_channels">
                     <span ng-if="current_pkg.url">
-                        <a title="Click to open this package main page." ng-href="http://agentanswercenterstg.directv.com/en-us/res/programming/{{current_pkg.url}}" target="_blank">
+                        <a title="Click to open this package main page." ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{current_pkg.url}}" target="_blank">
                         {{current_pkg.name}}
                         </a>
                     </span>
                     <span ng-show="current_pkg.status == '0'"> - </span>
-                    <a href="http://agentanswercenterstg.directv.com/en-us/res/programming/expired_packages.html" target="_blank" class="expired" ng-show="current_pkg.status == '0'">Expired</a>
+                    <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank" class="expired" ng-show="current_pkg.status == '0'">Expired</a>
                     </span>
                     <span ng-if="!current_pkg.url">
                         {{current_pkg.name}}
@@ -167,11 +167,11 @@
             <div class="table-header grid__item one-quarter">
                 <div class="label-holder" ng-cloak ng-show="show_requested_channels" >
                     <span ng-if="requested_pkg.url">
-                        <a title="Click to open this package main page." ng-href="http://agentanswercenterstg.directv.com/en-us/res/programming/{{requested_pkg.url}}" target="_blank">
+                        <a title="Click to open this package main page." ng-href="http://agentanswercenter.directv.com/en-us/res/programming/{{requested_pkg.url}}" target="_blank">
                         {{requested_pkg.name}}
                         </a>
                         <span ng-show="requested_pkg.status == '0'"> - </span>
-                        <a href="http://agentanswercenterstg.directv.com/en-us/res/programming/expired_packages.html" target="_blank" class="expired" ng-show="requested.status == '0'">Expired</a>
+                        <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank" class="expired" ng-show="requested.status == '0'">Expired</a>
                     </span>
                     <span ng-if="!requested_pkg.url">
                         {{requested_pkg.name}}
