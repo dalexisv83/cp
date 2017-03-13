@@ -484,29 +484,29 @@ app.controller('PP_Controller', ['$scope', '$compile',
         //MDU / JDU
         arrayMDUInnerHTML[2] = '<div class="col-sm-12">' +
             '<div class="col-sm-3 innerboxHeadBig pdr0 pdl0 marb5" ><a href="" ng-click="img_click_Base(\'Family\',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base(\'Family\',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a>' +
-            '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/family.html" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Family</a><br>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537528" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Family</a><br>' +
             '<a href="" ng-click="img_click_Base(\'Xtra\',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a>' +
             '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice_xtra.html" target="_blank"  ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Xtra</a><br>' +
             '<a href="" ng-click="img_click_Base(\'Preferred Extra\',33);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_xtra.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();"> Preferred Xtra</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538099" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();"> Preferred Xtra</a>' +
             '</div>' +
 
             '<div class="col-sm-3 innerboxHeadBig pdr0 pdl0" ><a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',32);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Select" name="Select" border="0" /></a>' +
-            '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/select.html" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Select</a><br>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538704" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Select</a><br>' +
             '<a href="" ng-click="img_click_Base(\'Ultimate\',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a>' +
-            '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice_ultimate.html" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Ultimate</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537462" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Ultimate</a>' +
             '</div>' +
 
             '<div class="col-sm-3 innerboxHeadBig pdr0 pdl0" ><a href="" ng-click="img_click_Base(\'Preferred Choice\',11);" ng-mouseover="ppSUMMARY = arrayBaseSummary[7]; img_on_Base(\'Preferred Choice\',11);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Choice\',11);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" /></a>' +
             '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/preferred_choice.html" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[7]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Preferred Choice</a><br>' +
             '<a href="" ng-click="img_click_Base(\'Premier\',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base(\'Premier\',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" /></a>' +
-            '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/premier.html" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Premier</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537668" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Premier</a>' +
             '</div>' +
 
             '<div class="col-sm-3 innerboxHeadBig pdr0 pdl0"><a href="" ng-click="img_click_Base(\'Choice\',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base(\'Choice\',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a>' +
-            '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/choice.html" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice</a><br>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice</a><br>' +
             '<a href="" ng-click="img_click_Base(\'Entertainment\',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment\',28);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment"  border="0" /></a>' +
-            '<a class="step3" href="http://agentanswercenterstg.directv.com/en-us/res/programming/entertainment_2.html" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538013" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment</a>' +
             '</div>' +
 
             '<div class="col-sm-12 innerboxText" >To add Preferred Choice in Rio: Add/Change Programming > "International" tab.' +
@@ -793,49 +793,49 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<div class="col-sm-3 pdr0 pdl0">' +
             '<a href="" ng-click="img_click_Base(\'Family\',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Family\',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base(\'Family\',1);">' +
             '<img alt="Family" border="0" id="Family" name="Family" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/family.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();"> Family</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537528" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();"> Family</a>' +
             '</div>' +
             '<div class="col-sm-3 pdr0 pdl0">' +
             '<a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',32);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22);">' +
             '<img alt="Select" border="0" id="Select" name="Select" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/select.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();"> Select</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538704" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();"> Select</a>' +
             '</div>' +
             '<div class="col-sm-3 pdr0 pdl0">' +
             '<a href="" ng-click="img_click_Base(\'Entertainment\',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment\',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28);">' +
             '<img alt="Entertainment" border="0" id="Entertainment" name="Entertainment" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/entertainment_2.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();"> Entertainment</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538013" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();"> Entertainment</a>' +
             '</div>' +
             '<div class="col-sm-3 pdr0 pdl0">' +
             '<a href="" ng-click="img_click_Base(\'Choice\',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice\',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base(\'Choice\',2);">' +
             '<img alt="Choice" border="0" id="Choice" name="Choice" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/choice.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();"> Choice</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();"> Choice</a>' +
             '</div>' +
             '</div>' +
             '<div class="col-sm-12 innerboxHeadBig pdr0 pdl0 marb10">' +
             '<div class="col-sm-3 pdr0 pdl0">' +
             '<a href="" ng-click="img_click_Base(\'Xtra\',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra\',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3);">' +
             '<img alt="Xtra" border="0" id="Xtra" name="Xtra" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/choice_xtra_new.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();"> Xtra</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537919" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();"> Xtra</a>' +
             '</div>' +
             '<div class="col-sm-3 pdr0 pdl0">' +
             '<a href="" ng-click="img_click_Base(\'Ultimate\',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate\',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4);">' +
             '<img alt="Ultimate" border="0" id="Ultimate" name="Ultimate" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/choice_ultimate.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();"> Ultimate</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537462" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();"> Ultimate</a>' +
             '</div>' +
             '<div class="col-sm-3 pdr0 pdl0">' +
             '<a href="" ng-click="img_click_Base(\'Premier\',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier\',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base(\'Premier\',6);">' +
             '<img alt="Premier" border="0" id="Premier" name="Premier" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/premier.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();"> Premier</a>'+
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537668" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();"> Premier</a>'+
             '</div>' +
             '<div class="col-sm-3 pdr0 pdl0">' +
             '<a href="" ng-click="img_click_Base(\'Preferred Extra\',33);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);">' +
             '<img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/preferred_xtra.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();"> Preferred Xtra</a>' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538099" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();"> Preferred Xtra</a>' +
             '</div>' +
             '</div>' +
             '<div class="col-sm-12 pdr0 pdl0">' +
             'Base package required for premiums/additional services. See' +
-            '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html" target="_blank"> Package Requirements</a>.' +
+            '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537674" target="_blank"> Package Requirements</a>.' +
             '</div>';
 
         // MDUdiv default innerhtml
@@ -861,29 +861,29 @@ app.controller('PP_Controller', ['$scope', '$compile',
                                     '<div class="col-sm-12 ipdr0 pdl0 marb10">'+
                                         '<a href="" ng-click="img_click_Base(\'Mas Latino\',7);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Mas Latino\',7);" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; img_on_Base(\'Mas Latino\',7);">'+
                                         '<img alt="Mas Latino" border="0" id="Mas Latino" name="Mas Latino" src="assets/img/greenBoxNorm.gif"></a>'+
-                                        '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/mas_latino.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();"> Más Latino</a>'+
+                                        '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spa_537850" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();"> Más Latino</a>'+
                                     '</div>'+
                                     '<div class="col-sm-12 pdr0 pdl0 marb10">'+
                                         '<a href="" ng-click="img_click_Base(\'Mas Ultra\',24);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Mas Ultra\',24);" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; img_on_Base(\'Mas Ultra\',24);">'+
                                         '<img alt="Mas Ultra" border="0" id="Mas Ultra" name="Mas Ultra" src="assets/img/greenBoxNorm.gif"></a>'+
-                                        '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/mas_ultra.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();"> Más Ultra</a>'+
+                                        '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();"> Más Ultra</a>'+
                                     '</div>'+
                                 '</div>'+
                                 '<div class="col-sm-6 innerboxHeadBig pdr0 pdl0">'+
                                     '<div class="col-sm-12 pdr0 pdl0 marb10">'+
                                         '<a href="" ng-click="img_click_Base(\'Optimo_Mas\',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Optimo_Mas\',8);" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; img_on_Base(\'Optimo_Mas\',8);">'+
                                         '<img alt="Optimo Mas" border="0" id="Optimo_Mas" name="Optimo_Mas" src="assets/img/greenBoxNorm.gif"></a>'+
-                                        '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/optimo_mas.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();"> Optimo Más</a>'+
+                                        '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537649" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();"> Optimo Más</a>'+
                                     '</div>'+
                                     '<div class="col-sm-12 pdr0 pdl0 marb10">'+
                                         '<a href="" ng-click="img_click_Base(\'Lo Maximo\',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Lo Maximo\',10);" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; img_on_Base(\'Lo Maximo\',10);">'+
                                         '<img alt="Lo Maximo" border="0" id="Lo Maximo" name="Lo Maximo" src="assets/img/greenBoxNorm.gif"></a>'+
-                                        '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/lo_maximo.html" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();"> Lo Maximo</a>'+
+                                        '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537586" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();"> Lo Maximo</a>'+
                                     '</div>'+
                                 '</div>'+
                                 '<div class="col-sm-12 pdr0 pdl0">'+
                                     'Base package required for premiums/additional services. See'+
-                                    '<a class="step3" href="http://agentanswercenter.directv.com/en-us/res/programming/programming_purchase_reqs.html" target="_blank"> Package Requirements</a>.'+
+                                    '<a class="step3" href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537674" target="_blank"> Package Requirements</a>.'+
                                     '</div>';
 
         function xhrSuccess() {
