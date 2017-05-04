@@ -2,7 +2,7 @@
     'use strict';
     angular.module('channelspackages')
         .controller('MainCtrl', ['$scope', '$location',
-            function($scope, $location) {
+            function($scope, $location, $cookies) {
                 if (($location.path() == '/channels_packages.htm') || ($location.path() == '')) {
                     $location.path('channel-lineup');
                 }

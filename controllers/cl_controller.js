@@ -1,5 +1,5 @@
-app.controller('CL_Controller',['$scope', '$http', '$window',
-    function($scope, $http, $window) {
+app.controller('CL_Controller',['$scope', '$http', '$window', '$cookies',
+    function($scope, $http, $window, $cookies) {
     "use strict";
     var init = function(response) {
             /*global AdSales, smallGrid, config, bigGrid, searchBox, programmingHeaders, columnSorter, reset, toolTip, commentBtn */
@@ -161,6 +161,14 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
         $scope.pActive = sortOrder;
         $scope.hdActive = hd;
     };
+    $scope.$watch(function () {
+        return $cookies.clOverlay;
+    }, function (value) {
+        $scope.clOverlay = value;
+    });
+    $scope.$watch('clOverlay', function () {
+        $cookies.clOverlay = $scope.clOverlay;
+    });
     $scope.sortType = 'channelnamebold';
     $scope.reverse = false;
     $scope.sorter = function(clickType) {

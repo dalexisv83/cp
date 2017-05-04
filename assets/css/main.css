@@ -645,9 +645,8 @@ label.helpful.open:after {
     height: 100%;
     top: 0;
     left: 0;
-    opacity: .8;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
-    background-color: #333;
+    background-color: rgba(0,0,0,.5);
     z-index: 99;
 }
 
@@ -853,4 +852,78 @@ input.ng-valid.zipinp {
   background-color: #009EDB;
   cursor: pointer;
   color: white;
+}
+
+.oContainer {
+    position: relative;
+}
+
+.oTip {
+    position: absolute;
+    z-index: 100;
+}
+
+.oTip-search {
+    left: 40px;
+    top: 10px;
+}
+
+.oTip-pName {
+    top: 0;
+    right: 0;
+}
+
+.oTip-sort {
+    left: 15%;
+    margin-left: -6.5%;
+    max-width: 25%;
+}
+
+.oTip-titles {
+    top: 120px;
+    left: 40px;
+}
+
+.oTip-pkgcom {
+    left: 300px;
+    top: 30px;
+}
+
+.oTip-lineup {
+    top: 55px;
+    left: 100px;
+}
+
+.oTip-select {
+    top: -60px;
+}
+
+.oTip-welcome {
+    top: 200px;
+    left: 50%;
+    margin-left: -225px;
+    z-index: 101;
+}
+
+.oTip-channels {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.oTip-pcTitles {
+    top: 220px;
+    left: -260px;
+}
+
+.oTip-welcome button {
+    position: absolute;
+    top: 150px;
+    left: 50%;
+    margin-left: -57.5px;
+    color: white;
+    border: 2px solid white;
+    background-color: #0567ae;
+    font-size: 22px;
+    text-transform: uppercase;
+    padding: 5px 20px 7px;
 }
