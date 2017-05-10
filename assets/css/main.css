@@ -105,6 +105,22 @@ h2 {
     padding: 0 24px 24px;
 }
 
+.wrapper{
+ max-width: 1260px;
+ position: relative;
+ padding: 20px;
+ margin: 0 auto;
+}
+
+.border {
+  background-color:#fff;
+  margin-top: 10px;
+  /*border: 3px solid #005D9E;*/
+  border-radius: 16px;
+  padding: 0 25px 25px;
+  position: relative;
+}
+
 .bg__col:after {
     content: "";
     display: block;
@@ -885,7 +901,7 @@ input.ng-valid.zipinp {
 }
 
 .oTip-pkgcom {
-    left: 300px;
+    left: 280px;
     top: 30px;
 }
 
@@ -909,7 +925,7 @@ input.ng-valid.zipinp {
 }
 
 .oTip-welcome {
-    top: 200px;
+    top: 140px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 101;
@@ -917,7 +933,7 @@ input.ng-valid.zipinp {
 
 .oTip-welcome button {
     position: absolute;
-    top: 150px;
+    top: 230px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -926,4 +942,12 @@ input.ng-valid.zipinp {
     font-size: 22px;
     text-transform: uppercase;
     padding: 5px 20px 7px;
+}
+
+.oTip-help {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    z-index: 1;
 }

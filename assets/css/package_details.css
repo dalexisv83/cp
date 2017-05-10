@@ -1,9 +1,11 @@
 .select-package {
-    float: left;
+    display: inline-block;
     margin-right: 10px;
+    vertical-align: text-bottom;
 }
 
 .select-style {
+    display: inline-block;
     border: 1px solid #ccc;
     width: 300px;
     border-radius: 5px;

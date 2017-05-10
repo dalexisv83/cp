@@ -2,6 +2,7 @@
 <img class="oTip oTip-lineup" src="assets/img/overlay_lineup_tab.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
 <div class="wrapper">
     <div class="border" ng-window-pie>
+        <img class="oTip oTip-help" ng-click="pcOverlay = 'show'" src="assets/img/help_icon.gif" />
         <div class="alert_box">
                 <img class="close_notification" src="../common_assets/img/close_button.jpg" width=10 height=10 />
                 <div class="alert_message"></div>
@@ -352,5 +353,4 @@
         <img src="assets/img/overlay_pkgcom_welcome.png" />
         <button ng-click="pcOverlay = 'hide'">Got it</button>
     </div>
-<button ng-click="pcOverlay = 'show'">Show PC tips</button>
 </div>
