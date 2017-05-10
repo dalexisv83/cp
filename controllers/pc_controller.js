@@ -119,7 +119,7 @@ app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
             return $cookies.pcOverlay;
         }, function (value) {
             $scope.pcOverlay = value;
-            if (value != 'hide') {
+            if (!value || value == 'show') {
                 cur_curpkg = $scope.current_pkg;
                 cur_curchs = $scope.current_channels;
                 cur_reqpkg = $scope.requested_pkg;
@@ -132,6 +132,10 @@ app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
                 cur_payamt = $scope.pay_more_amt;
                 cur_resact = $scope.resetActive;
                 cur_shwgwl = $(".alert_message").parent().css('display');
+                $scope.show_gained_channels = true;
+                $scope.show_lost_channels = true;
+                cur_curczn = $('select[chosen="current_pkgs"]').val();
+                cur_reqczn = $('select[chosen="requested_pkgs"]').val();
                 if ($scope.current_pkg == null) {
                     $scope.$watchCollection(function () {
                         return $scope.current_pkgs;
@@ -150,10 +154,6 @@ app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
                         }
                     });
                 }
-                $scope.show_gained_channels = true;
-                $scope.show_lost_channels = true;
-                cur_curczn = $('select[chosen="current_pkgs"]').val();
-                cur_reqczn = $('select[chosen="requested_pkgs"]').val();
             }
             if (value == 'hide') {
                 $scope.current_pkg = cur_curpkg;
