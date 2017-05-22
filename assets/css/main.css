@@ -911,7 +911,9 @@ input.ng-valid.zipinp {
 }
 
 .oTip-select {
-    top: -60px;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .oTip-channels {
