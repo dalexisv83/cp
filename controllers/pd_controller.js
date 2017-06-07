@@ -13,7 +13,7 @@ app.controller('PD_Controller',['$scope', '$filter', '$http', '$location',
 
                             $scope.selPackages = $filter('filter')(response.data.package_compare.datasource, {platform: '!FEE'});
                             $scope.selPackages = $filter('filter')($scope.selPackages, {id: ''});
-                            $scope.selPackages = $filter('orderBy')($scope.selPackages, 'name');
+                            $scope.selPackages = $filter('orderBy')($scope.selPackages, ['-platform', 'name']);
 
                             $scope.$watch(function() {
                                 return $location.search();
@@ -25,7 +25,7 @@ app.controller('PD_Controller',['$scope', '$filter', '$http', '$location',
 
                                 $scope.package = $scope.selPackages.find(function(qPack) {
                                     if ($scope.pid) {
-                                        return qPack.platform !== 'FEE' && qPack.id === $scope.pid;
+                                        return qPack.id === $scope.pid;
                                     }
                                 });
 

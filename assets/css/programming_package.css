@@ -367,3 +367,7 @@ form li {list-style: none}
         padding-right:0 !important;
     }
 }
+
+a.step3, a.step4 {
+    text-transform: uppercase;
+}
