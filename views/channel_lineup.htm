@@ -15,14 +15,14 @@
           <small ng-if="msgQuery && tempText == null" class="result-count red">You searched for: &ldquo;<b ng-bind="msgQuery"></b>&rdquo;
           <br /><br /></small>
           <small ng-if="inputText" class="result-count red"><b><span ng-bind="fChannels.result.length"></span> channel(s) found</b><span ng-if="fChannels.result.length == 0"><br />See <a target="_blank" href="/en-us/res/programming/commercials.html">Programming Requests</a> for points about channels not currently available on DIRECTV</span></small>
-          <small ng-if="pActive" class="result-count red">Displaying <b ng-bind="fChannels.result.length"></b><span ng-if="hdActive"> HD</span> channels for <a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{pActive | findPackage:pActive:packages:'cspUrl'}}" target="_blank">{{pActive | findPackage:pActive:packages:'display_name'}}</a> package</small>
+          <small ng-if="pActive" class="result-count red">Displaying <b ng-bind="fChannels.result.length"></b><span ng-if="hdActive"> HD</span> channels for <a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{pActive | findPackage:pActive:packages:'cspUrl'}}" target="_blank">{{pActive | findPackage:pActive:packages:'display_name'}}</a> package</small>
         </div>
         <div class="grid__item one-half">
             <div class="link-holder">
                 <h2>Useful Links</h2>
-                    <div><a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537722" target="_blank">Channel Neighborhoods</a></div>
-                    <div><a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank">Expired Packages</a></div>
-                    <div style="clear: left"><a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_lif_537723" target="_blank">Ad Sales/Paid Program/Part-Time</a></div>
+                    <div><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537722" target="_blank">Channel Neighborhoods</a></div>
+                    <div><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank">Expired Packages</a></div>
+                    <div style="clear: left"><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_lif_537723" target="_blank">Ad Sales/Paid Program/Part-Time</a></div>
                     <div><a href="http://www.directv.com/DTVAPP/packProg/localChannels.jsp?assetId=cms_local_channels&_requestid=2230690" target="_blank">Local Channel Availability</a></div>
             </div>
         </div>
@@ -33,9 +33,9 @@
             <div id="xtra_notes">
                 <h2>Reminders</h2>
                 <ul>
-                    <li ng-if="type == 'residential'">See <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
-                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
-                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
+                    <li ng-if="type == 'residential'">See <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
+                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
+                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
                     <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
                     <li><b>REMINDER:</b> Channel counts are estimates and are subject to change</li>
                     <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
@@ -155,9 +155,9 @@
             <div id="xtra_notes">
                 <h2>Reminders</h2>
                 <ul>
-                    <li ng-if="type == 'residential'">See <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
-                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
-                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
+                    <li ng-if="type == 'residential'">See <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
+                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
+                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
                     <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
                     <li><b>REMINDER:</b> Channel counts are estimates and are subject to change</li>
                     <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
@@ -173,9 +173,9 @@
                                 <div id="xtra_notes_tbl">
                                     <h2>Reminders</h2>
                                     <ul>
-                                        <li ng-if="type == 'residential'">See <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
-                                        <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
-                                        <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
+                                        <li ng-if="type == 'residential'">See <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
+                                        <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
+                                        <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
                                         <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
                                         <li><b>REMINDER:</b> Channel counts are estimates and are subject to change</li>
                                         <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
@@ -186,7 +186,7 @@
                                 <div>
                                     <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}" q-tip></div>
                                 </div>
-                                <span q-tip><a href ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{package.cspUrl}}" target="_blank" ng-bind="package.display_name | comReplace"></a></span>
+                                <span q-tip><a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{package.cspUrl}}" target="_blank" ng-bind="package.display_name | comReplace"></a></span>
                                 <img ng-if="$last" class="oTip oTip-pName" src="assets/img/overlay_lineup_package_names.png" ng-hide="clOverlay == 'hide'" />
                             </td>
                         </tr>
@@ -241,12 +241,12 @@
                 <table>
                     <tbody vs-repeat vs-scroll-parent="#vsrepeat">
                         <tr style="height:50px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
-                            <td class="c-name unmerged name"><a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></td>
+                            <td class="c-name unmerged name"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.channelnumber"></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.callletters"></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.genre"></td>
                             <td class="merged">
-                                <p class="c-name"><a ng-href="http://mycsp.web.att.com/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></p>
+                                <p class="c-name"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></p>
                                 <span class="c-num" ng-bind-html="channel.channelnumber.replace('\u003Cbr \/\u003E',', ')"></span>
                                 <span class="c-num" ng-bind-html="channel.callletters.replace('\u003Cbr\/\u003E',', ')"></span>
                                 <span class="c-num" ng-bind-html="channel.genre"></span>
