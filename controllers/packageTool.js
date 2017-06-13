@@ -482,39 +482,42 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //MDU / JDU
-        arrayMDUInnerHTML[2] = '<div class="col-sm-12">' +
-            '<div class="col-sm-3 innerboxHeadBig pdr0 pdl0 marb5" ><a href="" ng-click="img_click_Base(\'Family\',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base(\'Family\',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Family\',1);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537528" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Family</a><br>' +
-            '<a href="" ng-click="img_click_Base(\'Xtra\',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra\',3);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537464" target="_blank"  ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Xtra</a><br>' +
-            '<a href="" ng-click="img_click_Base(\'Preferred Extra\',33);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538099" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();"> Preferred Xtra</a>' +
-            '</div>' +
+        arrayMDUInnerHTML[2] = '<div class="row innerboxHeadBig pdr0 pdl0 marb5">' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Family\',1);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Family" name="Family" border="0" /> Family</a>' +
+                                    '</div>' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Xtra\',3);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra" name="Xtra" /> Xtra</a>' +
+                                    '</div>' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Preferred Extra\',33);"><img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="../common_assets/img/greenBoxNorm.gif"> Preferred Xtra</a>' +
+                                    '</div>' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Select\',32);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Select" name="Select" border="0" /> Select</a>' +
+                                    '</div>' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Ultimate\',4);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /> Ultimate</a>' +
+                                    '</div>' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Preferred Choice\',11);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" /> Preferred Choice</a>' +
+                                    '</div>' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Premier\',6);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" /> Premier</a>' +
+                                    '</div>' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Choice\',2);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/> Choice</a>' +
+                                    '</div>' +
+                                    '<div class="col-sm-4 col-md-3">' +
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Entertainment\',28);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment"  border="0" /> Entertainment</a>' +
+                                    '</div>' +
+                                '</div>' +
 
-            '<div class="col-sm-3 innerboxHeadBig pdr0 pdl0" ><a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',32);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Select" name="Select" border="0" /></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538704" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Select</a><br>' +
-            '<a href="" ng-click="img_click_Base(\'Ultimate\',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate\',4);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate" name="Ultimate" /></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537462" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Ultimate</a>' +
-            '</div>' +
-
-            '<div class="col-sm-3 innerboxHeadBig pdr0 pdl0" ><a href="" ng-click="img_click_Base(\'Preferred Choice\',11);" ng-mouseover="ppSUMMARY = arrayBaseSummary[7]; img_on_Base(\'Preferred Choice\',11);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Choice\',11);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" /></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537667" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[7]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Preferred Choice</a><br>' +
-            '<a href="" ng-click="img_click_Base(\'Premier\',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base(\'Premier\',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier\',6);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Premier" name="Premier" border="0" /></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537668" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Premier</a>' +
-            '</div>' +
-
-            '<div class="col-sm-3 innerboxHeadBig pdr0 pdl0"><a href="" ng-click="img_click_Base(\'Choice\',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base(\'Choice\',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice\',2);" ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice" name="Choice"/></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice</a><br>' +
-            '<a href="" ng-click="img_click_Base(\'Entertainment\',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment\',28);"><img src="../common_assets/img/greenBoxNorm.gif" alt="Entertainment" name="Entertainment"  border="0" /></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538013" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment</a>' +
-            '</div>' +
-
-            '<div class="col-sm-12 innerboxText" >To add Preferred Choice in Rio: Add/Change Programming > "International" tab.' +
+            '<div class="row"><div class="col-sm-12 innerboxText" >To add Preferred Choice in Rio: Add/Change Programming > "International" tab.' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Total Choice" name="Total Choice for TCD/JCD" border="0" style="display:none;"/>' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Choice Tier" name="Choice Tier for TCD/JCD" border="0" style="display:none;"/>' +
             '<a id="total_choice_plus_anchor"><img src="../common_assets/img/greenBoxOver.gif" alt="Total Choice Plus" name="Total Choice Plus" border="0" style="display:none;"/></a>' +
             '<a id="xtra_tier_anchor"><img src="../common_assets/img/greenBoxOver.gif" alt="Xtra Tier" name="Xtra Tier" border="0" style="display:none;"/></a>' +
-            '</div>' +
+            '</div></div>' +
 
             '<div class="col-sm-12">' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Xtra Add-On" name="Xtra Add-On" border="0" style="display:none;"/>' +
@@ -543,28 +546,28 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
 
         //TCD / JCD
-        arrayMDUInnerHTML[3] = '<div class="col-sm-12 pdr0 pdl0">' +
+        arrayMDUInnerHTML[3] = '<div class="row">' +
             '<div class="innerboxHeadBig4 col-sm-4"><div class="marb5"><strong>If TC Limited &amp; TC_MDU Tier are on account:</strong></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseover="ppSUMMARY = arrayBaseSummary[8]; img_on_Base(\'Total Choice for TCD/JCD\',12);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice for TCD/JCD\',12);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538775" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[8];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > TC Limited & Total Choice MDU Tier</a></div>' +
+            '<div class="innerboxHeadBig"><a href="" ng-click="img_click_Base(\'Total Choice for TCD/JCD\',12);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice" name="Total Choice for TCD/JCD"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[8];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > TC Limited & Total Choice MDU Tier</a></div>' +
             '<div class="col-sm-12 marb5" style="display:none"><a id="total_choice_plus_anchor" ><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Total Choice Plus" name="Total Choice Plus"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538774" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[10];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Total Choice Plus MDU Tier</a></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[10];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Total Choice Plus MDU Tier</a></div>' +
             '</div>' +
 
             '<div class="innerboxHeadBig4 col-sm-4"><div class="marb5"><strong>If TC Limited &amp; Choice_MDU Tier are on account:</strong></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseover="ppSUMMARY = arrayBaseSummary[9]; img_on_Base(\'Choice Tier for TCD/JCD\',13);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537468" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[9] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" > TC Limited & Choice MDU Tier</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Tier for TCD/JCD\',13);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Tier" name="Choice Tier for TCD/JCD"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[9] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Tier for TCD/JCD\',13);" > TC Limited & Choice MDU Tier</a></div>' +
             '<div class="col-sm-12 marb5" style="display:none"><a id="xtra_tier_anchor" ><img src="../common_assets/img/greenBoxOver.gif" border="0" alt="Choice Xtra Classic MDU Tier" name="Choice Xtra Classic MDU Tier"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537467" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[11];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Xtra Classic MDU Tier</a></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[11];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Xtra Classic MDU Tier</a></div>' +
             '</div>' +
 
             '<div class="innerboxHeadBig4 col-sm-4"><div class="marb5"><strong>If Student Preferred Bulk is on account:</strong></div>' +
             '<div class="col-sm-12 marb5">' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537839" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[25];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Student Preferred Bulk</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Student Choice Add-On\',29);" ng-mouseover="ppSUMMARY = arrayBaseSummary[26]; img_on_Base(\'Student Choice Add-On\',29);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Student Choice Add-On\',29);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Student Choice Add-On" name="Student Choice Add-On"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537840" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[26];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Student Choice Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Student Choice Xtra Classic Add-On\',30);" ng-mouseover="ppSUMMARY = arrayBaseSummary[27]; img_on_Base(\'Student Choice Xtra Classic Add-On\',30);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Student Choice Xtra Classic Add-On\',30);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537841" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[27];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Student Choice Xtra Classic Add-On</a></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[25];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Student Preferred Bulk</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Student Choice Add-On\',29);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Student Choice Add-On" name="Student Choice Add-On"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[26];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Student Choice Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Student Choice Xtra Classic Add-On\',30);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[27];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Student Choice Xtra Classic Add-On</a></div>' +
             '</div>' +
             '<div class="innerboxText col-sm-12" style="display:none;">' +
             '<img src="../common_assets/img/greenBoxNorm.gif" alt="Preferred Choice" name="Preferred Choice" border="0" style="display:none;"/>' +
@@ -598,41 +601,41 @@ app.controller('PP_Controller', ['$scope', '$compile',
         arrayMDUInnerHTML[4] = 
             '<div class="col-sm-4 pdr0 pdl0"><div class="marb5"><strong>If Choice Digital Bulk is on account:</strong></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537461" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Choice Digital Bulk</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On\',14);" ng-mouseover="ppSUMMARY = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537976" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[29];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On CDB\',25);" ng-mouseover="ppSUMMARY = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537463" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[30];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On CDB\',27);" ng-mouseover="ppSUMMARY = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537669" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[31];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Choice Digital Bulk</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On\',14);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[29];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On CDB\',25);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[30];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On CDB\',27);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[31];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
             '</div>' +
 
             '<div class="col-sm-4 pdr0 pdl0"><div class="marb5"><strong>If Entertainment Digital Bulk is on account:</strong></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537974" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Entertainment Digital Bulk</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On EDB\',20);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537460" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On EDB\',9);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537976" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On EDB\',17);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537463" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On EDB\',15);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537669" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Entertainment Digital Bulk</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On EDB\',20);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On EDB\',9);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On EDB\',17);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On EDB\',15);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
             '</div>' +
 
             '<div class="col-sm-4 pdr0 pdl0"><div class="marb5"><strong>If Family Digital Bulk is on account:</strong></div>' +
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537529" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Family Digital Bulk</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Entertainment Add-On\',31);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537975" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On FDB\',21);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537460" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Choice Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537976" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On FDB\',26);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537463" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
-            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On FDB\',23);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537669" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Family Digital Bulk</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Entertainment Add-On\',31);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On FDB\',21);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Choice Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',22);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On FDB\',26);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
+            '<div class="col-sm-12 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On FDB\',23);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div></div>' +
             '</div>' +
 
             '<div class="col-sm-12">Note: Some properties may also provide <a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537804" target="_blank">En Espanol Bulk</a> at $0.<br>See <a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537466" target="_blank">Choice Xtra Classic Digital Bulk</a> and <a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537465" target="_blank">Choice Xtra Classic Add-On</a>.</div>' +
@@ -664,14 +667,14 @@ app.controller('PP_Controller', ['$scope', '$compile',
             '<td colspan="3">&nbsp;</td></tr>' +
             '<tr>' +
             '<td width="9%" ></td>' +
-            '<td colspan=2 valign=left><a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538771" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[14];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Bulk</a></td>' +
+            '<td colspan=2 valign=left><a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[14];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Bulk</a></td>' +
             '<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '<td width="6%" class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '<td width="1%" class="innerboxHeadBig">&nbsp;</td>' +
             '</tr>' +
             '<tr>' +
-            '<td bgcolor=#e0e1e1><a href="" ng-click="img_click_Base(\'Total Choice Plus TMU\',16);" ng-mouseover="ppSUMMARY = arrayBaseSummary[16]; img_on_Base(\'Total Choice Plus TMU\',16);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Total Choice Plus TMU\',16);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus MDU Tier" name="Total Choice Plus TMU"></a></td>' +
-            '<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538774" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[15];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Plus_MDU Tier</a></td>' +
+            '<td bgcolor=#e0e1e1><a href="" ng-click="img_click_Base(\'Total Choice Plus TMU\',16);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Total Choice Plus MDU Tier" name="Total Choice Plus TMU"></a></td>' +
+            '<td colspan=2 bgcolor=#e0e1e1 valign=left><a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[15];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" >Total Choice Plus_MDU Tier</a></td>' +
             '<td class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '<td class="innerboxHeadBig">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>' +
             '<td class="innerboxHeadBig">&nbsp;</td>' +
@@ -723,43 +726,43 @@ app.controller('PP_Controller', ['$scope', '$compile',
         arrayMDUInnerHTML[6] = '<div class="col-sm-12">' +
             '<div class="col-sm-4"><div class="marb5"><strong>If Choice Digital Bulk is on account:</strong></div>' + 
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537461" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Choice Digital Bulk</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On\',14);" ng-mouseover="ppSUMMARY = arrayBaseSummary[29]; img_on_Base(\'Xtra Add-On\',14);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On\',14);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537976" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[29];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On CDB\',25);" ng-mouseover="ppSUMMARY = arrayBaseSummary[30]; img_on_Base(\'Ultimate Add-On CDB\',25);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On CDB\',25);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537463" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[30];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On CDB\',27);" ng-mouseover="ppSUMMARY = arrayBaseSummary[31]; img_on_Base(\'Premier Add-On CDB\',27);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On CDB\',27);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537669" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[31];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[18] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Choice Digital Bulk</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On\',14);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[29];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On CDB\',25);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On CDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[30];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On CDB\',27);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On CDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[31];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div>' +
 
             '</div>' +
 
             '<div class="col-sm-4"><div class="marb5"><strong>If Entertainment Digital Bulk is on account:</strong></div>'+ 
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537974" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline">Entertainment Digital Bulk</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On EDB\',20);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Choice Add-On EDB\',20);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On EDB\',20);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537460" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On EDB\',9);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Xtra Add-On EDB\',9);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On EDB\',9);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537976" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On EDB\',17);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Ultimate Add-On EDB\',17);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On EDB\',17);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537463" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On EDB\',15);" ng-mouseover="ppSUMMARY = arrayBaseSummary[28]; img_on_Base(\'Premier Add-On EDB\',15);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On EDB\',15);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537669" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28] ;" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline">Entertainment Digital Bulk</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On EDB\',20);"  ><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On EDB" name="Choice Add-On EDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Choice Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On EDB\',9);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On EDB" name="Xtra Add-On EDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On EDB\',17);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On EDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On EDB\',15);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On EDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[28];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div>' +
 
             '</div>' +
 
             '<div class="col-sm-4"><div class="marb5"><strong>If Family Digital Bulk is on account:</strong></div>'+ 
             '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5">' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537529" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Family Digital Bulk</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Entertainment Add-On\',31);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Entertainment Add-On\',31);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment Add-On\',31);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537975" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On FDB\',21);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Choice Add-On FDB\',21);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice Add-On FDB\',21);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537460" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Choice Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Xtra Add-On FDB\',22);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537976" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On FDB\',26);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Ultimate Add-On FDB\',26);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate Add-On FDB\',26);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537463" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
-            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On FDB\',23);" ng-mouseover="ppSUMMARY = arrayBaseSummary[19]; img_on_Base(\'Premier Add-On FDB\',23);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier Add-On FDB\',23);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
-            '<a class="step4" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537669" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" style="text-decoration:underline"> Family Digital Bulk</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Entertainment Add-On\',31);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Entertainment Add-On" name="Entertainment Add-On"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Entertainment Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Choice Add-On FDB\',21);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Choice Add-On" name="Choice Add-On FDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Choice Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',22);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Xtra Add-On" name="Xtra Add-On FDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;" > Xtra Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Ultimate Add-On FDB\',26);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Ultimate Add-On" name="Ultimate Add-On FDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Ultimate Add-On</a></div>' +
+            '<div class="col-sm-12 innerboxHeadBig4 pdr0 pdl0 marb5"><a href="" ng-click="img_click_Base(\'Premier Add-On FDB\',23);"><img src="../common_assets/img/greenBoxNorm.gif" border="0" alt="Premier Add-On" name="Premier Add-On FDB"></a>' +
+            '<a class="step4" href="" target="_blank" ng-mouseover="ppSUMMARY = arrayBaseSummary[19];" ng-mouseleave="ppSUMMARY = varDefaultSummary;"> Premier Add-On</a></div>' +
 
             '</div>' +
 
@@ -790,53 +793,44 @@ app.controller('PP_Controller', ['$scope', '$compile',
 
         //default english div
         arrayMDUInnerHTML[7] = '<div class="col-sm-12 innerboxHeadBig pdr0 pdl0 marb10">' +
-            '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Family\',1);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Family\',1);" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; img_on_Base(\'Family\',1);">' +
-            '<img alt="Family" border="0" id="Family" name="Family" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537528" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();"> Family</a>' +
-            '</div>' +
-            '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Xtra Add-On FDB\',32);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra Add-On FDB\',22);" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; img_on_Base(\'Xtra Add-On FDB\',22);">' +
-            '<img alt="Select" border="0" id="Select" name="Select" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538704" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();"> Select</a>' +
-            '</div>' +
-            '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Entertainment\',28);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Entertainment\',28);" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; img_on_Base(\'Entertainment\',28);">' +
-            '<img alt="Entertainment" border="0" id="Entertainment" name="Entertainment" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538013" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();"> Entertainment</a>' +
-            '</div>' +
-            '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Choice\',2);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Choice\',2);" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; img_on_Base(\'Choice\',2);">' +
-            '<img alt="Choice" border="0" id="Choice" name="Choice" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537459" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();"> Choice</a>' +
-            '</div>' +
-            '</div>' +
-            '<div class="col-sm-12 innerboxHeadBig pdr0 pdl0 marb10">' +
-            '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Xtra\',3);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Xtra\',3);" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; img_on_Base(\'Xtra\',3);">' +
-            '<img alt="Xtra" border="0" id="Xtra" name="Xtra" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537919" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();"> Xtra</a>' +
-            '</div>' +
-            '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Ultimate\',4);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Ultimate\',4);" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; img_on_Base(\'Ultimate\',4);">' +
-            '<img alt="Ultimate" border="0" id="Ultimate" name="Ultimate" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537462" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();"> Ultimate</a>' +
-            '</div>' +
-            '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Premier\',6);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Premier\',6);" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; img_on_Base(\'Premier\',6);">' +
-            '<img alt="Premier" border="0" id="Premier" name="Premier" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537668" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();"> Premier</a>'+
-            '</div>' +
-            '<div class="col-sm-3 pdr0 pdl0">' +
-            '<a href="" ng-click="img_click_Base(\'Preferred Extra\',33);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Preferred Extra\',33);" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; img_on_Base(\'Preferred Extra\',33);">' +
-            '<img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="../common_assets/img/greenBoxNorm.gif"></a>' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_538099" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();"> Preferred Xtra</a>' +
-            '</div>' +
-            '</div>' +
-            '<div class="col-sm-12 pdr0 pdl0">' +
-            'Base package required for premiums/additional services. See' +
-            '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537674" target="_blank"> Package Requirements</a>.' +
-            '</div>';
+                                    '<div class="row">' +
+                                        '<div class="col-sm-4 col-md-3 pdr0 pdl0">' +
+                                            '<a href="" class="step3" ng-click="img_click_Base(\'Family\',1);">' +
+                                            '<img alt="Family" border="0" id="Family" name="Family" src="assets/img/greenBoxNorm.gif"> Family</a>' +
+                                        '</div>' +
+                                        '<div class="col-sm-4 col-md-3 pdr0 pdl0">' +
+                                            '<a href="" class="step3" ng-click="img_click_Base(\'Select\',32);">' +
+                                            '<img alt="Select" border="0" id="Select" name="Select" src="assets/img/greenBoxNorm.gif"> Select</a>' +
+                                        '</div>' +
+                                        '<div class="col-sm-4 col-md-3 pdr0 pdl0">' +
+                                            '<a href="" class="step3" ng-click="img_click_Base(\'Entertainment\',28);">' +
+                                            '<img alt="Entertainment" border="0" id="Entertainment" name="Entertainment" src="assets/img/greenBoxNorm.gif"> Entertainment</a>' +
+                                        '</div>' +
+                                        '<div class="col-sm-4 col-md-3 pdr0 pdl0">' +
+                                            '<a href="" class="step3" ng-click="img_click_Base(\'Choice\',2);">' +
+                                            '<img alt="Choice" border="0" id="Choice" name="Choice" src="assets/img/greenBoxNorm.gif"> Choice</a>' +
+                                        '</div>' +
+                                        '<div class="col-sm-4 col-md-3 pdr0 pdl0">' +
+                                            '<a href="" class="step3" ng-click="img_click_Base(\'Xtra\',3);">' +
+                                            '<img alt="Xtra" border="0" id="Xtra" name="Xtra" src="assets/img/greenBoxNorm.gif"> Xtra</a>' +
+                                        '</div>' +
+                                        '<div class="col-sm-4 col-md-3 pdr0 pdl0">' +
+                                            '<a href="" class="step3" ng-click="img_click_Base(\'Ultimate\',4);">' +
+                                            '<img alt="Ultimate" border="0" id="Ultimate" name="Ultimate" src="assets/img/greenBoxNorm.gif"> Ultimate</a>' +
+                                        '</div>' +
+                                        '<div class="col-sm-4 col-md-3 pdr0 pdl0">' +
+                                            '<a href="" class="step3" ng-click="img_click_Base(\'Premier\',6);">' +
+                                            '<img alt="Premier" border="0" id="Premier" name="Premier" src="assets/img/greenBoxNorm.gif"> Premier</a>' +
+                                        '</div>' +
+                                        '<div class="col-sm-4 col-md-3 pdr0 pdl0">' +
+                                            '<a href="" class="step3" ng-click="img_click_Base(\'Preferred Extra\',33);">' +
+                                            '<img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="assets/img/greenBoxNorm.gif"> Preferred Xtra</a>' +
+                                        '</div>' +
+                                    '</div>' +
+                                '</div>' +
+                                '<div class="col-sm-12 pdr0 pdl0">' +
+                                    'Base package required for premiums/additional services. See <a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537674" target="_blank">Package Requirements</a>.' +
+                                '</div>';
 
         // MDUdiv default innerhtml
         arrayMDUInnerHTML[8] = '&nbsp;<br />' +
@@ -859,31 +853,26 @@ app.controller('PP_Controller', ['$scope', '$compile',
         // spanish MDU div
         arrayMDUInnerHTML[9] = '<div class="col-sm-6 innerboxHeadBig pdr0 pdl0">'+
                                     '<div class="col-sm-12 ipdr0 pdl0 marb10">'+
-                                        '<a href="" ng-click="img_click_Base(\'Mas Latino\',7);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Mas Latino\',7);" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; img_on_Base(\'Mas Latino\',7);">'+
-                                        '<img alt="Mas Latino" border="0" id="Mas Latino" name="Mas Latino" src="assets/img/greenBoxNorm.gif"></a>'+
-                                        '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spa_537850" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();"> M&aacute;s Latino</a>'+
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Mas Latino\',7);">'+
+                                        '<img alt="Mas Latino" border="0" id="Mas Latino" name="Mas Latino" src="assets/img/greenBoxNorm.gif"> M&aacute;s Latino</a>'+
                                     '</div>'+
                                     '<div class="col-sm-12 pdr0 pdl0 marb10">'+
-                                        '<a href="" ng-click="img_click_Base(\'Mas Ultra\',24);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Mas Ultra\',24);" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; img_on_Base(\'Mas Ultra\',24);">'+
-                                        '<img alt="Mas Ultra" border="0" id="Mas Ultra" name="Mas Ultra" src="assets/img/greenBoxNorm.gif"></a>'+
-                                        '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537613" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();"> M&aacute;s Ultra</a>'+
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Mas Ultra\',24);">'+
+                                        '<img alt="Mas Ultra" border="0" id="Mas Ultra" name="Mas Ultra" src="assets/img/greenBoxNorm.gif"> M&aacute;s Ultra</a>'+
                                     '</div>'+
                                 '</div>'+
                                 '<div class="col-sm-6 innerboxHeadBig pdr0 pdl0">'+
                                     '<div class="col-sm-12 pdr0 pdl0 marb10">'+
-                                        '<a href="" ng-click="img_click_Base(\'Optimo_Mas\',8);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Optimo_Mas\',8);" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; img_on_Base(\'Optimo_Mas\',8);">'+
-                                        '<img alt="Optimo Mas" border="0" id="Optimo_Mas" name="Optimo_Mas" src="assets/img/greenBoxNorm.gif"></a>'+
-                                        '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537649" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();"> Optimo M&aacute;s</a>'+
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Optimo_Mas\',8);">'+
+                                        '<img alt="Optimo Mas" border="0" id="Optimo_Mas" name="Optimo_Mas" src="assets/img/greenBoxNorm.gif"> Optimo M&aacute;s</a>'+
                                     '</div>'+
                                     '<div class="col-sm-12 pdr0 pdl0 marb10">'+
-                                        '<a href="" ng-click="img_click_Base(\'Lo Maximo\',10);" ng-mouseleave="ppSUMMARY = varDefaultSummary; img_off_Base(\'Lo Maximo\',10);" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; img_on_Base(\'Lo Maximo\',10);">'+
-                                        '<img alt="Lo Maximo" border="0" id="Lo Maximo" name="Lo Maximo" src="assets/img/greenBoxNorm.gif"></a>'+
-                                        '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537586" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();"> Lo Maximo</a>'+
+                                        '<a href="" class="step3" ng-click="img_click_Base(\'Lo Maximo\',10);">'+
+                                        '<img alt="Lo Maximo" border="0" id="Lo Maximo" name="Lo Maximo" src="assets/img/greenBoxNorm.gif"> Lo Maximo</a>'+
                                     '</div>'+
                                 '</div>'+
                                 '<div class="col-sm-12 pdr0 pdl0">'+
-                                    'Base package required for premiums/additional services. See'+
-                                    '<a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537674" target="_blank"> Package Requirements</a>.'+
+                                    'Base package required for premiums/additional services. See <a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537674" target="_blank">Package Requirements</a>.'+
                                     '</div>';
 
         function xhrSuccess() {
@@ -1044,6 +1033,9 @@ app.controller('PP_Controller', ['$scope', '$compile',
         myTab[31] = "Entertainment Add-On";
         myTab[32] = "Select";
         myTab[33] = "Preferred Extra";
+
+        document.getElementById("lyrEnglish2").innerHTML = arrayMDUInnerHTML[7];
+        $compile(document.getElementById("lyrEnglish2"))($scope);
 
 
 
@@ -2584,11 +2576,9 @@ app.controller('PP_Controller', ['$scope', '$compile',
         var fillMDUdiv = function(textEntry) {
             varMirrorFeeWaiver = 1;
             if (textEntry == 'TMW/JMW') {
-                document.getElementById("MDUselectionInfo").innerHTML = ('<span style="color:red;">Mirroring fee begins after 3rd receiver</span><br>Mouseover a package for Quick Summary instructions.');
+                document.getElementById("MDUselectionInfo").innerHTML = ('<span style="color:red;">Mirroring fee begins after 3rd receiver</span>');
             } else if (textEntry == 'TCD/JCD') {
-                document.getElementById("MDUselectionInfo").innerHTML = ('Verify Customer\'s current programming<br>Mouseover a package for Quick Summary instructions.');
-            } else {
-                document.getElementById("MDUselectionInfo").innerHTML = ('Mouseover a package for Quick Summary instructions.');
+                document.getElementById("MDUselectionInfo").innerHTML = ('Verify Customer\'s current programming');
             }
 
             if ((textEntry == null) || (textEntry == '')) { //default  

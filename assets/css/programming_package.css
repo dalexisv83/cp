@@ -43,14 +43,12 @@ h5 span{
 img {
     min-width:12px;
 }
-#step5Box .col-sm-4 a{text-decoration: underline !important;}
 
 .blbg{
     background-color: #0567AE;
     color: #fff;
     padding:20px;
     margin:5px 0;
-    min-height:147px;
     overflow: hidden;
     padding-top:5px;
     border-radius: 5px;
@@ -60,7 +58,6 @@ img {
     color: #fff;
     padding:20px;
     margin:5px 0;
-    min-height:147px;
     overflow: hidden;
     padding-top:5px;
     border-radius: 5px;   
@@ -70,16 +67,10 @@ img {
     border-radius: 5px;
     padding:20px;
     margin:5px 0;
-    min-height:147px;
     overflow: hidden;
     padding-top:5px
 }
-.mnh2{
-    min-height:243px;
-}
-.mnh3{
-    min-height:329px;
-}
+
 .marr0{
     margin-right:0;    
 }
@@ -171,13 +162,15 @@ img {
 .hdr {
     margin-bottom: 10px;
 }
-#step1Box div.bgwt.marr0 p ~ p {
-    margin-top:5px !important;
+#step1Box div.col-sm-2 {
+    text-align: center;
 }
 
-li#summaryBox {
+#summaryBox {
     color:#000;
     text-align:left;
+    visibility: hidden;
+    position: absolute;
 }
 
 #programming_package {
@@ -343,31 +336,8 @@ li.primaryCredit {
 
 form li {list-style: none}
 
-@media (min-width: 768px){
-    ul#container1 , ul#container2{
-    z-index:5;
-    padding:0;
-    margin-bottom:40px;
-    }
-    .pdr0{
-        padding-right:0 !important;    
-    }
-    .pdl0{
-        padding-left:0 !important;    
-    }
-    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, 
-    .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-        padding-left: 10px;
-    }     
-}
-
-@media (max-width: 767px){
-    #step1Box , #step2Box , #step3Box , #step4Box , #step5Box , #step6Box , #centerContent, #container1, #container2{
-        padding-left:0 !important;
-        padding-right:0 !important;
-    }
-}
-
 a.step3, a.step4 {
     text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
 }
