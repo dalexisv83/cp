@@ -186,7 +186,10 @@
                                 <div>
                                     <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}" q-tip></div>
                                 </div>
-                                <span q-tip><a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{package.cspUrl}}" target="_blank" ng-bind="package.display_name | comReplace"></a></span>
+                                <span q-tip>
+                                    <a ng-if="package.platform == 'DTVNOW'" href ng-href="#/package-details?pid={{package.pid}}" ng-bind="package.display_name | comReplace"></a>
+                                    <a ng-if="package.platform != 'DTVNOW'" href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{package.cspUrl}}" target="_blank" ng-bind="package.display_name | comReplace"></a>
+                                </span>
                                 <img ng-if="$last" class="oTip oTip-pName" src="assets/img/overlay_lineup_package_names.png" ng-hide="clOverlay == 'hide'" />
                             </td>
                         </tr>

@@ -147,9 +147,8 @@
             <div class="table-header grid__item one-quarter" ng-cloak>
                 <div class="current label-holder" ng-show="show_current_channels">
                     <span ng-if="current_pkg.cspUrl">
-                        <a title="Click to open this package main page." ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{current_pkg.cspUrl}}" target="_blank">
-                        {{current_pkg.name}}
-                        </a>
+                        <a ng-if="current_pkg.company == 'DIRECTV Now'" title="Click for package details" ng-href="#/package-details?pid={{current_pkg.pid}}">{{current_pkg.name}}</a>
+                        <a ng-if="current_pkg.company != 'DIRECTV Now'" title="Click to open this package main page." ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{current_pkg.cspUrl}}" target="_blank">{{current_pkg.name}}</a>
                     </span>
                     <span ng-show="current_pkg.status == '0'"> - </span>
                     <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank" class="expired" ng-show="current_pkg.status == '0'">Expired</a>
@@ -171,9 +170,8 @@
             <div class="table-header grid__item one-quarter">
                 <div class="label-holder" ng-cloak ng-show="show_requested_channels" >
                     <span ng-if="requested_pkg.cspUrl">
-                        <a title="Click to open this package main page." ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{requested_pkg.cspUrl}}" target="_blank">
-                        {{requested_pkg.name}}
-                        </a>
+                        <a ng-if="requested_pkg.company == 'DIRECTV Now'" title="Click for package details" ng-href="#/package-details?pid={{requested_pkg.pid}}">{{requested_pkg.name}}</a>
+                        <a ng-if="requested_pkg.company != 'DIRECTV Now'" title="Click to open this package main page." ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{current_pkg.cspUrl}}" target="_blank">{{requested_pkg.name}}</a>
                         <span ng-show="requested_pkg.status == '0'"> - </span>
                         <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank" class="expired" ng-show="requested.status == '0'">Expired</a>
                     </span>
