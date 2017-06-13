@@ -239,8 +239,8 @@
             <div id="vsrepeat" class="oContainer">
                 <img class="oTip oTip-titles" src="assets/img/overlay_lineup_titles.png" ng-hide="clOverlay == 'hide'" />
                 <table>
-                    <tbody vs-repeat vs-scroll-parent="#vsrepeat">
-                        <tr style="height:50px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
+                    <tbody vs-repeat="70" vs-scroll-parent="#vsrepeat" vs-excess="10">
+                        <tr style="height:70px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
                             <td class="c-name unmerged name"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.channelnumber"></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.callletters"></td>
