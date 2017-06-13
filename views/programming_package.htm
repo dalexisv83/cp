@@ -1,430 +1,82 @@
-<div class="wrapper">
-    <div id="programming_package" ng-controller="PP_Controller">
-        <form name="frmNewPackage">
-            <div id="centerContent" class="row">
-                <div id="container1" class="col-sm-3 col-md-2">
-                    <div id="totalsBox">
-                        <div class="blbg mnh2">
-                            <h5 class="header"> PACKAGE TOTAL </h5>
-                            <div>
-                               <span id="lyrSuggestion">&nbsp;</span>
-                            </div>
-                            <div>
-                                <h5>Base: <span>$</span><span id="txtBase" name="txtBase" >0.00</span></h5>
-                            </div>
-                            <div>                                
-                                <h5>Premium: <span>$</span><span id="txtPrem" name="txtPrem">0.00</span></h5>
-                            </div>
-                            <div>
-                                <h5>Extras: <span>$</span><span id="txtExtra" name="txtExtra" >0.00</span></h5>
-                            </div>
-                            <div>
-                                <h5>1<sup>st</sup> Month Total: <span>$</span><span id="txtGrandTotal" name="txtGrandTotal" >0.00</span></h5>
-                            </div>
-                            <div>
-                                <input ng-click="resetAll();" type="button" value="RESET" class="btn btn-default rst">
-                            </div>
-                            <div>
-                                <div id="lyr2ndMonth"></div>
-                            </div>
+<div id="programming_package" ng-controller="PP_Controller">
+    <div class="wrapper">
+        <div class="border">
+            <div class="grid">
+                <div class="grid__item portable--two-thirds desk--two-thirds">
+                    <div>
+                        <h1>How Many TV's?</h1>
+                        <div>
+                            <select>
+                                <option value="0" disabled selected>Please select</option>
+                                <option value="1">1</option>
+                            </select>
+                        </div>
+                        Rio > Bill Ledger tab, Primary TV Credit? <label><input type="radio" name="prime_credit" value="false" /> No</label> <label><input type="radio" name="prime_credit" value="true" /> Yes</label>
+                    </div>
+                    <div>
+                        <h1>Equipment Service</h1>
+                        <span>Note: Accounts may require different Advanced Services (ARS).</span>
+                        <div>
+                            <label><input type="checkbox" value="ars_25"> ARS Monthly ($25)</label>
                         </div>
                     </div>
-                    <div id="summaryBox">
-                        <div class="orbg marr0 col-sm-12 mnh3">
-                            <h5 class="header"> QUICK SUMMARY </h5>
-                            <div class="col-sm-12 detail">
-                                <div ng-bind-html="ppSUMMARY"></div>
-                            </div>
+                    <div>
+                        <h1>Select Base Package</h1>
+                        <a href="">English Programming</a> <a href="">Spanish Programming</a> <a href="">Multi Dwelling Accts.</a>
+                        <div>
+                            <label><input type="radio" name="base_pkg" value="Family"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Add Premium Services</h1>
+                        <span>Pricing without HBO: 1st = $13.99 / 2nd = $12 / 3rd = $13 / 4th = $10 / 5th = n/a</span>
+                        <div>
+                            <label><input type="checkbox" value="hbo"> HBO</label> <a href="">Quick View</a> | <a href="">Details</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h1>Add Extra Services</h1>
+                        <div>
+                            <label><input type="checkbox" value="dtv_pp"> DIRECTV Protection Plan</label> <a href="">Quick View</a> | <a href="">Details</a>
                         </div>
                     </div>
                 </div>
-                <div id="container2" class="col-sm-9 col-md-10">
-                    <div class="row">
-                        <div id="step1Box" class="col-sm-12 col-md-4 primaryCredit pdr0">
-                            <div class="col-sm-12 bgwt marr0 stp12">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-12 hdr">
-                                                <div class="steps stp1"></div><p><strong># of Tv's</strong></p>
-                                            </div>
-                                            <div class="col-sm-6 col-md-12 pdr0 pdl0 marb10">
-                                                <a href="" ng-click="img_click_primaryCredit();">
-                                                    <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="assets/img/greenBoxNorm.gif"> Click box if Primary TV Credit = No (Rio > Bill Ledger tab)
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 pdr0 pdl0 marb10">
-                                        <a href="" ng-click="img_click_ds('1receiver',1);" ><img alt="1 receiver" border="0" id="1receiver" name="1receiver" src="assets/img/button1normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 pdr0 pdl0 marb10">
-                                        <a href="" ng-click="img_click_ds('2receiver',2);" ><img alt="2 receiver" border="0" id="2receiver" name="2receiver" src="assets/img/button2normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 pdr0 pdl0 marb10">
-                                        <a href="" ng-click="img_click_ds('3receiver',3);" ><img alt="3 receiver" border="0" id="3receiver" name="3receiver" src="assets/img/button3normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 pdr0 pdl0 marb10">
-                                        <a href="" ng-click="img_click_ds('4receiver',4);" ><img alt="4 receiver" border="0" id="4receiver" name="4receiver" src="assets/img/button4normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 pdr0 pdl0 marb10">
-                                        <a href="" ng-click="img_click_ds('5receiver',5);" ><img alt="5 receiver" border="0" id="5receiver" name="5receiver" src="assets/img/button5normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 pdr0 pdl0 marb10">
-                                        <a href="" ng-click="img_click_ds('6receiver',6);" ><img alt="6 receiver" border="0" id="6receiver" name="6receiver" src="assets/img/button6normal.png"></a>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="grid__item portable--one-third desk--one-third">
+                    <div>
+                        <h1>Package Totals</h1>
+                        <div>Base: $64.99</div>
+                        <div>Premium: $17.99</div>
+                        <div>Extras: $22</div>
+                        <div><strong>1st Month Total: $104.98</strong></div>
+                    </div>
+                    <button>Calculate</button> <button>Reset</button>
+                    <hr />
+                    <div>
+                        <h1>Related Links</h1>
+                        <div>
+                            <h3>
+                                <a href="">Regional Sports Fee</a>
+                            </h3>
                         </div>
-                        <div id="step2Box" class="col-sm-12 col-md-8">
-                            <div class="col-sm-12 bgwt stp12">
-                                <div class="row">
-                                    <div class="col-sm-12 hdr">
-                                        <div class="steps stp2"></div><p><strong>Equipment Service</strong></p>
-                                    </div>
-                                    <div class="col-sm-3 pdr0 pdl0">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537947" target="_blank"><strong>ARS</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_ARS('ARS1',1)"><img border="0" id="ARS1" name="ARS1" src="assets/img/greenBoxNorm.gif"> Monthly(<span id="ARS_Monthly_Fee">$25</span>)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_ARS_Extra();"><img border="0" id="MRV3" name="MRV3" src="assets/img/greenBoxNorm.gif"> Monthly(<span>$15</span>)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_ARS('ARS2',2)"><img border="0" id="ARS2" name="ARS2" src="assets/img/greenBoxNorm.gif"> <span>Remove</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 pdr0 pdl0 marb10">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_equ_adv_rec_538676" target="_blank"><strong>ARS-DVR</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_DVR('DVR1',1)"><img border="0" id="DVR1" name="DVR1" src="assets/img/greenBoxNorm.gif"> Monthly(<span id="ARS_Monthly_DVR_Fee">$10</span>)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_DVR('DVR2',2)"><img border="0" id="DVR2" name="DVR2" src="assets/img/greenBoxNorm.gif"> <span>Remove</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 pdr0 pdl0 marb10">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537555" target="_blank"><strong>ARS-HD</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_HD_Access('HD_Access1',1)">
-                                                <img border="0" id="HD_Access1" name="HD_Access1" src="assets/img/greenBoxNorm.gif"> Monthly(<span id="ARS_Monthly_HD_Fee">$10</span>)
-                                            </a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_HD_Access('HD_Access2',2)">
-                                                <img border="0" id="HD_Access2" name="HD_Access2" src="assets/img/greenBoxNorm.gif"> <span>Remove</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 pdr0 pdl0 marb10">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_equ_adv_rec_538789" target="_blank"><strong>Whole-Home DVR</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_MRV('MRV1',1)">
-                                                <img border="0" id="MRV1" name="MRV1" src="assets/img/greenBoxNorm.gif"> Monthly(<span id="MRV">$3</span>)
-                                            </a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_MRV('MRV2',2)">
-                                                <img border="0" id="MRV2" name="MRV2" src="assets/img/greenBoxNorm.gif"> <span>Remove</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12 pdr0 pdl0">
-                                        Accounts may require different <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537947" target="_blank">
-                                        Advanced Services (ARS)</a>.
-                                    </div>
-                                </div>
-                            </div>
+                        <div>
+                            <h3>Packages:</h3>
+                            <ul>
+                                <li>
+                                    <a href="">Expired</a>
+                                </li>
+                            </ul>
                         </div>
-                        <div id="step3Box" class="col-sm-12">
-                            <div class="col-sm-12 bgwt">
-                                <div class="row">
-                                    <div class="col-sm-12 hdr">
-                                        <div class="row">
-                                            <div class="col-sm-5 pdr0 pdl0">
-                                                <div class="steps stp3"></div><p><strong>Base package</strong></p>
-                                            </div>
-                                            <div class="col-sm-7 pdr0 pdl0">
-                                                <a href="" ng-click="englishPackageLanguage()" ><img border="0" id="EnglishButton" name="EnglishButton" src="assets/img/greenBoxDown.gif"><span id="lyrEnglish1"> English</span></a>&nbsp;&nbsp;&nbsp;
-                                                <a href="" ng-click="spanishPackageLanguage()" ><img border="0" id="SpanishButton" name="SpanishButton" src="assets/img/greenBoxNorm.gif"><span id="lyrEnglish1"> Spanish</span></a>&nbsp;&nbsp;&nbsp;
-                                                <a href="" ng-click="swapBasePackageMDU()" ><img border="0" id="MDUbutton" name="MDUbutton" src="assets/img/greenBoxNorm.gif"> MDU</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="lyrEnglish2">
-                                        <!--<div class="col-sm-12 innerboxHeadBig pdr0 pdl0 marb10">
-                                            <div class="row">
-                                                <div class="col-sm-4 col-md-3 pdr0 pdl0">
-                                                    <a href="" ng-click="img_click_Base('Family',1);">
-                                                    <img alt="Family" border="0" id="Family" name="Family" src="assets/img/greenBoxNorm.gif"></a>
-                                                    <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[1]; importXML();"> Family</a>
-                                                </div>
-                                                <div class="col-sm-4 col-md-3 pdr0 pdl0">
-                                                    <a href="" ng-click="img_click_Base('Xtra Add-On FDB',32);">
-                                                    <img alt="Select" border="0" id="Select" name="Select" src="assets/img/greenBoxNorm.gif"></a>
-                                                    <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[32]; importXML();"> Select</a>
-                                                </div>
-                                                <div class="col-sm-4 col-md-3 pdr0 pdl0">
-                                                    <a href="" ng-click="img_click_Base('Entertainment',28);">
-                                                    <img alt="Entertainment" border="0" id="Entertainment" name="Entertainment" src="assets/img/greenBoxNorm.gif"></a>
-                                                    <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[5]; importXML();"> Entertainment</a>
-                                                </div>
-                                                <div class="col-sm-4 col-md-3 pdr0 pdl0">
-                                                    <a href="" ng-click="img_click_Base('Choice',2);">
-                                                    <img alt="Choice" border="0" id="Choice" name="Choice" src="assets/img/greenBoxNorm.gif"></a>
-                                                    <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[2]; importXML();"> Choice</a>
-                                                </div>
-                                                <div class="col-sm-4 col-md-3 pdr0 pdl0">
-                                                    <a href="" ng-click="img_click_Base('Xtra',3);">
-                                                    <img alt="Xtra" border="0" id="Xtra" name="Xtra" src="assets/img/greenBoxNorm.gif"></a>
-                                                    <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[3]; importXML();"> Xtra</a>
-                                                </div>
-                                                <div class="col-sm-4 col-md-3 pdr0 pdl0">
-                                                    <a href="" ng-click="img_click_Base('Ultimate',4);">
-                                                    <img alt="Ultimate" border="0" id="Ultimate" name="Ultimate" src="assets/img/greenBoxNorm.gif"></a>
-                                                    <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[4]; importXML();"> Ultimate</a>
-                                                </div>
-                                                <div class="col-sm-4 col-md-3 pdr0 pdl0">
-                                                    <a href="" ng-click="img_click_Base('Premier',6);">
-                                                    <img alt="Premier" border="0" id="Premier" name="Premier" src="assets/img/greenBoxNorm.gif"></a>
-                                                    <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[6]; importXML();"> Premier</a>
-                                                </div>
-                                                <div class="col-sm-4 col-md-3 pdr0 pdl0">
-                                                    <a href="" ng-click="img_click_Base('Preferred Extra',33);">
-                                                    <img alt="Preferred Xtra" border="0" id="Preferred_extra" name="Preferred Extra" src="assets/img/greenBoxNorm.gif"></a>
-                                                    <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayBaseSummary[33]; importXML();"> Preferred Xtra</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 pdr0 pdl0">
-                                            Base package required for premiums/additional services. See
-                                            <a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537674" target="_blank"> Package Requirements</a>.
-                                        </div>-->
-                                    </div>
-                                    <div id="lyrSpanish2" style="display:none;">
-                                        <!--<div class="col-sm-6 innerboxHeadBig pdr0 pdl0">
-                                            <div class="col-sm-12 ipdr0 pdl0 marb10">
-                                                <a href="" ng-click="img_click_Base('Mas Latino',7);">
-                                                <img alt="Mas Latino" border="0" id="Mas Latino" name="Mas Latino" src="assets/img/greenBoxNorm.gif"></a>
-                                                <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[10]; importXML();"> M&aacute;s Latino</a>
-                                            </div>
-                                            <div class="col-sm-12 pdr0 pdl0 marb10">
-                                                <a href="" ng-click="img_click_Base('Mas Ultra',24);">
-                                                <img alt="Mas Ultra" border="0" id="Mas Ultra" name="Mas Ultra" src="assets/img/greenBoxNorm.gif"></a>
-                                                <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[9]; importXML();"> M&aacute;s Ultra</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 innerboxHeadBig pdr0 pdl0">
-                                            <div class="col-sm-12 pdr0 pdl0 marb10">
-                                                <a href="" ng-click="img_click_Base('Optimo_Mas',8);">
-                                                <img alt="Optimo Mas" border="0" id="Optimo_Mas" name="Optimo_Mas" src="assets/img/greenBoxNorm.gif"></a>
-                                                <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[1]; importXML();"> Optimo M&aacute;s</a>
-                                            </div>
-                                            <div class="col-sm-12 pdr0 pdl0 marb10">
-                                                <a href="" ng-click="img_click_Base('Lo Maximo',10);">
-                                                <img alt="Lo Maximo" border="0" id="Lo Maximo" name="Lo Maximo" src="assets/img/greenBoxNorm.gif"></a>
-                                                <a class="step3" href="" target="_blank" ng-mouseleave="ppSUMMARY = varDefaultSummary;" ng-mouseover="ppSUMMARY = arrayParaSummary[5]; importXML();"> Lo Maximo</a>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-12 pdr0 pdl0">
-                                            Base package required for premiums/additional services. See
-                                            <a class="step3" href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537674" target="_blank"> Package Requirements</a>.
-                                            </div>-->
-                                    </div>
-                                    <div id="lyrMDU1" style="display:none;">
-                                        <div class="col-sm-12 pdr0 pdl0">
-                                            <select name="MDUselection" ng-model="MDUselection" ng-change="fillMDUdiv(MDUselection)" ng-options="mduoption as mduoption for mduoption in mduoptions" style="margin:0 5px 5px 0;">
-                                                <option value disabled selected>Select One...</option>
-                                            </select>
-                                            <div id="MDUselectionInfo">&nbsp;</div>
-                                            <div id="MDUdefault">
-                                                Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.
-                                            </div>
-                                            <div id="MDUdiv" style="display:none;">
-                                                <!-- TMU SECTION   -->
-                                                <!--<img alt="Total Choice Plus TMU" border="0" id="Total Choice Plus TMU" name="Total Choice Plus TMU" src="assets/img/greenBoxNorm.gif" style="display:none;">-->
-                                                <!-- Family Digital Bulk column  -->
-                                                <!--<img alt="Family Digital Bulk" border="0" id="Family Digital Bulk" name="Family Digital Bulk" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Xtra Add-On" border="0" id="Xtra Add-On" name="Xtra Add-On" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Xtra Add-On FDB" border="0" id="Xtra Add-On FDB" name="Xtra Add-On FDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Xtra Add-On EDB" border="0" id="Xtra Add-On EDB" name="Xtra Add-On EDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Choice Add-On FDB" border="0" id="Choice Add-On FDB" name="Choice Add-On FDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Choice Add-On EDB" border="0" id="Choice Add-On EDB" name="Choice Add-On EDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Premier Add-On FDB" border="0" id="Premier Add-On FDB" name="Premier Add-On FDB" src="assets/img/greenBoxNorm.gif" style="display:none;">-->
-                                                <!--==============================-->
-                                                <!--<img alt="Entertainment Add-On" border="0" id="Entertainment Add-On" name="Entertainment Add-On" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Preferred Choice" border="0" id="Preferred Choice" name="Preferred Choice" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Total Choice" border="0" id="Total Choice for TCD/JCD" name="Total Choice for TCD/JCD" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Choice Tier" border="0" id="Choice Tier for TCD/JCD" name="Choice Tier for TCD/JCD" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Ultimate Add-On CDB" border="0" id="Ultimate Add-On CDB" name="Ultimate Add-On CDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Ultimate Add-On FDB" border="0" id="Ultimate Add-On FDB" name="Ultimate Add-On FDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Ultimate Add-On EDB" border="0" id="Ultimate Add-On EDB" name="Ultimate Add-On EDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Premier Add-On CDB" border="0" id="Premier Add-On CDB" name="Premier Add-On CDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Premier Add-On EDB" border="0" id="Premier Add-On EDB" name="Premier Add-On EDB" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Xtra Digital Bulk" id="Xtra Digital Bulk" name="Xtra Digital Bulk" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Student Choice Add-On" id="Student Choice Add-On" name="Student Choice Add-On" src="assets/img/greenBoxNorm.gif" style="display:none;">
-                                                <img alt="Student Choice Xtra Classic Add-On" name="Student Choice Xtra Classic Add-On" style="display:none;">
-                                                <a href="" id="total_choice_plus_anchor" ng-mouseleave="" ng-mouseover="" ng-click="">
-                                                    <img alt="Total Choice Plus" border="0" id="Total Choice Plus" name="Total Choice Plus" src="assets/img/greenBoxNorm.gif" style="display:none;"></a>
-                                                <a href="" id="xtra_tier_anchor" ng-mouseleave="" ng-mouseover="" ng-click="">
-                                                <img alt="Xtra Tier" border="0" id="Xtra Tier" name="Xtra Tier" src="assets/img/greenBoxNorm.gif" style="display:none;"></a>-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="step4Box" class="col-sm-12 col-md-6 pdr0">
-                            <div class="col-sm-12 bgwt marr0 stp45">
-                                <div class="row">
-                                <div class="col-sm-12 hdr">
-                                    <div class="steps stp4"></div><p><strong>Premium services</strong></p>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div>
-                                        <a href="" ng-click="img_click_Prem('hbo',7); layerSwap();">
-                                        <img alt="HBO The Works" border="0" id="hbo" name="hbo" src="assets/img/greenBoxNorm.gif">
-                                        <img alt="Click here for more info." border="0" src="assets/img/packages_hbo.gif"></a>
-                                    </div>
-                                    <div>
-                                        <a href="" ng-click="img_click_Prem('starz',8);">
-                                        <img alt="Starz Super Pack" border="0" id="starz" name="starz" src="assets/img/greenBoxNorm.gif">
-                                        <img alt="Click here for more info." border="0" src="assets/img/packages_starz.gif"></a>
-                                    </div>                                
-                                    <div>
-                                        <a href="" ng-click="img_click_Prem('showtime',8);">
-                                        <img alt="Showtime Unlimited" border="0" id="showtime" name="showtime" src="assets/img/greenBoxNorm.gif">
-                                        <img alt="Click here for more info." border="0" src="assets/img/packages_showtime.gif"></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div>
-                                        <a href="" ng-click="img_click_Prem('cinemax',8);">
-                                        <img alt="Cinemax More Max" border="0" id="cinemax" name="cinemax" src="assets/img/greenBoxNorm.gif">
-                                        <img alt="Click here for more info." border="0" src="assets/img/packages_cinemax.gif"></a>
-                                    </div>                            
-                                    <div>
-                                        <a href="" ng-click="img_click_Prem('sportspack',9);">
-                                        <img alt="Sports Pack" border="0" id="sportspack" name="sportspack" src="assets/img/greenBoxNorm.gif">
-                                        <img alt="Click here for more info." border="0" src="assets/img/packages_sports.gif"></a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <table class="hboPrices">
-                                        <tbody>
-                                            <tr>
-                                                <td class="innerboxHeadAndLine">
-                                                    <a href="" ng-click="img_click_Prem('hbo',7);" id="without">without HBO</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>1st = <span class="prices" id="firstPrem">$13.99</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>2nd = <span class="prices" id="secondPrem">$12</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>3rd = <span class="prices">$13</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>4th = <span class="prices">$10</span></td>
-                                            </tr>
-                                            <tr>
-                                                <td>5th = <span class="prices" id="fifthPrem">n/a</span></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="step5Box" class="col-sm-12 col-md-6">
-                            <div class="col-sm-12 bgwt stp45">
-                                <div class="row">
-                                    <div class="col-sm-12 hdr">
-                                        <div class="steps stp5"></div><p><strong>Extra services</strong></p>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pro_537675" target="_blank"><strong>DIRECTV Protection Plan</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_Protect('protect_1',10);"><img alt="Standard Receiver ($5.99/mo.)" border="0" id="protect_1" name="protect_1" src="assets/img/greenBoxNorm.gif"> Monthly</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_Protect('protect_3',11);"><img alt="none" border="0" id="protect_3" name="protect_3" src="assets/img/greenBoxNorm.gif"> Remove</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537558" target="_blank"><strong>DIRECTV HD Extra Pack</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_hdextra('hdextra_1',10);"><img alt="none" border="0" id="hdextra_1" name="hdextra_1" src="assets/img/greenBoxNorm.gif"> Monthly</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_hdextra('hdextra_2',11);"><img alt="none" border="0" id="hdextra_2" name="hdextra_2" src="assets/img/greenBoxNorm.gif"> Remove</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pro_537962" target="_blank"><strong>Protection Plan Premier</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_premier('premier_1',12);"><img alt="none" border="0" id="premier_1" name="premier_1" src="assets/img/greenBoxNorm.gif"> Monthly</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_premier('premier_2',13);"><img alt="none" border="0" id="premier_2" name="premier_2" src="assets/img/greenBoxNorm.gif"> Remove</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="step6Box" class="col-sm-12">
-                            <div class="col-sm-12 bgwt">                
-                                <div class="col-sm-12">
-                                    <p style="margin-top:10px"><strong>OTHER LINKS</strong></p>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="col-sm-12">
-                                        - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537939" target="_blank"><strong>Regional Sports Fee</strong></a>  
-                                    </div>
-                                </div>
-                                <div class="col-sm-2">
-                                    <div class="col-sm-12">
-                                        <strong>Packages:</strong><br><br>
-                                        - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank"> Expired</a><br><br>
-                                        - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_int_537436" target="_blank"> Basic Choice</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div class="col-sm-12">
-                                        <strong>Add Ons:</strong><br><br>
-                                        - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_mov_538100" target="_blank"> Encore (A La Carte)</a><br><br>
-                                        - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537508" target="_blank"> En Espa&ntilde;ol</a><br><br>
-                                       - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537427" target="_blank"> Am&eacute;ricas Plus</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="col-sm-12">                                          
-                                        - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ope_cen_cal_sup_537577" target="_blank"> International (WorldDirect)</a><br><br>
-                                        - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537616" target="_blank"> M&eacute;xico Plus</a><br><br>
-                                        - <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spa_539237" target="_blank"> DIRECTV Deportes</a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div>
+                            <h3>Add Ons:</h3>
+                            <ul>
+                                <li>
+                                    <a href="">Encore (A La Carte)</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </div>
