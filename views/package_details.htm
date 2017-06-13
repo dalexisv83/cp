@@ -27,23 +27,32 @@
                     </tr>
                 </table>
                 <hr />
-                <table style="width:calc(50% - 16px);">
-                    <thead>
-                        <tr>
-                            <th width="66%">Channel Name</th>
-                            <th ng-if="package.platform == 'DIRECTV'">Channel #</th>
-                            <th>Genre</th>
-                        </tr>
-                    </thead>
-                </table>
-                <div style="width:50%;height:400px;overflow:auto;">
-                    <table class="packages" width="100%">
-                        <tr ng-repeat="channel in channels">
-                            <td width="66%" ng-bind="channel.channelname"></td>
-                            <td ng-if="package.platform == 'DIRECTV'" ng-bind-html="channel.channelnumber"></td>
-                            <td ng-bind="channel.genre"></td>
-                        </tr>
-                    </table>
+                <div class="grid">
+                    <div class="grid__item lap--one-half portable--one-half desk--one-half">
+                        <table style="width:calc(100% - 16px);">
+                            <thead>
+                                <tr>
+                                    <th width="66%">Channel Name</th>
+                                    <th ng-if="package.platform == 'DIRECTV'">Channel #</th>
+                                    <th>Genre</th>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div style="width:100%;height:400px;overflow:auto;">
+                            <table class="packages" width="100%">
+                                <tr ng-repeat="channel in channels">
+                                    <td width="66%" ng-bind="channel.channelname"></td>
+                                    <td ng-if="package.platform == 'DIRECTV'" ng-bind-html="channel.channelnumber"></td>
+                                    <td ng-bind="channel.genre"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="grid__item lap--one-half portable--one-half desk--one-half">
+                        <p ng-if="package.tip">
+                            <b ng-bind="package.name"></b> <span ng-bind="package.tip"></span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
