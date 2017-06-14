@@ -15,16 +15,33 @@
                     </div>
                     <div>
                         <h1>Equipment Service</h1>
-                        <span>Note: Accounts may require different Advanced Services (ARS).</span>
+                        <span>Accounts may require different Advanced Services (ARS).</span>
                         <div>
                             <label><input type="checkbox" value="ars_25"> ARS Monthly ($25)</label>
                         </div>
                     </div>
                     <div>
                         <h1>Select Base Package</h1>
-                        <a href="">English Programming</a> <a href="">Spanish Programming</a> <a href="">Multi Dwelling Accts.</a>
-                        <div>
-                            <label><input type="radio" name="base_pkg" value="Family"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                        <label><input type="radio" name="base_cat" ng-model="base_cat" value="english">English Programming</label> <label><input type="radio" name="base_cat" ng-model="base_cat" value="spanish">Spanish Programming</label> <label><input type="radio" name="base_cat" ng-model="base_cat" value="mdu">Multi Dwelling Accts.</label>
+                        <div ng-show="base_cat == 'english'">
+                            <label><input type="radio" name="base_pkg" value="family"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                        </div>
+                        <div ng-show="base_cat == 'spanish'">
+                            <label><input type="radio" name="base_pkg" value="mas_latino"> Mas Latino</label> <a href="">Quick View</a> | <a href="">Details</a>
+                        </div>
+                        <div ng-show="base_cat == 'mdu'">
+                            <span>Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.</span>
+                            <div class="grid">
+                                <div class="grid__item one-quarter">
+                                    <select ng-model="mdu_cat">
+                                        <option value="" selected disabled>Select an MDU Acct type</option>
+                                        <option value="mdujdu">MDU/JDU</option>
+                                    </select>
+                                </div>
+                                <div ng-show="mdu_cat == 'mdujdu'" class="grid__item three-quarters">
+                                    <label><input type="radio" name="base_pkg" value="family_mdu"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>
