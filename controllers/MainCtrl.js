@@ -12,7 +12,7 @@
                 var ppObj = {
                     "name": "Programming Package",
                     "url": "programming-package",
-                    "src": "views/programming_package.htm?@@BUSTER@@"
+                    "src": "views/programming_package.htm?" + Date.now()
                 },
                 tools = [{
                     "name": "Channel Lineup",
