@@ -1,79 +1,99 @@
 <div id="programming_package" ng-controller="PP_Controller">
     <div class="wrapper">
         <div class="border">
-            <div class="grid">
-                <div class="grid__item portable--two-thirds desk--two-thirds">
-                    <div>
-                        <h1>How Many TV's?</h1>
-                        <div>
+            <div class="flex-cont">
+                <div class="flex-item layout">
+                    <section id="tvs">
+                        <h2 style="display: inline-block;">How Many TV's?</h2>
+                        <div class="select-style">
                             <select>
                                 <option value="0" disabled selected>Please select</option>
                                 <option value="1">1</option>
                             </select>
                         </div>
-                        Rio > Bill Ledger tab, Primary TV Credit? <label><input type="radio" name="prime_credit" value="false" /> No</label> <label><input type="radio" name="prime_credit" value="true" /> Yes</label>
-                    </div>
-                    <div>
-                        <h1>Equipment Service</h1>
+                        <div>Rio > Bill Ledger tab, Primary TV Credit? <label><input type="radio" name="prime_credit" value="false" /> No</label> <label><input type="radio" name="prime_credit" value="true" /> Yes</label></div>
+                    </section>
+                    <section id="equip">
+                        <h2>Equipment Service</h2>
                         <span>Accounts may require different Advanced Services (ARS).</span>
                         <div>
                             <label><input type="checkbox" value="ars_25"> ARS Monthly ($25)</label>
                         </div>
-                    </div>
-                    <div>
-                        <h1>Select Base Package</h1>
-                        <label><input type="radio" name="base_cat" ng-model="base_cat" value="english">English Programming</label> <label><input type="radio" name="base_cat" ng-model="base_cat" value="spanish">Spanish Programming</label> <label><input type="radio" name="base_cat" ng-model="base_cat" value="mdu">Multi Dwelling Accts.</label>
-                        <div ng-show="base_cat == 'english'">
-                            <label><input type="radio" name="base_pkg" value="family"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                    </section>
+                    <section id="base">
+                        <h2>Select Base Package</h2>
+                        <div id="base_tabs" class="grid grid--full">
+                            <div class="grid__item one-third">
+                                <label ng-class="{'active': base_cat == 'english'}"><input type="radio" name="base_cat" ng-model="base_cat" value="english">English Programming</label>
+                            </div>
+                            <div class="grid__item one-third">
+                                <label ng-class="{'active': base_cat == 'spanish'}"><input type="radio" name="base_cat" ng-model="base_cat" value="spanish">Spanish Programming</label>
+                            </div>
+                            <div class="grid__item one-third">
+                                <label ng-class="{'active': base_cat == 'mdu'}"><input type="radio" name="base_cat" ng-model="base_cat" value="mdu">Multi Dwelling Accts.</label>
+                            </div>
                         </div>
-                        <div ng-show="base_cat == 'spanish'">
-                            <label><input type="radio" name="base_pkg" value="mas_latino"> Mas Latino</label> <a href="">Quick View</a> | <a href="">Details</a>
-                        </div>
-                        <div ng-show="base_cat == 'mdu'">
-                            <span>Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.</span>
-                            <div class="grid">
-                                <div class="grid__item one-quarter">
-                                    <select ng-model="mdu_cat">
-                                        <option value="" selected disabled>Select an MDU Acct type</option>
-                                        <option value="mdujdu">MDU/JDU</option>
-                                    </select>
-                                </div>
-                                <div ng-show="mdu_cat == 'mdujdu'" class="grid__item three-quarters">
-                                    <label><input type="radio" name="base_pkg" value="family_mdu"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                        <div class="grid">
+                            <div ng-show="base_cat == 'english'" class="grid__item">
+                                <label><input type="radio" name="base_pkg" value="family"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                            </div>
+                            <div ng-show="base_cat == 'spanish'" class="grid__item">
+                                <label><input type="radio" name="base_pkg" value="mas_latino"> Mas Latino</label> <a href="">Quick View</a> | <a href="">Details</a>
+                            </div>
+                            <div ng-show="base_cat == 'mdu'" class="grid__item">
+                                <div class="grid">
+                                    <div class="grid__item">
+                                        <span>Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.</span>
+                                    </div>
+                                    <div class="grid__item one-half">
+                                        <div class="select-style">
+                                            <select ng-model="mdu_cat">
+                                                <option value="" selected disabled>Select an MDU Acct type</option>
+                                                <option value="mdujdu">MDU/JDU</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div ng-show="mdu_cat == 'mdujdu'" class="grid__item one-half">
+                                        <label><input type="radio" name="base_pkg" value="family_mdu"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <h1>Add Premium Services</h1>
+                    </section>
+                    <section id="prem">
+                        <h2>Add Premium Services</h2>
                         <span>Pricing without HBO: 1st = $13.99 / 2nd = $12 / 3rd = $13 / 4th = $10 / 5th = n/a</span>
                         <div>
                             <label><input type="checkbox" value="hbo"> HBO</label> <a href="">Quick View</a> | <a href="">Details</a>
                         </div>
-                    </div>
-                    <div>
-                        <h1>Add Extra Services</h1>
+                    </section>
+                    <section id="serv">
+                        <h2>Add Extra Services</h2>
                         <div>
                             <label><input type="checkbox" value="dtv_pp"> DIRECTV Protection Plan</label> <a href="">Quick View</a> | <a href="">Details</a>
                         </div>
-                    </div>
+                    </section>
                 </div>
-                <div class="grid__item portable--one-third desk--one-third">
+                <div id="side" class="flex-item">
                     <div>
-                        <h1>Package Totals</h1>
-                        <div>Base: $64.99</div>
-                        <div>Premium: $17.99</div>
-                        <div>Extras: $22</div>
-                        <div><strong>1st Month Total: $104.98</strong></div>
+                        <h2>Package Totals</h2>
+                        <div id="pricing">
+                            <div>Base: $64.99</div>
+                            <div>Premium: $17.99</div>
+                            <div>Extras: $22</div>
+                            <div><strong>1st Month Total: $104.98</strong></div>
+                        </div>
+                        <button>Calculate</button> <button>Reset</button>
                     </div>
-                    <button>Calculate</button> <button>Reset</button>
-                    <hr />
                     <div>
-                        <h1>Related Links</h1>
+                        <h2>Related Links</h2>
                         <div>
-                            <h3>
-                                <a href="">Regional Sports Fee</a>
-                            </h3>
+                            <h3>Fees</h3>
+                            <ul>
+                                <li>
+                                    <a href="">Regional Sports Fee</a>
+                                </li>
+                            </ul>
                         </div>
                         <div>
                             <h3>Packages:</h3>

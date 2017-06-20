@@ -1,0 +1,91 @@
+#programming_package h2 {
+    text-transform: uppercase;
+}
+
+#programming_package h3 {
+    font-size: 1.25em;
+}
+
+#programming_package label {
+    font-weight: normal;
+}
+
+#programming_package section {
+    padding-left: 60px;
+    background: top left no-repeat;
+    margin-bottom: 58px;
+}
+
+#programming_package section#tvs {
+    background-image: url('../img/prog-pack_icn_1.png');
+}
+
+#programming_package section#equip {
+    background-image: url('../img/prog-pack_icn_2.png');
+}
+
+#programming_package section#base {
+    background-image: url('../img/prog-pack_icn_3.png');
+}
+
+#programming_package section#prem {
+    background-image: url('../img/prog-pack_icn_4.png');
+}
+
+#programming_package section#serv {
+    background-image: url('../img/prog-pack_icn_5.png');
+}
+
+#base_tabs div {
+    text-align: center;
+    vertical-align: bottom;
+}
+
+#base_tabs input[type=radio] {
+    display: none;
+}
+
+#base_tabs label {
+    display: block;
+    border-bottom: 4px solid #999;
+    color: #42b5e2;
+    font-size: 1.25em;
+    cursor: pointer;
+}
+
+#base_tabs div:first-child {
+    text-align: left;
+}
+
+#base_tabs div:last-child {
+    text-align: right;
+}
+
+#base_tabs label.active {
+    border-bottom-color: #e97400;
+}
+
+#side {
+    background: top left no-repeat url('../img/prog-pack_divider.png');
+    padding-left: 24px;
+}
+
+#pricing {
+    font-size: 1.5em;
+}
+
+.flex-cont {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+    .flex-cont {
+        flex-direction: row;
+    }
+
+    .flex-item.layout {
+        width: 66.666%;
+        margin-right: 24px;
+    }
+}
