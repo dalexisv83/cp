@@ -207,7 +207,7 @@ app.filter('comReplace', [
     function() {
         return function(input) {
             if(input) {
-                return input.replace('Business','Biz.').replace('Commercial','Com.');
+                return input.replace('Business','Biz.').replace('Commercial','Com.').replace('Comercial','Com.').replace('BUSINESS','BIZ.').replace('COMMERCIAL','COM.').replace('COMERCIAL','COM.');
             }
         }
     }
