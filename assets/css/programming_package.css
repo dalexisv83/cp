@@ -1,3 +1,22 @@
+@media (min-width: 992px){
+    #step1Box, #step4Box {
+        padding-right: 0 !important;
+    }
+    #step2Box, #step5Box {
+        padding-left: 10px !important;
+    }
+}
+@media (min-width: 768px){
+    #step6Box div div.col-sm-3{
+        padding-left:0;
+        padding-right:0;
+    }
+}
+@media (max-width: 768px){
+    #step6Box div div.col-sm-3{
+        padding-bottom:10px;
+    }
+}
 .wrapper{
     max-width: 1260px;
     position: relative;
@@ -212,44 +231,36 @@ img {
 A.step3:link {
     color:#070872;
     text-decoration:underline;
-    white-space:nowrap
 }
 
 A.step3:active {
     text-decoration:underline;
-    white-space:nowrap
 }
 
 A.step3:visited {
     text-decoration:underline;
-    white-space:nowrap
 }
 
 A.step3:hover {
     text-decoration:underline;
-    white-space:nowrap
 }
 
 /* used only for the MDU:TMU package table  */
 A.step4:link {
     text-decoration:underline;
-    white-space:nowrap;
 }
 
 A.step4:active {
     text-decoration:underline;
-    white-space:nowrap;
 }
 
 A.step4:visited {
     text-decoration:underline;
-    white-space:nowrap;
 }
 
 A.step4:hover {
     color:#F60;
     text-decoration:underline;
-    white-space:nowrap;
 }
 
 div#centerContent {
@@ -341,3 +352,6 @@ a.step3, a.step4 {
     margin-bottom: 10px;
     display: inline-block;
 }
+.inline{display:inline !important}
+.padl0{padding-left:0;}
+.padr0{padding-right:0;}
