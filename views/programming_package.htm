@@ -6,18 +6,19 @@
                     <section id="tvs">
                         <h2 style="display: inline-block;">How Many TV's?</h2>
                         <div class="select-style">
-                            <select>
-                                <option value="0" disabled selected>Please select</option>
-                                <option value="1">1</option>
+                            <select ng-model="recX" ng-options="num for num in recNum">
+                                <option value="" disabled>Please select</option>
                             </select>
                         </div>
-                        <div>Rio > Bill Ledger tab, Primary TV Credit? <label><input type="radio" name="prime_credit" value="false" /> No</label> <label><input type="radio" name="prime_credit" value="true" /> Yes</label></div>
+                        <div><label><input type="checkbox" ng-model="primary_credit" /> Rio > Bill Ledger tab, Primary TV Credit?</label></div>
                     </section>
                     <section id="equip">
                         <h2>Equipment Service</h2>
                         <span>Accounts may require different Advanced Services (ARS).</span>
-                        <div>
-                            <label><input type="checkbox" value="ars_25"> ARS Monthly ($25)</label>
+                        <div class="grid">
+                            <div ng-repeat="product in products | filter:{group:'EQUIPMENT SERVICE'}" class="grid__item one-half">
+                                <label><input type="checkbox" ng-model="checked[product.id]"> {{product.name}}</label>
+                            </div>
                         </div>
                     </section>
                     <section id="base">
@@ -35,10 +36,18 @@
                         </div>
                         <div class="grid">
                             <div ng-show="base_cat == 'english'" class="grid__item">
-                                <label><input type="radio" name="base_pkg" value="family"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                <div class="grid">
+                                    <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{english: 1}" class="grid__item one-half">
+                                        <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                    </div>
+                                </div>
                             </div>
                             <div ng-show="base_cat == 'spanish'" class="grid__item">
-                                <label><input type="radio" name="base_pkg" value="mas_latino"> Mas Latino</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                <div class="grid">
+                                    <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{spanish: 1}" class="grid__item one-half">
+                                        <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                    </div>
+                                </div>
                             </div>
                             <div ng-show="base_cat == 'mdu'" class="grid__item">
                                 <div class="grid">
@@ -47,14 +56,25 @@
                                     </div>
                                     <div class="grid__item one-half">
                                         <div class="select-style">
-                                            <select ng-model="mdu_cat">
+                                            <select ng-model="mdu_cat" ng-options="product.mduType as product.mduType for product in products | filter:{'mduType': ''} | filter:{'mduType': '!TCD/JCD'} | unique:'mduType'">
                                                 <option value="" selected disabled>Select an MDU Acct type</option>
-                                                <option value="mdujdu">MDU/JDU</option>
+                                            </select>
+                                        </div>
+                                        <div class="select-style">
+                                            <select ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'" ng-model="mdu_base" ng-options="product.mduBase as product.mduBase for product in products | filter:{'mduType': mdu_cat} | filter:{'mduBase': ''} | unique:'mduBase'">
+                                                <option value="" selected disabled>Select an MDU Bulk package type</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div ng-show="mdu_cat == 'mdujdu'" class="grid__item one-half">
-                                        <label><input type="radio" name="base_pkg" value="family_mdu"> Family</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                    <div ng-repeat="product in mdus = (products | filter:{'mduType': mdu_cat || ''}) | unique:'mduType'" class="grid__item one-half" ng-show="mdu_cat == product.mduType && mdu_cat != 'JMU/TMU/JMW/TMW'">
+                                        <div ng-repeat="mdu in mdus">
+                                            <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item one-half" ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'">
+                                        <div ng-repeat="mdu in mdus | filter:{'mduBase': mdu_base || '!'}">
+                                            <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -62,15 +82,18 @@
                     </section>
                     <section id="prem">
                         <h2>Add Premium Services</h2>
-                        <span>Pricing without HBO: 1st = $13.99 / 2nd = $12 / 3rd = $13 / 4th = $10 / 5th = n/a</span>
-                        <div>
-                            <label><input type="checkbox" value="hbo"> HBO</label> <a href="">Quick View</a> | <a href="">Details</a>
+                        <span ng-hide="premChkd[0]">Pricing without HBO: 1st = $13.99 / 2nd = $12 / 3rd = $13 / 4th = $10 / 5th = n/a</span>
+                        <span ng-show="premChkd[0]">Pricing with HBO: 1st = $17.99 / 2nd = $13 / 3rd = $13 / 4th = $10 / 5th = $8</span>
+                        <div class="grid">
+                            <div ng-repeat="product in products | filter:{group:'PREMIUM SERVICE'}" class="grid__item one-half">
+                                <label><input type="checkbox" ng-model="premChkd[$index]"> {{product.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                            </div>
                         </div>
                     </section>
                     <section id="serv">
                         <h2>Add Extra Services</h2>
-                        <div>
-                            <label><input type="checkbox" value="dtv_pp"> DIRECTV Protection Plan</label> <a href="">Quick View</a> | <a href="">Details</a>
+                        <div ng-repeat="product in products | filter:{group:'EXTRA SERVICES'}">
+                            <label><input type="checkbox" ng-model="checked[product.id]"> {{product.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
                         </div>
                     </section>
                 </div>
@@ -78,12 +101,20 @@
                     <div>
                         <h2>Package Totals</h2>
                         <div id="pricing">
-                            <div>Base: $64.99</div>
-                            <div>Premium: $17.99</div>
-                            <div>Extras: $22</div>
-                            <div><strong>1st Month Total: $104.98</strong></div>
+                            <div>Base: <span ng-bind="baseTotal | currency"></span></div>
+                            <div>Premium: <span ng-bind="premTotal | currency"></span></div>
+                            <div>Extras: <span ng-bind="xtraTotal | currency"></span></div>
+                            <div><strong>1st Month Total: <span ng-bind="mon1Total | currency"></span></strong></div>
+                            <div><strong>2nd Month Total: <span ng-bind="mon2Total | currency"></span></strong></div>
                         </div>
-                        <button>Calculate</button> <button>Reset</button>
+                        <div ng-show="base.selected == 6 && premChkd.length == 5">SAVINGS ALERT!
+                            <ul>
+                                <li>Premier has more for less money.
+                                <li>Add Premier instead of Ultimate and 5 Premiums.
+                            </ul>
+                        </div>
+                        <div ng-show="summShow">Customers are not charged for Protection Plan until the 2nd month. The subtotal for <strong ng-show="pPlanShow" ng-bind="pPlan.name"></strong><span ng-show="pPlanShow && pPlanPremShow"> and </span><strong ng-show="pPlanPremShow" ng-bind="pPlanPrem.name"></strong> is <span ng-bind="summTotal | currency"></span></div>
+                        <button ng-click="getTotals()">Calculate</button> <button ng-click="reset()">Reset</button>
                     </div>
                     <div>
                         <h2>Related Links</h2>
