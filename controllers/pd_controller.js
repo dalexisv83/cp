@@ -13,37 +13,19 @@ app.controller('PD_Controller',['$scope', '$filter', '$http', '$location',
 
                             $scope.selPackages = $filter('filter')(response.data.package_compare.datasource, {platform: '!FEE'});
                             $scope.selPackages = $filter('filter')($scope.selPackages, {id: ''});
-                            $scope.selPackages = $filter('orderBy')($scope.selPackages, 'name');
+                            $scope.selPackages = $filter('orderBy')($scope.selPackages, ['-platform', 'name']);
 
                             $scope.$watch(function() {
                                 return $location.search();
                             }, function(params) {
                                 $scope.pid = params.pid;
-                                // $scope.package = $scope.selPackages.find(function(qPack) {
-                                //     if ($scope.pid) {
-                                //         console.log(qPack.platform + "\n" + qPack.id + "\n" + $scope.pid);
-                                //         return qPack.platform === 'DTVRES' && qPack.id === $scope.pid;
-                                //     }
-                                // });
-
-                                // $scope.channels = response.data.channels.filter(function(qChan) {
-                                //     if ($scope.package) {
-                                //             var i,
-                                //             len = $scope.package.channels.length;
-                                //         for (i=0;i<len;i++) {
-                                //             if ($scope.package.channels[i].id === qChan.id){
-                                //                 return true;
-                                //             }
-                                //         }
-                                //     }
-                                // });
                             });
                             $scope.$watch('pid', function() {
                                 $location.search('pid', $scope.pid);
 
                                 $scope.package = $scope.selPackages.find(function(qPack) {
                                     if ($scope.pid) {
-                                        return qPack.platform !== 'FEE' && qPack.id === $scope.pid;
+                                        return qPack.id === $scope.pid;
                                     }
                                 });
 
@@ -76,16 +58,10 @@ app.controller('PD_Controller',['$scope', '$filter', '$http', '$location',
             function(params) {
                 if (params == 'package-details') {
                     stopWatching();
-                    $http.get('data/PageListRes.js').then(function successCallback(response) {
+                    $http.get('assets/datasource/PageListRes.js').then(function successCallback(response) {
                         init(response);
                     }, function errorCallback(response) {
-                        $http.get('http://localhost/rover_tools/channelsjs/channels.js').then(function successCallback(response) {
-                            init(response);
-                        }, function errorCallback(response) {
-                            // called asynchronously if an error occurs
-                            // or server returns response with an error status.
-                            throw new Error('Data request failed: ' + JSON.stringify(response));
-                        });
+                        throw new Error('Data request failed:\n' + JSON.stringify(response));
                     });
                 }
             },

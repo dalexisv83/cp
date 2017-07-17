@@ -1,14 +1,14 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="channelspackages">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Channels And Packages</title>
-    <script type="text/javascript" src="http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ProgrammingPackage"></script>
     <link rel="stylesheet" type="text/css" href="../common_assets/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="style/csswizardry-grids.css">
-    <link rel="stylesheet" type="text/css" href="style/main.css?@@BUSTER@@">
+    <link rel="stylesheet" type="text/css" href="assets/css/csswizardry-grids.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css?@@BUSTER@@">
 
     <style>
     html, body {
@@ -19,7 +19,6 @@
         left: 0;
     }
     </style>
-
     <!-- Package Compare Assets -->
     <link rel="stylesheet" href="../common_assets/css/bootstrap.3.1.1.css">
     <link rel="stylesheet" href="../common_assets/css/jquery.qtip.min.css">
@@ -34,23 +33,18 @@
         <!--[if !IE]> -->
         <link rel="stylesheet" href="assets/css/channel_lineup.css?@@BUSTER@@" type="text/css"/>
         <!-- <![endif]-->
-
     <!-- Channel Lineup Compare Assets -->
     <!-- Programming Package Assets -->
     <link rel="stylesheet" type="text/css" href="assets/css/programming_package.css?v1"/>
-    <script language="JavaScript" src="../common_assets/js/popup.js"></script>
-    <script language="javascript" src="../common_assets/js/newWindow.js"></script>
     <!-- Programming Package Assets -->
     <!-- Package Details Assets -->
     <link rel="stylesheet" type="text/css" href="assets/css/package_details.css"/>
     <!-- Package Details Assets -->
-
-    <!-- <base href="http://agentanswercenter.directv.com/en-us/res/rover_tools/channels_packages/channels_packages.htm" /> -->
     <!--[if lt IE 9]>
-    <script src="../common_assets/js/PIE.js"></script>
-    <script src="../common_assets/js/es5-shim.min.js"></script>
-    <script src="../common_assets/js/es5-sham.min.js"></script>
-    <script src="../common_assets/js/html5shiv.js"></script>
+    <script type="text/javascript" src="../common_assets/js/PIE.js"></script>
+    <script type="text/javascript" src="../common_assets/js/es5-shim.min.js"></script>
+    <script type="text/javascript" src="../common_assets/js/es5-sham.min.js"></script>
+    <script type="text/javascript" src="../common_assets/js/html5shiv.js"></script>
     <script type="text/javascript" src="../common_assets/js/matchmedia.polyfill.js"></script>
     <script type="text/javascript" src="../common_assets/js/respond.min.js"></script>
     <![endif]-->
@@ -65,62 +59,42 @@
 </footer>
     <input type="hidden" id="tool-author-id" value="David Velasquez">
     <!-- START OF SmartSource Data Collector TAG -->
-    <script src="http://agentanswercenter.directv.com/en-us/res/system/js/webtrends.js" type="text/javascript"></script>
-    <script src="../common_assets/js/modernizr-inputtypes.js"></script>
-    <script src="../common_assets/js/jquery-1.11.3.min.js" type="text/javascript"></script>
-    <script src="../common_assets/js/angular-1.2.32.js"></script>
-    <script src="app/app.js"></script>
-    <script src="controllers/MainCtrl.js?@@BUSTER@@"></script>
+    <script type="text/javascript" src="../common_assets/js/modernizr-inputtypes.js"></script>
+    <script type="text/javascript" src="../common_assets/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="../common_assets/js/angular-1.2.32.js"></script>
+    <script type="text/javascript" src="../common_assets/js/angular-cookies.1.2.32.js"></script>
+    <script type="text/javascript" src="../common_assets/js/jquery.qtip.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="controllers/MainCtrl.js?@@BUSTER@@"></script>
     <!-- Package Compare Assets -->
     <script type="text/javascript" src="../common_assets/js/angular-sanitize-1.2.32.js"></script>
     <script type="text/javascript" src="../common_assets/js/underscore.js"></script>
-    <script type="text/javascript" src="../common_assets/js/jquery.qtip.min.js"></script>
-    <!-- moved here due to Tridion parsing the > symbol incorrectly -->
-    <!-- TODO: moved this back to app.js once the issue in Tridion is fixed -->
     <script type="text/javascript" src="../common_assets/js/chosen_jquery.js"></script>
-    <script type="text/javascript">
-        app.directive('whenScrolled', function() {
-            'use strict';
-            return function(scope, elm, attr) {
-                var raw = elm[0];
-                elm.bind('scroll', function() {
-                    if (raw.scrollTop + raw.offsetHeight >= raw.scrollHeight) {
-                        scope.$apply(attr.whenScrolled);
-                    }
-                });
-            };
-        });
-    </script>
-    <script type="text/javascript" src="assets/scripts/pc_class.js"></script>
+    <script type="text/javascript" src="assets/js/pc_class.js"></script>
     <script type="text/javascript" src="controllers/pc_controller.js"></script>
     <!-- Package Compare Assets -->
     <!-- Channel Lineup Compare Assets -->
     <!--[if lt IE 9]>
-    <script src="../common_assets/js/raphael.js"></script>
-    <script src="../common_assets/js/jquery-event-drag.js"></script>
-    <script src="../common_assets/js/slick-core.js"></script>
-    <script src="../common_assets/js/slick-grid.js"></script>
-    <script src="../common_assets/js/slick-dataview.js"></script>
+    <script type="text/javascript" src="../common_assets/js/raphael.js"></script>
+    <script type="text/javascript" src="../common_assets/js/jquery-event-drag.js"></script>
+    <script type="text/javascript" src="../common_assets/js/slick-core.js"></script>
+    <script type="text/javascript" src="../common_assets/js/slick-grid.js"></script>
+    <script type="text/javascript" src="../common_assets/js/slick-dataview.js"></script>
     <![endif]-->
-    <script src="../common_assets/js/angular_directives/vs-repeat/angular-vs-repeat.min.js"></script>
-    <!--start of two are the datasources-->
-    <script src="http://agentanswercenter.directv.com/en-us/res/rover_tools/channel_list/version_two/data/ad_channels.js"></script>
-    <!--<script src="ad_channels_big.js"></script>-->
-    <!--end of two are the datasources-->
-
+    <script type="text/javascript" src="../common_assets/js/angular_directives/vs-repeat/angular-vs-repeat.min.js"></script>
     <!--holds the configuration values-->
-    <script src="config/cl_config.js"></script>
+    <script type="text/javascript" src="config/cl_config.js"></script>
     <!--the main library classes-->
-    <script src="assets/scripts/cl_class.js"></script>
+    <script type="text/javascript" src="assets/js/cl_class.js"></script>
     <!--the entrance script-->
-    <script src="controllers/cl_controller.js?@@BUSTER@@"></script>
+    <script type="text/javascript" src="controllers/cl_controller.js?@@BUSTER@@"></script>
     <!-- Channel Lineup Compare Assets -->
     <!-- Programming Package Assets -->
-    <script src="../common_assets/js/jquery.matchHeight-min.js" type="text/javascript"></script>
-    <script language="javascript" src="controllers/packageTool.js?@@BUSTER@@"></script>
+    <script type="text/javascript" src="../common_assets/js/jquery.matchHeight-min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="controllers/packageTool.js?@@BUSTER@@"></script>
     <!-- Programming Package Assets -->
     <!-- Package Detail Assets -->
-    <script src="controllers/pd_controller.js?@@BUSTER@@"></script>
+    <script type="text/javascript" src="controllers/pd_controller.js?@@BUSTER@@"></script>
     <!-- Package Detail Assets -->
 </body>
 

@@ -1,6 +1,8 @@
 <div id="package_compare" class="full" ng-controller="AppController">
+<img class="oTip oTip-lineup" src="assets/img/overlay_lineup_tab.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
 <div class="wrapper">
     <div class="border" ng-window-pie>
+        <img class="oTip oTip-help" ng-click="pcOverlay = 'show'" src="assets/img/help_icon.gif" />
         <div class="alert_box">
                 <img class="close_notification" src="../common_assets/img/close_button.jpg" width=10 height=10 />
                 <div class="alert_message"></div>
@@ -18,7 +20,8 @@
         </div>
         <!--start row for package dropdowns-->
         <div class="grid">
-            <div class="current grid__item one-quarter">
+            <div class="current grid__item one-quarter oContainer">
+                <img class="oTip oTip-select" src="assets/img/overlay_pkgcom_select_current.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
                 <select ng-hide="pcLoaded"><option value="" disabled selected>Loading&hellip;</option></select>
                 <select ng-show="pcLoaded" data-placeholder="Type or Select Package:" tabindex="2" ng-model="current_pkg" ng-options="current_pkg as (current_pkg.dname + ' ' + dataStore.getDisplayPrice(current_pkg.price,volume) + ' (' + current_pkg.count + ')') group by current_pkg.company for current_pkg in current_pkgs | orderBy:'dname'" name="current_package" class="convert-from chosen-select" chosen="current_pkgs" required>
                 </select>
@@ -30,12 +33,12 @@
                         <img id="genreX" src="../common_assets/img/close_button.jpg" width=10 height=10 />
                         <div class="last">
                            <div class="pull-left code">*</div>
-                           <div class="pull-left title"><a href="http://agentanswercenterstg.directv.com/en-us/res/ace/vod_index.html" target="_blank">DIRECTV On Demand</a></div>
+                           <div class="pull-left title"><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_544889" target="_blank">DIRECTV On Demand</a></div>
                            <div style="clear:both"></div>
                         </div>
                         <div class="last">
                            <div class="pull-left code">&#171;</div>
-                           <div class="pull-left title"><a href="http://agentanswercenterstg.directv.com/en-us/res/programming/72hr_rewind_restart.html" target="_blank">Rewind &amp; Restart</a></div>
+                           <div class="pull-left title"><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049" target="_blank">Rewind &amp; Restart</a></div>
                            <div style="clear:both"></div>
                         </div>
                         <hr />
@@ -96,7 +99,8 @@
                 </div>
             </div>
 
-            <div class="requested grid__item one-quarter">
+            <div class="requested grid__item one-quarter oContainer">
+                <img class="oTip oTip-select" src="assets/img/overlay_pkgcom_select_new.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
                 <select ng-hide="pcLoaded"><option value="" disabled selected>Loading&hellip;</option></select>
                 <select ng-show="pcLoaded" data-placeholder="Type or Select Package:" tabindex="2" ng-model="requested_pkg" ng-options="requested_pkg as (requested_pkg.dname + ' ' + dataStore.getDisplayPrice(requested_pkg.price,volume) + ' (' + requested_pkg.count + ')') group by requested_pkg.company for requested_pkg in requested_pkgs | orderBy:'dname'" name="requested_package" class="convert-from chosen-select" chosen="requested_pkgs" required>
                 </select>
@@ -142,15 +146,14 @@
         <div class="grid">
             <div class="table-header grid__item one-quarter" ng-cloak>
                 <div class="current label-holder" ng-show="show_current_channels">
-                    <span ng-if="current_pkg.url">
-                        <a title="Click to open this package main page." ng-href="http://agentanswercenterstg.directv.com/en-us/res/programming/{{current_pkg.url}}" target="_blank">
-                        {{current_pkg.name}}
-                        </a>
+                    <span ng-if="current_pkg.cspUrl">
+                        <a ng-if="current_pkg.company == 'DIRECTV Now'" title="Click for package details" ng-href="#/package-details?pid={{current_pkg.pid}}">{{current_pkg.name}}</a>
+                        <a ng-if="current_pkg.company != 'DIRECTV Now'" title="Click to open this package main page." ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{current_pkg.cspUrl}}" target="_blank">{{current_pkg.name}}</a>
                     </span>
                     <span ng-show="current_pkg.status == '0'"> - </span>
-                    <a href="http://agentanswercenterstg.directv.com/en-us/res/programming/expired_packages.html" target="_blank" class="expired" ng-show="current_pkg.status == '0'">Expired</a>
+                    <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank" class="expired" ng-show="current_pkg.status == '0'">Expired</a>
                     </span>
-                    <span ng-if="!current_pkg.url">
+                    <span ng-if="!current_pkg.cspUrl">
                         {{current_pkg.name}}
                     </span>
                 </div>               
@@ -166,14 +169,13 @@
             </div>          
             <div class="table-header grid__item one-quarter">
                 <div class="label-holder" ng-cloak ng-show="show_requested_channels" >
-                    <span ng-if="requested_pkg.url">
-                        <a title="Click to open this package main page." ng-href="http://agentanswercenterstg.directv.com/en-us/res/programming/{{requested_pkg.url}}" target="_blank">
-                        {{requested_pkg.name}}
-                        </a>
+                    <span ng-if="requested_pkg.cspUrl">
+                        <a ng-if="requested_pkg.company == 'DIRECTV Now'" title="Click for package details" ng-href="#/package-details?pid={{requested_pkg.pid}}">{{requested_pkg.name}}</a>
+                        <a ng-if="requested_pkg.company != 'DIRECTV Now'" title="Click to open this package main page." ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{current_pkg.cspUrl}}" target="_blank">{{requested_pkg.name}}</a>
                         <span ng-show="requested_pkg.status == '0'"> - </span>
-                        <a href="http://agentanswercenterstg.directv.com/en-us/res/programming/expired_packages.html" target="_blank" class="expired" ng-show="requested.status == '0'">Expired</a>
+                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank" class="expired" ng-show="requested.status == '0'">Expired</a>
                     </span>
-                    <span ng-if="!requested_pkg.url">
+                    <span ng-if="!requested_pkg.cspUrl">
                         {{requested_pkg.name}}
                     </span>
                 </div>                
@@ -192,7 +194,7 @@
                 </div>
             </div>
             <div class="grid__item one-half">
-                <div class="label-holder reminder" ng-show="current_pkg || requested_pkg" ng-cloak>**REMINDER: DO NOT discuss exact channel counts with customers.</div>
+                <div class="label-holder reminder" ng-show="current_pkg || requested_pkg" ng-cloak>**REMINDER: Channel counts are estimates and are subject to change.</div>
             </div>
             <div class="grid__item one-quarter">
                 <div class="current alert_ggp" ng-if="requested_pkg.company == 'U-verse'" ng-cloak>
@@ -209,14 +211,15 @@
         <!--start row for table headers-->
         <div class="grid" ng-cloak ng-show="current_channels || gained_channels  || lost_channels || requested_channels">
             <div class="table-header current grid__item one-quarter">
-                <div class="table-header-inner" ng-cloak ng-show="current_channels && show_current_channels">
+                <div class="table-header-inner oContainer" ng-cloak ng-show="current_channels && show_current_channels">
+                    <img class="oTip oTip-channels" src="assets/img/overlay_pkgcom_current_lineup.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
                     <table>
                         <tr>
                             <td width="20%">
                                <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelnumber'"><span ng-if="current_pkg.company != 'DIRECTV Now'">#</span></a>
                             </td>
                             <td width="60%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelname'">Channel Name</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelname'">Name</a>
                             </td>
                             <td width="20%">
                                 <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='genre'">Genre</a>
@@ -226,14 +229,15 @@
                 </div>
             </div>
             <div class="table-header gained grid__item one-quarter">
-                <div class="table-header-inner" ng-cloak ng-show="gained_channels && show_gained_channels">
+                <div class="table-header-inner oContainer" ng-cloak ng-show="gained_channels && show_gained_channels">
+                    <img class="oTip oTip-channels" src="assets/img/overlay_pkgcom_gained.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
                     <table>
                         <tr>
                             <td width="20%">
                                <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelnumber'"><span ng-if="requested_pkg.company != 'DIRECTV Now'">#</span></a>
                             </td>
                             <td width="60%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelname'">Channel Name</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelname'">Name</a>
                             </td>
                             <td width="20%">
                                 <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='genre'">Genre</a>
@@ -243,14 +247,15 @@
                 </div>
             </div>
             <div class="table-header lost grid__item one-quarter">
-                <div class="table-header-inner" ng-cloak ng-show="lost_channels && show_lost_channels">
+                <div class="table-header-inner oContainer" ng-cloak ng-show="lost_channels && show_lost_channels">
+                    <img class="oTip oTip-channels" src="assets/img/overlay_pkgcom_lost.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
                     <table>
                         <tr>
                             <td width="20%">
                                <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelnumber'"><span ng-if="current_pkg.company != 'DIRECTV Now'">#</span></a>
                             </td>
                             <td width="60%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelname'">Channel Name</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelname'">Name</a>
                             </td>
                             <td width="20%">
                                 <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='genre'">Genre</a>
@@ -260,20 +265,22 @@
                 </div>
             </div>
              <div class="table-header requested grid__item one-quarter">
-                <div class="table-header-inner" ng-cloak ng-show="requested_channels && show_requested_channels">
+                <div class="table-header-inner oContainer" ng-cloak ng-show="requested_channels && show_requested_channels">
+                    <img class="oTip oTip-channels" src="assets/img/overlay_pkgcom_new_lineup.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
                     <table>
                         <tr>
                             <td width="20%">
                                <a ng-class="{'sort-true sorted': sorted_column == 'channelnumber sort-true', 'sort-false sorted': sorted_column == 'channelnumber sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelnumber'"><span ng-if="requested_pkg.company != 'DIRECTV Now'">#</span></a>
                             </td>
                             <td width="60%">
-                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelname'">Channel Name</a>
+                                <a ng-class="{'sort-true sorted': sorted_column == 'channelname sort-true', 'sort-false sorted': sorted_column == 'channelname sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='channelname'">Name</a>
                             </td>
                             <td width="20%">
                                 <a ng-class="{'sort-true sorted': sorted_column == 'genre sort-true', 'sort-false sorted': sorted_column == 'genre sort-false'}" href="" title="Click to sort." ng-click="reverse=!reverse;sortType='genre'">Genre</a>
                             </td>
                         </tr>
                     </table>
+                    <img class="oTip oTip-pcTitles" src="assets/img/overlay_pkgcom_click_titles.png" ng-hide="pcOverlay == 'hide' || pcOverlay == null" />
                 </div>
             </div>
         </div>
@@ -288,33 +295,33 @@
                             <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20%"></td>
                             <td ng-if="current_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20%"></td>
-                            <td width="60%"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td width="60%"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html="channel.genre" width="20%"></td>
                         </tr>
                     </table>
                 </div>
             </div>
-            <div class="channels-table-holder gained-channels grid__item one-quarter"">
+            <div class="channels-table-holder gained-channels grid__item one-quarter">
                 <div class="table-wrapper" ng-cloak  ng-show="gained_channels && show_gained_channels" scroll-to-top-when="items_changed" when-scrolled="gained_channels_limit = loadMore(gained_channels_limit);">
                     <table>
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in gained_channels | orderBy:sortType:reverse  | limitTo:gained_channels_limit">
                             <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="requested_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td width="60"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>
                 </div>
             </div>
-            <div class="channels-table-holder lost-channels grid__item one-quarter"">
+            <div class="channels-table-holder lost-channels grid__item one-quarter">
                 <div class="table-wrapper" ng-cloak  ng-show="lost_channels && show_lost_channels" scroll-to-top-when="items_changed" when-scrolled="lost_channels_limit = loadMore(lost_channels_limit);">
                     <table>                    
                         <tr ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="channel in lost_channels | orderBy:sortType:reverse  | limitTo:lost_channels_limit">
                             <td ng-if="current_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="current_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="current_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td width="60"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>
@@ -327,7 +334,7 @@
                             <td ng-if="requested_pkg.company == 'DIRECTV'" class="channel-number" ng-bind-html="channel.channelnumber" width="20"></td>
                             <td ng-if="requested_pkg.company == 'DIRECTV Now'" class="channel-number" width="20%"></td>
                             <td ng-if="requested_pkg.company == 'U-verse'" class="channel-number" ng-bind-html="channel.attNumber" width="20"></td>
-                            <td width="60"><a ng-href="{{channel.url}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
+                            <td width="60"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><font ng-bind-html="channel.channelname"></font></a></td>
                             <td class="genre" ng-bind-html="channel.genre" width="20"></td>
                         </tr>
                     </table>
@@ -336,8 +343,12 @@
         </div>
         <!--end row for channel tables-->
     </div>
-<!--         <div class="label-holder disclaim center-note pricing" ng-show="current_pkg && requested_pkg" ng-cloak>Pricing is not inclusive of any add-ons; refer to the ordering system for accurate pricing with all package components
-        </div>
- -->    
+<!-- <div class="label-holder disclaim center-note pricing" ng-show="current_pkg && requested_pkg" ng-cloak>Pricing is not inclusive of any add-ons; refer to the ordering system for accurate pricing with all package components</div> -->    
+    </div>
+<div class="overlay" ng-hide="pcOverlay == 'hide' || pcOverlay == null">
+</div>
+    <div class="oTip oTip-welcome" ng-hide="pcOverlay == 'hide' || pcOverlay == null">
+        <img src="assets/img/overlay_pkgcom_welcome.png" />
+        <button ng-click="pcOverlay = 'hide'">Got it</button>
     </div>
 </div>

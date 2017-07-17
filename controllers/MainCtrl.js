@@ -2,14 +2,15 @@
     'use strict';
     angular.module('channelspackages')
         .controller('MainCtrl', ['$scope', '$location',
-            function($scope, $location) {
+            function($scope, $location, $cookies) {
                 if (($location.path() == '/channels_packages.htm') || ($location.path() == '')) {
                     $location.path('channel-lineup');
                 }
                 $scope.goHere = function(here) {
                     $location.path(here);
                 }
-                var ppObj = {
+                var dataProg = true,
+                    ppObj = {
                     "name": "Programming Package",
                     "url": "programming-package",
                     "src": "views/programming_package.htm?@@BUSTER@@"
@@ -31,10 +32,6 @@
                     tools.splice(2, 0, ppObj);
                 }
                 $scope.tools = tools;
-                // $scope.trusted = {};
-                // for (var i=0;i<$scope.tools.length;i++) {
-                //     $scope.trusted[$scope.tools[i].url] = $sce.trustAsResourceUrl($scope.tools[i].src);
-                // }
                 $scope.$watch(function() {
                     return $location.path();
                 }, function(params) {

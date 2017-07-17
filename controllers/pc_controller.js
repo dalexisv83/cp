@@ -1,5 +1,7 @@
-app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $filter, $http) {
-    'use strict';    
+app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
+    function ($scope, $filter, $http, $cookies) {
+    'use strict';
+
     var stopWatching = $scope.$watch(
         function() {
             return $scope.$parent.page;
@@ -7,7 +9,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
         function(params) {
             if (params == 'package-compare') {
                 stopWatching();
-                $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/PackageCompareRes').then(function successCallback(response) {
+                $http.get('assets/datasource/PackageCompareRes.js').then(function successCallback(response) {
         var alert_message = $(".alert_message"),
             refresher = function() {
                 var diff,
@@ -98,6 +100,81 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
             $scope.lost_channels_limit = min_limit;
             $scope.$broadcast("items_changed");
         };
+
+        var cur_curpkg = null,
+            cur_curchs = null,
+            cur_reqpkg = null,
+            cur_reqchs = null,
+            cur_gndchs = null,
+            cur_lstchs = null,
+            cur_shwgnd = null,
+            cur_shwlst = null,
+            cur_svdamt = 0,
+            cur_payamt = 0,
+            cur_resact = false,
+            cur_shwgwl = null,
+            cur_curczn = null,
+            cur_reqczn = null;
+        $scope.$watch(function () {
+            return $cookies.pcOverlay;
+        }, function (value) {
+            $scope.pcOverlay = value;
+            if (!value || value == 'show') {
+                cur_curpkg = $scope.current_pkg;
+                cur_curchs = $scope.current_channels;
+                cur_reqpkg = $scope.requested_pkg;
+                cur_reqchs = $scope.requested_channels;
+                cur_gndchs = $scope.gained_channels;
+                cur_lstchs = $scope.lost_channels;
+                cur_shwgnd = $scope.show_gained_channels;
+                cur_shwlst = $scope.show_lost_channels;
+                cur_svdamt = $scope.saved_amt;
+                cur_payamt = $scope.pay_more_amt;
+                cur_resact = $scope.resetActive;
+                cur_shwgwl = $(".alert_message").parent().css('display');
+                $scope.show_gained_channels = true;
+                $scope.show_lost_channels = true;
+                cur_curczn = $('select[chosen="current_pkgs"]').val();
+                cur_reqczn = $('select[chosen="requested_pkgs"]').val();
+                if ($scope.current_pkg == null) {
+                    $scope.$watchCollection(function () {
+                        return $scope.current_pkgs;
+                    }, function (value) {
+                        if (value) {
+                            $scope.current_pkg = value[1];
+                        }
+                    });
+                }
+                if ($scope.requested_pkg == null) {
+                    $scope.$watchCollection(function () {
+                        return $scope.requested_pkgs;
+                    }, function (value) {
+                        if (value) {
+                            $scope.requested_pkg = value[5];
+                        }
+                    });
+                }
+            }
+            if (value == 'hide') {
+                $scope.current_pkg = cur_curpkg;
+                $scope.current_channels = cur_curchs;
+                $scope.requested_pkg = cur_reqpkg;
+                $scope.requested_channels = cur_reqchs;
+                $scope.gained_channels = cur_gndchs;
+                $scope.lost_channels = cur_lstchs;
+                $scope.show_gained_channels = cur_shwgnd;
+                $scope.show_lost_channels = cur_shwlst;
+                $scope.saved_amt = cur_svdamt;
+                $scope.pay_more_amt = cur_payamt;
+                $scope.resetActive = cur_resact;
+                $(".alert_message").parent().css('display', cur_shwgwl);
+                $('select[chosen="current_pkgs"]').val(cur_curczn).trigger('chosen:updated');
+                $('select[chosen="requested_pkgs"]').val(cur_reqczn).trigger('chosen:updated');
+            }
+        });
+        $scope.$watch('pcOverlay', function () {
+            $cookies.pcOverlay = $scope.pcOverlay;
+        });
 
         /**
          * Called on page load
@@ -337,9 +414,7 @@ app.controller('AppController', ['$scope','$filter', '$http',function ($scope, $
         };
 
     }, function errorCallback(response) {
-        // called asynchronously if an error occurs
-        // or server returns response with an error status.
-        throw new Error('Data request failed: ' + JSON.stringify(response));
+        throw new Error('Data request failed:\n' + JSON.stringify(response));
     });
             }
         },

@@ -731,3 +731,18 @@ span.btn-feedback:hover {
         font-size: 14px;
     }
 }
+
+#vsrepeat::-webkit-scrollbar {
+    width: 16px;
+    background-color: #f1f1f1;
+}
+
+#vsrepeat::-webkit-scrollbar-thumb {
+    border: 2px solid #f1f1f1;
+    background-color: rgba(0,0,0,.25);
+    box-shadow: 0 0 1px rgba(255,255,255,.25);
+}
+
+#vsrepeat {
+    overflow-anchor: none;
+}
