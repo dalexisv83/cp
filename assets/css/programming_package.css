@@ -1,3 +1,22 @@
+@media (min-width: 992px){
+    #step1Box, #step4Box {
+        padding-right: 0 !important;
+    }
+    #step2Box, #step5Box {
+        padding-left: 10px !important;
+    }
+}
+@media (min-width: 768px){
+    #step6Box div div.col-sm-3{
+        padding-left:0;
+        padding-right:0;
+    }
+}
+@media (max-width: 768px){
+    #step6Box div div.col-sm-3{
+        padding-bottom:10px;
+    }
+}
 .wrapper{
     max-width: 1260px;
     position: relative;
@@ -43,14 +62,12 @@ h5 span{
 img {
     min-width:12px;
 }
-#step5Box .col-sm-4 a{text-decoration: underline !important;}
 
 .blbg{
     background-color: #0567AE;
     color: #fff;
     padding:20px;
     margin:5px 0;
-    min-height:147px;
     overflow: hidden;
     padding-top:5px;
     border-radius: 5px;
@@ -60,7 +77,6 @@ img {
     color: #fff;
     padding:20px;
     margin:5px 0;
-    min-height:147px;
     overflow: hidden;
     padding-top:5px;
     border-radius: 5px;   
@@ -70,16 +86,10 @@ img {
     border-radius: 5px;
     padding:20px;
     margin:5px 0;
-    min-height:147px;
     overflow: hidden;
     padding-top:5px
 }
-.mnh2{
-    min-height:243px;
-}
-.mnh3{
-    min-height:329px;
-}
+
 .marr0{
     margin-right:0;    
 }
@@ -171,13 +181,15 @@ img {
 .hdr {
     margin-bottom: 10px;
 }
-#step1Box div.bgwt.marr0 p ~ p {
-    margin-top:5px !important;
+#step1Box div.col-sm-2 {
+    text-align: center;
 }
 
-li#summaryBox {
+#summaryBox {
     color:#000;
     text-align:left;
+    visibility: hidden;
+    position: absolute;
 }
 
 #programming_package {
@@ -219,44 +231,36 @@ li#summaryBox {
 A.step3:link {
     color:#070872;
     text-decoration:underline;
-    white-space:nowrap
 }
 
 A.step3:active {
     text-decoration:underline;
-    white-space:nowrap
 }
 
 A.step3:visited {
     text-decoration:underline;
-    white-space:nowrap
 }
 
 A.step3:hover {
     text-decoration:underline;
-    white-space:nowrap
 }
 
 /* used only for the MDU:TMU package table  */
 A.step4:link {
     text-decoration:underline;
-    white-space:nowrap;
 }
 
 A.step4:active {
     text-decoration:underline;
-    white-space:nowrap;
 }
 
 A.step4:visited {
     text-decoration:underline;
-    white-space:nowrap;
 }
 
 A.step4:hover {
     color:#F60;
     text-decoration:underline;
-    white-space:nowrap;
 }
 
 div#centerContent {
@@ -343,31 +347,11 @@ li.primaryCredit {
 
 form li {list-style: none}
 
-@media (min-width: 768px){
-    ul#container1 , ul#container2{
-    z-index:5;
-    padding:0;
-    margin-bottom:40px;
-    }
-    .pdr0{
-        padding-right:0 !important;    
-    }
-    .pdl0{
-        padding-left:0 !important;    
-    }
-    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, 
-    .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
-        padding-left: 10px;
-    }     
-}
-
-@media (max-width: 767px){
-    #step1Box , #step2Box , #step3Box , #step4Box , #step5Box , #step6Box , #centerContent, #container1, #container2{
-        padding-left:0 !important;
-        padding-right:0 !important;
-    }
-}
-
 a.step3, a.step4 {
     text-transform: uppercase;
+    margin-bottom: 10px;
+    display: inline-block;
 }
+.inline{display:inline !important}
+.padl0{padding-left:0;}
+.padr0{padding-right:0;}
