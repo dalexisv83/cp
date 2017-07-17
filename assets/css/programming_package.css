@@ -13,7 +13,7 @@
 #programming_package section {
     padding-left: 60px;
     background: top left no-repeat;
-    margin-bottom: 58px;
+    margin-bottom: 38px;
 }
 
 #programming_package section#tvs {
@@ -65,9 +65,16 @@
     border-bottom-color: #e97400;
 }
 
-#side {
-    background: top left no-repeat url('../img/prog-pack_divider.png');
-    padding-left: 24px;
+#side{
+    padding-left: 55px;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,255,255,1)), color-stop(0%, rgba(250,250,250,1)), color-stop(50%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: -ms-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(250,250,250,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1 );
 }
 
 #pricing {
