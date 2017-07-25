@@ -184,9 +184,9 @@
                             </td>
                             <td rowspan="2" class="rotate" ng-style="{'width': width}" ng-repeat="package in packages">
                                 <div>
-                                    <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}" q-tip></div>
+                                    <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}" q-tip="{{package.description}}" q-tip-my="top right" q-tip-at="bottom left"></div>
                                 </div>
-                                <span q-tip>
+                                <span q-tip="{{package.description}}" q-tip-my="top right" q-tip-at="bottom left" q-tip-adjust-y="50">
                                     <a ng-if="package.platform == 'DTVNOW'" href ng-href="#/package-details?pid={{package.pid}}" ng-bind="package.display_name | comReplace"></a>
                                     <a ng-if="package.platform != 'DTVNOW'" href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{package.cspUrl}}" target="_blank" ng-bind="package.display_name | comReplace"></a>
                                 </span>

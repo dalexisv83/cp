@@ -38,14 +38,14 @@
                             <div ng-show="base_cat == 'english'" class="grid__item">
                                 <div class="grid">
                                     <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{english: 1}" class="grid__item one-half">
-                                        <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                        <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                                     </div>
                                 </div>
                             </div>
                             <div ng-show="base_cat == 'spanish'" class="grid__item">
                                 <div class="grid">
                                     <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{spanish: 1}" class="grid__item one-half">
-                                        <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                        <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -68,12 +68,12 @@
                                     </div>
                                     <div ng-repeat="product in mdus = (products | filter:{'mduType': mdu_cat || ''}) | unique:'mduType'" class="grid__item one-half mdus" ng-show="mdu_cat == product.mduType && mdu_cat != 'JMU/TMU/JMW/TMW'">
                                         <div ng-repeat="mdu in mdus">
-                                            <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                            <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                                         </div>
                                     </div>
                                     <div class="grid__item one-half mdus" ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'">
                                         <div ng-repeat="mdu in mdus | filter:{'mduBase': mdu_base || '!'}">
-                                            <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                            <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                                         </div>
                                     </div>
                                 </div>
@@ -86,14 +86,14 @@
                         <span ng-show="premChkd[0]">Pricing with HBO: 1st = $17.99 / 2nd = $13 / 3rd = $13 / 4th = $10 / 5th = $8</span>
                         <div class="grid">
                             <div ng-repeat="product in products | filter:{group:'PREMIUM SERVICE'}" class="grid__item one-half">
-                                <label><input type="checkbox" ng-model="premChkd[$index]"> {{product.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                                <label><input type="checkbox" ng-model="premChkd[$index]"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                             </div>
                         </div>
                     </section>
                     <section id="serv">
                         <h2>Add Extra Services</h2>
                         <div ng-repeat="product in products | filter:{group:'EXTRA SERVICES'}">
-                            <label><input type="checkbox" ng-model="checked[product.id]"> {{product.name}}</label> <a href="">Quick View</a> | <a href="">Details</a>
+                            <label><input type="checkbox" ng-model="checked[product.id]"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                         </div>
                     </section>
                 </div>

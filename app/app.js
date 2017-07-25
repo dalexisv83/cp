@@ -68,6 +68,25 @@ app.directive('chosen',['$timeout',function($timeout){
 	    });
 	}
     };   
+}]).directive('qTip', [function () {
+    return {
+        link: function (scope, elem, attrs) {
+            attrs.qTipAdjustY = attrs.qTipAdjustY ? attrs.qTipAdjustY : 0;
+            $(elem).qtip({
+                content: {
+                    text: attrs.qTip
+                },
+                position: {
+                    my: attrs.qTipMy,
+                    at: attrs.qTipAt,
+                    target: this,
+                    adjust: {
+                        y: attrs.qTipAdjustY * 1
+                    }
+                }
+            });
+        }
+    };
 }]);
 /*jslint unparam: false*/
 
