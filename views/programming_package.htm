@@ -4,7 +4,7 @@
             <div class="flex-cont">
                 <div class="flex-item layout">
                     <section id="tvs">
-                        <h2>How Many TV's?</h2>
+                        <h2><span class="deskHide">1: </span>How Many TV's?</h2>
                         <div class="select-style">
                             <select ng-model="recX" ng-options="num for num in recNum">
                                 <option value="" disabled>Please select</option>
@@ -13,22 +13,22 @@
                         <div id="rio-bill"><label><input type="checkbox" ng-model="primary_credit" /> Rio > Bill Ledger tab, Primary TV Credit?</label></div>
                     </section>
                     <section id="equip">
-                        <h2>Equipment Service</h2>
+                        <h2><span class="deskHide">2: </span>Equipment Service</h2>
                         <span>Accounts may require different Advanced Services (ARS).</span>
                         <div class="grid">
-                            <div ng-repeat="product in products | filter:{group:'EQUIPMENT SERVICE'}" class="grid__item one-half">
+                            <div ng-repeat="product in products | filter:{group:'EQUIPMENT SERVICE'}" class="grid__item palm--one-whole lap--one-whole one-half">
                                 <label><input type="checkbox" ng-model="checked[product.id]"> {{product.name}}</label>
                             </div>
                         </div>
                     </section>
                     <section id="base">
-                        <h2>Select Base Package</h2>
+                        <h2><span class="deskHide">3: </span>Select Base Package</h2>
                         <div id="base_tabs" class="grid grid--full">
                             <div class="grid__item one-third">
-                                <label ng-class="{'active': base_cat == 'english'}"><input type="radio" name="base_cat" ng-model="base_cat" value="english">English Programming</label>
+                                <label ng-class="{'active': base_cat == 'english'}"><input type="radio" name="base_cat" ng-model="base_cat" value="english">Eng<span class="mobileHide">lish</span><span class="deskHide">.</span> Programming</label>
                             </div>
                             <div class="grid__item one-third">
-                                <label ng-class="{'active': base_cat == 'spanish'}"><input type="radio" name="base_cat" ng-model="base_cat" value="spanish">Spanish Programming</label>
+                                <label ng-class="{'active': base_cat == 'spanish'}"><input type="radio" name="base_cat" ng-model="base_cat" value="spanish">Spa<span class="mobileHide">nish</span><span class="deskHide">.</span> Programming</label>
                             </div>
                             <div class="grid__item one-third">
                                 <label ng-class="{'active': base_cat == 'mdu'}"><input type="radio" name="base_cat" ng-model="base_cat" value="mdu">Multi Dwelling Accts.</label>
@@ -37,14 +37,14 @@
                         <div class="grid">
                             <div ng-show="base_cat == 'english'" class="grid__item">
                                 <div class="grid">
-                                    <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{english: 1}" class="grid__item one-half">
+                                    <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{english: 1}" class="grid__item palm--one-whole lap--one-whole one-half">
                                         <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                                     </div>
                                 </div>
                             </div>
                             <div ng-show="base_cat == 'spanish'" class="grid__item">
                                 <div class="grid">
-                                    <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{spanish: 1}" class="grid__item one-half">
+                                    <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{spanish: 1}" class="grid__item palm--one-whole lap--one-whole one-half">
                                         <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                                     </div>
                                 </div>
@@ -54,24 +54,24 @@
                                     <div class="grid__item">
                                         <span>Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.</span>
                                     </div>
-                                    <div class="grid__item one-half mdus">
+                                    <div class="grid__item palm--one-whole lap--one-whole one-half mdus">
                                         <div class="select-style">
                                             <select ng-model="mdu_cat" ng-options="product.mduType as product.mduType for product in products | filter:{'mduType': ''} | filter:{'mduType': '!TCD/JCD'} | unique:'mduType'">
                                                 <option value="" selected disabled>Select an MDU Acct type</option>
                                             </select>
                                         </div>
-                                        <div class="select-style">
-                                            <select ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'" ng-model="mdu_base" ng-options="product.mduBase as product.mduBase for product in products | filter:{'mduType': mdu_cat} | filter:{'mduBase': ''} | unique:'mduBase'">
+                                        <div ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'" class="select-style">
+                                            <select ng-model="mdu_base" ng-options="product.mduBase as product.mduBase for product in products | filter:{'mduType': mdu_cat} | filter:{'mduBase': ''} | unique:'mduBase'">
                                                 <option value="" selected disabled>Select an MDU Bulk package type</option>
                                             </select>
                                         </div>
                                     </div>
-                                    <div ng-repeat="product in mdus = (products | filter:{'mduType': mdu_cat || ''}) | unique:'mduType'" class="grid__item one-half mdus" ng-show="mdu_cat == product.mduType && mdu_cat != 'JMU/TMU/JMW/TMW'">
+                                    <div ng-repeat="product in mdus = (products | filter:{'mduType': mdu_cat || ''}) | unique:'mduType'" class="grid__item palm--one-whole lap--one-whole one-half mdus" ng-show="mdu_cat == product.mduType && mdu_cat != 'JMU/TMU/JMW/TMW'">
                                         <div ng-repeat="mdu in mdus">
                                             <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                                         </div>
                                     </div>
-                                    <div class="grid__item one-half mdus" ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'">
+                                    <div class="grid__item palm--one-whole lap--one-whole one-half mdus" ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'">
                                         <div ng-repeat="mdu in mdus | filter:{'mduBase': mdu_base || '!'}">
                                             <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                                         </div>
@@ -81,17 +81,17 @@
                         </div>
                     </section>
                     <section id="prem">
-                        <h2>Add Premium Services</h2>
+                        <h2><span class="deskHide">5: </span>Add Premium Services</h2>
                         <span ng-hide="premChkd[0]">Pricing without HBO: 1st = $13.99 / 2nd = $12 / 3rd = $13 / 4th = $10 / 5th = n/a</span>
                         <span ng-show="premChkd[0]">Pricing with HBO: 1st = $17.99 / 2nd = $13 / 3rd = $13 / 4th = $10 / 5th = $8</span>
                         <div class="grid">
-                            <div ng-repeat="product in products | filter:{group:'PREMIUM SERVICE'}" class="grid__item one-half">
+                            <div ng-repeat="product in products | filter:{group:'PREMIUM SERVICE'}" class="grid__item palm--one-whole lap--one-whole one-half">
                                 <label><input type="checkbox" ng-model="premChkd[$index]"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                             </div>
                         </div>
                     </section>
                     <section id="serv">
-                        <h2>Add Extra Services</h2>
+                        <h2><span class="deskHide">6: </span>Add Extra Services</h2>
                         <div ng-repeat="product in products | filter:{group:'EXTRA SERVICES'}">
                             <label><input type="checkbox" ng-model="checked[product.id]"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}">Details</a>
                         </div>
