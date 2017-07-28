@@ -147,6 +147,7 @@ select::-ms-expand {
     }
     #programming_package section#tvs {
         background-image: url('../img/prog-pack_icn_1.png');
+        background-position-y: 20px;
     }
 
     #programming_package section#equip {
