@@ -72,6 +72,8 @@ app.directive('chosen',['$timeout',function($timeout){
     return {
         link: function (scope, elem, attrs) {
             attrs.qTipAdjustY = attrs.qTipAdjustY ? attrs.qTipAdjustY : 0;
+            attrs.qTipShowEvent = attrs.qTipShowEvent ? attrs.qTipShowEvent : "mouseenter";
+            console.log(attrs.qTipShowEvent);
             $(elem).qtip({
                 content: {
                     text: attrs.qTip
@@ -83,6 +85,9 @@ app.directive('chosen',['$timeout',function($timeout){
                     adjust: {
                         y: attrs.qTipAdjustY * 1
                     }
+                },
+                show: {
+                    event: attrs.qTipShowEvent
                 }
             });
         }
