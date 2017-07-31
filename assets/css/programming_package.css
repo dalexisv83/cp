@@ -66,6 +66,10 @@
     font-size: 1.5em;
 }
 
+#pricing.grey {
+    color: #ddd;
+}
+
 #pricing div {
     margin-bottom: 20px;
 }

@@ -100,7 +100,7 @@
                 <div id="side" class="flex-item tri-right">
                     <div>
                         <h2>Package Totals</h2>
-                        <div id="pricing">
+                        <div id="pricing" ng-class="{'grey': grey}">
                             <div>Base: <span ng-bind="baseTotal | currency"></span></div>
                             <div>Premium: <span ng-bind="premTotal | currency"></span></div>
                             <div>Extras: <span ng-bind="xtraTotal | currency"></span></div>

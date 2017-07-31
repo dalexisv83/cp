@@ -48,6 +48,7 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
         };
         $scope.getTotals = function () {
             $http.get('assets/datasource/ProgrammingPackagePrices.js',{cache:true}).then(function successCallback(response) {
+                $scope.grey = false;
                 $scope.prices = response.data.pricing;
                 $scope.baseTotal = getSubTotal($scope.checked, $scope.prices, 'BASE');
                 $scope.premTotal = getSubTotal($scope.checked, $scope.prices, 'PREMIUM');
@@ -70,6 +71,12 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
                 } else {
                     $scope.summShow = false;
                 }
+                var stop = $scope.$watchCollection('checked', function(oldForm, newForm) {
+                    if (newForm != oldForm) {
+                        $scope.grey = true;
+                        stop();
+                    }
+                });
             }, function errorCallback(response) {
                 throw new Error('Data request failed:\n' + JSON.stringify(response));
             });
@@ -93,7 +100,8 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
             $scope.summShow = false;
             $scope.pPlanShow = false;
             $scope.pPlanPremShow = false;
-        }
+            $scope.grey = true;
+        };
         $scope.reset();
 
         $scope.$watch('base.selected', function (newBase, oldBase, scope) {
