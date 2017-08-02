@@ -134,6 +134,8 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
                 scope.checked[305] = true;
                 if (len > 1) {
                     scope.checked[306] = true;
+                } else {
+                    scope.checked[306] = null;
                 }
             } else if (scope.premChkd[0] != true) {
                 scope.checked[305] = null;
