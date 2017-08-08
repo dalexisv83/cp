@@ -38,14 +38,14 @@
                             <div ng-show="base_cat == 'english'" class="grid__item">
                                 <div class="grid">
                                     <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{english: 1}" class="grid__item palm--one-whole lap--one-whole one-half">
-                                        <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
+                                        <label><input type="radio" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
                                     </div>
                                 </div>
                             </div>
                             <div ng-show="base_cat == 'spanish'" class="grid__item">
                                 <div class="grid">
                                     <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{spanish: 1}" class="grid__item palm--one-whole lap--one-whole one-half">
-                                        <label><input type="radio" name="base" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
+                                        <label><input type="radio" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -68,12 +68,12 @@
                                     </div>
                                     <div ng-repeat="product in mdus = (products | filter:{'mduType': mdu_cat || ''}) | unique:'mduType'" class="grid__item palm--one-whole lap--one-whole one-half mdus" ng-show="mdu_cat == product.mduType && mdu_cat != 'JMU/TMU/JMW/TMW'">
                                         <div ng-repeat="mdu in mdus">
-                                            <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href q-tip="<b>{{mdu.name}}</b> {{mdu.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{mdu.url}}" target="_blank">Details</a>
+                                            <label><input type="radio" ng-value="mdu.id" ng-model="base.selected"> {{mdu.name}}</label> <a href q-tip="<b>{{mdu.name}}</b> {{mdu.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{mdu.url}}" target="_blank">Details</a>
                                         </div>
                                     </div>
                                     <div class="grid__item palm--one-whole lap--one-whole one-half mdus" ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'">
                                         <div ng-repeat="mdu in mdus | filter:{'mduBase': mdu_base || '!'}">
-                                            <label><input type="radio" name="base_pkg" value="mdu.id"> {{mdu.name}}</label> <a href q-tip="<b>{{mdu.name}}</b> {{mdu.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{mdu.url}}" target="_blank">Details</a>
+                                            <label><input type="radio" ng-value="mdu.id" ng-model="base.selected"> {{mdu.name}}</label> <a href q-tip="<b>{{mdu.name}}</b> {{mdu.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{mdu.url}}" target="_blank">Details</a>
                                         </div>
                                     </div>
                                 </div>
