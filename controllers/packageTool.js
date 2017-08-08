@@ -122,17 +122,17 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
         });
 
         $scope.$watchCollection('premChkd', function (newV, oldV, scope) {
-            var i,
-                len = scope.premChkd.filter(function (v) { return v }).length;
-            for (i = 300; i < 300 + len; i++) {
+            var i;
+                scope.len = scope.premChkd.filter(function (v) { return v }).length;
+            for (i = 300; i < 300 + scope.len; i++) {
                 scope.checked[i] = true;
             }
-            for (i = 304; i > 304 - (5 - len); i--) {
+            for (i = 304; i > 304 - (5 - scope.len) ; i--) {
                 scope.checked[i] = null;
             }
             if (scope.premChkd[0] == true) {
                 scope.checked[305] = true;
-                if (len > 1) {
+                if (scope.len > 1) {
                     scope.checked[306] = true;
                 } else {
                     scope.checked[306] = null;
