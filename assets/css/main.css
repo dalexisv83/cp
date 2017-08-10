@@ -959,7 +959,7 @@ input.ng-valid.zipinp {
     border: 1px solid #ccc;
     border-radius: 5px;
     overflow: hidden;
-    background: #fafafa url("../img/select_icon.png") no-repeat 95% 50%;
+    background: #fafafa url(../img/select_icon.png) no-repeat right 5px center;
     box-shadow: 1px 1px 3px #ddd;
     font-size: 18px;
     margin-top: 15px;

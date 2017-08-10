@@ -83,7 +83,7 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
         };
         
         $scope.reset = function() {
-            $scope.recX = '';
+            $scope.recX = 1;
             $scope.recNum = [1, 2, 3, 4, 5, 6];
             $scope.primary_credit = true;
             $scope.base_cat = "english";
