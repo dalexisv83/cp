@@ -33,7 +33,7 @@
 #base_tabs label {
     display: block;
     border-bottom: 4px solid #999;
-    color: #42b5e2;
+    color: #838383;
     font-size: 15px;
     cursor: pointer;
 }
@@ -48,6 +48,7 @@
 
 #base_tabs label.active {
     border-bottom-color: #e97400;
+    color: #42b5e2;
 }
 
 #side{
