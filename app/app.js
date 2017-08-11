@@ -75,7 +75,8 @@ app.directive('chosen',['$timeout',function($timeout){
             attrs.qTipShowEvent = attrs.qTipShowEvent ? attrs.qTipShowEvent : "mouseenter";
             $(elem).qtip({
                 content: {
-                    text: attrs.qTip
+                    text: attrs.qTip,
+                    button: true
                 },
                 position: {
                     my: attrs.qTipMy,
