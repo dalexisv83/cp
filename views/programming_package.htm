@@ -84,7 +84,7 @@
                         <span ng-show="premChkd[0]">Pricing with HBO: 1st = $17.99 / 2nd = $13 / 3rd = $13 / 4th = $10 / 5th = $8</span>
                         <div class="grid">
                             <div ng-repeat="product in products | filter:{group:'PREMIUM SERVICE'}" class="grid__item palm--one-whole lap--one-whole one-half">
-                                <label><input type="checkbox" ng-model="premChkd[$index]"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
+                                <label><input type="checkbox" ng-model="premChkd[$index]" ng-disabled="premDisabled"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
                             </div>
                         </div>
                     </section>

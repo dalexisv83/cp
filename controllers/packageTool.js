@@ -101,6 +101,7 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
             $scope.pPlanShow = false;
             $scope.pPlanPremShow = false;
             $scope.grey = true;
+            $scope.premDisabled = false;
         };
         $scope.reset();
 
@@ -113,10 +114,12 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
             if (newBase == 7 || newBase == 20) {
                 for (i = 0; i < 5; i++) {
                     scope.premChkd[i] = true;
+                    scope.premDisabled = true;
                 }
             } else if (oldBase == 7 || oldBase == 20) {
                 for (i = 0; i < 5; i++) {
                     scope.premChkd[i] = false;
+                    scope.premDisabled = false;
                 }
             }
         });
