@@ -144,7 +144,13 @@ select::-ms-expand {
 
 .mobileHide {
     display: none;
-} 
+}
+
+@media screen and (max-width: 769px) {
+    .mdus .select-style {
+        font-size: 12px;
+    }
+}
 
 @media screen and (min-width: 769px) {
     #programming_package section {
