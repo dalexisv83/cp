@@ -1,7 +1,17 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" xmlns:ng="http://angularjs.org" id="ng-app" ng-app="channelspackages">
 
 <head>
+    <script>
+        (function () {
+            var testStr = window.location.pathname;
+            if (testStr.toLowerCase().indexOf('com') > -1) {
+                window.location.href = 'https://www.e-access.att.com/mycsp/mycspportal/tools/channels_packages_com/channels_packages.htm' + window.location.hash;
+            } else if (testStr.toLowerCase().indexOf('res') > -1 || window.location.pathname.toLowerCase().indexOf('sales') > -1) {
+                window.location.href = 'https://www.e-access.att.com/mycsp/mycspportal/tools/channels_packages/channels_packages.htm' + window.location.hash;
+            }
+        })()
+    </script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
     <title>Channels And Packages</title>
