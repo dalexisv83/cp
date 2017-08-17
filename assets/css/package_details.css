@@ -4,38 +4,6 @@
     vertical-align: text-bottom;
 }
 
-.select-style {
-    display: inline-block;
-    border: 1px solid #ccc;
-    width: 300px;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #fafafa url("../img/select_icon.png") no-repeat 95% 50%;
-    box-shadow: 1px 1px 3px #ddd;
-    font-size: 18px;
-    margin-top: 15px;
-    padding-bottom: 2px;
-}
-
-.select-style select {
-    padding: 5px 8px;
-    width: 130%;
-    border: none;
-    box-shadow: none;
-    background: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-}
-
-.select-style select:focus {
-    outline: none;
-}
-
-.select-style option {
-    font-size: 15px;
-    font-weight: lighter;
-    color: #333;
-}
 .packages {
     border: 1px solid #ddd;
 }

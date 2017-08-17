@@ -1,324 +1,148 @@
-<div class="wrapper">
-    <div id="programming_package" ng-controller="PP_Controller">
-        <form name="frmNewPackage">
-            <div id="centerContent" class="row">
-                <div id="container1" class="col-sm-3 col-md-2">
-                    <div id="totalsBox">
-                        <div class="blbg mnh2">
-                            <h5 class="header"> PACKAGE TOTAL </h5>
-                            <div>
-                               <span id="lyrSuggestion">&nbsp;</span>
-                            </div>
-                            <div>
-                                <h5>Base: <span>$</span><span id="txtBase" name="txtBase" >0.00</span></h5>
-                            </div>
-                            <div>                                
-                                <h5>Premium: <span>$</span><span id="txtPrem" name="txtPrem">0.00</span></h5>
-                            </div>
-                            <div>
-                                <h5>Extras: <span>$</span><span id="txtExtra" name="txtExtra" >0.00</span></h5>
-                            </div>
-                            <div>
-                                <h5>1<sup>st</sup> Month Total: <span>$</span><span id="txtGrandTotal" name="txtGrandTotal" >0.00</span></h5>
-                            </div>
-                            <div>
-                                <input ng-click="resetAll();" type="button" value="RESET" class="btn btn-default rst" style="margin-bottom: 5px;">
-                            </div>
-                            <div>
-                                <div id="lyr2ndMonth"></div>
+<div id="programming_package" ng-controller="PP_Controller">
+    <div class="wrapper">
+        <div class="border">
+            <div class="flex-cont">
+                <div class="flex-item layout">
+                    <section id="tvs">
+                        <h2><span class="deskHide">1: </span>How Many TV's?</h2>
+                        <div class="select-style">
+                            <select ng-model="recX" ng-options="num for num in recNum"></select>
+                        </div>
+                        <div id="rio-bill"><label><input type="checkbox" ng-model="primary_credit" /> Rio > Bill Ledger tab, Primary TV Credit?</label></div>
+                    </section>
+                    <section id="equip">
+                        <h2><span class="deskHide">2: </span>Equipment Service</h2>
+                        <span>Accounts may require different Advanced Services (ARS).</span>
+                        <div class="grid">
+                            <div ng-repeat="product in products | filter:{group:'EQUIPMENT SERVICE'}" class="grid__item">
+                                <label><input type="checkbox" ng-model="checked[product.id]"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
                             </div>
                         </div>
-                    </div>
-                    <div id="summaryBox">
-                        <div class="orbg marr0 col-sm-12 mnh3">
-                            <h5 class="header"> QUICK SUMMARY </h5>
-                            <div class="col-sm-12 detail">
-                                <div ng-bind-html="ppSUMMARY"></div>
+                    </section>
+                    <section id="base">
+                        <h2><span class="deskHide">3: </span>Select Base Package</h2>
+                        <div id="base_tabs" class="grid grid--full">
+                            <div class="grid__item one-third">
+                                <label ng-class="{'active': base_cat == 'english'}"><input type="radio" name="base_cat" ng-model="base_cat" value="english">English<span class="mobileHide"> Programming</span></label>
+                            </div>
+                            <div class="grid__item one-third">
+                                <label ng-class="{'active': base_cat == 'spanish'}"><input type="radio" name="base_cat" ng-model="base_cat" value="spanish">Spanish<span class="mobileHide"> Programming</span></label>
+                            </div>
+                            <div class="grid__item one-third">
+                                <label ng-class="{'active': base_cat == 'mdu'}"><input type="radio" name="base_cat" ng-model="base_cat" value="mdu">Multi Dwelling Accts.</label>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div id="container2" class="col-sm-9 col-md-10">
-                    <div class="row">
-                        <div id="step1Box" class="col-sm-12 col-md-4 primaryCredit pdr0">
-                            <div class="col-sm-12 bgwt marr0 stp12">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-md-12 hdr">
-                                                <div class="steps stp1"></div><p><strong># of Tv's</strong></p>
-                                            </div>
-                                            <div class="col-sm-6 col-md-12 marb10">
-                                                <a href="" ng-click="img_click_primaryCredit();">
-                                                    <img alt="Primary Credit" border="0" id="PrimaryCredit" name="PrimaryCredit" src="assets/img/greenBoxNorm.gif"> Click box if Primary TV Credit = No (Rio > Bill Ledger tab)
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 marb10">
-                                        <a href="" ng-click="img_click_ds('1receiver',1);" ><img alt="1 receiver" border="0" id="1receiver" name="1receiver" src="assets/img/button1normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 marb10">
-                                        <a href="" ng-click="img_click_ds('2receiver',2);" ><img alt="2 receiver" border="0" id="2receiver" name="2receiver" src="assets/img/button2normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 marb10">
-                                        <a href="" ng-click="img_click_ds('3receiver',3);" ><img alt="3 receiver" border="0" id="3receiver" name="3receiver" src="assets/img/button3normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 marb10">
-                                        <a href="" ng-click="img_click_ds('4receiver',4);" ><img alt="4 receiver" border="0" id="4receiver" name="4receiver" src="assets/img/button4normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 marb10">
-                                        <a href="" ng-click="img_click_ds('5receiver',5);" ><img alt="5 receiver" border="0" id="5receiver" name="5receiver" src="assets/img/button5normal.png"></a>
-                                    </div>
-                                    <div class="col-sm-2 col-md-4 marb10">
-                                        <a href="" ng-click="img_click_ds('6receiver',6);" ><img alt="6 receiver" border="0" id="6receiver" name="6receiver" src="assets/img/button6normal.png"></a>
+                        <div class="grid">
+                            <div ng-show="base_cat == 'english'" class="grid__item">
+                                <div class="grid">
+                                    <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{english: 1}" class="grid__item palm--one-whole lap--one-whole one-half">
+                                        <label><input type="radio" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="step2Box" class="col-sm-12 col-md-8">
-                            <div class="col-sm-12 bgwt stp12">
-                                <div class="row">
-                                    <div class="col-sm-12 hdr">
-                                        <div class="steps stp2"></div><p><strong>Equipment Service</strong></p>
-                                    </div>
-                                    <div class="col-sm-3">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537947" target="_blank"><strong>ARS</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_ARS('ARS1',1)"><img border="0" id="ARS1" name="ARS1" src="assets/img/greenBoxNorm.gif"> Monthly(<span id="ARS_Monthly_Fee">$25</span>)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_ARS_Extra();"><img border="0" id="MRV3" name="MRV3" src="assets/img/greenBoxNorm.gif"> Monthly(<span>$15</span>)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_ARS('ARS2',2)"><img border="0" id="ARS2" name="ARS2" src="assets/img/greenBoxNorm.gif"> <span>Remove</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 marb10">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_equ_adv_rec_538676" target="_blank"><strong>ARS-DVR</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_DVR('DVR1',1)"><img border="0" id="DVR1" name="DVR1" src="assets/img/greenBoxNorm.gif"> Monthly(<span id="ARS_Monthly_DVR_Fee">$10</span>)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_DVR('DVR2',2)"><img border="0" id="DVR2" name="DVR2" src="assets/img/greenBoxNorm.gif"> <span>Remove</span></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 marb10">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537555" target="_blank"><strong>ARS-HD</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_HD_Access('HD_Access1',1)">
-                                                <img border="0" id="HD_Access1" name="HD_Access1" src="assets/img/greenBoxNorm.gif"> Monthly(<span id="ARS_Monthly_HD_Fee">$10</span>)
-                                            </a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_HD_Access('HD_Access2',2)">
-                                                <img border="0" id="HD_Access2" name="HD_Access2" src="assets/img/greenBoxNorm.gif"> <span>Remove</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-3 marb10">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_equ_adv_rec_538789" target="_blank"><strong>Whole-Home DVR</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_MRV('MRV1',1)">
-                                                <img border="0" id="MRV1" name="MRV1" src="assets/img/greenBoxNorm.gif"> Monthly(<span id="MRV">$3</span>)
-                                            </a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_Click_MRV('MRV2',2)">
-                                                <img border="0" id="MRV2" name="MRV2" src="assets/img/greenBoxNorm.gif"> <span>Remove</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-12">
-                                        Accounts may require different <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537947" target="_blank">
-                                        Advanced Services (ARS)</a>.
+                            <div ng-show="base_cat == 'spanish'" class="grid__item">
+                                <div class="grid">
+                                    <div ng-repeat="product in products | filter:{group:'BASE PACKAGE'} | filter:{spanish: 1}" class="grid__item palm--one-whole lap--one-whole one-half">
+                                        <label><input type="radio" ng-value="product.id" ng-model="base.selected"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div id="step3Box" class="col-sm-12">
-                            <div class="col-sm-12 bgwt">
-                                <div class="row">
-                                    <div class="col-sm-12 hdr">
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <div class="steps stp3"></div><p><strong>Base package</strong></p>
-                                            </div>
-                                            <div class="col-sm-7">
-                                                <a href="" ng-click="englishPackageLanguage()" ><img border="0" id="EnglishButton" name="EnglishButton" src="assets/img/greenBoxDown.gif"><span id="lyrEnglish1"> English</span></a>&nbsp;&nbsp;&nbsp;
-                                                <a href="" ng-click="spanishPackageLanguage()" ><img border="0" id="SpanishButton" name="SpanishButton" src="assets/img/greenBoxNorm.gif"><span id="lyrEnglish1"> Spanish</span></a>&nbsp;&nbsp;&nbsp;
-                                                <a href="" ng-click="swapBasePackageMDU()" ><img border="0" id="MDUbutton" name="MDUbutton" src="assets/img/greenBoxNorm.gif"> MDU</a>
-                                            </div>
-                                        </div>
+                            <div ng-show="base_cat == 'mdu'" class="grid__item">
+                                <div class="grid">
+                                    <div class="grid__item">
+                                        <span>Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.</span>
                                     </div>
-                                    <div id="lyrEnglish2"></div>
-                                    <div id="lyrSpanish2" style="display:none;"></div>
-                                    <div id="lyrMDU1" style="display:none;">
-                                        <div class="col-sm-12">
-                                            <select name="MDUselection" ng-model="MDUselection" ng-change="fillMDUdiv(MDUselection)" ng-options="mduoption as mduoption for mduoption in mduoptions" style="margin:0 5px 5px 0;">
-                                                <option value disabled selected>Select One...</option>
+                                    <div class="grid__item palm--one-whole lap--one-whole one-half mdus">
+                                        <div class="select-style">
+                                            <select ng-model="mdu_cat" ng-options="product.mduType as product.mduType for product in products | filter:{'mduType': ''} | filter:{'mduType': '!TCD/JCD'} | unique:'mduType'">
+                                                <option value="" selected disabled>Select an MDU Acct type</option>
                                             </select>
-                                            <div id="MDUselectionInfo">&nbsp;</div>
-                                            <div id="MDUdefault">
-                                                Multi-Dwelling customers' programming based on account type. Many receive same packages and pricing as REG, but some receive significantly reduced-price programming since their entire building has activated DIRECTV. For reduced-priced packages, the name is different in Rio but is very similar to package mirrored.
-                                            </div>
-                                            <div id="MDUdiv" style="display:none;"></div>
+                                        </div>
+                                        <div ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'" class="select-style">
+                                            <select ng-model="mdu_base" ng-options="product.mduBase as product.mduBase for product in products | filter:{'mduType': mdu_cat} | filter:{'mduBase': ''} | unique:'mduBase'">
+                                                <option value="" selected disabled>Select an MDU Bulk package type</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div ng-repeat="product in mdus = (products | filter:{'mduType': mdu_cat || ''}) | unique:'mduType'" class="grid__item palm--one-whole lap--one-whole one-half mdus" ng-show="mdu_cat == product.mduType && mdu_cat != 'JMU/TMU/JMW/TMW'">
+                                        <div ng-repeat="mdu in mdus">
+                                            <label><input type="radio" ng-value="mdu.id" ng-model="base.selected"> {{mdu.name}}</label> <a href q-tip="<b>{{mdu.name}}</b> {{mdu.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{mdu.url}}" target="_blank">Details</a>
+                                        </div>
+                                    </div>
+                                    <div class="grid__item palm--one-whole lap--one-whole one-half mdus" ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'">
+                                        <div ng-repeat="mdu in mdus | filter:{'mduBase': mdu_base || '!'}">
+                                            <label><input type="radio" ng-value="mdu.id" ng-model="base.selected"> {{mdu.name}}</label> <a href q-tip="<b>{{mdu.name}}</b> {{mdu.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{mdu.url}}" target="_blank">Details</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div id="step4Box" class="col-sm-12 col-md-6 pdr0">
-                            <div class="col-sm-12 bgwt marr0 stp45">
-                                <div class="row">
-                                    <div class="col-sm-12 hdr">
-                                        <div class="steps stp4"></div><p><strong>Premium services</strong></p>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div>
-                                            <a href="" ng-click="img_click_Prem('hbo',7); layerSwap();">
-                                            <img alt="HBO The Works" border="0" id="hbo" name="hbo" src="assets/img/greenBoxNorm.gif">
-                                            <img alt="Click here for more info." border="0" src="assets/img/packages_hbo.gif"></a>
-                                        </div>
-                                        <div>
-                                            <a href="" ng-click="img_click_Prem('starz',8);">
-                                            <img alt="Starz Super Pack" border="0" id="starz" name="starz" src="assets/img/greenBoxNorm.gif">
-                                            <img alt="Click here for more info." style="margin-left:5px" border="0" src="assets/img/packages_starz.gif"></a>
-                                        </div>                                
-                                        <div>
-                                            <a href="" ng-click="img_click_Prem('showtime',8);">
-                                            <img alt="Showtime Unlimited" border="0" id="showtime" name="showtime" src="assets/img/greenBoxNorm.gif">
-                                            <img alt="Click here for more info." style="margin-left:5px" border="0" src="assets/img/packages_showtime.gif"></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <div>
-                                            <a href="" ng-click="img_click_Prem('cinemax',8);">
-                                            <img alt="Cinemax More Max" border="0" id="cinemax" name="cinemax" src="assets/img/greenBoxNorm.gif">
-                                            <img alt="Click here for more info." style="margin-left:5px" border="0" src="assets/img/packages_cinemax.gif"></a>
-                                        </div>                            
-                                        <div>
-                                            <a href="" ng-click="img_click_Prem('sportspack',9);">
-                                            <img alt="Sports Pack" border="0" id="sportspack" name="sportspack" src="assets/img/greenBoxNorm.gif">
-                                            <img alt="Click here for more info." style="margin-left:5px" border="0" src="assets/img/packages_sports.gif"></a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4">
-                                        <table class="hboPrices" style="margin-top:6px">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="innerboxHeadAndLine">
-                                                        <a href="" ng-click="img_click_Prem('hbo',7);" id="without">without HBO</a>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1st = <span class="prices" id="firstPrem">$13.99</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>2nd = <span class="prices" id="secondPrem">$12</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>3rd = <span class="prices">$13</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>4th = <span class="prices">$10</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>5th = <span class="prices" id="fifthPrem">n/a</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                    </section>
+                    <section id="prem">
+                        <h2><span class="deskHide">4: </span>Add Premium Services</h2>
+                        <span ng-hide="premChkd[0]">Pricing without HBO: 1st = $13.99 / 2nd = $12 / 3rd = $13 / 4th = $10 / 5th = n/a</span>
+                        <span ng-show="premChkd[0]">Pricing with HBO: 1st = $17.99 / 2nd = $13 / 3rd = $13 / 4th = $10 / 5th = $8</span>
+                        <div class="grid">
+                            <div ng-repeat="product in products | filter:{group:'PREMIUM SERVICE'}" class="grid__item palm--one-whole lap--one-whole one-half">
+                                <label><input type="checkbox" ng-model="premChkd[$index]" ng-disabled="premDisabled"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
                             </div>
                         </div>
-                        <div id="step5Box" class="col-sm-12 col-md-6">
-                            <div class="col-sm-12 bgwt stp45">
-                                <div class="row">
-                                    <div class="col-sm-12 hdr">
-                                        <div class="steps stp5"></div><p><strong>Extra services</strong></p>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pro_537675" target="_blank"><strong>DIRECTV Protection Plan</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_Protect('protect_1',10);"><img alt="Standard Receiver ($5.99/mo.)" border="0" id="protect_1" name="protect_1" src="assets/img/greenBoxNorm.gif"> Monthly ($7.99)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_Protect('protect_3',11);"><img alt="none" border="0" id="protect_3" name="protect_3" src="assets/img/greenBoxNorm.gif"> Remove</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537558" target="_blank"><strong>DIRECTV HD Extra Pack</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_hdextra('hdextra_1',10);"><img alt="none" border="0" id="hdextra_1" name="hdextra_1" src="assets/img/greenBoxNorm.gif"> Monthly ($4.99)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_hdextra('hdextra_2',11);"><img alt="none" border="0" id="hdextra_2" name="hdextra_2" src="assets/img/greenBoxNorm.gif"> Remove</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-4 col-md-6">
-                                        <div class="marb10">
-                                            <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pro_537962" target="_blank"><strong>Protection Plan Premier</strong></a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_premier('premier_1',12);"><img alt="none" border="0" id="premier_1" name="premier_1" src="assets/img/greenBoxNorm.gif"> Monthly ($19.99)</a>
-                                        </div>
-                                        <div class="marb10">
-                                            <a href="" ng-click="img_click_premier('premier_2',13);"><img alt="none" border="0" id="premier_2" name="premier_2" src="assets/img/greenBoxNorm.gif"> Remove</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </section>
+                    <section id="serv">
+                        <h2><span class="deskHide">5: </span>Add Extra Services</h2>
+                        <div ng-repeat="product in products | filter:{group:'EXTRA SERVICES'}">
+                            <label><input type="checkbox" ng-model="checked[product.id]"> {{product.name}}</label> <a href q-tip="<b>{{product.name}}</b> {{product.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{product.url}}" target="_blank">Details</a>
                         </div>
-                        <div id="step6Box" class="col-sm-12">
-                            <div class="col-sm-12 bgwt">                
-                                <div>
-                                    <p style="margin-top:10px"><strong>OTHER LINKS</strong></p>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div>
-                                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537939" target="_blank"><strong>- Regional Sports Fee</strong></a>  
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div>
-                                        <strong>Packages:</strong><br><br>
-                                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank">- Expired</a><br><br>
-                                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_int_537436" target="_blank">- Basic Choice</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div>
-                                        <strong>Add Ons:</strong><br><br>
-                                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_mov_538100" target="_blank">- Encore (A La Carte)</a><br><br>
-                                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537508" target="_blank">- En Espa&ntilde;ol</a><br><br>
-                                       <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537427" target="_blank">- Am&eacute;ricas Plus</a>
-                                    </div>
-                                </div>
-                                <div class="col-sm-3">
-                                    <div>
-                                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ope_cen_cal_sup_537577" target="_blank">- International (WorldDirect)</a><br><br>
-                                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537616" target="_blank">- M&eacute;xico Plus</a><br><br>
-                                        <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spa_539237" target="_blank">- DIRECTV Deportes</a>
-                                    </div>
-                                </div>
-                            </div>
+                    </section>
+                </div>
+                <div id="side" class="flex-item tri-right">
+                    <div>
+                        <h2>Package Totals</h2>
+                        <div id="pricing" ng-class="{'grey': grey}">
+                            <div>Base: <span ng-bind="baseTotal | currency"></span></div>
+                            <div>Premium: <span ng-bind="premTotal | currency"></span></div>
+                            <div>Extras: <span ng-bind="xtraTotal | currency"></span></div>
+                            <div><strong>1st Month Total: <span ng-bind="mon1Total | currency"></span></strong></div>
+                            <div><strong>2nd Month Total: <span ng-bind="mon2Total | currency"></span></strong></div>
+                        </div>
+                        <div ng-show="base.selected == 6 && len == 5">SAVINGS ALERT!
+                            <ul>
+                                <li>Premier has more for less money.
+                                <li>Add Premier instead of Ultimate and 5 Premiums.
+                            </ul>
+                        </div>
+                        <div ng-show="summShow">Customers are not charged for Protection Plan until the 2nd month. The subtotal for <strong ng-show="pPlanShow" ng-bind="pPlan.name"></strong><span ng-show="pPlanShow && pPlanPremShow"> and </span><strong ng-show="pPlanPremShow" ng-bind="pPlanPrem.name"></strong> is <span ng-bind="summTotal | currency"></span></div>
+                        <button ng-click="getTotals()" class="pp-btn mrr10">Calculate</button> <button ng-click="reset()" class="pp-btn">Reset</button>
+                    </div>
+                    <div>
+                        <h2>Related Links</h2>
+                        <div>
+                            <h3>Fees</h3>
+                            <ul>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537939" target="_blank">Regional Sports Fee</a>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Packages:</h3>
+                            <ul>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank">Expired</a>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_int_537436" target="_blank">Basic Choice</a>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3>Add Ons:</h3>
+                            <ul>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_mov_538100" target="_blank">Encore (A La Carte)</a>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537508" target="_blank">En Espa&ntilde;ol</a>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537427" target="_blank">Am&eacute;ricas Plus</a>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ope_cen_cal_sup_537577" target="_blank">International (WorldDirect)</a>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537616" target="_blank">M&eacute;xico Plus</a>
+                                <li><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_spa_539237" target="_blank">DIRECTV Deportes</a>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-        </form>
+        </div>
     </div>
 </div>

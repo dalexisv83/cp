@@ -9,7 +9,8 @@
                 $scope.goHere = function(here) {
                     $location.path(here);
                 }
-                var ppObj = {
+                var dataProg = true,
+                    ppObj = {
                     "name": "Programming Package",
                     "url": "programming-package",
                     "src": "views/programming_package.htm?@@BUSTER@@"
