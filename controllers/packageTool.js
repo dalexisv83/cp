@@ -113,12 +113,12 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
                 scope.checked[oldBase] = null;
                 scope.checked[newBase] = true;
             }
-            if (newBase == 7 || newBase == 20) {
+            if (newBase == 7 || newBase == 20 || newBase == 240 || newBase == 243 || newBase == 244) {
                 for (i = 0; i < 5; i++) {
                     scope.premChkd[i] = true;
                     scope.premDisabled = true;
                 }
-            } else if (oldBase == 7 || oldBase == 20) {
+            } else if (oldBase == 7 || oldBase == 20 || oldBase == 240 || oldBase == 243 || oldBase == 244) {
                 for (i = 0; i < 5; i++) {
                     scope.premChkd[i] = false;
                     scope.premDisabled = false;
