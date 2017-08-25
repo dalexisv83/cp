@@ -54,12 +54,15 @@
                                     </div>
                                     <div class="grid__item palm--one-whole lap--one-whole one-half mdus">
                                         <div class="select-style">
-                                            <select ng-model="mdu_cat" ng-options="product.mduType as product.mduType for product in products | filter:{'mduType': ''} | filter:{'mduType': '!TCD/JCD'} | unique:'mduType'">
+                                            <select ng-model="mdu_cat">
                                                 <option value="" selected disabled>Select an MDU Acct type</option>
+                                                <option value="MDU/JDU">MDU/JDU</option>
+                                                <option value="JMU/TMU">JMU/TMU</option>
+                                                <option value="JMW/TMW">JMW/TMW</option>
                                             </select>
                                         </div>
-                                        <div ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'" class="select-style">
-                                            <select ng-model="mdu_base" ng-options="product.mduBase as product.mduBase for product in products | filter:{'mduType': mdu_cat} | filter:{'mduBase': ''} | unique:'mduBase'">
+                                        <div ng-show="mdu_cat == 'JMU/TMU' || mdu_cat == 'JMW/TMW'" class="select-style">
+                                            <select ng-model="mdu_base" ng-options="product.mduBase as product.mduBase for product in products | mduTypeFilter:mdu_cat | filter:{'mduBase': ''} | unique:'mduBase'">
                                                 <option value="" selected disabled>Select an MDU Bulk package type</option>
                                             </select>
                                         </div>
@@ -69,7 +72,7 @@
                                             <label><input type="radio" ng-value="mdu.id" ng-model="base.selected"> {{mdu.name}}</label> <a href q-tip="<b>{{mdu.name}}</b> {{mdu.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{mdu.url}}" target="_blank">Details</a>
                                         </div>
                                     </div>
-                                    <div class="grid__item palm--one-whole lap--one-whole one-half mdus" ng-show="mdu_cat == 'JMU/TMU/JMW/TMW'">
+                                    <div class="grid__item palm--one-whole lap--one-whole one-half mdus" ng-show="mdu_cat == 'JMU/TMU' || mdu_cat == 'JMW/TMW'">
                                         <div ng-repeat="mdu in mdus | filter:{'mduBase': mdu_base || '!'}">
                                             <label><input type="radio" ng-value="mdu.id" ng-model="base.selected"> {{mdu.name}}</label> <a href q-tip="<b>{{mdu.name}}</b> {{mdu.desc}}" q-tip-show-event="click">Quick View</a> | <a href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{mdu.url}}" target="_blank">Details</a>
                                         </div>

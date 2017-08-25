@@ -13,7 +13,7 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
             throw new Error('Data request failed:\n' + JSON.stringify(response));
         });
         
-        var getSubTotal = function (chkdarr, pricearr, category, firstExempt, multi, credit) {
+        var getSubTotal = function (chkdarr, pricearr, category, firstExempt, multi, credit, mduCat) {
                 var total = 0,
                     match,
                     c;
@@ -33,7 +33,9 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
                                 return c == obj.id;
                             });
                             if (match) {
-                                if (match.id == 155 && credit && multi) {
+                                if (match.id == 155 && mduCat == 'JMW/TMW' && multi < 5) {
+                                    total += 0;
+                                } else if (match.id == 155 && credit && multi) {
                                     total += match.price * multi - match.price;
                                 } else if (match.id == 155 && multi) {
                                     total += match.price * multi;
@@ -52,9 +54,9 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
                 $scope.prices = response.data.pricing;
                 $scope.baseTotal = getSubTotal($scope.checked, $scope.prices, 'BASE');
                 $scope.premTotal = getSubTotal($scope.checked, $scope.prices, 'PREMIUM');
-                $scope.xtraTotal = getSubTotal($scope.checked, $scope.prices, 'EXTRA', false, $scope.recX, $scope.primary_credit);
-                $scope.mon1Total = getSubTotal($scope.checked, $scope.prices, null, true, $scope.recX, $scope.primary_credit);
-                $scope.mon2Total = getSubTotal($scope.checked, $scope.prices, null, false, $scope.recX, $scope.primary_credit);
+                $scope.xtraTotal = getSubTotal($scope.checked, $scope.prices, 'EXTRA', false, $scope.recX, $scope.primary_credit, $scope.mdu_cat);
+                $scope.mon1Total = getSubTotal($scope.checked, $scope.prices, null, true, $scope.recX, $scope.primary_credit, $scope.mdu_cat);
+                $scope.mon2Total = getSubTotal($scope.checked, $scope.prices, null, false, $scope.recX, $scope.primary_credit, $scope.mdu_cat);
                 if ($scope.checked[202] || $scope.checked[205]) {
                     $scope.summShow = true;
                     if ($scope.checked[202]) {
@@ -152,4 +154,28 @@ app.filter('unique', function () {
     return function (arr, field) {
         return _.uniq(arr, function (a) { return a[field]; });
     };
+});
+
+app.filter('mduTypeFilter', function () {
+    return function (arr, mduCat) {
+        if (arr) {
+            var cat,
+                filteredArr;
+            switch (mduCat) {
+                case 'MDU/JDU':
+                    cat = 'MDU/JDU';
+                    break;
+                case 'JMU/TMU':
+                    cat = 'JMU/TMU/JMW/TMW';
+                    break;
+                case 'JMW/TMW':
+                    cat = 'JMU/TMU/JMW/TMW';
+                    break;
+            }
+            filteredArr = arr.filter(function (package) {
+                return package.mduType == cat;
+            });
+            return filteredArr;
+        }
+    }
 });
