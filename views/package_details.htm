@@ -32,15 +32,15 @@
                         <table style="width:calc(100% - 16px);">
                             <thead>
                                 <tr>
-                                    <th width="66%">Channel Name</th>
-                                    <th ng-if="package.platform == 'DIRECTV'">Channel #</th>
-                                    <th>Genre</th>
+                                    <th width="66%"><a class="sortHead" ng-class="{'sorted asc': sortType == 'channelname' && reverse == false, 'sorted desc': sortType == 'channelname' && reverse == true}" href title="Click to sort" ng-click="sorter('channelname')">Channel Name</a></th>
+                                    <th ng-if="package.platform == 'DIRECTV'"><a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Channel #</a></th>
+                                    <th><a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a></th>
                                 </tr>
                             </thead>
                         </table>
                         <div style="width:100%;height:400px;overflow:auto;">
                             <table class="packages" width="100%">
-                                <tr ng-repeat="channel in channels">
+                                <tr ng-repeat="channel in channels | orderBy:sortType:reverse">
                                     <td width="66%" ng-bind="channel.channelname"></td>
                                     <td ng-if="package.platform == 'DIRECTV'" ng-bind-html="channel.channelnumber"></td>
                                     <td ng-bind="channel.genre"></td>

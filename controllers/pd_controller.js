@@ -45,6 +45,17 @@ app.controller('PD_Controller',['$scope', '$filter', '$http', '$location',
                                 );
                             });
 
+                            $scope.sortType = 'channelname';
+                            $scope.reverse = false;
+                            $scope.sorter = function (clickType) {
+                                if ($scope.sortType == clickType) {
+                                    $scope.reverse = !$scope.reverse;
+                                } else {
+                                    $scope.reverse = false;
+                                }
+                                $scope.sortType = clickType;
+                            };
+
                             $scope.pdLoaded = true;
                         }
                     },
