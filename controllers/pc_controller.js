@@ -50,8 +50,6 @@ app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
         $scope.UrlFormatter = new UrlFormatter(localhost); //expose the urlformatter class to the view
         $scope.Utility = new Utility(); //expose the utility class to the view
 
-        $scope.sorted_column = ''; //holds the column currently sorted
-
         $scope.show_current_channels = true; //determine to show/hide the current channels
         $scope.show_requested_channels = true; //determine to show/hide the requested channels
         $scope.show_gained_channels = false; //determine to show/hide the gained channels
@@ -64,6 +62,15 @@ app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
         $scope.volume = null; //hold the value for the selected volume
 
         $scope.sortType = 'channelname';
+        $scope.reverse = false;
+        $scope.sorter = function (clickType) {
+            if ($scope.sortType == clickType) {
+                $scope.reverse = !$scope.reverse;
+            } else {
+                $scope.reverse = false;
+            }
+            $scope.sortType = clickType;
+        };
 
         $scope.current_pkg_limit = min_limit;
         $scope.requested_pkg_limit = min_limit;
@@ -341,19 +348,6 @@ app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
         };
 
         /**
-         * Sort functionality for channels
-         *
-         * @param {mixed} channels collection of channel objects
-         * @param {string} predicate the property to sort
-         * @param {boolean} reverse
-         */
-        $scope.sort = function(predicate,reverse) {
-            //assign the selected class to the scope
-            $scope.sorted_column = $scope.Utility.selectedClass(predicate,reverse);
-            $scope.sortType = predicate;
-        };
-
-        /**
          * Resets the whole datascopes as if the page just loaded
          */
         $scope.reset = function(){
@@ -368,9 +362,6 @@ app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
             //reset the gained and lost channels
             $scope.gained_channels = null;
             $scope.lost_channels = null;
-
-            //reset the sorted column
-            $scope.sorted_column = '';
 
             //reset all the show/hide pointers back to original values
             $scope.show_current_channels = true;
@@ -390,6 +381,7 @@ app.controller('AppController', ['$scope','$filter', '$http', '$cookies',
             $scope.volume = null;
 
             $scope.sortType = 'channelname';
+            $scope.reverse = false;
 
             $scope.gFilter = {
                 "int": true,

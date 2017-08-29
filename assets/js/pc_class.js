@@ -38,7 +38,7 @@
         
         for (i = 0; i < len; i = i + 1) {
             pkg = pkgs[i];
-            if ((pkg.id === id) || (pkg.id === String(id))){
+            if ((pkg.id == id) || (pkg.id == String(id))){
                 match_pkg = pkg;
                 break;
             }
@@ -67,7 +67,7 @@
 
         for (i = 0; i < len; i = i + 1) {
             ch = chs[i];
-            if (ch.id === id){
+            if (ch.id == id){
                 match_ch = ch;
                 break;
             }
@@ -140,12 +140,12 @@
         }
         if (type === 'att') {
             channels_unmapped = _.filter(channels, function(channel){
-                if (channel.dtv_id === "0") {
+                if (channel.dtv_id == "0") {
                     return channel;
                 }
             });
             channels_mapped = _.filter(channels, function(channel){
-                if (channel.dtv_id !== "0") {
+                if (channel.dtv_id != "0") {
                     return channel;
                 }
             });

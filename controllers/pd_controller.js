@@ -36,7 +36,7 @@ app.controller('PD_Controller',['$scope', '$filter', '$http', '$location',
                                                 var i,
                                                 len = $scope.package.channels.length;
                                             for (i=0;i<len;i++) {
-                                                if ($scope.package.channels[i].id === qChan.id){
+                                                if ($scope.package.channels[i].id == qChan.id){
                                                     return true;
                                                 }
                                             }

@@ -121,18 +121,11 @@
 #package_compare .table-header-inner {
   height:20px;
   width:100%;
-  background-color:#E0E0E0;
   padding-right: 16px;
 }
 
 #package_compare .table-header-inner table {
   border: none;
-}
-
-#package_compare .table-header-inner a{
-  display: block;
-  background-repeat: no-repeat;
-  background-position: 13px center; 
 }
 
 .sort-false,
