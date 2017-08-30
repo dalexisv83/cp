@@ -79,6 +79,24 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
                         stop();
                     }
                 });
+                var stopBase = $scope.$watch('base_cat', function (oldForm, newForm) {
+                    if (newForm != oldForm) {
+                        $scope.grey = true;
+                        stopBase();
+                    }
+                });
+                var stopMdu = $scope.$watch('mdu_cat', function (oldForm, newForm) {
+                    if (newForm != oldForm) {
+                        $scope.grey = true;
+                        stopMdu();
+                    }
+                });
+                var stopMduBase = $scope.$watch('mdu_base', function (oldForm, newForm) {
+                    if (newForm != oldForm) {
+                        $scope.grey = true;
+                        stopMduBase();
+                    }
+                });
             }, function errorCallback(response) {
                 throw new Error('Data request failed:\n' + JSON.stringify(response));
             });
