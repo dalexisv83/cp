@@ -18,7 +18,7 @@ app.controller('PP_Controller', ['$scope', '$filter', '$http',
                     match,
                     c;
                 for (var c in chkdarr) {
-                    if (c >= 300 && c <= 306 && (chkdarr[7] || chkdarr[20])) {
+                    if (c >= 300 && c <= 306 && (chkdarr[7] || chkdarr[20] || chkdarr[240] || chkdarr[243] || chkdarr[244])) {
                         continue;
                     } else {
                         if (chkdarr[c]) {
