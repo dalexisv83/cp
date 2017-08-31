@@ -33,7 +33,7 @@
                             <thead>
                                 <tr>
                                     <th style="width: 60%;"><a class="sortHead" ng-class="{'sorted asc': sortType == 'channelname' && reverse == false, 'sorted desc': sortType == 'channelname' && reverse == true}" href title="Click to sort" ng-click="sorter('channelname')">Channel Name</a></th>
-                                    <th style="width: 20%;" ng-if="package.platform == 'DIRECTV'"><a class="sortHead" ng-class="{'sorted asc': sortType == 'chanSort' && reverse == false, 'sorted desc': sortType == 'chanSort' && reverse == true}" href title="Click to sort" ng-click="sorter('chanSort')">Channel #</a></th>
+                                    <th style="width: 20%;" ng-if="package.platform == 'DIRECTV' || package.platform == 'DTVCOM'"><a class="sortHead" ng-class="{'sorted asc': sortType == 'chanSort' && reverse == false, 'sorted desc': sortType == 'chanSort' && reverse == true}" href title="Click to sort" ng-click="sorter('chanSort')">Channel #</a></th>
                                     <th style="width: 20%;"><a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a></thstyle="width:>
                                 </tr>
                             </thead>
@@ -42,7 +42,7 @@
                             <table class="packages" style="width: 100%;">
                                 <tr ng-repeat="channel in channels | orderBy:sortType:reverse">
                                     <td style="width: 60%;" ng-bind="channel.channelname"></td>
-                                    <td style="width: 20%;" ng-if="package.platform == 'DIRECTV'" ng-bind-html="channel.channelnumber"></td>
+                                    <td style="width: 20%;" ng-if="package.platform == 'DIRECTV' || package.platform == 'DTVCOM'" ng-bind-html="channel.channelnumber"></td>
                                     <td style="width: 20%;" ng-bind="channel.genre"></td>
                                 </tr>
                             </table>
