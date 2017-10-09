@@ -211,7 +211,7 @@
                             </td>
                             <td class="merged">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Name</a>
-                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Num</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'chanSort' && reverse == false, 'sorted desc': sortType == 'chanSort' && reverse == true}" href title="Click to sort" ng-click="sorter('chanSort')">Num</a>
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a><span class="alert" id="genreLegend" ng-window-pie>?</span>
                                 <img class="oTip oTip-sort" src="assets/img/overlay_lineup_sort.png" ng-hide="clOverlay == 'hide'" />
@@ -252,8 +252,8 @@
                             <td class="c-num unmerged num" ng-bind-html="channel.genre"></td>
                             <td class="merged">
                                 <p class="c-name"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></p>
-                                <span class="c-num" ng-bind-html="channel.channelnumber.replace('\u003Cbr \/\u003E',', ')"></span>
-                                <span class="c-num" ng-bind-html="channel.callletters.replace('\u003Cbr\/\u003E',', ')"></span>
+                                <span class="c-num" ng-bind-html="channel.channelnumber | brToComma"></span>
+                                <span class="c-num" ng-bind-html="channel.callletters | brToComma"></span>
                                 <span class="c-num" ng-bind-html="channel.genre"></span>
                             </td>
                             <td class="dot" ng-style="{'width': width}" ng-class="{'odd': $odd, 'even': $even}" ng-repeat="package in packages" ng-bind-html="channel['p' + ($index + 1)] | xToBull"></td>
