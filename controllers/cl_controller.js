@@ -284,6 +284,14 @@ app.filter('comReplace', [
             }
         }
     }
+]).filter('brToComma', [
+    function () {
+        return function (input) {
+            if (input) {
+                return input.toString().replace('<br/>', ', ').replace('<br />', ', ');
+            }
+        }
+    }
 ]);
 
 
