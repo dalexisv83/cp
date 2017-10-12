@@ -225,10 +225,10 @@ h2 {
     text-align: center;
     padding: 7px 10px;
     font-weight: bold;
-    font-size: .95em;
+    font-size: .85em;
 }
 
-@media only screen and (min-width: 790px) {
+@media only screen and (min-width: 960px) {
     .nav a, .nav span {
         font-size: 1em;
     }

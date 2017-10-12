@@ -80,11 +80,11 @@
     flex-direction: row;
 }
 
-.flex-item {
+#programming_package .flex-item {
     width: 33.333%;
 }
 
-.flex-item.layout {
+#programming_package .flex-item.layout {
     width: 66.666%;
     margin-right: 24px;
 }
@@ -177,11 +177,11 @@ select::-ms-expand {
         background-image: url('../img/prog-pack_icn_5.png');
     }
     
-    .deskHide {
+    #programming_package .deskHide {
         display: none;
     }
 
-    .mobileHide {
+    #programming_package .mobileHide {
         display: inline;
     }
 

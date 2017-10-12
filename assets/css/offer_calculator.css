@@ -1,0 +1,100 @@
+﻿#offer_calculator {
+    font-size: .85em;
+}
+
+#offer_calculator .flex-item {
+    width: 40%;
+}
+
+#offer_calculator .flex-item.layout {
+    width: 60%;
+    margin-right: 24px;
+    padding-right: 20px;
+}
+
+#offer_calculator h2 {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 24px
+}
+
+#offer_calculator section {
+    background: 0 7px no-repeat;
+}
+
+#offer_calculator section + section {
+    margin-top: 38px;
+}
+
+#offer_calculator .border {
+    padding: 25px;
+}
+
+#offer_calculator #side {
+    padding-left: 74px;
+}
+
+#offer_calculator .select-style {
+    float: right;
+}
+
+#offer_calculator .select-style select {
+    text-transform: uppercase;
+}
+
+.pricing_radio {
+    float: right;
+    font-size: 16px;
+    margin: 20px 0 10px;
+}
+
+.pricing_radio label + label {
+    margin-left: 20px;
+}
+
+@media screen and (min-width: 1029px) {
+    #offer_calculator {
+        font-size: 1em;
+    }
+
+    #offer_calculator .flex-item {
+        width: 50%;
+    }
+
+    #offer_calculator .flex-item.layout {
+        width: 50%;
+    }
+
+    #offer_calculator section {
+        padding-left: 60px;
+        padding-bottom: 7px;
+    }
+
+    #offer_calculator section#current {
+        background-image: url('../img/prog-pack_icn_1.png');
+    }
+
+    #offer_calculator section#requested {
+        background-image: url('../img/prog-pack_icn_2.png');
+    }
+
+    #offer_calculator section#num_rec {
+        background-image: url('../img/prog-pack_icn_3.png');
+    }
+
+    #offer_calculator section#stb_promo {
+        background-image: url('../img/prog-pack_icn_4.png');
+    }
+
+    #offer_calculator section#promo_pricing {
+        background-image: url('../img/prog-pack_icn_5.png');
+    }
+
+    #offer_calculator .deskHide {
+        display: none;
+    }
+
+    #offer_calculator .mobileHide {
+        display: inline;
+    }
+}
