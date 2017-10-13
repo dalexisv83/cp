@@ -7,7 +7,7 @@
                     <section id="current">
                         <h2><span class="deskHide">1: </span>Current Package</h2>
                         <div class="select-style">
-                            <select ng-model="current" ng-change="grey = true">
+                            <select ng-model="current" ng-change="grey = true" ng-options="package.name for package in packages">
                                 <option value="">Please Select</option>
                             </select>
                         </div>
@@ -15,7 +15,7 @@
                     <section id="requested">
                         <h2><span class="deskHide">2: </span>Requested Package</h2>
                         <div class="select-style">
-                            <select ng-model="requested" ng-change="grey = true">
+                            <select ng-model="requested" ng-change="grey = true" ng-options="package.name for package in packages">
                                 <option value="">Please Select</option>
                             </select>
                         </div>
@@ -23,15 +23,19 @@
                     <section id="num_rec">
                         <h2><span class="deskHide">3: </span>Number of Receivers</h2>
                         <div class="select-style">
-                            <select ng-model="requested" ng-change="grey = true">
+                            <select ng-model="num_rec" ng-change="grey = true">
                                 <option value="">Please Select</option>
+                                <option value="0">1</option>
+                                <option value="1">2</option>
+                                <option value="2">3</option>
+                                <option value="3">4</option>
                             </select>
                         </div>
                     </section>
                     <section id="stb_promo">
-                        <h2><span class="deskHide">4: </span>Current STB Promo</h2>
+                        <h2><span class="deskHide">4: </span>STB Promo Start Date</h2>
                         <div class="select-style">
-                            <select ng-model="requested" ng-change="grey = true">
+                            <select ng-model="stb_promo" ng-change="grey = true" ng-options="promo.label for promo in promos">
                                 <option value="">Please Select</option>
                             </select>
                         </div>
@@ -39,17 +43,20 @@
                     <section id="promo_pricing">
                         <h2><span class="deskHide">5: </span>Promotional Pricing</h2>
                         <div class="pricing_radio">
-                            <label><input type="radio" name="promo_pricing" ng-model="promo_pricing"> Yes</label> <label><input type="radio" name="promo_pricing" ng-model="promo_pricing"> No</label>
+                            <label><input type="radio" name="promo_pricing" ng-model="promo_pricing" ng-value="true"> Yes</label> <label><input type="radio" name="promo_pricing" ng-model="promo_pricing" ng-value="false"> No</label>
                         </div>
                     </section>
                 </div>
                 <div id="side" class="flex-item tri-right">
                     <div>
                         <h2>Total System Price</h2>
-                        <div id="pricing" ng-class="{'grey': grey}">
-                            <div><span ng-bind="baseTotal | currency"></span> Base</div>
-                            <div>+ <span ng-bind="premTotal | currency"></span> Additional Receivers</div>
-                            <div>- <span ng-bind="xtraTotal | currency"></span> Monthly Credit on Customer Bill</div>
+                        <div id="pricing">
+                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined"><span ng-bind="requested[2].price | currency"></span> All Included Fall Offer</div>
+                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined && disc < 0"><span ng-bind="disc = promo_pricing && (current[stb_promo.id].disc) | currency"></span> Current Promotional Offer</div>
+                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined"><span ng-bind="rec_fee = (num_rec * 7) | currency"></span> Additional Receivers</div>
+                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined && num_rec * 1 + 1 <= stb_promo.num && credit < 0"><span ng-bind="credit = (requested[stb_promo.id].price + (disc || 0)) - (requested[2].price + (disc || 0) + rec_fee) | currency"></span> Monthly Credit on Customer Bill</div>
+                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined && num_rec * 1 + 1 <= stb_promo.num"><span ng-bind="(requested[2].price + (disc || 0)) + rec_fee + Math.max(0,credit) | currency"></span> Total Monthly Charges</div>
+                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined && num_rec * 1 + 1 <= stb_promo.num && credit >= 0">Fall Offer price is lower than existing package price</div>
                         </div>
                     </div>
                 </div>
