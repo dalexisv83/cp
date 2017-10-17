@@ -18,6 +18,22 @@ app.controller('OC_Controller',['$scope', '$http',
                     "num": 4
                 }
             ];
+            $scope.reset = function () {
+                $scope.submitted = $scope.current = $scope.requested = $scope.stb_promo = $scope.promo_pricing = $scope.num_rec = $scope.stb_promo = $scope.credit = null;
+                $scope.num_rec = "";
+                $scope.display = false;
+            };
+            $scope.receivers = [1, 2, 3, 4, 5, 6];
+            $scope.calculate = function () {
+                $scope.grey = false;
+                $scope.cCur = $scope.current;
+                $scope.cReq = $scope.requested;
+                $scope.cDisc = $scope.current[$scope.stb_promo.id].disc;
+                $scope.cRecFee = $scope.num_rec * 7;
+                $scope.cCredit = ($scope.requested[$scope.stb_promo.id].price + ($scope.cDisc || 0)) - ($scope.requested[2].price + ($scope.cDisc || 0) + $scope.cRecFee);
+                $scope.totals = ($scope.requested[2].price + ($scope.cDisc || 0)) + $scope.cRecFee + Math.max(0, $scope.cCredit);
+                $scope.display = true;
+            }
         };
         $http.get('assets/datasource/OfferCalculator.js').then(function successCallback(response) {
             init(response);

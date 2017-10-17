@@ -1,7 +1,8 @@
 <div id="offer_calculator" ng-controller="OC_Controller">
     <div class="wrapper">
         <div class="border">
-            <p style="font-size:16px;text-align:center"><b>NOTICE:</b> This tool is only for use for DIRECTV customers on enabler and U-verse package upgrades.</p>
+            <h2 class="title">Fall Offer Calculator</h2>
+            <p style="font-size:16px;margin-bottom: 40px;"><b>NOTICE:</b> This tool is only for use for DIRECTV customers on enabler and U-verse package upgrades.</p>
             <div class="flex-cont">
                 <div class="flex-item layout">
                     <section id="current">
@@ -23,12 +24,8 @@
                     <section id="num_rec">
                         <h2><span class="deskHide">3: </span>Number of Receivers</h2>
                         <div class="select-style">
-                            <select ng-model="num_rec" ng-change="grey = true">
+                            <select ng-model="num_rec" ng-change="grey = true" ng-options="rec - 1 as rec for rec in receivers">
                                 <option value="">Please Select</option>
-                                <option value="0">1</option>
-                                <option value="1">2</option>
-                                <option value="2">3</option>
-                                <option value="3">4</option>
                             </select>
                         </div>
                     </section>
@@ -50,13 +47,36 @@
                 <div id="side" class="flex-item tri-right">
                     <div>
                         <h2>Total System Price</h2>
-                        <div id="pricing">
-                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined"><span ng-bind="requested[2].price | currency"></span> All Included Fall Offer</div>
-                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined && disc < 0"><span ng-bind="disc = promo_pricing && (current[stb_promo.id].disc) | currency"></span> Current Promotional Offer</div>
-                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined"><span ng-bind="rec_fee = (num_rec * 7) | currency"></span> Additional Receivers</div>
-                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined && num_rec * 1 + 1 <= stb_promo.num && credit < 0"><span ng-bind="credit = (requested[stb_promo.id].price + (disc || 0)) - (requested[2].price + (disc || 0) + rec_fee) | currency"></span> Monthly Credit on Customer Bill</div>
-                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined && num_rec * 1 + 1 <= stb_promo.num"><span ng-bind="(requested[2].price + (disc || 0)) + rec_fee + Math.max(0,credit) | currency"></span> Total Monthly Charges</div>
-                            <div ng-show="current && requested && num_rec && stb_promo && promo_pricing != undefined && num_rec * 1 + 1 <= stb_promo.num && credit >= 0">Fall Offer price is lower than existing package price</div>
+                        <div id="pricing" ng-class="{'grey': grey}">
+                            <table ng-show="display">
+                                <tr>
+                                    <td></td>
+                                    <td><span ng-bind="cReq[2].price | currency"></span></td>
+                                    <td>All Included Fall Offer</td>
+                                </tr>
+                                <tr ng-show="cDisc < 0" class="credit">
+                                    <td>&minus;</td>
+                                    <td><span ng-bind="cDisc | currency"></span></td>
+                                    <td>Current Promotional Offer</td>
+                                </tr>
+                                <tr>
+                                    <td>&plus;</td>
+                                    <td><span ng-bind="cRecFee | currency"></span></td>
+                                    <td>Additional Receivers</td>
+                                </tr>
+                                <tr ng-show="num_rec * 1 + 1 <= stb_promo.num && cCredit < 0" class="credit">
+                                    <td>&minus;</td>
+                                    <td><span ng-bind="cCredit | currency"></span></td>
+                                    <td>Monthly Credit on Customer Bill</td>
+                                </tr>
+                                <tr>
+                                    <td>&equals;</td>
+                                    <td><span ng-bind="totals | currency"></span></td>
+                                    <td>Total Monthly Charges</td>
+                                </tr>
+                            </table>
+                            <p ng-show="display && num_rec * 1 + 1 <= stb_promo.num && cCredit >= 0">Fall Offer price is lower than existing package price</p>
+                            <button ng-click="current && requested && num_rec && stb_promo && promo_pricing != undefined && calculate()" class="pp-btn mrr10">Calculate</button> <button ng-click="reset()" class="pp-btn">Reset</button>
                         </div>
                     </div>
                 </div>

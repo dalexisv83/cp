@@ -14,7 +14,15 @@ var max_limit = 10000, //the maximum limit for ng-repeat to display
     app = angular.module('channelspackages'); // angular.module('App', ['angular-growl','ngSanitize']);
 
 
-app.directive('chosen',['$timeout',function($timeout){
+app.config(['$provide', function ($provide) {
+    $provide.decorator('$locale', ['$delegate', function ($delegate) {
+        if ($delegate.id == 'en-us') {
+            $delegate.NUMBER_FORMATS.PATTERNS[1].negPre = '$';
+            $delegate.NUMBER_FORMATS.PATTERNS[1].negSuf = '';
+        }
+        return $delegate;
+    }]);
+}]).directive('chosen', ['$timeout', function ($timeout) {
     'use strict';
     var linker = function(scope,element,attrs){
        var stopWatching = scope.$watch('$parent.pcLoaded', function() {
