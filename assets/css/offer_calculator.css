@@ -58,25 +58,29 @@
     margin-left: 20px;
 }
 
-#pricing table {
+#offer_calculator #pricing table {
     width: 100%;
 }
 
-#pricing td {
+#offer_calculator #pricing td {
     padding: 10px;
 }
 
-#pricing table td:nth-child(1) {
+#offer_calculator #pricing table td:nth-child(1) {
     width: 20px;
 }
 
-#pricing table td:nth-child(2) {
+#offer_calculator #pricing table td:nth-child(2) {
     width: 20%;
     text-align: right;
 }
 
-#pricing table td:nth-child(3) {
+#offer_calculator #pricing table td:nth-child(3) {
     width: 80%;
+}
+
+#offer_calculator #pricing {
+    margin: 20px 0;
 }
 
 .credit {
@@ -87,7 +91,21 @@
     color: inherit;
 }
 
-@media screen and (min-width: 1029px) {
+#offer_calculator .alert {
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+#offer_calculator .alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+@media screen and (min-width: 1024px) {
     #offer_calculator {
         font-size: 1em;
     }
@@ -131,5 +149,15 @@
 
     #offer_calculator .mobileHide {
         display: inline;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #offer_calculator .flex-item.layout {
+        padding-right: 45px;
+    }
+
+    #offer_calculator #side {
+        padding-left: 65px;
     }
 }
