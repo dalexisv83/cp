@@ -75,7 +75,7 @@
                                     <td>Total Monthly Charges</td>
                                 </tr>
                             </table>
-                            <p ng-show="display && num_rec * 1 + 1 <= stb_promo.num && cCredit >= 0">Fall Offer price is lower than existing package price</p>
+                            <p ng-show="display && num_rec * 1 + 1 <= stb_promo.num && cCredit >= 0">Fall Offer price is lower than or equal to existing package price</p>
                             <button ng-click="calculate()" class="pp-btn mrr10">Calculate</button> <button ng-click="reset()" class="pp-btn">Reset</button>
                         </div>
                         <p class="alert alert-danger" ng-show="invalid">Please select an option for all fields</p>
