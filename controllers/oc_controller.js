@@ -60,5 +60,8 @@ app.controller('OC_Controller',['$scope', '$http',
         }, function errorCallback(packages) {
             throw new Error('Data request failed:\n' + JSON.stringify(packages));
         });
+        $scope.addRc1 = function(label) {
+            return label == "DIRECTV" ? label + " RC1" : label;
+        }
     }
 ]);
