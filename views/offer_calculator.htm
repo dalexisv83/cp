@@ -74,7 +74,7 @@
                                         <td><span ng-bind="cRecFee | currency"></span></td>
                                         <td>Additional Receivers</td>
                                     </tr>
-                                    <tr ng-show="num_rec * 1 + 1 <= stb_promo.num && cCredit < 0" class="credit">
+                                    <tr ng-show="num_rec * 1 + 1 <= bans && cCredit < 0" class="credit">
                                         <td>&minus;</td>
                                         <td><span ng-bind="cCredit | currency"></span></td>
                                         <td>Monthly Credit on Customer Bill</td>
@@ -85,7 +85,7 @@
                                         <td>Total Monthly Charges</td>
                                     </tr>
                                 </table>
-                                <p ng-show="display && cNumRec * 1 + 1 <= stb_promo.num && cCredit >= 0">Fall Offer price is lower than or equal to existing package price</p>
+                                <p ng-show="display && cNumRec * 1 + 1 <= bans && cCredit >= 0">Fall Offer price is lower than or equal to existing package price</p>
                                 <button type="submit" class="pp-btn mrr10">Submit</button> <button ng-click="reset()" class="pp-btn">Reset</button>
                                 <p class="alert alert-danger" ng-show="banError">Error loading BAN list.<br />Please contact support for this tool at <a href='mailto://g06292@att.com'>g06292@att.com</a></p>
                             </div>
