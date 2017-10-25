@@ -45,7 +45,7 @@ app.controller('OC_Controller',['$scope', '$http',
                     $scope.cDisc = $scope.promo_pricing ? $scope.current[$scope.stb_promo.id].disc : 0;
                     $scope.cRecFee = $scope.cNumRec * $scope.stbPrice;
                     $scope.cCredit = Math.min(0, ($scope.requested[$scope.stb_promo.id].price + $scope.cDisc) - ($scope.requested[2].price + $scope.cDisc + $scope.cRecFee));
-                    $scope.totals = ($scope.requested[2].price + $scope.cDisc) + $scope.cRecFee + Math.max(0, $scope.cCredit);
+                    $scope.totals = $scope.requested[2].price + $scope.cDisc + $scope.cRecFee + $scope.cCredit;
                     $scope.display = true;
                     $scope.loading = false;
                 }, function errorCallback(bans) {
