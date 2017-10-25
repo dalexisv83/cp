@@ -24,9 +24,8 @@ app.controller('OC_Controller',['$scope', '$http',
                 $scope.display = false;
             };
             $scope.receivers = [1, 2, 3, 4, 5, 6];
-            $scope.calculate = function () {
-                $scope.loading = true;
-                $http.get('assets/datasource/bans.js').then(function successCallback(bans) {
+            $scope.calculate = function(inputBan) {
+                var doCalc = function(bans) {
                     $scope.bans = bans.data;
                     $scope.grey = false;
                     $scope.cCur = $scope.current;
@@ -47,11 +46,20 @@ app.controller('OC_Controller',['$scope', '$http',
                     $scope.cCredit = Math.min(0, ($scope.requested[$scope.stb_promo.id].price + $scope.cDisc) - ($scope.requested[2].price + $scope.cDisc + $scope.cRecFee));
                     $scope.totals = ($scope.requested[2].price + $scope.cDisc) + $scope.cRecFee + Math.max(0, $scope.cCredit);
                     $scope.display = true;
+                }
+                $scope.loading = true;
+                $http.jsonp('https://wiwauk4coldda09.itservices.sbc.com/toolupdater/web/api/datalookup/FallOfferBan/' + inputBan + '?callback=JSON_CALLBACK', { cache: true }).then(function successCallback(bans) {
+                    doCalc(bans);
                     $scope.loading = false;
                 }, function errorCallback(bans) {
-                    throw new Error('Data request failed:\n' + JSON.stringify(bans));
-                    $scope.banError = true;
-                    $scope.loading = false;
+                    $http.get('assets/datasource/bans.js', { cache: true }).then(function successCallback(bans) {
+                        doCalc(bans);
+                        $scope.loading = false;
+                    }, function errorCallback(bans) {
+                        throw new Error('Data request failed:\n' + JSON.stringify(bans));
+                        $scope.banError = true;
+                        $scope.loading = false;
+                    });
                 });
             }
         };
