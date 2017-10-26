@@ -45,7 +45,7 @@ app.controller('OC_Controller',['$scope', '$http',
                     $scope.cDisc = $scope.promo_pricing ? $scope.current[$scope.stb_promo.id].disc : 0;
                     $scope.cRecFee = $scope.cNumRec * $scope.stbPrice;
                     $scope.promoRec = Math.min($scope.cRecFee, ($scope.stb_promo.num - 1) * $scope.stbPrice);
-                    $scope.cCredit = Math.min(0, ($scope.requested[$scope.stb_promo.id].price + $scope.cDisc) - ($scope.requested[2].price + $scope.cDisc + $scope.promoRec));
+                    $scope.cCredit = $scope.cNumRec + 1 <= $scope.stb_promo.num ? Math.min(0, ($scope.requested[$scope.stb_promo.id].price + $scope.cDisc) - ($scope.requested[2].price + $scope.cDisc + $scope.promoRec)) : 0;
                     $scope.totals = $scope.requested[2].price + $scope.cDisc + $scope.cRecFee + $scope.cCredit;
                     $scope.display = true;
                     $scope.loading = false;
