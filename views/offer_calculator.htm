@@ -6,13 +6,13 @@
         <div class="border">
             <form name="offerCalc" ng-submit="calculate(ban)">
                 <h2 class="title">Fall Offer Calculator</h2>
-                <p style="font-size:16px;margin-bottom: 40px;"><b>NOTICE:</b> This tool should only be used for video package changes for customers whose current service was activated prior to 11/12.</p>
+                <p style="font-size:16px;margin-bottom: 40px;"><b>NOTICE:</b> This tool should only be used for video package changes for customers whose current service is NOT a standard package and was activated prior to 11/12.</p>
                 <div class="flex-cont">
                     <div class="flex-item layout">
                         <section id="current">
                             <h2><span class="deskHide"></span>Current Package</h2>
                             <div class="select-style">
-                                <select ng-model="current" ng-change="grey = true" ng-options="package.name group by package.platform for package in packages | orderBy:'name'" required>
+                                <select ng-model="current" ng-change="grey = true" ng-options="package.name group by addRc1(package.platform) for package in packages | orderBy:['-platform','name']" required>
                                     <option value="" selected disabled>Please Select</option>
                                 </select>
                             </div>
@@ -20,7 +20,7 @@
                         <section id="requested">
                             <h2><span class="deskHide"></span>Requested Package</h2>
                             <div class="select-style">
-                                <select ng-model="requested" ng-change="grey = true" ng-options="package.name group by package.platform for package in packages | orderBy:'name'" required>
+                                <select ng-model="requested" ng-change="grey = true" ng-options="package.name group by package.platform for package in packages | orderBy:['-platform','name']" required>
                                     <option value="" selected disabled>Please Select</option>
                                 </select>
                             </div>
@@ -48,7 +48,7 @@
                     </div>
                 </section>-->
                         <section id="promo_pricing">
-                            <h2><span class="deskHide"></span>Is Customer on Promo Pricing?</h2>
+                            <h2><span class="deskHide"></span>Is customer on Intro Promo Pricing?</h2>
                             <div class="pricing_radio">
                                 <label><input type="radio" name="promo_pricing" ng-model="promo_pricing" ng-value="true" ng-change="grey = true"> Yes</label> <label><input type="radio" name="promo_pricing" ng-model="promo_pricing" ng-value="false" ng-change="grey = true" required> No</label>
                             </div>
@@ -64,7 +64,7 @@
                                         <td><span ng-bind="cReq[2].price | currency"></span></td>
                                         <td>All Included Fall Offer</td>
                                     </tr>
-                                    <tr ng-show="cDisc < 0" class="credit">
+                                    <tr ng-show="cDisc < 0">
                                         <td>&minus;</td>
                                         <td><span ng-bind="cDisc | currency"></span></td>
                                         <td>Current Promotional Offer</td>
@@ -74,7 +74,7 @@
                                         <td><span ng-bind="cRecFee | currency"></span></td>
                                         <td>Additional Receivers</td>
                                     </tr>
-                                    <tr ng-show="num_rec * 1 + 1 <= bans && cCredit < 0" class="credit">
+                                    <tr ng-show="cCredit < 0" class="credit">
                                         <td>&minus;</td>
                                         <td><span ng-bind="cCredit | currency"></span></td>
                                         <td>Monthly Credit on Customer Bill</td>
@@ -85,7 +85,7 @@
                                         <td>Total Monthly Charges</td>
                                     </tr>
                                 </table>
-                                <p ng-show="display && cNumRec * 1 + 1 <= bans && cCredit >= 0">Fall Offer price is lower than or equal to existing package price</p>
+                                <p ng-show="display && cCredit >= 0">Fall Offer price is lower than or equal to existing package price.<br /><strong>This customer will not receive any additional credits.</strong></p>
                                 <button type="submit" class="pp-btn mrr10">Submit</button> <button ng-click="reset()" class="pp-btn">Reset</button>
                                 <p class="alert alert-danger" ng-show="banError">Error loading BAN list.<br />Please contact support for this tool at <a href='mailto://g06292@att.com'>g06292@att.com</a></p>
                             </div>

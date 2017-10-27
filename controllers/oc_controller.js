@@ -26,7 +26,8 @@ app.controller('OC_Controller',['$scope', '$http',
             $scope.receivers = [1, 2, 3, 4, 5, 6];
             $scope.calculate = function(inputBan) {
                 var doCalc = function(bans) {
-                    $scope.bans = typeof bans.data == 'string'? bans.data : bans.data[inputBan];
+                    $scope.bans = typeof bans.data === 'string' ? bans.data : bans.data[inputBan] ? bans.data[inputBan] : "4";
+                    console.log(typeof bans.data);
                     $scope.grey = false;
                     $scope.cCur = $scope.current;
                     $scope.cReq = $scope.requested;
@@ -34,12 +35,13 @@ app.controller('OC_Controller',['$scope', '$http',
                     $scope.stbPrice = $scope.current.platform == "DIRECTV" ? 7 : 10;
                     $scope.cDisc = $scope.promo_pricing ? $scope.current[$scope.bans].disc : 0;
                     $scope.cRecFee = $scope.cNumRec * $scope.stbPrice;
-                    $scope.cCredit = Math.min(0, ($scope.requested[$scope.bans].price + $scope.cDisc) - ($scope.requested[2].price + $scope.cDisc + $scope.cRecFee));
-                    $scope.totals = ($scope.requested[2].price + $scope.cDisc) + $scope.cRecFee + Math.max(0, $scope.cCredit);
+                    $scope.promoRec = Math.min($scope.cRecFee, ($scope.bans - 1) * $scope.stbPrice);
+                    $scope.cCredit = $scope.cNumRec + 1 <= $scope.bans ? Math.min(0, ($scope.requested[$scope.bans].price + $scope.cDisc) - ($scope.requested["1"].price + $scope.cDisc + $scope.promoRec)) : 0;
+                    $scope.totals = $scope.requested["1"].price + $scope.cDisc + $scope.cRecFee + $scope.cCredit;
                     $scope.display = true;
                 }
                 $scope.loading = true;
-                $http.jsonp('https://wiwauk4coldda09.itservices.sbc.com/toolupdater/web/api/GetStbCount/' + inputBan + '?callback=JSON_CALLBACK', { cache: true }).then(function successCallback(bans) {
+                $http.jsonp('https://wiwauk4coldda09.itservices.sbc.com/toolupdater/web/404/GetStbCount/' + inputBan + '?callback=JSON_CALLBACK', { cache: true }).then(function successCallback(bans) {
                     doCalc(bans);
                     $scope.loading = false;
                 }, function errorCallback(bans) {
@@ -59,5 +61,8 @@ app.controller('OC_Controller',['$scope', '$http',
         }, function errorCallback(packages) {
             throw new Error('Data request failed:\n' + JSON.stringify(packages));
         });
+        $scope.addRc1 = function(label) {
+            return label == "DIRECTV" ? label + " RC1" : label;
+        }
     }
 ]);
