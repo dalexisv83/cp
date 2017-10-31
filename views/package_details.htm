@@ -8,7 +8,7 @@
             </div>
             <div>
                 <hr />
-                <table class="price">
+                <table class="price" ng-if="!package.prices">
                     <thead>
                         <tr>
                             <th width="15%">Total Channels</th>
@@ -24,6 +24,26 @@
                         <td ng-if="package.noLocal" ng-bind="package.noLocal"></td>
                         <td ng-if="package.allInc" ng-bind="package.allInc"></td>
                         <td ng-if="package.allIncNoLocal" ng-bind="package.allIncNoLocal"></td>
+                    </tr>
+                </table>
+                <table class="price" ng-if="package.prices">
+                    <thead>
+                        <tr>
+                            <th width="15%">Total Channels</th>
+                            <th ng-if="package.prices[0]" width="18%" ng-bind="package.prices[0].offerCode"></th>
+                            <th ng-if="package.prices[1]" width="18%" ng-bind="package.prices[4].offerCode"></th>
+                            <th ng-if="package.prices[1]" width="18%" ng-bind="package.prices[1].offerCode"></th>
+                            <th ng-if="package.prices[2]" width="18%" ng-bind="package.prices[2].offerCode"></th>
+                            <th ng-if="package.prices[3]" width="20%" ng-bind="package.prices[3].offerCode"></th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td ng-bind="package.channel_count"></td>
+                        <td ng-if="package.prices[0]" ng-bind="package.prices[0].packagePrice"></td>
+                        <td ng-if="package.prices[1]" ng-bind="package.prices[4].packagePrice"></td>
+                        <td ng-if="package.prices[1]" ng-bind="package.prices[1].packagePrice"></td>
+                        <td ng-if="package.prices[2]" ng-bind="package.prices[2].packagePrice"></td>
+                        <td ng-if="package.prices[3]" ng-bind="package.prices[3].packagePrice"></td>
                     </tr>
                 </table>
                 <hr />
