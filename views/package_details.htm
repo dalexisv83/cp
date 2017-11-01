@@ -4,7 +4,7 @@
         <div ng-show="pdLoaded" class="border" ng-window-pie>
             <h2 class="select-package">Select Package:</h2>
             <div class="select-style">
-                <select ng-options="selPackage.id as selPackage.name group by selPackage.platform for selPackage in selPackages" ng-model="pid"></select>
+                <select ng-options="selPackage.id as selPackage.name group by selPackage.platform for selPackage in selPackages | filter:{displayInPackageDetails:1}" ng-model="pid"></select>
             </div>
             <div>
                 <hr />
