@@ -31,14 +31,36 @@ app.controller('OC_Controller',['$scope', '$http',
                     $scope.grey = false;
                     $scope.cCur = $scope.current;
                     $scope.cReq = $scope.requested;
+                    //$scope.stb_promo = $scope.bans[$scope.ban] ? {
+                    //    "id": 3,
+                    //    "label": "7/17 \u2013 10/22/16 (2STB)",
+                    //    "num": 2
+                    //} : {
+                    //    "id": 1,
+                    //    "label": "4/14 \u2013 7/16/16 (4STB)",
+                    //    "num": 4
+                    //};
+                    $scope.pricing = {
+                        "U-verse": {
+                            "3": 2,
+                            "4": 12
+                        },
+                        "DIRECTV": {
+                            "4": 7
+                        }
+                    };
                     $scope.cNumRec = $scope.num_rec
-                    $scope.stbPrice = $scope.current.platform == "DIRECTV" ? 7 : 10;
-                    $scope.cDisc = $scope.promo_pricing ? $scope.current[$scope.bans].disc : 0;
-                    $scope.cRecFee = $scope.cNumRec * $scope.stbPrice;
-                    $scope.promoRec = Math.min($scope.cRecFee, ($scope.bans - 1) * $scope.stbPrice);
-                    $scope.cCredit = $scope.cNumRec + 1 <= $scope.bans ? Math.min(0, ($scope.requested[$scope.bans].price + $scope.cDisc) - ($scope.requested["1"].price + $scope.cDisc + $scope.promoRec)) : 0;
-                    $scope.totals = $scope.requested["1"].price + $scope.cDisc + $scope.cRecFee + $scope.cCredit;
-                    $scope.display = true;
+                    //$scope.stbPrice = $scope.current.platform == "DIRECTV" ? 7 : 10;
+                    //$scope.cDisc = $scope.promo_pricing ? $scope.current[$scope.stb_promo.id].disc : 0;
+                    //$scope.cRecFee = $scope.cNumRec * $scope.stbPrice;
+                    //$scope.promoRec = Math.min($scope.cRecFee, ($scope.stb_promo.num - 1) * $scope.stbPrice);
+                    //$scope.cCredit = $scope.cNumRec + 1 <= $scope.stb_promo.num ? Math.min(0, ($scope.requested[$scope.stb_promo.id].price + $scope.cDisc) - ($scope.requested[2].price + $scope.cDisc + $scope.promoRec)) : 0;
+                    //$scope.totals = $scope.requested[2].price + $scope.cDisc + $scope.cRecFee + $scope.cCredit;
+                    if (($scope.cCur.platform == 'U-verse' && $scope.cCur == $scope.cReq) || $scope.bans[$scope.ban]) {
+                        $scope.display = false;
+                    } else {
+                        $scope.display = $scope.pricing[$scope.cReq.platform][$scope.cNumRec + 1] ? $scope.pricing[$scope.cReq.platform][$scope.cNumRec + 1] : false;
+                    }
                 }
                 $scope.loading = true;
                 $http.jsonp('https://wiwauk4coldda09.itservices.sbc.com/toolupdater/web/404/GetStbCount/' + inputBan + '?callback=JSON_CALLBACK', { cache: true }).then(function successCallback(bans) {
@@ -66,3 +88,20 @@ app.controller('OC_Controller',['$scope', '$http',
         }
     }
 ]);
+
+app.directive('validationError', function () {
+    return {
+        restrict: 'A',
+        require: 'ngModel',
+        link: function (scope, elem, attrs, ctrl) {
+            scope.$watch(attrs['validationError'], function (errMsg) {
+                if (elem[0] && elem[0].setCustomValidity) { // HTML5 validation
+                    elem[0].setCustomValidity(errMsg);
+                }
+                if (ctrl) { // AngularJS validation
+                    ctrl.$setValidity('validationError', errMsg ? false : true);
+                }
+            });
+        }
+    }
+});
