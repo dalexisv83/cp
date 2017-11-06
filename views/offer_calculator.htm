@@ -6,7 +6,7 @@
         <div class="border">
             <form name="offerCalc" ng-submit="calculate()">
                 <h2 class="title">Fall Offer Calculator</h2>
-                <p style="font-size:16px;margin-bottom: 40px;"><b>NOTICE:</b> This tool should only be used for video package changes for customers whose current service is NOT a standard package and was activated prior to 11/12.</p>
+                <p style="font-size:16px;margin-bottom: 40px;"><b>NOTICE:</b> This tool may only be used for video package changes for customers whose current service is NOT a standard package and was activated prior to 11/12.</p>
                 <div class="flex-cont">
                     <div class="flex-item layout">
                         <section id="current">
@@ -20,7 +20,7 @@
                         <section id="requested">
                             <h2><span class="deskHide"></span>Requested Package</h2>
                             <div class="select-style">
-                                <select ng-model="requested" ng-change="grey = true" ng-options="package.name group by package.platform for package in packages | orderBy:['-platform','name']" required>
+                                <select ng-model="requested" ng-change="grey = true" ng-options="package.name group by package.platform for package in packages | orderBy:['-platform','name']" required validation-error="current && requested && current.platform != requested.platform ? 'Customers cannot switch between U-verse and DIRECTV offers with this tool': ''">
                                     <option value="" selected disabled>Please Select</option>
                                 </select>
                             </div>
@@ -39,26 +39,12 @@
                                 </select>
                             </div>
                         </section>
-                        <!--<section id="stb_promo">
-                    <h2><span class="deskHide"></span>Current Receiver Promo Start Date</h2>
-                    <div class="select-style">
-                        <select ng-model="stb_promo" ng-change="grey = true" ng-options="promo.label for promo in promos">
-                            <option value="">Please Select</option>
-                        </select>
-                    </div>
-                </section>-->
-                        <section id="promo_pricing">
-                            <h2><span class="deskHide"></span>Is customer on Intro Promo Pricing?</h2>
-                            <div class="pricing_radio">
-                                <label><input type="radio" name="promo_pricing" ng-model="promo_pricing" ng-value="true" ng-change="grey = true"> Yes</label> <label><input type="radio" name="promo_pricing" ng-model="promo_pricing" ng-value="false" ng-change="grey = true" required> No</label>
-                            </div>
-                        </section>
                     </div>
                     <div id="side" class="flex-item tri-right">
                         <div>
                             <h2>New All-Included Offer</h2>
-                            <div id="pricing" ng-class="{'grey': grey}">
-                                <table ng-show="display">
+                            <div id="pricing">
+                                <!--<table ng-show="display">
                                     <tr>
                                         <td></td>
                                         <td><span ng-bind="cReq[2].price | currency"></span></td>
@@ -84,10 +70,11 @@
                                         <td><span ng-bind="totals | currency"></span></td>
                                         <td>Total Monthly Charges</td>
                                     </tr>
-                                </table>
-                                <p ng-show="display && cCredit >= 0">Fall Offer price is lower than or equal to existing package price.<br /><strong>This customer will not receive any additional credits.</strong></p>
+                                </table>-->
                                 <button type="submit" class="pp-btn mrr10">Submit</button> <button ng-click="reset()" class="pp-btn">Reset</button>
                                 <p class="alert alert-danger" ng-show="banError">Error loading BAN list.<br />Please contact support for this tool at <a href='mailto://g06292@att.com'>g06292@att.com</a></p>
+                                <p ng-show="noCredit || display == false" ng-style="{display: grey ? 'none' : 'block' }"><strong>This customer will not receive any additional credits.</strong></p>
+                                <p ng-show="display" class="credit" ng-style="{display: grey ? 'none' : 'block' }">{{display | currency}} Monthly Credit</p>
                             </div>
                         </div>
                     </div>
