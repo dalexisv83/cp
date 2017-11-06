@@ -19,9 +19,7 @@ app.controller('OC_Controller',['$scope', '$http',
                 }
             ];
             $scope.reset = function () {
-                $scope.submitted = $scope.current = $scope.requested = $scope.stb_promo = $scope.promo_pricing = $scope.num_rec = $scope.credit = $scope.ban = null;
-                $scope.num_rec = "";
-                $scope.display = false;
+                location.reload();
             };
             $scope.receivers = [1, 2, 3, 4, 5, 6];
             $scope.calculate = function () {
