@@ -71,7 +71,7 @@
                                         <td>Total Monthly Charges</td>
                                     </tr>
                                 </table>-->
-                                <button type="submit" class="pp-btn mrr10">Submit</button> <button ng-click="reset()" class="pp-btn">Reset</button>
+                                <button type="submit" class="pp-btn mrr10">Submit</button> <button type="reset" value="reset" ng-click="reset()" class="pp-btn">Reset</button>
                                 <p class="alert alert-danger" ng-show="banError">Error loading BAN list.<br />Please contact support for this tool at <a href='mailto://g06292@att.com'>g06292@att.com</a></p>
                                 <p ng-show="noCredit || display == false" ng-style="{display: grey ? 'none' : 'block' }"><strong>This customer will not receive any additional credits.</strong></p>
                                 <p ng-show="display" class="credit" ng-style="{display: grey ? 'none' : 'block' }">{{display | currency}} Monthly Credit</p>
