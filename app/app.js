@@ -1,7 +1,7 @@
 /*jslint unparam: true*/
 (function(angular) {
     'use strict';
-    angular.module('channelspackages', ['ngSanitize', 'vs-repeat', 'ngCookies'])
+    angular.module('channelspackages', ['ngSanitize', 'vs-repeat', 'ngCookies', 'constants.urls'])
         .config(['$httpProvider', function ($httpProvider) {
             cache: true
         }]);
