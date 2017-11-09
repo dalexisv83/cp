@@ -1,5 +1,5 @@
-app.controller('OC_Controller',['$scope', '$http',
-    function ($scope, $http) {
+app.controller('OC_Controller',['$scope', '$http', 'pathFinder',
+    function ($scope, $http, pathFinder) {
         "use strict";
         var init = function (packages) {
             $scope.packages = packages.data;
@@ -60,7 +60,7 @@ app.controller('OC_Controller',['$scope', '$http',
                     }
                 }
                 $scope.loading = true;
-                $http.jsonp($scope.fullURL + inputBan + '?callback=JSON_CALLBACK', { cache: true }).then(function successCallback(bans) {
+                pathFinder.callApi('GetStbCount', inputBan, 'bans.js').then(function successCallback(bans) {
                     doCalc(bans);
                     $scope.loading = false;
                 }, function errorCallback(bans) {

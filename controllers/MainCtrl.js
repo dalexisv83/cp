@@ -1,15 +1,14 @@
 (function(angular) {
     'use strict';
     angular.module('channelspackages')
-        .controller('MainCtrl', ['$scope', '$location', 'pathFinder',
-            function($scope, $location, pathFinder) {
+        .controller('MainCtrl', ['$scope', '$location',
+            function($scope, $location) {
                 if (($location.path() == '/channels_packages.htm') || ($location.path() == '')) {
                     $location.path('channel-lineup');
                 }
                 $scope.goHere = function(here) {
                     $location.path(here);
                 }
-                $scope.fullURL = pathFinder.getFullUrl();
                 var dataProg = true,
                     ppObj = {
                         "name": "Programming Package",
@@ -49,54 +48,63 @@
                 });
             }
         ])
-        .service('pathFinder', ['URLS', '$location', function (URLS, $location) {
-            this.getApiNet = function (net) {
-                var basePath;
-                switch (net) {
-                    case 'intra':
-                        basePath = URLS.API_INTRA;
-                        break;
+        .service('pathFinder', ['URLS', '$location', '$http',
+            function (URLS, $location, $http) {
+                var getBasePath = function (net) {
+                        var basePath;
+                        switch (net) {
+                            case 'intra':
+                                basePath = URLS.API_INTRA;
+                                break;
 
-                    case 'stage':
-                        basePath = URLS.API_STAGE;
-                        break;
+                            case 'stage':
+                                basePath = URLS.API_STAGE;
+                                break;
 
-                    case 'extra':
-                        basePath = URLS.API_EXTRA;
-                        break;
+                            case 'extra':
+                                basePath = URLS.API_EXTRA;
+                                break;
 
-                    case 'test':
-                        basePath = URLS.API_DEV;
-                        break;
-                }
-                return basePath;
-            };
-            this.getFullUrl = function() {
-                var theURL,
-                    net;
-                if ($location.host() == 'vwecda05.testla.testfrd.directv.com' || $location.host() == 'localhost') {
-                    net = 'test';
-                } else if ($location.host() == 'zlp09097.vci.att.com') {
-                    net = 'stage';
-                } else {
-                    $http.jsonp(URLS.API_INTRA + '/web/api/values/1?callback=JSON_CALLBACK').then(function successTest(response) {
-                        net = 'intra';
-                    }, function errorTest(response) {
-                        $http.jsonp(URLS.API_EXTRA + '/web/api/values/1?callback=JSON_CALLBACK').then(function successTest(response) {
-                            net = 'extra';
-                        }, function errorTest(response) {
-                            net = 'local';
-                            //$scope.errorMsg = "Unable to reach the data APIs.<br />Please contact support for this tool at <a href='mailto://g06292@att.com'>g06292@att.com</a>"
-                            //throw new Error(JSON.stringify(response));
+                            case 'test':
+                                basePath = URLS.API_DEV;
+                                break;
+                        }
+                        return basePath + 'web/api/';
+                    },
+                    promise = function (net, apiName, query) {
+                        return $http.jsonp(getBasePath(net) + apiName + '/' + query + '?callback=JSON_CALLBACK', {
+                            cache: true,
+                            headers: {
+                                'Accept': 'application/json, text/javascript'
+                            }
                         });
-                    });
-                }
-                if (net == 'local') {
-                    theURL = 'assets/datasource/bans.js';
-                } else {
-                    theURL = this.getApiNet(net) + 'web/api/GetStbCount/';
-                }
-                return theURL;
-            };
-        }]);
+                    };
+                return {
+                    callApi: function (apiName, query, localFile) {
+                        var net;
+                        if ($location.host() == 'vwecda05.testla.testfrd.directv.com' || $location.host() == 'localhost') {
+                            net = 'test';
+                            return promise(net, apiName, query);
+                        } else if ($location.host() == 'zlp09097.vci.att.com' || $location.absUrl().indexOf('sandbox') > -1) {
+                            net = 'stage';
+                            return promise(net, apiName, query);
+                        } else {
+                            return $http.jsonp(URLS.API_INTRA + 'web/api/values/1?callback=JSON_CALLBACK').then(function successTest(response) {
+                                net = 'intra';
+                                return promise(net, apiName, query);
+                            }, function errorTest(response) {
+                                return $http.jsonp(URLS.API_EXTRA + 'web/api/values/1?callback=JSON_CALLBACK').then(function successTest(response) {
+                                    net = 'extra';
+                                    return promise(net, apiName, query);
+                                }, function errorTest(response) {
+                                    return $http.get('assets/datasource/' + localFile + '?callback=JSON_CALLBACK', { cache: true });
+                                    //$scope.errorMsg = "Unable to reach the data APIs.<br />Please contact support for this tool at <a href='mailto://g06292@att.com'>g06292@att.com</a>"
+                                    //throw new Error(JSON.stringify(response));
+                                });
+                            });
+                        }
+                    }
+                };
+            }
+        ]);
 }(window.angular));
