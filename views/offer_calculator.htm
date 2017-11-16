@@ -1,0 +1,85 @@
+<div id="offer_calculator" ng-controller="OC_Controller">
+    <div id="loader" ng-show="loading">
+        <img src="../common_assets/img/marvin-spinner.gif" />
+    </div>
+    <div class="wrapper">
+        <div class="border">
+            <form name="offerCalc" ng-submit="calculate(ban)">
+                <h2 class="title">Fall Offer Calculator</h2>
+                <p style="font-size:16px;margin-bottom: 40px;"><b>NOTICE:</b> This tool may only be used for video package changes for customers whose current service is NOT a standard package and was activated prior to 11/12.</p>
+                <div class="flex-cont">
+                    <div class="flex-item layout">
+                        <section id="current">
+                            <h2><span class="deskHide"></span>Current Package</h2>
+                            <div class="select-style">
+                                <select ng-model="current" ng-change="grey = true" ng-options="package.name group by addRc1(package.platform) for package in packages | orderBy:['-platform','name']" required>
+                                    <option value="" selected disabled>Please Select</option>
+                                </select>
+                            </div>
+                        </section>
+                        <section id="requested">
+                            <h2><span class="deskHide"></span>Requested Package</h2>
+                            <div class="select-style">
+                                <select ng-model="requested" ng-change="grey = true" ng-options="package.name group by package.platform for package in packages | orderBy:['-platform','name']" required validation-error="current && requested && current.platform != requested.platform ? 'Customers cannot switch between U-verse and DIRECTV offers with this tool': ''">
+                                    <option value="" selected disabled>Please Select</option>
+                                </select>
+                            </div>
+                        </section>
+                        <section id="ban">
+                            <h2>Billing Account Number</h2>
+                            <div class="select-style">
+                                <input type="text" ng-model="ban" ng-change="grey = true" pattern="[0-9]{9,13}" placeholder="Please input BAN" title="9-13 digit BAN" required />
+                            </div>
+                        </section>
+                        <section id="num_rec">
+                            <h2><span class="deskHide"></span>Number of Receivers</h2>
+                            <div class="select-style">
+                                <select ng-model="num_rec" ng-change="grey = true" ng-options="rec - 1 as rec for rec in receivers" required>
+                                    <option value="" selected disabled>Please Select</option>
+                                </select>
+                            </div>
+                        </section>
+                    </div>
+                    <div id="side" class="flex-item tri-right">
+                        <div>
+                            <h2>New All-Included Offer</h2>
+                            <div id="pricing">
+                                <!--<table ng-show="display">
+                                    <tr>
+                                        <td></td>
+                                        <td><span ng-bind="cReq[2].price | currency"></span></td>
+                                        <td>All Included Fall Offer</td>
+                                    </tr>
+                                    <tr ng-show="cDisc < 0">
+                                        <td>&minus;</td>
+                                        <td><span ng-bind="cDisc | currency"></span></td>
+                                        <td>Current Promotional Offer</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&plus;</td>
+                                        <td><span ng-bind="cRecFee | currency"></span></td>
+                                        <td>Additional Receivers</td>
+                                    </tr>
+                                    <tr ng-show="cCredit < 0" class="credit">
+                                        <td>&minus;</td>
+                                        <td><span ng-bind="cCredit | currency"></span></td>
+                                        <td>Monthly Credit on Customer Bill</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&equals;</td>
+                                        <td><span ng-bind="totals | currency"></span></td>
+                                        <td>Total Monthly Charges</td>
+                                    </tr>
+                                </table>-->
+                                <button type="submit" class="pp-btn mrr10">Submit</button> <button type="reset" value="reset" ng-click="reset()" class="pp-btn">Reset</button>
+                                <p class="alert alert-danger" ng-show="banError">Error loading BAN list.<br />Please contact support for this tool at <a href='mailto://g06292@att.com'>g06292@att.com</a></p>
+                                <p ng-show="noCredit || display == false" ng-style="{display: grey ? 'none' : 'block' }"><strong>This customer will not receive any additional credits.</strong></p>
+                                <p ng-show="display" class="credit" ng-style="{display: grey ? 'none' : 'block' }">{{display | currency}} Monthly Credit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

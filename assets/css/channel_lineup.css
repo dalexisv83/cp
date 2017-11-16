@@ -1,7 +1,6 @@
 #channel_lineup {
-  font-family: arial;
-  padding: 0;
-    font: 14px Arial, Helvetica, sans-serif;
+    padding: 0;
+    font-size: 14px;
     overflow: hidden;
     margin: 0;
 }
@@ -566,8 +565,12 @@ span.btn-feedback:hover {
 
 .rotate > div {
     width: 100%;
-    height: 150px;
+    height: 160px;
     bottom: 0;
+}
+
+.com .rotate > div {
+    height: 220px;
 }
 
 .rotate div div {
@@ -730,4 +733,19 @@ span.btn-feedback:hover {
     #containerSmall .even {
         font-size: 14px;
     }
+}
+
+#vsrepeat::-webkit-scrollbar {
+    width: 16px;
+    background-color: #f1f1f1;
+}
+
+#vsrepeat::-webkit-scrollbar-thumb {
+    border: 2px solid #f1f1f1;
+    background-color: rgba(0,0,0,.25);
+    box-shadow: 0 0 1px rgba(255,255,255,.25);
+}
+
+#vsrepeat {
+    overflow-anchor: none;
 }

@@ -1,25 +1,31 @@
 ﻿<div id="channel_lineup" ng-controller="CL_Controller" ng-class="{'com': type=='commercial'}">
+<img class="oTip oTip-pkgcom" src="assets/img/overlay_pkgcom_tab.png" ng-hide="clOverlay == 'hide'" />
 <div class="wrapper">
 <div class="border">
+    <img class="oTip oTip-help" ng-click="clOverlay = 'show'" src="assets/img/help_icon.gif" />
     <div class="grid">
         <div class="grid__item one-half">
           <h2 class="search-label">Search by Call Letters, Channel Name or Number:</h2>
-          <input type=text id="txtSearch" placeholder="Search" ng-model="tempText" ng-keypress="clKeyPress($event)"/>
-          <input type="button" class="reset" ng-class="{'active': tempText || inputText || pActive}" value="RESET" id="reset" ng-click="clReset()" />
-          <br />
+            <div class="oContainer">
+                <input type=text id="txtSearch" placeholder="Search" ng-model="tempText" ng-keypress="clKeyPress($event)"/>
+                <img class="oTip oTip-search" src="assets/img/overlay_lineup_search.png" ng-hide="clOverlay == 'hide'" />
+                <input type="button" class="reset" ng-class="{'active': tempText || inputText || pActive}" value="RESET" id="reset" ng-click="clReset()" />
+            </div>
           <small ng-if="!tempText && !inputText && !pActive" class="result-count red">To look up multiple networks, use a comma (,) to separate search terms</small>
           <small ng-if="msgQuery && tempText == null" class="result-count red">You searched for: &ldquo;<b ng-bind="msgQuery"></b>&rdquo;
           <br /><br /></small>
           <small ng-if="inputText" class="result-count red"><b><span ng-bind="fChannels.result.length"></span> channel(s) found</b><span ng-if="fChannels.result.length == 0"><br />See <a target="_blank" href="/en-us/res/programming/commercials.html">Programming Requests</a> for points about channels not currently available on DIRECTV</span></small>
-          <small ng-if="pActive" class="result-count red">Displaying <b ng-bind="fChannels.result.length"></b><span ng-if="hdActive"> HD</span> channels for <a ng-href="{{pActive | findPackage:pActive:packages:'url'}}" target="_blank">{{pActive | findPackage:pActive:packages:'display_name'}}</a> package</small>
+          <small ng-if="pActive" class="result-count red">Displaying <b ng-bind="fChannels.result.length"></b><span ng-if="hdActive"> HD</span> channels for <a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{pActive | findPackage:pActive:packages:'cspUrl'}}" target="_blank">{{pActive | findPackage:pActive:packages:'display_name'}}</a> package</small>
         </div>
         <div class="grid__item one-half">
             <div class="link-holder">
                 <h2>Useful Links</h2>
-                    <div><a href="http://agentanswercenter.directv.com/en-us/res/programming/channel_neighborhoods.html" target="_blank">Channel Neighborhoods</a></div>
-                    <div><a href="http://agentanswercenter.directv.com/en-us/res/programming/expired_packages.html" target="_blank">Expired Packages</a></div>
-                    <div style="clear: left"><a href="http://agentanswercenter.directv.com/en-us/res/programming/paid_programming_part_time_channels.html" target="_blank">Ad Sales/Paid Program/Part-Time</a></div>
-                    <div><a href="http://www.directv.com/DTVAPP/packProg/localChannels.jsp?assetId=cms_local_channels&_requestid=2230690" target="_blank">Local Channel Availability</a></div>
+                    <div ng-if="type == 'residential'"><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ope_cen_cal_dis_538009" target="_blank">DIRECTV Disclosures</a></div>
+                    <div><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537722" target="_blank">Channel Neighborhoods</a></div>
+                    <div><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_pac_537512" target="_blank">Expired Packages</a></div>
+                    <div><a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_cha_lif_537723" target="_blank">Ad Sales/Paid Program/Part-Time</a></div>
+                    <div><a href="http://www.directv.com/DTVAPP/packProg/localChannels.jsp?assetId=cms_local_channels&_requestid=2230690" target="_blank">DIRECTV Local Channels</a></div>
+                    <div ng-if="type == 'residential'"><a href="http://www.directv.com/DTVAPP/packProg/attLocalChannels.jsp?assetId=att_cms_local_channels&_requestid=1156154" target="_blank">DIRECTV NOW Local Channels</a></div>
             </div>
         </div>
     </div>
@@ -29,11 +35,11 @@
             <div id="xtra_notes">
                 <h2>Reminders</h2>
                 <ul>
-                    <li ng-if="type == 'residential'">See <a href="http://agentanswercenter.directv.com/en-us/res/programming/directv_everywhere.html?fragid=3" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
-                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/redirectors/bce_redirect.html" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">«</span>) <a href="http://agentanswercenter.directv.com/en-us/res/programming/72hr_rewind_restart.html#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
-                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/com/equipment/audio_problems.html',850,600);">mono sound</a>.</li>
+                    <li ng-if="type == 'residential'">See <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
+                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
+                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
                     <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
-                    <li><b>REMINDER:</b> <b>DO NOT</b> discuss <em>exact</em> channel counts with customers</li>
+                    <li><b>REMINDER:</b> Channel counts are estimates and are subject to change</li>
                     <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
                 </ul>
             </div>
@@ -151,11 +157,11 @@
             <div id="xtra_notes">
                 <h2>Reminders</h2>
                 <ul>
-                    <li ng-if="type == 'residential'">See <a href="http://agentanswercenter.directv.com/en-us/res/programming/directv_everywhere.html?fragid=3" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
-                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/redirectors/bce_redirect.html" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">«</span>) <a href="http://agentanswercenter.directv.com/en-us/res/programming/72hr_rewind_restart.html#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
-                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/com/equipment/audio_problems.html',850,600);">mono sound</a>.</li>
+                    <li ng-if="type == 'residential'">See <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
+                    <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
+                    <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
                     <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
-                    <li><b>REMINDER:</b> <b>DO NOT</b> discuss <em>exact</em> channel counts with customers</li>
+                    <li><b>REMINDER:</b> Channel counts are estimates and are subject to change</li>
                     <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
                 </ul>
             </div>
@@ -169,28 +175,33 @@
                                 <div id="xtra_notes_tbl">
                                     <h2>Reminders</h2>
                                     <ul>
-                                        <li ng-if="type == 'residential'">See <a href="http://agentanswercenter.directv.com/en-us/res/programming/directv_everywhere.html?fragid=3" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
-                                        <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="http://agentanswercenter.directv.com/en-us/res/rover_tools/redirectors/bce_redirect.html" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">«</span>) <a href="http://agentanswercenter.directv.com/en-us/res/programming/72hr_rewind_restart.html#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
-                                        <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="javascript:pop_at('http://agentanswercenter.directv.com/en-us/com/equipment/audio_problems.html',850,600);">mono sound</a>.</li>
+                                        <li ng-if="type == 'residential'">See <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_537836#GeneralInformation" target="_blank">DIRECTV App</a> for a list of available channels offering streaming content</li>
+                                        <li ng-if="type == 'residential'">(<span class="ondemand">*</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_539326" target="_blank">DIRECTV On Demand</a> | (<span class="rewind">&laquo;</span>) <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_ser_tv_dir_538049#fragment=4" target="_blank">Rewind &amp; Restart</a></li>
+                                        <li ng-if="type == 'commercial'">(m) indicates channels broadcast in <a href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id=myc_sup_tv_tro_aud_538416" target="_blank">mono sound</a>.</li>
                                         <li ng-if="type == 'commercial'"><b>a - Available to in-markets customers only.</b></li>
-                                        <li><b>REMINDER:</b> <b>DO NOT</b> discuss <em>exact</em> channel counts with customers</li>
+                                        <li><b>REMINDER:</b> Channel counts are estimates and are subject to change</li>
                                         <li>If the customer refers to a package color, see <a href="http://www.directv.com/DTVAPP/packages/base_packages.jsp" target="_blank">DIRECTV TV PACKAGES</a> online</li>
                                     </ul>
                                 </div>&nbsp;
                             </td>
                             <td rowspan="2" class="rotate" ng-style="{'width': width}" ng-repeat="package in packages">
                                 <div>
-                                    <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}" q-tip></div>
+                                    <div class="grey-border" ng-class="{'odd': $odd, 'even': $even}" q-tip="{{package.description}}" q-tip-my="top right" q-tip-at="bottom left"></div>
                                 </div>
-                                <span q-tip><a href ng-href="{{package.url}}" target="_blank" ng-bind="package.display_name | comReplace"></a></span>
+                                <span q-tip="{{package.description}}" q-tip-my="top right" q-tip-at="bottom left" q-tip-adjust-y="50">
+                                    <a ng-if="package.platform == 'DTVNOW'" href ng-href="#/package-details?pid={{package.pid}}" ng-bind="package.display_name | comReplace"></a>
+                                    <a ng-if="package.platform != 'DTVNOW'" href ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{package.cspUrl}}" target="_blank" ng-bind="package.display_name | comReplace"></a>
+                                </span>
+                                <img ng-if="$last" class="oTip oTip-pName" src="assets/img/overlay_lineup_package_names.png" ng-hide="clOverlay == 'hide'" />
                             </td>
                         </tr>
-                        <tr style="vertical-align: bottom;">
+                        <tr style="vertical-align: bottom;" class="oContainer">
                             <td class="unmerged name">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Channel Name</a>
+                                <img class="oTip oTip-sort" src="assets/img/overlay_lineup_sort.png" ng-hide="clOverlay == 'hide'" />
                             </td>
                             <td class="unmerged num">
-                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Channel #</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'chanSort' && reverse == false, 'sorted desc': sortType == 'chanSort' && reverse == true}" href title="Click to sort" ng-click="sorter('chanSort')">Channel #</a>
                             </td>
                             <td class="unmerged num">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
@@ -200,16 +211,17 @@
                             </td>
                             <td class="merged">
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnamebold' && reverse == false, 'sorted desc': sortType == 'channelnamebold' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnamebold')">Name</a>
-                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'channelnumber' && reverse == false, 'sorted desc': sortType == 'channelnumber' && reverse == true}" href title="Click to sort" ng-click="sorter('channelnumber')">Num</a>
+                                <a class="sortHead" ng-class="{'sorted asc': sortType == 'chanSort' && reverse == false, 'sorted desc': sortType == 'chanSort' && reverse == true}" href title="Click to sort" ng-click="sorter('chanSort')">Num</a>
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'callletters' && reverse == false, 'sorted desc': sortType == 'callletters' && reverse == true}" href title="Click to sort" ng-click="sorter('callletters')">Call Letters</a>
                                 <a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a><span class="alert" id="genreLegend" ng-window-pie>?</span>
+                                <img class="oTip oTip-sort" src="assets/img/overlay_lineup_sort.png" ng-hide="clOverlay == 'hide'" />
                             </td>
                         </tr>
                     </thead>
                     <tbody id="containerSmall">
                         <tr>
                             <td colspan="4" class="n-c">
-                                <small>Approximate number of HD channels</small>
+                                <small>HD channels (Approx #)</small>
                                 <img class="arrow-icon" src="assets/img/arrow-icon.gif" />
                             </td>
                             <td class="outline" ng-class="{'odd': $odd, 'even': $even}" ng-repeat="package in packages">
@@ -218,28 +230,30 @@
                         </tr>
                         <tr>
                             <td colspan="4" class="n-c">
-                                <small>Approximate number of total channels</small>
+                                <small>Total channels (Approx #)</small>
                                 <img class="arrow-icon" src="assets/img/arrow-icon.gif" />
                             </td>
-                            <td class="outline" ng-class="{'odd': $odd, 'even': $even}" ng-repeat="package in packages">
+                            <td class="outline oContainer" ng-class="{'odd': $odd, 'even': $even}" ng-repeat="package in packages">
+                                <img ng-if="$first" class="oTip oTip-totals" src="assets/img/overlay_lineup_channel_totals.png" ng-hide="clOverlay == 'hide'" />
                                 <a href ng-click="pFilter(package.sortOrder,false)" ng-bind="package.channelCount"></a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div id="vsrepeat">
+            <div id="vsrepeat" class="oContainer">
+                <img class="oTip oTip-titles" src="assets/img/overlay_lineup_titles.png" ng-hide="clOverlay == 'hide'" />
                 <table>
-                    <tbody vs-repeat vs-scroll-parent="#vsrepeat">
-                        <tr style="height:50px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
-                            <td class="c-name unmerged name"><a ng-href="{{channel.url}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></td>
+                    <tbody vs-repeat="70" vs-scroll-parent="#vsrepeat" vs-excess="10">
+                        <tr style="height:70px;" ng-repeat="channel in fChannels.result = (channels | clSearch:inputText | byPackage:pActive:hdActive | orderBy:sortType:reverse) track by $index">
+                            <td class="c-name unmerged name"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.channelnumber"></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.callletters"></td>
                             <td class="c-num unmerged num" ng-bind-html="channel.genre"></td>
                             <td class="merged">
-                                <p class="c-name"><a ng-href="{{channel.url}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></p>
-                                <span class="c-num" ng-bind-html="channel.channelnumber.replace('\u003Cbr \/\u003E',', ')"></span>
-                                <span class="c-num" ng-bind-html="channel.callletters.replace('\u003Cbr\/\u003E',', ')"></span>
+                                <p class="c-name"><a ng-href="https://www.e-access.att.com/mycsp/mycspportal/proxyServlet?content_matrix_id={{channel.cspUrl}}" target="_blank"><span ng-bind-html="channel.channelnamebold"></span></a></p>
+                                <span class="c-num" ng-bind-html="channel.channelnumber | brToComma"></span>
+                                <span class="c-num" ng-bind-html="channel.callletters | brToComma"></span>
                                 <span class="c-num" ng-bind-html="channel.genre"></span>
                             </td>
                             <td class="dot" ng-style="{'width': width}" ng-class="{'odd': $odd, 'even': $even}" ng-repeat="package in packages" ng-bind-html="channel['p' + ($index + 1)] | xToBull"></td>
@@ -252,4 +266,10 @@
     </div>
 </div>
 </div>
+    <div class="overlay" ng-hide="clOverlay == 'hide'">
+    </div>
+    <div class="oTip oTip-welcome" ng-hide="clOverlay == 'hide'">
+        <img src="assets/img/overlay_lineup_welcome.png" />
+        <button ng-click="clOverlay = 'hide'">Got it</button>
+    </div>
 </div>

@@ -4,46 +4,76 @@
         <div ng-show="pdLoaded" class="border" ng-window-pie>
             <h2 class="select-package">Select Package:</h2>
             <div class="select-style">
-                <select ng-options="selPackage.id as selPackage.name for selPackage in selPackages" ng-model="pid"></select>
+                <select ng-options="selPackage.id as selPackage.name group by selPackage.platform for selPackage in selPackages | filter:{displayInPackageDetails:1}" ng-model="pid"></select>
             </div>
             <div>
                 <hr />
-                <table class="price">
+                <table class="price" ng-if="!package.prices">
                     <thead>
                         <tr>
                             <th width="15%">Total Channels</th>
                             <th ng-if="package.price" width="18%">Price</th>
                             <th ng-if="package.noLocal" width="18%">No Locals Price</th>
                             <th ng-if="package.allInc" width="18%">All-Included Price</th>
-                            <th ng-if="package.noLocal" width="20%">All-Included No Locals Price</th>
+                            <th ng-if="package.allIncNoLocal" width="20%">All-Included No Locals Price</th>
                         </tr>
                     </thead>
                     <tr>
                         <td ng-bind="package.channel_count"></td>
-                        <td ng-if="package.price" ng-bind="package.price"></td>
-                        <td ng-if="package.noLocal" ng-bind="package.noLocal"></td>
-                        <td ng-if="package.allInc" ng-bind="package.allInc"></td>
-                        <td ng-if="package.allIncNoLocal" ng-bind="package.allIncNoLocal"></td>
+                        <td ng-if="package.price" ng-bind="package.price | currency"></td>
+                        <td ng-if="package.noLocal" ng-bind="package.noLocal | currency"></td>
+                        <td ng-if="package.allInc" ng-bind="package.allInc | currency"></td>
+                        <td ng-if="package.allIncNoLocal" ng-bind="package.allIncNoLocal | currency"></td>
                     </tr>
                 </table>
-                <hr />
-                <table style="width:calc(50% - 16px);">
+                <table class="price" ng-if="package.prices">
                     <thead>
                         <tr>
-                            <th width="50%">Channel Name</th>
-                            <th width="25%">Channel #</th>
-                            <th width="25%">Genre</th>
+                            <th width="15%">Total Channels</th>
+                            <th ng-if="package.prices[0]" width="18%" ng-bind="package.prices[0].displayName"></th>
+                            <th ng-if="package.prices[1]" width="18%" ng-bind="package.prices[4].displayName"></th>
+                            <th ng-if="package.prices[1]" width="18%" ng-bind="package.prices[1].displayName"></th>
+                            <th ng-if="package.prices[2]" width="18%" ng-bind="package.prices[2].displayName"></th>
+                            <th ng-if="package.prices[3]" width="20%" ng-bind="package.prices[3].displayName"></th>
                         </tr>
                     </thead>
+                    <tr>
+                        <td ng-bind="package.channel_count"></td>
+                        <td ng-if="package.prices[0]" ng-bind="package.prices[0].packagePrice | currency"></td>
+                        <td ng-if="package.prices[1]" ng-bind="package.prices[4].packagePrice | currency"></td>
+                        <td ng-if="package.prices[1]" ng-bind="(package.prices[1].packagePrice | currency) + '**'"></td>
+                        <td ng-if="package.prices[2]" ng-bind="(package.prices[2].packagePrice | currency) + '**'"></td>
+                        <td ng-if="package.prices[3]" ng-bind="(package.prices[3].packagePrice | currency) + '**'"></td>
+                    </tr>
                 </table>
-                <div style="width:50%;height:400px;overflow:auto;">
-                    <table class="packages" width="100%">
-                        <tr ng-repeat="channel in channels">
-                            <td width="50%" ng-bind="channel.channelname"></td>
-                            <td width="25%" ng-bind-html="channel.channelnumber"></td>
-                            <td width="25%" ng-bind="channel.genre"></td>
-                        </tr>
-                    </table>
+                <p ng-if="package.prices[1] || package.prices[2] || package.prices[3]" style="text-align:right;margin-top:15px;">**All Included No Locals packages are $3 less than prices shown</p>
+                <hr />
+                <div class="grid">
+                    <div class="grid__item lap--one-half portable--one-half desk--one-half">
+                        <table style="width:calc(100% - 16px);">
+                            <thead>
+                                <tr>
+                                    <th style="width: 60%;"><a class="sortHead" ng-class="{'sorted asc': sortType == 'channelname' && reverse == false, 'sorted desc': sortType == 'channelname' && reverse == true}" href title="Click to sort" ng-click="sorter('channelname')">Channel Name</a></th>
+                                    <th style="width: 20%;" ng-if="package.platform == 'DIRECTV' || package.platform == 'DTVCOM'"><a class="sortHead" ng-class="{'sorted asc': sortType == 'chanSort' && reverse == false, 'sorted desc': sortType == 'chanSort' && reverse == true}" href title="Click to sort" ng-click="sorter('chanSort')">Channel #</a></th>
+                                    <th style="width: 20%;"><a class="sortHead" ng-class="{'sorted asc': sortType == 'genre' && reverse == false, 'sorted desc': sortType == 'genre' && reverse == true}" href title="Click to sort" ng-click="sorter('genre')">Genre</a></thstyle="width:>
+                                </tr>
+                            </thead>
+                        </table>
+                        <div style="width:100%;height:400px;overflow:auto;">
+                            <table class="packages" style="width: 100%;">
+                                <tr ng-repeat="channel in channels | orderBy:sortType:reverse">
+                                    <td style="width: 60%;" ng-bind="channel.channelname"></td>
+                                    <td style="width: 20%;" ng-if="package.platform == 'DIRECTV' || package.platform == 'DTVCOM'" ng-bind-html="channel.channelnumber"></td>
+                                    <td style="width: 20%;" ng-bind="channel.genre"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="grid__item lap--one-half portable--one-half desk--one-half">
+                        <p ng-if="package.tip">
+                            <b ng-bind="package.name"></b> <span ng-bind="package.tip"></span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

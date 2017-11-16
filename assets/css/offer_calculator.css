@@ -1,0 +1,205 @@
+﻿#offer_calculator {
+    font-size: .85em;
+    counter-reset: section;
+}
+
+#loader {
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1983;
+}
+
+#loader img {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#offer_calculator .flex-item {
+    width: 40%;
+}
+
+#offer_calculator .flex-item.layout {
+    width: 60%;
+    margin-right: 24px;
+    padding-right: 20px;
+}
+
+#offer_calculator section h2::before {
+    counter-increment: section;
+    content: counter(section) ": ";
+}
+
+#offer_calculator h2 {
+    vertical-align: top;
+    margin: 0;
+}
+
+#offer_calculator section {
+    background: 0 0 no-repeat;
+}
+
+#offer_calculator section + section {
+    margin-top: 38px;
+}
+
+#offer_calculator .border {
+    padding: 25px;
+}
+
+#offer_calculator h2.title {
+    color: #333 !important;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+#offer_calculator #side {
+    background: none;
+    padding-left: 40px;
+}
+
+#offer_calculator .select-style {
+    margin-top: 5px;
+    width: 100%;
+}
+
+#offer_calculator .select-style select {
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.pricing_radio {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.pricing_radio label + label {
+    margin-left: 20px;
+}
+
+#offer_calculator #pricing table {
+    width: 100%;
+}
+
+#offer_calculator #pricing td {
+    padding: 10px;
+}
+
+#offer_calculator #pricing table td:nth-child(1) {
+    width: 20px;
+}
+
+#offer_calculator #pricing table td:nth-child(2) {
+    width: 20%;
+    text-align: right;
+}
+
+#offer_calculator #pricing table td:nth-child(3) {
+    width: 80%;
+}
+
+#offer_calculator #pricing {
+    margin: 20px 0;
+}
+
+.credit {
+    color: #4ba50c;
+}
+
+.grey .credit {
+    color: inherit;
+}
+
+#offer_calculator .alert {
+    font-size: 16px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+#offer_calculator .alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
+#offer_calculator #ban .select-style {
+    background-image: none;
+}
+
+#offer_calculator #ban input {
+    width: 100%;
+    padding: 5px 30px 5px 10px;
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+}
+
+@media screen and (min-width: 1024px) {
+    #offer_calculator {
+        font-size: 1em;
+    }
+
+    #offer_calculator .flex-item {
+        width: 50%;
+    }
+
+    #offer_calculator .flex-item.layout {
+        width: 50%;
+    }
+
+    #offer_calculator section {
+        padding-left: 70px;
+        padding-bottom: 7px;
+    }
+
+    #offer_calculator section#current {
+        background-image: url('../img/prog-pack_icn_1.png');
+    }
+
+    #offer_calculator section#requested {
+        background-image: url('../img/prog-pack_icn_2.png');
+    }
+
+    #offer_calculator section#ban {
+        background-image: url('../img/prog-pack_icn_3.png');
+    }
+
+    #offer_calculator section#num_rec {
+        background-image: url('../img/prog-pack_icn_4.png');
+    }
+
+    #offer_calculator section#promo_pricing {
+        background-image: url('../img/prog-pack_icn_5.png');
+    }
+
+    #offer_calculator section h2::before {
+        content: none;
+    }
+
+    #offer_calculator .deskHide {
+        display: none;
+    }
+
+    #offer_calculator .mobileHide {
+        display: inline;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #offer_calculator .flex-item.layout {
+        padding-right: 45px;
+    }
+
+    #offer_calculator #side {
+        padding-left: 65px;
+    }
+}

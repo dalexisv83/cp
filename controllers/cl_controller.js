@@ -1,5 +1,5 @@
-app.controller('CL_Controller',['$scope', '$http', '$window',
-    function($scope, $http, $window) {
+app.controller('CL_Controller',['$scope', '$http', '$window', '$cookies',
+    function($scope, $http, $window, $cookies) {
     "use strict";
     var init = function(response) {
             /*global AdSales, smallGrid, config, bigGrid, searchBox, programmingHeaders, columnSorter, reset, toolTip, commentBtn */
@@ -9,7 +9,6 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
                     return a.sortOrder - b.sortOrder;
                 }),
                 channels = response.data.channels,
-                ad_channels = AdSales.channels,
                 data_type = response.data.type;
                 if (($window.matchMedia) && (!isIE())) {
                     var mql = $window.matchMedia('screen and (min-width: 1024px)'),
@@ -81,7 +80,6 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
                             big_grid.setOptions(true,false);
                             big_grid.setColumns(columns);
                             big_grid.setChannels(channels);
-                            big_grid.setChannels(ad_channels);
                             big_grid.render();
 
                             //get the width for each big_grid cell
@@ -144,16 +142,10 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
             function(params) {
                 if (params == 'channel-lineup') {
                     stopWatching();
-                    $http.get('http://vwecda05.testla.testfrd.directv.com/toolmanager/index.php/ChannelLineupRes').then(function successCallback(response) {
+                    $http.get('assets/datasource/ChannelLineupRes.js').then(function successCallback(response) {
                         init(response);
                     }, function errorCallback(response) {
-                        $http.get('http://localhost/rover_tools/channelsjs/channels.js').then(function successCallback(response) {
-                            init(response);
-                        }, function errorCallback(response) {
-                            // called asynchronously if an error occurs
-                            // or server returns response with an error status.
-                            throw new Error('Data request failed: ' + JSON.stringify(response));
-                        });
+                        throw new Error('Data request failed:\n' + JSON.stringify(response));
                     });
                 }
             },
@@ -169,6 +161,14 @@ app.controller('CL_Controller',['$scope', '$http', '$window',
         $scope.pActive = sortOrder;
         $scope.hdActive = hd;
     };
+    $scope.$watch(function () {
+        return $cookies.clOverlay;
+    }, function (value) {
+        $scope.clOverlay = value;
+    });
+    $scope.$watch('clOverlay', function () {
+        $cookies.clOverlay = $scope.clOverlay;
+    });
     $scope.sortType = 'channelnamebold';
     $scope.reverse = false;
     $scope.sorter = function(clickType) {
@@ -207,7 +207,7 @@ app.filter('comReplace', [
     function() {
         return function(input) {
             if(input) {
-                return input.replace('Business','Biz.').replace('Commercial','Com.');
+                return input.replace('Business','Biz.').replace('Commercial','Com.').replace('Comercial','Com.').replace('BUSINESS','BIZ.').replace('COMMERCIAL','COM.').replace('COMERCIAL','COM.');
             }
         }
     }
@@ -284,25 +284,15 @@ app.filter('comReplace', [
             }
         }
     }
-]).directive('qTip', [function() {
-    return {
-        link: function(scope, elem, attrs) {
-            $(elem).qtip({
-                content: {
-                    text: scope.package.description
-                },
-                position: {
-                    my: 'top right',
-                    at: 'bottom left',
-                    target: this,
-                    adjust: {
-                        y: 50
-                    }
-                }
-            });
+]).filter('brToComma', [
+    function () {
+        return function (input) {
+            if (input) {
+                return input.toString().replace('<br/>', ', ').replace('<br />', ', ');
+            }
         }
-    };
-}]);
+    }
+]);
 
 
 var isIE = function() {
